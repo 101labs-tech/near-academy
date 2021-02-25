@@ -17,3 +17,11 @@ export const headerColor = '#10122399'
 export const inactiveColor = '#242649'
 export const counterColor = '#6D728F'
 export const okColor = '#12650a'
+
+export const near1 = '#FF585D'
+export const near2 = '#FFB259'
+export const near3 = '#00C08B'
+export const near4 = '#00C1DE'
+export const near5 = '#0072CE'
+  export const near6 = '#F2F2F2'
+
