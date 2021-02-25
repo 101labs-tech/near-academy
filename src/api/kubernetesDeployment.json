@@ -1,0 +1,22 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": { "name": "nearacademy-api" },
+  "spec": {
+    "replicas": 3,
+    "selector": { "matchLabels": { "app": "nearacademy-api" } },
+    "template": {
+      "metadata": { "labels": { "app": "nearacademy-api" } },
+      "spec": {
+        "terminationGracePeriodSeconds": 30,
+        "containers": [
+          {
+            "name": "nearacademy-api",
+            "image": "registry.digitalocean.com/labs101/nearacademy-api",
+            "imagePullPolicy": "Always"
+          }
+        ]
+      }
+    }
+  }
+}
