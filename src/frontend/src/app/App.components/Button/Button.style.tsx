@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components/macro'
 
-import { buttonColor, primaryColor, secondaryColor } from '../../../styles'
+import { buttonColor, primaryColor, secondaryColor, near2, near3 } from '../../../styles'
 
 export const clickWave = keyframes`
   from {
@@ -14,14 +14,17 @@ export const clickWave = keyframes`
 export const ButtonStyled = styled.button`
   height: 36px;
   border: none;
-  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 55px;
   will-change: box-shadow;
   width: 100%;
+  max-width: 275px;
   user-select: none;
+  width: 275px;
+  height: 61px;
 
   &.clicked {
     animation: ${clickWave} 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -30,12 +33,12 @@ export const ButtonStyled = styled.button`
 
   &.primary {
     color: ${buttonColor};
-    background: ${primaryColor};
+    background: ${near2};
   }
 
   &.secondary {
     color: ${buttonColor};
-    background-color: ${secondaryColor};
+    background-color: ${near3};
   }
 
   &.transparent {

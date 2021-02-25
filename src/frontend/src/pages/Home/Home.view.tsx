@@ -15,7 +15,7 @@ export const HomeView = () => {
               <h1>Build a Web3 App the fun way!</h1>
               <p>NEAR Academy is an interactive introduction course for web developers looking to explore blockchain integration to their Apps. It is free, and it hands a completion certificate.</p>
               <Link to="/near101/chapter-1">
-                <Button text="GET STARTED" color="primary" />
+                <Button text="START ACADEMY" color="primary" />
               </Link>
             </div>
             <div className={"right"}>
@@ -35,7 +35,7 @@ export const HomeView = () => {
               <p>This is not without similarities to the growth of internet services in the 2000s, and hints at significant development for years to come.
                 Importantly, the infrastructure has matured, and makes it easy to create dApps, the decentralized equivalent to Apps. Do you have NPM installed? You’re ready to go!
                 <Link to="/near101/chapter-1">
-                  <Button text="GET STARTED" color="primary" />
+                  <Button text="JOIN NOW" color="secondary" />
                 </Link>
               </p>
             </div>

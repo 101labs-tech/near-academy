@@ -34,11 +34,30 @@ export const HomeContainer = styled.div`
   }
   
   section.first {
-    display: flex;
-    flex-direction: row;
+    background-image: url('museum_exterior_animated.svg');
+    background-position: right bottom; 
+    background-repeat: no-repeat; 
+    background-size: 949px 684px;
+    min-height: 660px;
+    z-index: 1;
+    position: relative;
+    margin-bottom: -190px;
+    margin-right: -60px;
+    margin-top: 160px;
+    z-index: 1;
+    position: relative;
+    
+
+    
+    .left {
+      width: 50vw;
+      padding: 5vw;
+    }
+    
+    
     .right {
       img {
-        width: 555px;
+        width: 0;
       }
     }
   }
@@ -55,6 +74,7 @@ export const HomeContainer = styled.div`
     h1 {
       width: 100%;
       text-align: center;
+      padding-top: 120px;
     }
     background-color: #f2f2f2;
     height: 840px;
