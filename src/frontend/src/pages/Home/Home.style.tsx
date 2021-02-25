@@ -70,7 +70,11 @@ export const HomeContainer = styled.div`
     background-size: 685px 147px;
     margin: 0 -70px;
     
-  
+    Button {
+        margin-top: 80px;
+        margin-left: -210px;
+    }
+    
     h1 {
       width: 100%;
       text-align: center;
@@ -82,6 +86,10 @@ export const HomeContainer = styled.div`
     .left {
       display: flex;
       flex-direction: row;
+      
+      p {
+        padding:40px;
+      }
       img {
         width: 276px;
         height: 693px;
@@ -91,14 +99,49 @@ export const HomeContainer = styled.div`
     }
   }
   
-  footer {
+  section.third {
+   h1 {
+    text-align: center;
+    margin-top: 170px;
+   }
+   .left {
+    display: flex;
+    flex-direction: column;
+    justify-elements: center;
+    align-items: center;
+    max-width: 690px;
+    width:100%;
+    margin: 0 auto;
+    
+    Button {
+      margin-top: 40px;
+    }
+   }
+    
+  
+  }
+  
+  footer.footer {
     background-color: black;
     height: 190px;
+    margin: -70px;
+    margin-top: -140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .left {
+    padding: 60px;
+      p {
+        color: white;
+        font-size: 14px;
+      }
+    }
     .right {
+    padding: 60px;
+    margin-top: 14px;
       img {
         width: 32px;
-        margin-left: 5px;
-      
+        margin-left: 25px;
       }
     }
   }
