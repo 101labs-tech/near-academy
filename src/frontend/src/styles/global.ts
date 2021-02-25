@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;;
   font-display: optional;
   margin: 0;
   padding: 0;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 p {
-    font-family: "Proxima Nova", sans-serif;
+    font-family: 'Inter', sans-serif;
     display: block;
     margin-block-start: 10px;
     margin-block-end: 10px;

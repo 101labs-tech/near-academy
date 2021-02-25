@@ -23,5 +23,5 @@ export const near2 = '#FFB259'
 export const near3 = '#00C08B'
 export const near4 = '#00C1DE'
 export const near5 = '#0072CE'
-  export const near6 = '#F2F2F2'
+export const near6 = '#F2F2F2'
 

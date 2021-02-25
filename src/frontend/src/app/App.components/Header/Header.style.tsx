@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { bgTextColor, primaryColor, backgroundColorLight, textColor } from 'styles'
+import { bgTextColor, primaryColor, near6, textColor } from 'styles'
 
 export const HeaderStyled = styled.div`
   margin-bottom: 20px;
@@ -7,13 +7,15 @@ export const HeaderStyled = styled.div`
   text-align: center;
   height: 50px;
   z-index: 1;
-  background-color: ${backgroundColorLight};
+  background-color: ${near6};
 `
 
 export const HeaderLogo = styled.img`
   padding: 11px;
   z-index: 1;
   margin: auto;
+  float: left;
+  margin-left: 44px;
 `
 
 export const HeaderLoggedOut = styled.div`
