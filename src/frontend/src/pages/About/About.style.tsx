@@ -40,7 +40,7 @@ export const AboutContainer = styled.div`
   }
 
   ul > li > a {
-    color: #ff4092;
+    color: #08658b;
     text-decoration: underline !important;
   }
 `

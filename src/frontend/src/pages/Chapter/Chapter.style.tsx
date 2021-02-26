@@ -49,7 +49,7 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #ff4092;
+    color: #08658b;
   }
 
   a:visited {

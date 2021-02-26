@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 
 export const FooterStyled = styled.div`
-  height: 50px;
+  height: 70px;
 
   > a:nth-child(1) {
     position: absolute;
