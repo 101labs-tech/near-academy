@@ -19,7 +19,7 @@ export const HomeView = () => {
               </Link>
             </div>
             <div className={"right"}>
-              <img src={'museum_exterior_animated.svg'}/>
+
             </div>
           </section>
 

@@ -33,32 +33,41 @@ export const HomeContainer = styled.div`
     display: block;
   }
   
+
+  
+  
   section.first {
-    background-image: url('museum_exterior_animated.svg');
+    background-image: url('museum_exterior_1.svg');
     background-position: right bottom; 
     background-repeat: no-repeat; 
-    background-size: 949px 684px;
+    background-size: 881px 684px;
     min-height: 660px;
     z-index: 1;
     position: relative;
-    margin-bottom: -190px;
+    margin-bottom: -200px;
     margin-right: -60px;
     margin-top: 160px;
     z-index: 1;
     position: relative;
     
-
-    
     .left {
       width: 50vw;
-      padding: 5vw;
-    }
-    
-    
-    .right {
-      img {
-        width: 0;
+      padding-bottom: 5vw;
+      h1 {
+        font-weight: 900;
       }
+      p {
+        font-size: 24px;
+        line-height: 36px;
+        max-width: 590px;
+      }
+      button {
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+    }
+    .right {
+     
     }
   }
   
@@ -79,6 +88,7 @@ export const HomeContainer = styled.div`
       width: 100%;
       text-align: center;
       padding-top: 120px;
+      font-weight: 900;
     }
     background-color: #f2f2f2;
     height: 840px;
@@ -103,6 +113,7 @@ export const HomeContainer = styled.div`
    h1 {
     text-align: center;
     margin-top: 170px;
+    font-weight: 900;
    }
    .left {
     display: flex;
@@ -143,6 +154,46 @@ export const HomeContainer = styled.div`
         width: 32px;
         margin-left: 25px;
       }
+    }
+  }
+  
+  @media (max-width: 1155px) {
+    section.first { 
+      background-size: 881px 684px;
+      min-height: 770px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    section.first { 
+      background-size: 628px 601px;
+      min-height: 770px;
+    }
+  }
+  
+  @media (max-width: 555px) {
+    section.first { 
+      margin-top: 100px;
+      background-size: 628px 601px;
+      min-height: 1070px;
+      padding: 0 10px;
+      
+      .left {
+      width: 88vw;
+      padding-bottom: 5vw;
+      h1 {
+        font-weight: 900;
+      }
+      p {
+        font-size: 24px;
+        line-height: 36px;
+        max-width: 590px;
+      }
+      button {
+        margin-top: 50px;
+        margin-left: 82px;
+      }
+    }
     }
   }
 
