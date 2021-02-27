@@ -34,12 +34,14 @@ export const HomeView = () => {
 
               <p>This is not without similarities to the growth of internet services in the 2000s, and hints at significant development for years to come.
                 Importantly, the infrastructure has matured, and makes it easy to create dApps, the decentralized equivalent to Apps. Do you have NPM installed?
-                <Link to="/near101/chapter-1">
-                  <Button text="JOIN NOW" color="secondary" />
-                </Link>
               </p>
             </div>
 
+            <div className={"button--center"}>
+              <Link to="/near101/chapter-1">
+                <Button text="JOIN NOW" color="secondary" />
+              </Link>
+            </div>
           </section>
 
 

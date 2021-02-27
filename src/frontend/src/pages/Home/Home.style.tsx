@@ -3,7 +3,6 @@ import { FullPage } from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
-
   > img {
     position: absolute;
     top: calc(33vh - 130px);
@@ -27,14 +26,11 @@ export const HomeContainer = styled.div`
     margin-top: 20px;
     width: 160px;
   }
-
+  
   span {
     font-size: 16px;
     display: block;
   }
-  
-
-  
   
   section.first {
     background-image: url('museum_exterior_1.svg');
@@ -72,22 +68,26 @@ export const HomeContainer = styled.div`
   }
   
   section.second {
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url("distortion-footer.svg");
     background-position: right bottom; 
     background-repeat: no-repeat; 
     background-size: 685px 147px;
-    margin: 0 -70px;
+    margin: 0 -5vw;
     
-    Button {
-        margin-top: 80px;
-        margin-left: -210px;
-    }
+     .button--center {
+        margin-top: -350px;
+        margin-bottom: 350px;
+          
+      }
     
     h1 {
       width: 100%;
       text-align: center;
-      padding-top: 120px;
+      padding-top: 333px;
       font-weight: 900;
     }
     background-color: #f2f2f2;
@@ -119,24 +119,22 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-elements: center;
-    align-items: center;
     max-width: 690px;
     width:100%;
     margin: 0 auto;
     
-    Button {
-      margin-top: 40px;
+    a{
+      margin-top: 44px;
+      text-align: center;
     }
    }
     
-  
   }
   
   footer.footer {
     background-color: black;
     height: 190px;
-    margin: -70px;
-    margin-top: -140px;
+    margin: 0 -5vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -166,36 +164,58 @@ export const HomeContainer = styled.div`
   
   @media (max-width: 768px) {
     section.first { 
-      background-size: 628px 601px;
-      min-height: 770px;
-    }
-  }
-  
-  @media (max-width: 555px) {
-    section.first { 
       margin-top: 100px;
+      margin-right: 0;
       background-size: 628px 601px;
       min-height: 1070px;
       padding: 0 10px;
       
       .left {
-      width: 88vw;
-      padding-bottom: 5vw;
+          width: 88vw;
+          padding-bottom: 5vw;
+          h1 {
+            font-weight: 900;
+          }
+          p {
+            font-size: 24px;
+            line-height: 36px;
+            max-width: 590px;
+          }
+          button {
+            margin-top: 50px;
+            margin-left: 82px;
+          }
+        }
+    }
+    
+    section.second { 
+      height: calc(100% + 250px);
+      .left {
+        flex-direction: column;
+        padding: 40px;
+        img {
+          height: 88vh;
+        }
+      }
+      
       h1 {
-        font-weight: 900;
-      }
-      p {
-        font-size: 24px;
-        line-height: 36px;
-        max-width: 590px;
-      }
-      button {
-        margin-top: 50px;
-        margin-left: 82px;
-      }
+        padding-top: 55px;
+      }   
     }
+    
+    footer.footer {
+        .right {
+            padding:0;
+            padding-top: 10px;
+            a {
+                display: block;
+                margin-bottom: 20px;
+                padding-right: 35px;
+            }
+        }
+        
     }
-  }
+}
 
   @media (max-width: 700px) {
     width: 100%;
