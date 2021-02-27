@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro'
-import { FullPage } from 'styles'
+import {
+    FullPage
+} from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
@@ -42,7 +44,7 @@ export const HomeContainer = styled.div`
     position: relative;
     margin-bottom: -200px;
     margin-right: -60px;
-    margin-top: 160px;
+    margin-top: 110px;
     z-index: 1;
     position: relative;
     
@@ -128,6 +130,10 @@ export const HomeContainer = styled.div`
       text-align: center;
     }
    }
+   
+   .museum-interior {
+    margin-bottom: -6px;
+   }
     
   }
   
@@ -164,11 +170,12 @@ export const HomeContainer = styled.div`
   
   @media (max-width: 768px) {
     section.first { 
-      margin-top: 100px;
+      margin-top: 130px;
       margin-right: 0;
       background-size: 628px 601px;
       min-height: 1070px;
-      padding: 0 10px;
+      padding: 0 20px;
+      padding-left: 30px;
       
       .left {
           width: 88vw;
@@ -190,16 +197,25 @@ export const HomeContainer = styled.div`
     
     section.second { 
       height: calc(100% + 250px);
+      
+        .button--center {
+            margin-top: 0; 
+            margin-bottom: 200px;
+        }
+
       .left {
         flex-direction: column;
         padding: 40px;
         img {
           height: 88vh;
         }
+        p {
+            padding-bottom: 20px;
+        }
       }
       
       h1 {
-        padding-top: 55px;
+        padding-top: 155px;
       }   
     }
     

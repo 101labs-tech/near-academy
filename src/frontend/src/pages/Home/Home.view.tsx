@@ -56,7 +56,7 @@ export const HomeView = () => {
                 <Button text="GET STARTED" color="primary" />
               </Link>
             </div>
-            <img src={'museum_interior_x2.svg'}/>
+            <img className={"museum-interior"} src={'museum_interior_x2.svg'}/>
           </section>
 
           <footer className={"footer"}>
