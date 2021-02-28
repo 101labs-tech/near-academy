@@ -240,6 +240,7 @@ export const HomeContainer = styled.div`
                 padding-right: 35px;
             }
         }
+       
     }
   }
   
@@ -260,6 +261,8 @@ export const HomeContainer = styled.div`
         .left {
             padding-bottom: 20px;
             padding-top:0 ;
+            margin: 0 auto;
+            text-align: center;
         }
         
     }
