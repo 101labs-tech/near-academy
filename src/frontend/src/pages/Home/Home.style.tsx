@@ -112,28 +112,28 @@ export const HomeContainer = styled.div`
   }
   
   section.third {
-   h1 {
-    text-align: center;
-    margin-top: 170px;
-    font-weight: 900;
-   }
-   .left {
-    display: flex;
-    flex-direction: column;
-    justify-elements: center;
-    max-width: 690px;
-    width:100%;
-    margin: 0 auto;
-    
-    a{
-      margin-top: 44px;
-      text-align: center;
-    }
-   }
-   
-   .museum-interior {
-    margin-bottom: -6px;
-   }
+       h1 {
+        text-align: center;
+        margin-top: 170px;
+        font-weight: 900;
+       }
+       .left {
+            display: flex;
+            flex-direction: column;
+            justify-elements: center;
+            max-width: 690px;
+            width:100%;
+            margin: 0 auto;
+        
+        a {
+              margin-top: 44px;
+              text-align: center;
+        }
+       }
+       
+       .museum-interior {
+            margin-bottom: -6px;
+       }
     
   }
   
@@ -161,10 +161,17 @@ export const HomeContainer = styled.div`
     }
   }
   
-  @media (max-width: 1155px) {
+  @media (max-width: 1200px) {
     section.first { 
       background-size: 881px 684px;
       min-height: 770px;
+    }
+    
+    section.second { 
+          .button--center {
+            margin-top: calc(-18vw);
+            margin-bottom: 350px;
+        }
     }
   }
   
@@ -180,6 +187,9 @@ export const HomeContainer = styled.div`
       .left {
           width: 88vw;
           padding-bottom: 5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           h1 {
             font-weight: 900;
           }
@@ -190,7 +200,7 @@ export const HomeContainer = styled.div`
           }
           button {
             margin-top: 50px;
-            margin-left: 82px;
+            margin-left: auto;
           }
         }
     }
@@ -205,7 +215,8 @@ export const HomeContainer = styled.div`
 
       .left {
         flex-direction: column;
-        padding: 40px;
+        padding: 0;
+        align-items: center;
         img {
           height: 88vh;
         }
@@ -229,11 +240,29 @@ export const HomeContainer = styled.div`
                 padding-right: 35px;
             }
         }
+    }
+  }
+  
+  @media (max-width: 500px) { 
+    .section.second { 
+        .left {
+            padding: 0;
+        }
+    }
+    footer.footer {
+        flex-direction: column-reverse;
+        height: 200px;
+        .right {
+            display: inline-flex;
+            padding-top: 42px;
+            margin: 0 auto;
+        }
+        .left {
+            padding-bottom: 20px;
+            padding-top:0 ;
+        }
         
     }
-}
-
-  @media (max-width: 700px) {
-    width: 100%;
+    
   }
 `
