@@ -34,6 +34,10 @@ export const HomeContainer = styled.div`
     display: block;
   }
   
+  button:hover {
+    transform: scale(1.05);
+  }
+  
   section.first {
     background-image: url('museum_exterior_1.svg');
     background-position: right bottom; 
