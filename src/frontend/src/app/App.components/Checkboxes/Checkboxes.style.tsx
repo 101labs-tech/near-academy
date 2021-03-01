@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { primaryColor } from 'styles'
+import { primaryColor, near5 } from 'styles'
 
 export const CheckboxesStyled = styled.div`
   padding: 1em;
@@ -16,16 +16,16 @@ export const CheckboxesStyled = styled.div`
       height: 1em;
       width: 1em;
       border-radius: 10%;
-      border: 2px solid ${primaryColor};
+      border: 3px solid ${near5};
       margin-right: 0.5em;
     }
 
     > input:checked + span:before {
-      border-color: ${primaryColor};
+      border-color: ${near5};
       background-image: radial-gradient(
         circle closest-side,
-        ${primaryColor} 0%,
-        ${primaryColor} 50%,
+        ${near5} 0%,
+        ${near5} 50%,
         transparent 50%,
         transparent 100%
       );

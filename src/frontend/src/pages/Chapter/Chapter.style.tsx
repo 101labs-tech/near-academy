@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro'
-import { backgroundColorLight, borderColor, downColor, okColor, primaryColor, textColor } from 'styles'
+import { backgroundColorLight, borderColor, downColor, okColor, primaryColor, textColor, near6, near4 } from 'styles'
 
 export const ChapterStyled = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 10px;
   height: calc(100vh - 130px);
   margin: 70px 20px 0;
@@ -29,12 +29,16 @@ export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
 
 export const ChapterQuestions = styled.div`
   padding: 20px;
-  border: 1px solid ${borderColor};
+  border: 1px solid ${near6};
+  background: white;
+  h2 {
+    font-weight: 600;
+  }
 `
 
 export const ChapterCourse = styled.div`
   background: ${backgroundColorLight};
-  border: 1px solid ${borderColor};
+  border: 1px solid ${near6};
   padding: 20px;
   font-size: 14px;
   white-space: pre-wrap;
@@ -92,7 +96,7 @@ export const ChapterH4 = styled.div`
 
 export const ChapterValidator = styled.div`
   background: ${backgroundColorLight};
-  border: 1px solid ${borderColor};
+  border: 1px solid ${near6};
   position: relative;
   margin-top: 10px;
   display: flex;
@@ -121,6 +125,8 @@ export const ChapterValidator = styled.div`
 
 export const ChapterValidatorTitle = styled.div`
   font-size: 32px;
+  color: #0072ce;
+  font-weight: 600;
 `
 
 export const ChapterValidatorContent = styled.div`
@@ -171,6 +177,13 @@ export const ButtonText = styled.div`
   z-index: 1;
   color: ${textColor};
   text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 55px;
+  font-weight: 600;
+  &:hover {
+    transform: scale(1.05);
+    color: #0072ce;
+  }
 
   > svg {
     stroke: ${textColor};
@@ -223,4 +236,5 @@ export const ChapterTitle = styled.div`
 export const Difficulty = styled.div`
   margin-top: 15px;
   text-align: center;
+  
 `

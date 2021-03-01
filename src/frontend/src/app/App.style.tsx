@@ -15,4 +15,5 @@ export const AppWrapper = styled.div`
   width: 100vw;
   top: 0;
   will-change: transform, opacity;
+  background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
 `
