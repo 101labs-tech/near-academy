@@ -43,7 +43,7 @@ export const HomeContainer = styled.div`
     background-position: right bottom; 
     background-repeat: no-repeat; 
     background-size: 881px 684px;
-    min-height: 660px;
+    min-height: 108vh;
     z-index: 1;
     position: relative;
     margin-bottom: -200px;

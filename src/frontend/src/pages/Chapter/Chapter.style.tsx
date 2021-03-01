@@ -4,7 +4,7 @@ import { backgroundColorLight, borderColor, downColor, okColor, primaryColor, te
 export const ChapterStyled = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
   height: calc(100vh - 130px);
   margin: 70px 20px 0;
 
@@ -98,7 +98,7 @@ export const ChapterValidator = styled.div`
   background: ${backgroundColorLight};
   border: 1px solid ${near6};
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
