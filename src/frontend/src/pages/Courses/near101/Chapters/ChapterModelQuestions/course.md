@@ -1,7 +1,10 @@
-# Chapter 1 : Test
+<chapterTitle> Why Web3? </chapterTitle>
+<Difficulty>Difficulty: 1/5 | Estimated reading time: 4 min</Difficulty>
 
-## Title
-<dialog character="mario">These new species have absolutely incredible behaviors. They can do a lot of things, and more!</dialog>
+<dialog character="mario">The year is 2029, the new internet is running on top of public interoperable blockchains. It seems crazy to think how the perception towards these technologies has drastically changed. The Internet of Value is more tangible than ever. Knowing how blockchain infrastructure works is not considered a competitive advantage nowadays. It is a must have.<br><br>
+This chain of thoughts makes you remember the day when you originally discovered you could add a payment gateway with a 1-liner of code to your app via the NEAR Blockchain. This was such a game changer back then....
+
+</dialog>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl purus in mollis nunc sed. Consectetur lorem donec massa sapien faucibus et molestie. Urna condimentum mattis pellentesque id nibh. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Aenean et tortor at risus viverra adipiscing at in. Semper risus in hendrerit gravida. Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Quam pellentesque nec nam aliquam sem et. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Rhoncus dolor purus non enim praesent elementum facilisis leo. At imperdiet dui accumsan sit amet nulla. Dictumst quisque sagittis purus sit amet volutpat consequat. Nulla porttitor massa id neque aliquam.
 

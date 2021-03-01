@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { backgroundColorLight, primaryColor, borderColor, textColor, downColor, okColor } from 'styles'
+import { backgroundColorLight, borderColor, downColor, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
   display: grid;
@@ -205,4 +205,22 @@ export const ChapterTab = styled.div<{ isSelected?: boolean }>`
 export const ChapterLocked = styled.div`
   height: calc(100vh - 130px);
   margin: 70px 20px 0;
+`
+
+export const ChapterTitle = styled.div`
+  font-size: 50px;
+  margin-top: 25px;
+  color: #1174CB;
+  line-height: 38px;
+  font-weight: 600;
+  text-align: center;
+
+  /* @media (max-width: 900px) {
+    font-size: 24px;
+    line-height: 28px;
+  } */
+`
+export const Difficulty = styled.div`
+  margin-top: 15px;
+  text-align: center;
 `
