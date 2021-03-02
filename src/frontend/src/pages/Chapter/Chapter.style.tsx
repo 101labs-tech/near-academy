@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { backgroundColorLight, borderColor, downColor, okColor, primaryColor, textColor, near6, near4 } from 'styles'
+import { backgroundColorLight, borderColor, downColor, near4, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
   display: grid;
@@ -238,3 +238,14 @@ export const Difficulty = styled.div`
   text-align: center;
   
 `
+export const BackgroundContainer = styled.div`
+  background-color: green;
+`
+export const Image = styled.div`
+  background-color: yellow;
+  
+`
+export const Quote = styled.div`
+  background-color: blue;
+`
+
