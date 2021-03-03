@@ -73,9 +73,10 @@ export const ChapterH1 = styled.div`
 `
 
 export const ChapterH2 = styled.div`
-  font-size: 24px;
+  font-size: 36px;
   line-height: 28px;
   margin-top: 20px;
+  color: #ffb359;
 
   @media (max-width: 900px) {
     font-size: 20px;
@@ -239,13 +240,40 @@ export const Difficulty = styled.div`
   
 `
 export const BackgroundContainer = styled.div`
-  background-color: green;
-`
-export const Image = styled.div`
-  background-color: yellow;
+  background-color: #0072ce;
+  color: white;
+  padding: 40px;
+  h1 {
+    color: #ffb359:
+  }
   
 `
+export const Image = styled.div`
+  
+`
+
+export const Spacer = styled.div`
+    height: 30px;
+`
+
+export const narrativeText = styled.div`
+    font-weight: 500;
+    background-color: #f2f2f2;
+    padding: 40px;
+`
+
 export const Quote = styled.div`
-  background-color: blue;
+  color: #0072CE;
+  font-size: 35px;
+  font-weight: 900;
+  padding-left: 40px;
+`
+
+export const quoteComma = styled.div`
+  color: #0072CE;
+  font-weight: 600;
+  font-size: 88px;
+  margin-bottom: -80px;
+
 `
 
