@@ -165,6 +165,18 @@ export const HomeContainer = styled.div`
     }
   }
   
+  @media (min-width: 1201px) {
+      section.first { 
+        height: 100vh;
+        min-height: 888px;
+      }
+        h1 {
+        font-size: 72px;
+        }
+  }
+  
+  
+  
   @media (max-width: 1200px) {
     section.first { 
       background-size: 881px 684px;
