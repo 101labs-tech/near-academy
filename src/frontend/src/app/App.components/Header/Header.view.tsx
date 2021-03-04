@@ -1,7 +1,6 @@
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-
 import { PublicUser } from 'shared/user/PublicUser'
 
 import { HamburgerLeft } from '../Hamburger/Hamburger.controller'
@@ -29,9 +28,6 @@ export const HeaderView = ({ user, removeAuthUserCallback }: HeaderViewProps) =>
 function loggedOutHeader() {
   return (
     <HeaderLoggedOut>
-      <Link to="/about">
-        <HeaderMenuItem>ABOUT US</HeaderMenuItem>
-      </Link>
       <Link to="/terms">
         <HeaderMenuItem>TERMS</HeaderMenuItem>
       </Link>
@@ -48,9 +44,6 @@ function loggedOutHeader() {
 function loggedInHeader({ user, removeAuthUserCallback }: HeaderViewProps) {
   return (
     <HeaderLoggedIn>
-      <Link to="/about">
-        <HeaderMenuItem>ABOUT US</HeaderMenuItem>
-      </Link>
       <Link to="/terms">
         <HeaderMenuItem>TERMS</HeaderMenuItem>
       </Link>

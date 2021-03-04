@@ -1,4 +1,4 @@
-import { About } from 'pages/About/About.controller'
+// import { About } from 'pages/About/About.controller'
 import { Certificate } from 'pages/Certificate/Certificate.controller'
 import { ChangePassword } from 'pages/ChangePassword/ChangePassword.controller'
 import { Chapter } from 'pages/Chapter/Chapter.controller'
@@ -46,9 +46,9 @@ export const AppRoutes = ({ location }: any) => (
     <Route exact path="/certificate/:username">
       <Certificate />
     </Route>
-    <Route exact path="/about">
+    {/* <Route exact path="/about">
       <About />
-    </Route>
+    </Route> */}
     <Route exact path="/terms">
       <Terms />
     </Route>

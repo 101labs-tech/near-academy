@@ -79,10 +79,6 @@ function loggedInDrawer({ showingMenu, user, removeAuthUserCallback }: LoggedInD
     <DrawerStyledLogin className={`${showingMenu}`}>
       <h1>Menu</h1>
       <DrawerItem>
-        <Link to="/about">ABOUT US</Link>
-      </DrawerItem>
-
-      <DrawerItem>
         <Link to="/terms">TERMS</Link>
       </DrawerItem>
 
@@ -108,10 +104,6 @@ function loggedOutDrawer({ showingMenu }: LoggedOutDrawerViewProps) {
   return (
     <DrawerStyledLogin className={`${showingMenu}`}>
       <h1>Menu</h1>
-      <DrawerItem>
-        <Link to="/about">ABOUT US</Link>
-      </DrawerItem>
-
       <DrawerItem>
         <Link to="/terms">TERMS</Link>
       </DrawerItem>
