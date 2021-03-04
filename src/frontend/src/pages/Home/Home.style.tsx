@@ -164,17 +164,7 @@ export const HomeContainer = styled.div`
       }
     }
   }
-  
-  @media (min-width: 1201px) {
-      section.first { 
-        height: 100vh;
-        min-height: 888px;
-      }
-        h1 {
-        font-size: 72px;
-        }
-  }
-  
+   
   
   
   @media (max-width: 1200px) {
@@ -190,6 +180,88 @@ export const HomeContainer = styled.div`
         }
     }
   }
+  
+    @media (min-width: 1201px) {
+        section.first { 
+            height: 100vh;
+            min-height: 888px;
+            .left {
+                width: 55vw;
+                p {
+                    max-width: 55vw;
+                }
+                button {
+                    margin-left: 100px;
+                }
+                h1 {
+                    font-size: 72px;
+                    margin-top: 72px;
+                }
+            }
+            
+        }
+   }
+   
+   @media (min-width: 1401px) {
+        section.first { 
+            height: 100vh;
+            min-height: 888px;
+            .left {
+                width: 44vw;
+                p {
+                    max-width: 44vw;
+                }
+                button {
+                    margin-left: 200px;
+                }
+                h1 {
+                    font-size: 72px;
+                    margin-top: 72px;
+                }
+            }
+            
+        }
+   }
+   
+  @media (min-width: 1801px) {
+    section.first { 
+        height: 100vh;
+        min-height: 888px;
+        .left {
+            width: 38vw;
+            p {
+                max-width: 38vw;
+            }
+            button {
+                margin-left: 200px;
+            }
+            h1 {
+                font-size: 72px;
+                margin-top: 72px;
+            }
+        }
+        
+    }
+   }
+   
+   @media screen and  (min-width: 769px) and (max-width: 1111px) {
+    section.first { 
+        background-size: 621px 598px;
+        margin-top: -100px;
+        .left {
+            width: 66vw;
+            p {
+                max-width: 66vw;
+            }
+            button {
+                margin-left: 100px;
+            }
+            h1 {
+                //margin-top: 72px;
+            }
+        }
+    }
+   }
   
   @media (max-width: 768px) {
     section.first { 
