@@ -47,7 +47,7 @@ export const HomeContainer = styled.div`
     z-index: 1;
     position: relative;
     margin-bottom: -200px;
-    margin-right: -60px;
+    //margin-right: -60px;
     margin-top: 110px;
     z-index: 1;
     position: relative;
@@ -183,7 +183,7 @@ export const HomeContainer = styled.div`
   
     @media (min-width: 1201px) {
         section.first { 
-            height: 100vh;
+            //height: 100vh;
             min-height: 888px;
             .left {
                 width: 55vw;
@@ -204,8 +204,6 @@ export const HomeContainer = styled.div`
    
    @media (min-width: 1401px) {
         section.first { 
-            height: 100vh;
-            min-height: 888px;
             .left {
                 width: 44vw;
                 p {
@@ -225,7 +223,7 @@ export const HomeContainer = styled.div`
    
   @media (min-width: 1801px) {
     section.first { 
-        height: 100vh;
+        //height: 100vh;
         min-height: 888px;
         .left {
             width: 38vw;
