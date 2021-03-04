@@ -6,7 +6,7 @@ export const GdprStyled = styled.div`
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 60px;
+  height: 80px;
 
   display: grid;
   grid-template-columns: 4fr 1fr 1fr;
