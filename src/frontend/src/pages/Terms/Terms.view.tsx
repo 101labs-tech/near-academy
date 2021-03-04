@@ -46,7 +46,6 @@ export const TermsView = () => {
           <ul>
             <li>Process your order and manage your account.</li>
             <li>Email you with information and news about near.academy or about Near Protocol.</li>
-            <li>Email you to invite you to join the Near Protocol Ambassador community</li>
           </ul>
           <p>near.academy does not share or sell your data with any other third party.</p>
           <h1>How do we store your data?</h1>
@@ -60,8 +59,7 @@ export const TermsView = () => {
           </p>
           <h1>Marketing</h1>
           <p>
-            near.academy may send you information related to Near Academy, Near Protocol or Near Protocol Ambassadors
-            community.{' '}
+            near.academy may send you information related to Near Academy, Near Protocol or Near Community.{' '}
           </p>
           <p>
             You have the right at any time to stop near.academy from contacting you for any purposes. To do so, please
@@ -143,13 +141,13 @@ export const TermsView = () => {
           <h1>Changes to our privacy policy</h1>
           <p>
             near.academy keeps its privacy policy under regular review and places any updates on this web page. This
-            privacy policy was last updated on 13 October 2020.
+            privacy policy was last updated on 4 March 2021.
           </p>
           <h1>How to contact us</h1>
           <p>
             If you have any questions about near.academy privacy policy, the data we hold on you, or you would like to
-            exercise one of your data protection rights, please email us at:{' '}
-            <a href="mailto:nearacademy@protonmail.com">nearacademy@protonmail.com</a>
+            exercise one of your data protection rights, please email :{' '}
+            <a href="mailto:info@101labs.org">info@101labs.org</a>
           </p>
           <h1>How to contact the appropriate authority</h1>
           <p>
