@@ -188,7 +188,7 @@ export const HomeContainer = styled.div`
             .left {
                 width: 55vw;
                 p {
-                    max-width: 55vw;
+                    max-width: 51vw;
                 }
                 button {
                     margin-left: 100px;
