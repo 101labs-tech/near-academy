@@ -1,4 +1,4 @@
-<ChapterTitle>4\. NEAR Environment</ChapterTitle>
+# 4. NEAR Environment
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
 <Image>
@@ -12,6 +12,7 @@ It’s always something to start in a new environment. And you’ve decided to m
 “You’re all set now. Let’s get to work! “
 <Spacer />
 “You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… ”
+
 </narrativeText>
 <Spacer />
 
@@ -67,6 +68,7 @@ The cost of each instruction is denominated in “gas” units.  Bandwidth is us
 “Alrighty, I see you’ve still got a hang of it!”
 <Spacer />
 “Awesome, we can start running some code through the near-cli now”
+
 </narrativeText>
 <Spacer />
 
@@ -76,11 +78,11 @@ Let us call the Meme Museum Contract and see how many memes there are registered
 
 Since we are interested in calling a simple function and getting a quick answer we do need to build any interface. We simply use the nodejs based NEAR CLI that provides a set of command line tools to easily create, test, deploy scripts on the NEAR Network.
 
- 1. Install NEAR CLI: `npm install -g near-cli`
- 2. Typing `near` prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum
- 3. Type `near login` this will open your browser and ask you to login into your account
- 4. Now the contract name is “meme-museum.testnet” and the method is called “getMemecount”. So type: `near view meme-museum.testnet get_meme_count`. This will return you the amount of memes that are registered in the museum.
- 5. Congratulations. You just called a contract on NEAR.
+ 1\. Install NEAR CLI: "npm install -g near-cli"
+ 2\. Typing "near" prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum
+ 3\. Type "near login" this will open your browser and ask you to login into your account
+ 4\. Now the contract name is “meme-museum.testnet” and the method is called “getMemecount”. So type: "near view meme-museum.testnet get_meme_count". This will return you the amount of memes that are registered in the museum.
+ 5\. Congratulations. You just called a contract on NEAR.
 
  <Image>
      <img src="/images/chap_4_3.png">
@@ -92,11 +94,11 @@ Since we are interested in calling a simple function and getting a quick answer 
 
 Invoking a contract method from your dApp will trigger a sequence of actions locally as well as on the NEAR protocol:
 
- 1. Your dApp uses near-cli to compose and sign the transaction that represents a Function Call transaction.
- 2. The transaction is sent to the NEAR platform through the RPC interface which validates and verifies the transaction before routing it (based on the contract account) to the correct validator for processing.
- 3. The runtime layer launches a Wasm virtual machine.
- 4. The VM loads the contract code to invoke the function identified in the transaction, reading and writing to state storage as needed, and returning the result of the function call.
- 5. The blockchain layer routes the result back through the RPC interface to your dApp.
+1\. Your dApp uses near-cli to compose and sign the transaction that represents a Function Call transaction.
+2\. The transaction is sent to the NEAR platform through the RPC interface which validates and verifies the transaction before routing it (based on the contract account) to the correct validator for processing.
+3\. The runtime layer launches a Wasm virtual machine.
+4\. The VM loads the contract code to invoke the function identified in the transaction, reading and writing to state storage as needed, and returning the result of the function call.
+5\. The blockchain layer routes the result back through the RPC interface to your dApp.
 
-## *Exercise*
- *At the museum, each meme is created by a contributor and can receive comments, votes and donations. The contributor can call a release function to release the donations to any given address. The meme museum has an expert team that curates the most interesting memes and presents them in their museum. Yes, this is part of the job!*
+## Exercise
+At the museum, each meme is created by a contributor and can receive comments, votes and donations. The contributor can call a release function to release the donations to any given address. The meme museum has an expert team that curates the most interesting memes and presents them in their museum. Yes, this is part of the job!
