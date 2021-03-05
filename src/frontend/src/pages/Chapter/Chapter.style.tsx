@@ -2,6 +2,7 @@ import styled from 'styled-components/macro'
 import { backgroundColorLight, borderColor, downColor, near4, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
+  background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
@@ -45,6 +46,12 @@ export const ChapterCourse = styled.div`
   overflow: auto;
   position: relative;
   font-size: 22px;
+
+  p {
+    padding: 0 40px;
+    font-size: 25px;
+    text-align: justify;
+  }
 
   img {
     max-width: 100%;
@@ -242,7 +249,7 @@ export const Difficulty = styled.div`
 export const BackgroundContainer = styled.div`
   background-color: #0072ce;
   color: white;
-  padding: 40px;
+  padding: 40px 0;
   h1 {
     color: #ffb359:
   }
@@ -259,7 +266,7 @@ export const Spacer = styled.div`
 export const narrativeText = styled.div`
     font-weight: 500;
     background-color: #f2f2f2;
-    padding: 40px;
+    padding: 40px 0;
 `
 
 export const Quote = styled.div`

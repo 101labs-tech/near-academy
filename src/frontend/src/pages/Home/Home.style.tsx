@@ -338,10 +338,12 @@ export const HomeContainer = styled.div`
         .right {
             display: inline-flex;
             padding-top: 42px;
+            margin: 0 auto;
         }
         .left {
             padding-bottom: 20px;
             padding-top:0 ;
+            /* margin: 0 auto; */
             text-align: center;
         }
         

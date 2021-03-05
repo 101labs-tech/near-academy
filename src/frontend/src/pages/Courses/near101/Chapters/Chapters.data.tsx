@@ -1,8 +1,8 @@
 import { ChapterData } from 'pages/Chapter/Chapter.controller'
 
 import { course } from '..'
-import { data as dataQuestions } from './ChapterModelQuestions'
-import { data as dataEditor } from './ChapterModelEditor'
+import { data as dataQuestions } from './Chapter-1'
+import { data as dataEditor } from './Chapter-2'
 
 export const chapterData: ChapterData[] = [
   {
