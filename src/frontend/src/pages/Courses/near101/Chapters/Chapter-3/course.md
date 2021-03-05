@@ -96,13 +96,13 @@ Imagine a NEAR based platform that register new user roles that have the ability
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
  <Image>
-     <img src="/images/**chap_3_4.png**">
+     <img src="/images/chap_3_4.png">
  </Image>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet.  If the nickname is available, you are ready to join the protocol!
 
 <Image>
-    <img src="/images/**chap_3_5.png**">
+    <img src="/images/chap_3_5.png">
 </Image>
 
 3\. Now it is the time to choose the security method to secure and recover your account.
