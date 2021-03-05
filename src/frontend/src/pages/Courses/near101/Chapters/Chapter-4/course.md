@@ -1,4 +1,4 @@
-<ChapterTitle>3\.  What is NEAR?</ChapterTitle>
+<ChapterTitle>4\. NEAR Environment</ChapterTitle>
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image> 

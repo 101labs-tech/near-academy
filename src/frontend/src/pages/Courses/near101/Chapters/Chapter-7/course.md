@@ -1,4 +1,4 @@
-<ChapterTitle>3\.  What is NEAR?</ChapterTitle>
+<ChapterTitle>7\. Build your Interface</ChapterTitle>
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image> 
