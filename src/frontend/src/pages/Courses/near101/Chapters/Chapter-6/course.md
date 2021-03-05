@@ -55,6 +55,7 @@ near call meme-museum.testnet add_meme \
 ```
 
 Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: near view meme-museum.testnet get_meme_list. You may now also find it on the blockchain explorer, it is in the public domain now. 
+
 ## The Meme Contract
 
 As we just learned each meme contract lives on a newly created account that was created through the meme-museum.testnet account. In fact, the only way to get a meme-museum.testnet id is through interacting with the museum contract. 
