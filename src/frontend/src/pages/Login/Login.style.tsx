@@ -2,16 +2,22 @@ import styled from 'styled-components/macro'
 
 import { Card, CardPage, FadeInFromTop, primaryColor } from '../../styles'
 
-export const LoginStyled = styled(CardPage)``
+export const LoginStyled = styled(CardPage)`
+  height: 90vh;
+`
 
 export const LoginCard = styled(Card)`
+  text-align: center;
   padding: 20px;
 `
 export const LoginSeparator = styled.div`
   height: 10px;
 `
 
-export const LoginTitle = styled(FadeInFromTop)``
+export const LoginTitle = styled(FadeInFromTop)`
+  text-align: center;
+  color: white;
+`
 
 export const LoginSignUp = styled.div`
   margin-top: 10px;
@@ -21,6 +27,6 @@ export const LoginSignUp = styled.div`
   grid-gap: 10px;
 
   > a {
-    color: ${primaryColor} !important;
+    color: white !important;
   }
 `

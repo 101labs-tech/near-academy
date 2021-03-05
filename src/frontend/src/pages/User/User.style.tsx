@@ -2,6 +2,7 @@ import styled from 'styled-components/macro'
 import { AnimatedCard, FadeInFromTop, primaryColor, textColor } from 'styles'
 
 export const UserStyled = styled.div`
+  height: 90vh;
   margin: 100px auto 20px auto;
   width: 800px;
   max-width: 90vw;
@@ -11,7 +12,9 @@ export const UserCard = styled(AnimatedCard)`
   padding: 20px;
 `
 
-export const UserTitle = styled(FadeInFromTop)``
+export const UserTitle = styled(FadeInFromTop)`
+  color: white;
+`
 
 export const UserProgress = styled.div``
 
@@ -29,6 +32,7 @@ export const UserChapter = styled.div<{ done?: boolean }>`
 export const UserBadge = styled.div<{ badgeUnlocked: boolean }>``
 
 export const UserTitle2 = styled(FadeInFromTop)`
+  color: white;
   margin-top: 30px;
 `
 
