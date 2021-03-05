@@ -1,7 +1,7 @@
 <ChapterTitle>2\. Key Concepts of Web3</ChapterTitle>
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
-<Image> 
+<Image>
     <img src="/images/chap_2.png">
 </Image>
 
@@ -9,8 +9,80 @@
 
 <narrativeText>
 “My dear friend, i’ve known you for a long time. Aren’t you bored of your job at Soga? These social gaming companies are so 2020, lol. I heard from Marco there was a job opening at the new Meme Museum in Rio de Janeiro, what an awesome opportunity. Memes are such a fascinating form of collective expression, this is so the future of anarchivism.”
-<Spacer />
-That looks cool! The Museum is new, and you’d like to learn more about them. Nowadays, most jobs are filled and found via a decentralized marketplace, Decentrajob, the dApp that replaced Upwork back in 2025. 
-<Spacer />
-Let’s have a closer look...
+
+That looks cool! The Museum is new, and you’d like to learn more about them. Nowadays, most jobs are filled and found via a decentralized marketplace, Decentrajob, the dApp that replaced Upwork back in 2025.
+
+Let’s have a closer look…
+
 </narrativeText>
+<Spacer />
+
+We’ll start by looking at the main components of Web3, it's a helpful reference to have when you’ll write code.
+
+##Distributed ledger
+The distributed ledger, or blockchain, is the backbone of the network. This is where states are publicly stored.
+
+##Validator nodes
+Validator nodes are servers that provide computation services and security to the network. In permissionless networks, **anyone is free to run a Validator node**, following a set of requirements that are specific to this network.
+
+##Execution capabilities
+Custom code is directly  deployed to the blockchain and can be called by users. Validator nodes take care of execution and any interactions with the code are then saved on the blockchain.
+
+Permissionless protocols allow anyone to use the network as they want: run a validator node, create an account and interact with the network. Users of these networks cannot be barred on account of geography, income, gender, orientation or a host of other sociological and demographic factors. Value and digital assets can be transferred cross-border, quickly and efficiently, anywhere in the world. **The power of permissionless access cannot be overstated.**
+
+Permissionless blockchains like NEAR use rules that are programmatically open and fair rather than subjectively imposed by a single entity. Everything is fully verifiable through the blockchain.
+
+No central entity or government has the ability to shut down sites and services, because these are operated through a network of independent participants via consensus.
+
+##New Mental Models
+
+A typical web application is programmed using a client–server structure. The user ("client") is provided services through an off-site server that is hosted by a third-party.
+
+Applications are usually broken into logical chunks called "tiers", where every tier is assigned a role. Though many variations are possible, the most common structure is the three-tiered representation: presentation (front-end), application (back-end) and storage (database).
+
+**Decentralized applications** (or **dApps**) follow the same structure overall. The only difference is that the back-end gets enhanced by connecting it to public Web3 infrastructure. The front-end and the storage can be integrated in dApps just like in any other Apps.
+
+In a dApp, security and access are provided by cryptography (public/private keys) rather than username and password or oAuth. This approach is also called **passwordless identification**. **Users keep their identity through dApps** rather than having a different one in each or rely on third party identity management.
+
+<Image>
+    <img src="/images/chap_2_1.png">
+</Image>
+
+For users, access to the open web is based only on a private key, which is used to unlock all dApps and services on the blockchain.
+
+Users access and interact with dApps with a web browser just like any other App; this makes it easy for them to switch. And dApps offer many improvements to the user experience:
+ * Identification is done only once for access across dApps
+ * Ownership of personal data remains in users’ hands at all times
+ * Interactions are opt-in by default
+ * Payment and exchanges are handled just like any other action
+
+Behind the scenes, the framework connecting users with digital services is slightly different with a dApp.
+
+Consider all the possible aspects of an application that may be decentralized:
+ * Backend software (application logic)
+ * Frontend software
+ * Data storage
+
+##Backend (application logic)
+The backend of a dApp is just the same as any other App, except that it’s **connected to the blockchain for at least some of its services**, like access control, storage of transactions and balances, or programmatic guarantee of agreements between users.
+
+##Frontend (Web User Interface)
+**The client-side interface of a dApp can use standard web technologies** (HTML, CSS, JavaScript, etc.). This allows a traditional web developer to use familiar tools, libraries, and frameworks.
+
+Interactions with the blockchain, such as signing messages, sending transactions, and managing keys, are often conducted through the web browser via an extension such as the NEAR Wallet. It is also possible to create native mobile dApps.
+
+##Data Storage
+**Data storage can be handled the same in dApps as in other Apps**, with the extra ability to store information into the blockchain. That is handy when one wants to verifiably and permanently save actions or transactions.
+
+Storing and distributing large static assets on a blockchain would be inefficient as cost would be too high. This is why images, videos, and resources of the application’s frontend web interface (HTML, CSS, JavaScript, etc.) are generally not stored on the blockchain itself.
+
+Besides cloud databases and other centralized solutions, data can be stored on P2P platforms such as the InterPlanetary File System (IPFS); P2P storage is a great alternative while maintaining a trustless environment for the dApp.
+
+**Check it for yourself with a Block Explorer!**
+The NEAR blockchain is public, so anyone can query it to get any data stored in it.  
+
+The blockchain can be queried through the NEAR client, but a dedicated interface is easier to use, and is accessible by anyone regardless whether they are running the NEAR software or not. Blockchain explorers, as these interfaces are called, can display blockchain data in a more user friendly way, and also enhance the entries with off-chain data like current dollar value of a token.
+
+##*Exercise*
+
+*To find the job offer on Decentrajob. Visit https://explorer.testnet.near.org/ and search for the “decentrajob.testnet” account. Here you see an overview of all transactions that happened on that account. Look for the latest transaction set_open_job called by meme-museum.testnet and click on the link that looks something like 8xhSuM1...This will display the details about the transaction, including all arguments that were used to call the function. Select the correct answer.*
