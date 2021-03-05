@@ -6,7 +6,7 @@ export const ChapterStyled = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 20px;
-  height: calc(100vh - 130px);
+  height: calc(100vh - 170px);
   margin: 70px 20px 0;
 
   @media (max-width: 900px) {
