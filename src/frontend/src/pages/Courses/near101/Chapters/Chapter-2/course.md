@@ -1,9 +1,8 @@
 <ChapterTitle>2\. Key Concepts of Web3</ChapterTitle>
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
-<dialog narrator="dialog/mario.svg"> hello </dialog>
 <Image> 
-    <img src="/dialog/happy2029.svg">
+    <img src="/images/chap_2.png">
 </Image>
 
 <Spacer />
