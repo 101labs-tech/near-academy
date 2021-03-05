@@ -57,7 +57,7 @@ export const HomeContainer = styled.div`
       p {
         font-size: 24px;
         line-height: 36px;
-        max-width: 590px;
+        max-width: 600px !important;
       }
       button {
         margin-top: 50px;
