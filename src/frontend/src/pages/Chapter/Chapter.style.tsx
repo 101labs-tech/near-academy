@@ -4,7 +4,7 @@ import { backgroundColorLight, borderColor, downColor, near4, near6, okColor, pr
 export const ChapterStyled = styled.div`
   background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 5fr 3fr;
   grid-gap: 20px;
   height: calc(100vh - 170px);
   margin: 70px 20px 0;
