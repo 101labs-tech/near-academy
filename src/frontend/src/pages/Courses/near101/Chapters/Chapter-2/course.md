@@ -85,4 +85,4 @@ The blockchain can be queried through the NEAR client, but a dedicated interface
 
 ## Exercise
 
-To find the job offer on Decentrajob. Visit the <a target="_blank" href="https://explorer.testnet.near.org/">testnet explorer</a> and search for the “decentrajob.testnet” account. Here you see an overview of all transactions that happened on that account. Look for the latest transaction set_open_job called by meme-museum.testnet and click on the link that looks something like 8xhSuM1...This will display the details about the transaction, including all arguments that were used to call the function. Select the correct answer.
+To find the job offer on Decentrajob. Visit the <a target="_blank" href="https://explorer.testnet.near.org/">testnet explorer</a> and search for the “decentrajob.testnet” account. Here you see an overview of all transactions that happened on that account. Look for the latest transaction set_open_job called by museum_director.testnet and click on the link that looks something like G8xp5V6...This will display the details about the transaction, including all arguments that were used to call the function. Select the correct answer.
