@@ -1,22 +1,13 @@
 export const questions = [
     {
-        question: "Question 1",
+        question: "Use the NEAR CLI view method to query the museum contract and report back the number of memes in the museum",
         answers: [
-            "Wrong 1",
-            "Wrong 2",
-            "Correct",
-            "Wrong 3"
+            "9001",
+            "100-200",
+            "42",
+            "4-30",
+            "1"
         ],
-        responses: ["Correct"],
-    },
-    {
-        question: "Question 2",
-        answers: [
-            "Correct 1",
-            "Correct 2",
-            "Wrong 1",
-            "Wrong 2"
-        ],
-        responses: ["Correct 1", "Correct 2"],
+        responses: ["4-30"],
     }
 ]
