@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import {
-    FullPage
+  FullPage
 } from 'styles'
 
 export const HomeStyled = styled.div`
@@ -124,7 +124,7 @@ export const HomeContainer = styled.div`
        .left {
             display: flex;
             flex-direction: column;
-            justify-elements: center;
+            justify-content: center;
             max-width: 690px;
             width:100%;
             margin: 0 auto;
