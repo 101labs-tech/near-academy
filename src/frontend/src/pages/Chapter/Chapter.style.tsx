@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+
 import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
@@ -48,14 +49,14 @@ export const ChapterCourse = styled.div`
   font-size: 22px;
 
   .view-line {
-    font-size: 25px;
+    font-size: 18px;
     /* text-align: right; */
     padding: 0 40px;
   }
 
   p {
     padding: 0 40px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 300;
     text-align: justify;
   }
@@ -67,7 +68,7 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #08658b;
+    color: #00c1de;
   }
 
   a:visited {
