@@ -55,7 +55,7 @@ export const ChapterCourse = styled.div`
 
   p {
     padding: 0 40px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     text-align: justify;
   }
