@@ -49,7 +49,7 @@ export const ChapterCourse = styled.div`
 
   .view-line {
     font-size: 25px;
-    text-align: right;
+    /* text-align: right; */
     padding: 0 40px;
   }
 
