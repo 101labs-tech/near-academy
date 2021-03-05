@@ -85,7 +85,7 @@ export const ChapterH1 = styled.div`
 
 export const ChapterH2 = styled.div`
   color: #ffb359;
-  padding: 0 40px;
+  padding: 20px 40px 10px 40px;
   font-weight: 900;
   font-size: 28px;
   text-align: justify;
@@ -251,7 +251,7 @@ export const BackgroundContainer = styled.div`
   color: white;
   padding: 40px 0;
   h1 {
-    color: #ffb359:
+    color: #ffb359;
   }
   
 `
