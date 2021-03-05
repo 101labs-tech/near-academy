@@ -13,7 +13,7 @@ export const TermsView = () => {
             This privacy policy will explain how our organization uses the personal data we collect from you when you
             use our website.
           </p>
-          <h1>What data do we collect?</h1>
+          <h2>What data do we collect?</h2>
           <p>near.academy collects the following data:</p>
           <ul>
             <li>
@@ -25,7 +25,7 @@ export const TermsView = () => {
             </li>
             <li>Anonymized website usage data </li>
           </ul>
-          <h1>How do we collect your data?</h1>
+          <h2>How do we collect your data?</h2>
           <p>
             You directly provide near.academy with most of the data we collect. We collect data and process data when
             you:
@@ -41,7 +41,7 @@ export const TermsView = () => {
           <ul>
             <li>Google Analytics</li>
           </ul>
-          <h1>How will we use your data?</h1>
+          <h2>How will we use your data?</h2>
           <p>near.academy collects your data so that we can:</p>
           <ul>
             <li>Process your order and manage your account.</li>
@@ -49,7 +49,7 @@ export const TermsView = () => {
             <li>Email you to invite you to join the Near Protocol Ambassador community</li>
           </ul>
           <p>near.academy does not share or sell your data with any other third party.</p>
-          <h1>How do we store your data?</h1>
+          <h2>How do we store your data?</h2>
           <p>
             near.academy securely stores your data in a server located in Frankfurt, Germany. The strictest security
             policies and technologies are used to keep your data secure.
@@ -58,7 +58,7 @@ export const TermsView = () => {
             near.academy will keep your data for a period of 10 years. Once this time period has expired, we will erase
             your data.
           </p>
-          <h1>Marketing</h1>
+          <h2>Marketing</h2>
           <p>
             near.academy may send you information related to Near Academy, Near Protocol or Near Protocol Ambassadors
             community.{' '}
@@ -67,7 +67,7 @@ export const TermsView = () => {
             You have the right at any time to stop near.academy from contacting you for any purposes. To do so, please
             contact us via email at the address provided.
           </p>
-          <h1>What are your data protection rights?</h1>
+          <h2>What are your data protection rights?</h2>
           <p>
             near.academy would like to make sure you are fully aware of all of your data protection rights. Every user
             is entitled to the following:
@@ -101,7 +101,7 @@ export const TermsView = () => {
             If you make a request, we have one month to respond to you. If you would like to exercise any of these
             rights, please contact us at our email: nearacademy@protonmail.com{' '}
           </p>
-          <h1>Cookies</h1>
+          <h2>Cookies</h2>
           <p>
             Cookies are text files placed on your computer to collect standard Internet log information and visitor
             behavior information. When you visit our websites, we may collect information from you automatically through
@@ -110,13 +110,13 @@ export const TermsView = () => {
           <p>
             For further information, visit <a href="https://allaboutcookies.org">allaboutcookies.org</a>
           </p>
-          <h1>How do we use cookies?</h1>
+          <h2>How do we use cookies?</h2>
           <p>near.academy uses cookies in a range of ways to improve your experience on our website, including:</p>
           <ul>
             <li>Keeping you signed in</li>
             <li>Understanding how you use our website</li>
           </ul>
-          <h1>What types of cookies do we use?</h1>
+          <h2>What types of cookies do we use?</h2>
           <p>There are a number of different types of cookies, however, our website uses:</p>
           <ul>
             <li>
@@ -130,28 +130,28 @@ export const TermsView = () => {
               address.
             </li>
           </ul>
-          <h1>How to manage cookies</h1>
+          <h2>How to manage cookies</h2>
           <p>
             You can set your browser not to accept cookies, and the above website tells you how to remove cookies from
             your browser. However, in a few cases, some of our website features may not function as a result.
           </p>
-          <h1>Privacy policies of other websites</h1>
+          <h2>Privacy policies of other websites</h2>
           <p>
             near.academy website contains links to other websites. Our privacy policy applies only to our website, so if
             you click on a link to another website, you should read their privacy policy.
           </p>
-          <h1>Changes to our privacy policy</h1>
+          <h2>Changes to our privacy policy</h2>
           <p>
             near.academy keeps its privacy policy under regular review and places any updates on this web page. This
             privacy policy was last updated on 13 October 2020.
           </p>
-          <h1>How to contact us</h1>
+          <h2>How to contact us</h2>
           <p>
             If you have any questions about near.academy privacy policy, the data we hold on you, or you would like to
             exercise one of your data protection rights, please email us at:{' '}
             <a href="mailto:nearacademy@protonmail.com">nearacademy@protonmail.com</a>
           </p>
-          <h1>How to contact the appropriate authority</h1>
+          <h2>How to contact the appropriate authority</h2>
           <p>
             Should you wish to report a complaint or if you feel that near.academy has not addressed your concern in a
             satisfactory manner, you may contact the Information Commissioner’s Office.
