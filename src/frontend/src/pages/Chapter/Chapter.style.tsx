@@ -47,6 +47,12 @@ export const ChapterCourse = styled.div`
   position: relative;
   font-size: 22px;
 
+  .view-line {
+    font-size: 25px;
+    text-align: right;
+    padding: 0 40px;
+  }
+
   p {
     padding: 0 40px;
     font-size: 25px;
