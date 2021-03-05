@@ -2,11 +2,12 @@ export const questions = [
     {
         question: "Select all available jobs from decentrajob.testnet",
         answers: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "Account Manager (senior)",
+            "Full Stack Web3 Developer (junior)",
+            "NFT token engineer (junior)",
+            "Janitor (senior)",
+            "Meme Specialist (senior)"
         ],
-        responses: ["A"],
+        responses: ["Full Stack Web3 Developer (junior)"],
     }
 ]

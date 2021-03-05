@@ -1,4 +1,4 @@
-<ChapterTitle>1\. Why Should You Care?</ChapterTitle>
+# 1. Why Should You Care?
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image>
@@ -33,8 +33,7 @@ Creators and influencers can launch their own “**social tokens**”. These tok
 
 Unlike Bitcoin, the “value” managed by blockchain networks is not necessarily “money”; in fact most Web3 projects provide a more human-centric definition of “value” called “utility”.
 
-<Spacer />
-##Welcome to the Internet of Value.
+## Welcome to the Internet of Value.
 
 These social tokens are just one of the multiple new primitives from Web3, which is shifting the internet away from an attention to engagement and shared value.
 
@@ -46,9 +45,7 @@ Without a native mechanism to save states on the internet, exchanges could be re
 
 **Blockchain technology has introduced a method to store the state of the network in a digitally native format**, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
 
-<Spacer />
-
-##Who benefits from this?
+## Who benefits from this?
 While cloud services enable businesses to focus more on their business logic and care less about infrastructure it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
 
 In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**. This is why they are also referred to as the “Open Web”.

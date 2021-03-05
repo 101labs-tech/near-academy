@@ -1,22 +1,11 @@
 export const questions = [
     {
-        question: "Question 1",
+        question: "Answer a simple question: What is a NEAR contract? Wrong answers only.",
         answers: [
-            "Wrong 1",
-            "Wrong 2",
-            "Correct",
-            "Wrong 3"
+            "A legal agreement for storing financial assets on the NEAR network",
+            "A fee perceived by contractors of the NEAR network",
+            "A transaction involving more than one party in the NEAR network"
         ],
-        responses: ["Correct"],
-    },
-    {
-        question: "Question 2",
-        answers: [
-            "Correct 1",
-            "Correct 2",
-            "Wrong 1",
-            "Wrong 2"
-        ],
-        responses: ["Correct 1", "Correct 2"],
+        responses: [],
     }
 ]
