@@ -1,8 +1,7 @@
 import styled from 'styled-components/macro'
-import { bgTextColor, primaryColor, near6, textColor } from 'styles'
+import { bgTextColor, near6, primaryColor, textColor } from 'styles'
 
 export const HeaderStyled = styled.div`
-  margin-bottom: 20px;
   position: relative;
   text-align: center;
   height: 50px;
