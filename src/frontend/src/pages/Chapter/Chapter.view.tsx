@@ -11,7 +11,7 @@ import { backgroundColorLight } from 'styles'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, Spacer, narrativeText } from './Chapter.style'
+import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer } from './Chapter.style'
 import { BackgroundContainer, ChapterTitle, Difficulty, Image, Quote, quoteComma } from './Chapter.style'
 
 monaco
@@ -66,7 +66,7 @@ const MonacoEditorSupport = ({ support }: any) => {
   return (
     <div>
       <Editor
-        height="500px"
+        height="600px"
         value={support}
         language="rust"
         theme="myCustomTheme"
@@ -89,7 +89,7 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
   return (
     <div>
       <ControlledEditor
-        height="500px"
+        height="600px"
         value={proposedSolution}
         language="rust"
         theme="myCustomTheme"
@@ -113,7 +113,7 @@ const MonacoDiff = ({ solution, proposedSolution }: any) => {
   return (
     <div>
       <DiffEditor
-        height="500px"
+        height="600px"
         original={proposedSolution}
         modified={solution}
         language="rust"
@@ -222,9 +222,9 @@ const Content = ({ course }: any) => (
         Quote: {
           component: Quote
         },
-          quoteComma: {
-              component: quoteComma
-          },
+        quoteComma: {
+          component: quoteComma
+        },
         Spacer: {
           component: Spacer
         },
@@ -303,25 +303,25 @@ export const ChapterView = ({
             ))}
           </ChapterQuestions>
         ) : (
-            <div>
-              {display === 'solution' ? (
-                <ChapterMonaco>
-                  {showDiff ? (
-                    <MonacoDiff solution={solution} proposedSolution={proposedSolution} />
-                  ) : (
-                      <MonacoEditor
-                        proposedSolution={proposedSolution}
-                        proposedSolutionCallback={proposedSolutionCallback}
-                      />
-                    )}
-                </ChapterMonaco>
-              ) : (
-                  <ChapterMonaco>
-                    <MonacoEditorSupport support={supports[display]} />
-                  </ChapterMonaco>
+          <div>
+            {display === 'solution' ? (
+              <ChapterMonaco>
+                {showDiff ? (
+                  <MonacoDiff solution={solution} proposedSolution={proposedSolution} />
+                ) : (
+                  <MonacoEditor
+                    proposedSolution={proposedSolution}
+                    proposedSolutionCallback={proposedSolutionCallback}
+                  />
                 )}
-            </div>
-          )}
+              </ChapterMonaco>
+            ) : (
+              <ChapterMonaco>
+                <MonacoEditorSupport support={supports[display]} />
+              </ChapterMonaco>
+            )}
+          </div>
+        )}
         <Validator validatorState={validatorState} validateCallback={validateCallback} />
       </ChapterGrid>
     </ChapterStyled>
