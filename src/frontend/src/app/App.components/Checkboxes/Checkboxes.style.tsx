@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { primaryColor, near5 } from 'styles'
+import { near5 } from 'styles'
 
 export const CheckboxesStyled = styled.div`
   padding: 1em;

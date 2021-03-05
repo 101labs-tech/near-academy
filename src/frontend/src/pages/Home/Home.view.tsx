@@ -24,7 +24,7 @@ export const HomeView = () => {
           <section className={"components second"}>
             <h1>Join the future</h1>
             <div className={"left"}>
-              <img src={'man.svg'} />
+              <img src={'man.svg'} alt="main character" />
               <p>The decentralized internet, or Web3, has been growing at a fast pace since its inception in 2008. It is now a magnet to talent, with more smart developers joining every day. Web3 monthly developers are up +15% over 2020, following investments in venture capital of about 900 Mio USD. </p>
               <p>This is not without similarities to the growth of internet services in the 2000s, and hints at significant development for years to come. Importantly, the infrastructure has matured, and makes it easy to create dApps, the decentralized equivalent to Apps. Do you have NPM installed?</p>
             </div>
@@ -45,18 +45,18 @@ export const HomeView = () => {
                 <Button text="GET STARTED" color="primary" />
               </Link>
             </div>
-            <img className={"museum-interior"} src={'museum_interior_x2.svg'} />
+            <img className={"museum-interior"} src={'museum_interior_x2.svg'} alt="museum interior" />
           </section>
 
           <footer className={"footer"}>
             <div className={"left"}>
-              <img src={'logo-white.svg'} />
+              <img src={'logo-white.svg'} alt="101 labs icon" />
               <p>Made by 101Labs.org</p>
             </div>
             <div className={"right"}>
-              <a href={"https://github.com"}> <img src={'github.svg'} /></a>
-              <a href={"https://twitter.com"}><img src={'twitter.svg'} /></a>
-              <a href={"https://telegram.com"}><img src={'telegram.svg'} /></a>
+              <a href={"https://github.com"}> <img src={'github.svg'} alt="github icon" /></a>
+              <a href={"https://twitter.com"}><img src={'twitter.svg'} alt="twitter icon" /></a>
+              <a href={"https://telegram.com"}><img src={'telegram.svg'} alt="telegram icon" /></a>
             </div>
           </footer>
 

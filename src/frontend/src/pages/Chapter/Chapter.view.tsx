@@ -6,7 +6,6 @@ import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useState } from 'react'
-import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'

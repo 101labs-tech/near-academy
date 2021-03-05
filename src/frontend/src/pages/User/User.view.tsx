@@ -1,7 +1,6 @@
 import { Button } from 'app/App.components/Button/Button.controller'
 import { Input } from 'app/App.components/Input/Input.controller'
 import { ChapterData } from 'pages/Chapter/Chapter.controller'
-import { courseData } from 'pages/Course/Course.data'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { Link } from 'react-router-dom'
@@ -57,7 +56,7 @@ export const UserView = ({
                     onClick={() => downloadCallback()}
                   />
                   <Link to={`/certificate/${user.username}`}>
-                    <Button type="button" text="Certified URL" icon="link" loading={loading} onClick={() => {}} />
+                    <Button type="button" text="Certified URL" icon="link" loading={loading} onClick={() => { }} />
                   </Link>
                 </UserBadgeButtons>
               ) : (
@@ -71,7 +70,7 @@ export const UserView = ({
                       setName(e.target.value)
                     }}
                     value={name}
-                    onBlur={() => {}}
+                    onBlur={() => { }}
                     inputStatus={undefined}
                     errorMessage={undefined}
                   />

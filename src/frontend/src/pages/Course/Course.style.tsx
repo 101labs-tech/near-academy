@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { backgroundColorLight, borderColor, textColor } from 'styles'
 
 export const CourseStyled = styled.div`
   display: grid;

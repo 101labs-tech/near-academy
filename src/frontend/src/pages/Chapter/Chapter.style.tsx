@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { backgroundColorLight, borderColor, downColor, near4, near6, okColor, primaryColor, textColor } from 'styles'
+import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
   background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
