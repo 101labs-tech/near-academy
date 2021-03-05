@@ -13,7 +13,6 @@
 That looks cool! The Museum is new, and you’d like to learn more about them. Nowadays, most jobs are filled and found via a decentralized marketplace, Decentrajob, the dApp that replaced Upwork back in 2025.
 
 Let’s have a closer look…
-
 </narrativeText>
 <Spacer />
 
@@ -78,10 +77,8 @@ Storing and distributing large static assets on a blockchain would be inefficien
 
 Besides cloud databases and other centralized solutions, data can be stored on P2P platforms such as the InterPlanetary File System (IPFS); P2P storage is a great alternative while maintaining a trustless environment for the dApp.
 
-**Check it for yourself with a Block Explorer!**
-The NEAR blockchain is public, so anyone can query it to get any data stored in it.  
-
-The blockchain can be queried through the NEAR client, but a dedicated interface is easier to use, and is accessible by anyone regardless whether they are running the NEAR software or not. Blockchain explorers, as these interfaces are called, can display blockchain data in a more user friendly way, and also enhance the entries with off-chain data like current dollar value of a token.
+## Check it for yourself with a Block Explorer!
+The NEAR blockchain is public, so anyone can query it to get any data stored in it. The blockchain can be queried through the NEAR client, but a dedicated interface is easier to use, and is accessible by anyone regardless whether they are running the NEAR software or not. Blockchain explorers, as these interfaces are called, can display blockchain data in a more user friendly way, and also enhance the entries with off-chain data like current dollar value of a token.
 
 ## Exercise
 
