@@ -1,7 +1,7 @@
 <ChapterTitle>1\. Why Should You Care?</ChapterTitle>
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
-<Image> 
+<Image>
     <img src="/images/chap_1.png">
 </Image>
 
@@ -27,31 +27,31 @@ The boom of blockchain and Web3 projects has fueled tremendous demand for web de
 
 Blockchain isn’t just about financial transactions. Social and community tokens power new types of blockchain applications centered around human networks and the growth of these networks. They can be designed to create shared value for communities with their own rules across adoption, viral marketing, and ownership.
 
-Creators and influencers can launch their own “social tokens”. These tokens may or may not carry monetary value; they are simply used in the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal standing to active governance of the community.
+Creators and influencers can launch their own “**social tokens**”. These tokens may or may not carry monetary value; they are simply used in the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal standing to active governance of the community.
 
 <Spacer />
 
 Unlike Bitcoin, the “value” managed by blockchain networks is not necessarily “money”; in fact most Web3 projects provide a more human-centric definition of “value” called “utility”.
 
 <Spacer />
-**Welcome to the Internet of Value.**
+##Welcome to the Internet of Value.
 
 These social tokens are just one of the multiple new primitives from Web3, which is shifting the internet away from an attention to engagement and shared value.
 
-Before Web3, the internet was a native mechanism to transfer what computer science refers to as state – the status of who is who, who owns what, and who has the right to do what.
+Before Web3, the internet was a native mechanism to transfer what computer science refers to as **state – the status of who is who, who owns what, and who has the right to do what.**
 
 State is a key property for enabling human ecosystems. The ability to easily and efficiently transfer value independently has been at the heart of exchanges between humans for centuries. When Alice gives 1 shell to Bob, their states change.
 
 Without a native mechanism to save states on the internet, exchanges could be recorded only through institutions acting as clearing entities.
 
-Blockchain technology has introduced a method to store the state of the network in a digitally native format, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
+**Blockchain technology has introduced a method to store the state of the network in a digitally native format**, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
 
 <Spacer />
 
-**Who benefits from this?**
+##Who benefits from this?
 While cloud services enable businesses to focus more on their business logic and care less about infrastructure it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
 
-In contrast, Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network. This is why they are also referred to as the “Open Web”.
+In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**. This is why they are also referred to as the “Open Web”.
 
 <Spacer />
 There are many advantages that a typical centralized architecture cannot provide:

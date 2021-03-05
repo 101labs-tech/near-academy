@@ -46,7 +46,7 @@ export const TermsView = () => {
           <ul>
             <li>Process your order and manage your account.</li>
             <li>Email you with information and news about near.academy or about Near Protocol.</li>
-            <li>Email you to invite you to join the Near Protocol Ambassador community</li>
+            <li>Email you to invite you to join the Near Protocol community</li>
           </ul>
           <p>near.academy does not share or sell your data with any other third party.</p>
           <h2>How do we store your data?</h2>
@@ -60,8 +60,7 @@ export const TermsView = () => {
           </p>
           <h2>Marketing</h2>
           <p>
-            near.academy may send you information related to Near Academy, Near Protocol or Near Protocol Ambassadors
-            community.{' '}
+            near.academy may send you information related to Near Academy, Near Protocol or Near Protocol community.{' '}
           </p>
           <p>
             You have the right at any time to stop near.academy from contacting you for any purposes. To do so, please
