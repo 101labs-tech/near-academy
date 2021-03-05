@@ -256,7 +256,7 @@ export const BackgroundContainer = styled.div`
   
 `
 export const Image = styled.div`
-  
+  margin-top: 40px;
 `
 
 export const Spacer = styled.div`
