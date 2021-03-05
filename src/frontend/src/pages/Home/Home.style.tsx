@@ -1,10 +1,9 @@
 import styled from 'styled-components/macro'
-import {
-  FullPage
-} from 'styles'
+import { FullPage } from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
+  background: white;
   > img {
     position: absolute;
     top: calc(33vh - 130px);
@@ -17,9 +16,6 @@ export const HomeStyled = styled.div`
 export const HomePage = styled(FullPage)``
 
 export const HomeContainer = styled.div`
-  //width: 590px;
-  margin-top: calc(30vh - 130px);
-
   > h1 {
     margin-bottom: 10px;
   }
@@ -342,12 +338,10 @@ export const HomeContainer = styled.div`
         .right {
             display: inline-flex;
             padding-top: 42px;
-            margin: 0 auto;
         }
         .left {
             padding-bottom: 20px;
             padding-top:0 ;
-            margin: 0 auto;
             text-align: center;
         }
         
