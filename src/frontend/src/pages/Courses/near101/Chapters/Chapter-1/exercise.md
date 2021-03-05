@@ -38,7 +38,7 @@ async function main() {
   const senderAccount = await near.account(sender);
 
   try {
-    // send those tokens
+    // TODO send those tokens here
     const result =  
     console.log("Transaction Results: ", result.transaction);
   } catch (error) {
