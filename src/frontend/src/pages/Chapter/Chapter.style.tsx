@@ -75,26 +75,20 @@ export const ChapterCourse = styled.div`
 `
 
 export const ChapterH1 = styled.div`
-  font-size: 32px;
+  font-size: 50px;
+  margin-top: 25px;
+  color: #1174CB;
   line-height: 38px;
   font-weight: 600;
-
-  @media (max-width: 900px) {
-    font-size: 24px;
-    line-height: 28px;
-  }
+  text-align: center;
 `
 
 export const ChapterH2 = styled.div`
-  font-size: 36px;
-  line-height: 28px;
-  margin-top: 20px;
   color: #ffb359;
-
-  @media (max-width: 900px) {
-    font-size: 20px;
-    line-height: 24px;
-  }
+  padding: 0 40px;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: justify;
 `
 
 export const ChapterH3 = styled.div`
