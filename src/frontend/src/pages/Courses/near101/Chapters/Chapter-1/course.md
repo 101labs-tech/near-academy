@@ -46,13 +46,12 @@ Without a native mechanism to save states on the internet, exchanges could be re
 **Blockchain technology has introduced a method to store the state of the network in a digitally native format**, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
 
 ## Who benefits from this?
+
 While cloud services enable businesses to focus more on their business logic and care less about infrastructure it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
 
 In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**. This is why they are also referred to as the “Open Web”.
 
-<Spacer />
 There are many advantages that a typical centralized architecture cannot provide:
-<Spacer />
 
 **Trust**
 Value transfers are operated in a peer-to-peer fashion, without trusted third-parties. That way, users are not dependent on a central entity or platform.

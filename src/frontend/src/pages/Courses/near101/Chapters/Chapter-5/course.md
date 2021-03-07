@@ -20,13 +20,14 @@
 Contracts are a set of functions that can read or alter the state of the NEAR Network. They are executed on the NEAR Virtual Machine (VM). A minimal “Hello, World!” code written in AssemblyScript looks like this:
 
 ```typescript
-export function hello(): string { return "Hello, World!";}
-
+export function hello(): string {
+  return 'Hello, World!'
+}
 ```
 
 After it was compiled to Wasm, the contract can be deployed to the NEAR blockchain. Deploying a contract means that it is uploaded and stored in the NEAR blockchain.
 
-Once deployed, the contract can be called in the NEAR VM like a script, served by Nodes on the NEAR blockchain. Anyone connected to the network can see and interact with the code. If a user  provides a valid input, the contract will deterministically produce its expected output. In this case “Hello, World!”.
+Once deployed, the contract can be called in the NEAR VM like a script, served by Nodes on the NEAR blockchain. Anyone connected to the network can see and interact with the code. If a user provides a valid input, the contract will deterministically produce its expected output. In this case “Hello, World!”.
 
 The contract can be called using the NEAR CLI:
 
@@ -42,11 +43,9 @@ Let’s look at hello_you() now. This contract invokes more than just a simple�
 
 ```typescript
 export function hello_you(): string {
-  return "Hello, " + context.sender + "!";
+  return 'Hello, ' + context.sender + '!'
 }
-
 ```
-
 
 Contract hello_you() does not alter the state of the blockchain, but it requires a call of context, which is an operation that validator nodes have to carry, and therefore gas to be paid.
 
@@ -54,17 +53,14 @@ Other "call" functions may alter the state of the blockchain. Gas must be paid t
 
 Consider the function register_me(). It takes a name and stores it on the blockchain, altering its state, and requiring an action.
 
-
 ```typescript
 export function register_me(): void {
- logging.log("saveMyName() was called");
- storage.setString("sender", context.sender);
+  logging.log('saveMyName() was called')
+  storage.setString('sender', context.sender)
 }
-
 ```
 
 Note that this time, the function does not return anything to view. This is what is indicated by “void”. The null output must be specified in the functions run on NEAR.
-
 
 ## Action
 
@@ -79,7 +75,6 @@ There are currently 8 supported action types:
 **6.Transfer** to move tokens from one account to another
 **7.Stake** to express interest in becoming a validator at the next available opportunity
 **8.DeployContract** to deploy a contract FunctionCall to invoke a method on a contract (including budget for compute and storage)
-
 
 ## Deployment
 

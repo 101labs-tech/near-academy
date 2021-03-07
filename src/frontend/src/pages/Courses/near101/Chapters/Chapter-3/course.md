@@ -33,22 +33,24 @@ The core platform, which is made up of the cloud of community-operated validator
 
 In order to clearly understand the NEAR platform, we may start to highlight these primitives:
 
-1\. **Assets.** Assets of all types (from money to data) are now digitally native, meaning they are verifiably unique, individually owned and completely programmable.
-2\.**Accounts.** Every actor in the ecosystem has an account which gives them secure storage for their assets, an easy way to verify their identity to applications and an accumulation of reputation over time
-3\.**Transactions.** Because assets are digitally native and accounts are part of the global pool, programmable transactions between parties are simple, cheap, secure and near-instant.
-4\.**Verification.** Because NEAR’s storage is an immutable public ledger, data and code that are saved to the platform are publicly verifiable.
+**1. Assets.** Assets of all types (from money to data) are now digitally native, meaning they are verifiably unique, individually owned and completely programmable.
+**2.Accounts.** Every actor in the ecosystem has an account which gives them secure storage for their assets, an easy way to verify their identity to applications and an accumulation of reputation over time
+**3\.Transactions.** Because assets are digitally native and accounts are part of the global pool, programmable transactions between parties are simple, cheap, secure and near-instant.
+**4\.Verification.** Because NEAR’s storage is an immutable public ledger, data and code that are saved to the platform are publicly verifiable.
 
 ## The NEAR token
+
 The NEAR platform uses a token — called “NEAR”. This token allows cloud resources, regardless of where they are in the world, to be fairly compensated for their services. Validator nodes get compensated in tokens for their service.
 The NEAR token is also used for voting and governance of the network. Token holders govern the network; updates about the future of the network are generated from the community and subject to a token-based governance process.
 
-To summarize, each NEAR  token can be used to:
+To summarize, each NEAR token can be used to:
 Pay the system for processing transactions and data storage.
 Run a validating node by participating in token staking.
 Govern how network resources are allocated and where its future technical direction will go.
 
 ## NEAR in Protocol in Numbers
-The NEAR network has been processing over 1.5M  transactions at time of writing, at a super high speed of 1 second per block on average. These are definitely encouraging numbers for a protocol that is so young.
+
+The NEAR network has been processing over 1.5M transactions at time of writing, at a super high speed of 1 second per block on average. These are definitely encouraging numbers for a protocol that is so young.
 
 The network is supported by 60 validator nodes and a large community, with already over 50’000 active accounts.
 
@@ -64,7 +66,8 @@ The network is supported by 60 validator nodes and a large community, with alrea
 
 The NEAR ecosystem is attracting developers and founders from all over the world. The network is production-ready, enabling the development of high-quality apps and services in record time.
 
-## Interoperability &  The bridge with Ethereum
+## Interoperability & The bridge with Ethereum
+
 With NEAR, developers should not have to choose between different blockchains like NEAR and Ethereum networks and commit to only one. Developers have the same asset on both blockchains and even have apps that seamlessly communicate across the boundary. This has been enabled by a bridge, called <a target="_blank" rel="noreferrer" href="https://github.com/near/rainbow-bridge" >Rainbow Bridge</a>, that requires the lowest possible trust level one can have for an interoperability solution.
 
 <Image>
@@ -82,7 +85,8 @@ With NEAR, developers should not have to choose between different blockchains li
 </narrativeText>
 
 ## NEAR Account Overview and Set Up
-NEAR uses readable account IDs  similar to Twitter handles. In addition, account IDs work like website domains; they can have sub-domains.
+
+NEAR uses readable account IDs similar to Twitter handles. In addition, account IDs work like website domains; they can have sub-domains.
 For example, only the account “alice” can create a sub-account like “work.alice”, and now only “work.alice” can create a “ http://dayjob.work.alice”.
 Each of these subaccounts has their own public key, so one account can have multiple public keys representing multiple profiles.
 
@@ -95,11 +99,11 @@ Imagine a NEAR based platform that register new user roles that have the ability
 ## Create your NEAR Test Network account
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
- <Image>
-     <img src="/images/chap_3_4.png">
- </Image>
+<Image>
+<img src="/images/chap_3_4.png">
+</Image>
 
-2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet.  If the nickname is available, you are ready to join the protocol!
+2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!
 
 <Image>
     <img src="/images/chap_3_5.png">
