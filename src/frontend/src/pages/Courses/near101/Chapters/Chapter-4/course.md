@@ -1,4 +1,4 @@
-# 4. NEAR Environment
+<ChapterTitle>NEAR Environment</ChapterTitle>
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
 <Image>

@@ -1,7 +1,7 @@
-# 5. On NEAR Contracts
+<ChapterTitle>NEAR Contracts</ChapterTitle>
 <Difficulty> Difficulty: 4/5 | Estimated reading time: 6 min </Difficulty>
 
-<Image> 
+<Image>
     <img src="/images/chap_5.png">
 </Image>
 

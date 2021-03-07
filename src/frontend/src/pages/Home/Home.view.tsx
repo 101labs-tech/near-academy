@@ -25,7 +25,7 @@ export const HomeView = () => {
             <h1>Join the future</h1>
             <div className={"left"}>
               <img src={'man.svg'} alt="main character" />
-              <p>The decentralized internet, or Web3, has been growing at a fast pace since its inception in 2008. It is now a magnet to talent, with more smart developers joining every day. Web3 monthly developers are up +15% over 2020, following investments in venture capital of about 900 Mio USD. </p>
+              <p>The decentralized internet, or Web3, has been growing at a fast pace since its inception in 2009. It is now a magnet to talent, with more smart developers joining every day. Web3 monthly developers are up +15% over 2020, following investments in venture capital of about 900 Mio USD. </p>
               <p>This is not without similarities to the growth of internet services in the 2000s, and hints at significant development for years to come. Importantly, the infrastructure has matured, and makes it easy to create dApps, the decentralized equivalent to Apps. Do you have NPM installed?</p>
             </div>
             <div className={"button--center"}>

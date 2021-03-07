@@ -1,13 +1,13 @@
-<ChapterTitle>6\. Deploy the Meme Contract</ChapterTitle>
+<ChapterTitle>Deploy the Meme Contract</ChapterTitle>
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
-<Image> 
+<Image>
     <img src="/images/chap_6.png">
 </Image>
 
 <Spacer />
 <narrativeText>
-Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum. 
+Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
 <Spacer />
 We’re all artists, after all!
 
@@ -16,7 +16,7 @@ We’re all artists, after all!
 
 **Now that you are more familiar with NEAR infrastructure and contracts, you are ready to learn how contracts may be used to orchestrate a meme museum.**
 
-Technically two contracts are used: the museum contract and the meme contract. The museum contract gives an overview of all available memes, and takes care of curation and governance. 
+Technically two contracts are used: the museum contract and the meme contract. The museum contract gives an overview of all available memes, and takes care of curation and governance.
 
 ## The Museum Contract
 
@@ -26,15 +26,15 @@ The museum contract offers a function to deploy a new meme contract to those who
 
 ```typescript
 export function add_meme (
-    meme: AccountId, 
-    title: string, 
-    data: string, 
+    meme: AccountId,
+    title: string,
+    data: string,
     category: Category): void
 ```
 
 The first argument, **AccountId**, is simply a string that is used to create a new address for the new meme. If you provide the string “alice” it will deploy the contract to *alice.meme-museum.testnet.* This also means that whitespace and “.” are not allowed for a valid name.
 
-The second argument sets the **title** of the meme. It’s just an ordinary string. 
+The second argument sets the **title** of the meme. It’s just an ordinary string.
 
 Since the meme-museum is cooperating with 9gag the **data** field must be a URL pointing to 9gag. 9gag is a centralized service which was chosen as a partner for storage because it does not allow offensive and inappropriate content. The meme museum could easily expand to other services and enable other URLs.
 
@@ -54,17 +54,17 @@ near call meme-museum.testnet add_meme \
 --accountId YOUR_ACCOUNT_NAME.testnet --amount 3
 ```
 
-Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: near view meme-museum.testnet get_meme_list. You may now also find it on the blockchain explorer, it is in the public domain now. 
+Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: near view meme-museum.testnet get_meme_list. You may now also find it on the blockchain explorer, it is in the public domain now.
 
 ## The Meme Contract
 
-As we just learned each meme contract lives on a newly created account that was created through the meme-museum.testnet account. In fact, the only way to get a meme-museum.testnet id is through interacting with the museum contract. 
+As we just learned each meme contract lives on a newly created account that was created through the meme-museum.testnet account. In fact, the only way to get a meme-museum.testnet id is through interacting with the museum contract.
 
 The meme contract contains 12 functions:
 
 ```typescript
-export function init(title: string, data: string, category: Category): void 
-export function get_meme(): Meme 
+export function init(title: string, data: string, category: Category): void
+export function get_meme(): Meme
 export function vote(value: i8): void
 export function batch_vote(value: i8, is_batch: bool = true): void
 export function get_recent_votes(): Array<Vote>
@@ -79,11 +79,11 @@ export function release_donations(account: AccountId): void
 
 The given functions are written in AssemblyScript. But they could also have been written in Rust or any other language that compiles to Wasm. But it is easier to understand and saves some compiling time compared to Rust which is great for prototyping and simple contracts.
 
-You can see that all functions are exported so that they can be called from other accounts. Every function has a name and optional arguments that must be of a specific type (custom types included). Every function needs to return something: void or another data type. 
+You can see that all functions are exported so that they can be called from other accounts. Every function has a name and optional arguments that must be of a specific type (custom types included). Every function needs to return something: void or another data type.
 
 We can classify these functions into two different kinds of functions: view functions and call functions.
 
-View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote_score is returned, which represents the total vote score for this specific meme: 
+View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote_score is returned, which represents the total vote score for this specific meme:
 
 ```typescript
 export function get_vote_score(): i32 {
@@ -103,11 +103,11 @@ export function add_comment(text: string): void {
 }
 ```
 
-This function add_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment. 
+This function add_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
 
 The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add_comment function.
 
-<Image> 
+<Image>
     <img src="/images/chap_6_1.png">
 </Image>
 

@@ -1,4 +1,4 @@
-# 2. Key Concepts of Web3
+<ChapterTitle>Key Concepts of Web3</ChapterTitle>
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <Image>
@@ -57,7 +57,7 @@ Users access and interact with dApps with a web browser just like any other App;
 
 Behind the scenes, the framework connecting users with digital services is slightly different with a dApp.
 
-Consider all the possible aspects of an application that may be decentralized: 
+Consider all the possible aspects of an application that may be decentralized:
  * Backend software (application logic)
  * Frontend software
  * Data storage
