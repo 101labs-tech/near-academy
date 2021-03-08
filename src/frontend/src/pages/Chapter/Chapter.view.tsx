@@ -17,7 +17,7 @@ monaco
   .init()
   .then((monacoInstance) => {
     monacoInstance.editor.defineTheme('myCustomTheme', {
-      base: 'GitHub',
+      base: 'vs-light',
       inherit: true,
       // rules: [
       //   { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
@@ -71,7 +71,7 @@ const MonacoEditorSupport = ({ support }: any) => {
         theme="myCustomTheme"
         options={{
           lineNumbers: true,
-          scrollBeyondLastLine: true,
+          scrollBeyondLastLine: false,
           minimap: { enabled: false },
           scrollbar: { vertical: 'hidden', verticalScrollbarSize: 0 },
           folding: true,
@@ -95,7 +95,7 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
         onChange={(_, val) => proposedSolutionCallback(val)}
         options={{
           lineNumbers: true,
-          scrollBeyondLastLine: true,
+          scrollBeyondLastLine: false,
           minimap: { enabled: false },
           scrollbar: { vertical: 'hidden', verticalScrollbarSize: 0 },
           folding: true,
@@ -120,7 +120,7 @@ const MonacoDiff = ({ solution, proposedSolution }: any) => {
         theme="myCustomTheme"
         options={{
           lineNumbers: true,
-          scrollBeyondLastLine: true,
+          scrollBeyondLastLine: false,
           minimap: { enabled: false },
           scrollbar: { vertical: 'hidden', verticalScrollbarSize: 0 },
           folding: true,
