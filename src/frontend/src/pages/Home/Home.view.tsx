@@ -54,9 +54,9 @@ export const HomeView = () => {
               <p>Made by 101Labs.org</p>
             </div>
             <div className={"right"}>
-              <a href={"https://github.com"}> <img src={'github.svg'} alt="github icon" /></a>
-              <a href={"https://twitter.com"}><img src={'twitter.svg'} alt="twitter icon" /></a>
-              <a href={"https://telegram.com"}><img src={'telegram.svg'} alt="telegram icon" /></a>
+              <a href={"https://github.com/near"}> <img src={'github.svg'} alt="github icon" /></a>
+              <a href={"https://twitter.com/NEARProtocol"}><img src={'twitter.svg'} alt="twitter icon" /></a>
+              <a href={"https://t.me/cryptonear"}><img src={'telegram.svg'} alt="telegram icon" /></a>
             </div>
           </footer>
 
