@@ -1,5 +1,4 @@
-# Deploy the Meme Contract
-
+<ChapterTitle>The Meme & Museum Contracts</ChapterTitle>
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
 <Image>
