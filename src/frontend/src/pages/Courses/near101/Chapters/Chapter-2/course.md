@@ -1,4 +1,5 @@
-<ChapterTitle>Key Concepts of Web3</ChapterTitle>
+# Key Concepts of Web3
+
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <Image>

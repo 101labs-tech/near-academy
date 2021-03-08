@@ -1,4 +1,5 @@
-<ChapterTitle>What is NEAR?</ChapterTitle>
+# What is NEAR?
+
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <Image>

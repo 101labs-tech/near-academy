@@ -1,14 +1,10 @@
 // Here is your easy win to get started: integrate the payment gateway in line 44.
 // Make sure you do not add extra spaces for code validation purposes.
-
 const nearAPI = require("near-api-js");
 const { connect, KeyPair, keyStores, utils } = nearAPI;
-
-//this is required if using a local .env file for private key
-require("dotenv").config();
+const { config } = require('./config'); // loads config settings
 
 // configure accounts, network, and amount of NEAR to send
-// converts NEAR amount into yoctoNEAR (10^-24) using a near-api-js utility
 const sender = "sender.testnet";
 const receiver = "receiver.testnet";
 const networkId = "testnet";
@@ -22,30 +18,12 @@ async function main() {
   // adds the key you just created to your keyStore which can hold multiple keys
   await keyStore.setKey(networkId, sender, keyPair);
 
-  // configuration used to connect to NEAR
-  const config = {
-    networkId,
-    keyStore,
-    nodeUrl: `https://rpc.${networkId}.near.org`,
-    walletUrl: `https://wallet.${networkId}.near.org`,
-    helperUrl: `https://helper.${networkId}.near.org`,
-    explorerUrl: `https://explorer.${networkId}.near.org`,
-  };
-
   // connect to NEAR! :)
   const near = await connect(config);
   // create a NEAR account object
   const senderAccount = await near.account(sender);
 
-  try {
-    // TODO send those tokens here
-    const result = sender.sendMoney(receiver, amount);
-    console.log("Transaction Results: ", result.transaction);
-  } catch (error) {
-    // return an error if unsuccessful
-    console.log(error);
-  }
+  // TODO send those tokens here
+  const result = ;
+  console.log("Transaction Results: ", result.transaction);
 }
-
-// run the function
-main();
