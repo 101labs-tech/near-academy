@@ -1,4 +1,5 @@
-<ChapterTitle>The Meme & Museum Contracts</ChapterTitle>
+# The Meme and Museum Contracts
+
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
 <Image>
