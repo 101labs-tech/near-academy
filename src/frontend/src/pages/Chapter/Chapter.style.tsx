@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-
 import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
@@ -56,7 +55,7 @@ export const ChapterCourse = styled.div`
 
   p {
     padding: 0 40px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 300;
     text-align: justify;
   }
@@ -68,11 +67,16 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #00c1de;
+    color: #00C1DE;
   }
 
   a:visited {
     color: #0f9ba4;
+  }
+
+  ul {
+    font-size: 19px;
+    padding-left: 60px;
   }
 `
 
@@ -86,7 +90,7 @@ export const ChapterH1 = styled.div`
 `
 
 export const ChapterH2 = styled.div`
-  color: #ffb359;
+  color: #0072CE;
   padding: 20px 40px 10px 40px;
   font-weight: 900;
   font-size: 28px;
@@ -230,19 +234,6 @@ export const ChapterLocked = styled.div`
   margin: 70px 20px 0;
 `
 
-export const ChapterTitle = styled.div`
-  font-size: 50px;
-  margin-top: 25px;
-  color: #1174CB;
-  line-height: 38px;
-  font-weight: 600;
-  text-align: center;
-
-  /* @media (max-width: 900px) {
-    font-size: 24px;
-    line-height: 28px;
-  } */
-`
 export const Difficulty = styled.div`
   margin-top: 15px;
   text-align: center;

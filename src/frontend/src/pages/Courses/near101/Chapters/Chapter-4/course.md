@@ -1,4 +1,5 @@
-<ChapterTitle>NEAR Environment</ChapterTitle>
+# NEAR Environment
+
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
 <Image>

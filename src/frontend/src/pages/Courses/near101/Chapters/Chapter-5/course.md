@@ -1,4 +1,5 @@
-<ChapterTitle>NEAR Contracts</ChapterTitle>
+# NEAR Contracts
+
 <Difficulty> Difficulty: 4/5 | Estimated reading time: 6 min </Difficulty>
 
 <Image>

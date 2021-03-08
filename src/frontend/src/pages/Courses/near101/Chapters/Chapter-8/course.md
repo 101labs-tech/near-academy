@@ -1,4 +1,5 @@
-<ChapterTitle>What Next</ChapterTitle>
+# What Next
+
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image>
@@ -25,6 +26,7 @@ The network is production-ready, enabling the development of high-quality dApps 
 **As more developers consider joining NEAR, why shouldn’t you?**
 
 Here are a few ways to get involved, regardless of your skills or the time you have at hand. It’s worth it!
+
 - <a target="_blank" rel="noreferrer" href="https://near.org/contributor/">Become a Contributor</a>. Contribute to NEAR technical content and libraries. The benefits are several such as having a global impact into Web3 development and monetary reward from NEAR Foundation.
 - <a target="_blank" rel="noreferrer" href="https://near.org/guilds/">Join a Guild</a>. Building a community and earn engagement-based rewards for it. NEAR Guilds are a new way for a decentralized community to organize in an agile way. Participate in Events.
 - <a target="_blank" rel="noreferrer" href="https://near.org/events/">Participate in events across the globe and online</a>.
@@ -36,6 +38,7 @@ Here are a few ways to get involved, regardless of your skills or the time you h
 Grants are available for a multitude of contributions, like extending the NEAR infrastructure, developer tooling and documentation, validator and staking resources, open source libraries, public goods projects, research & development, decentralized applications with open source components, educational materials for developers, social impact, and interoperability solutions.
 
 Previous grants have already seen amazing innovation comes to light:
+
 - <a target="_blank" rel="noreferrer" href="https://liquality.io/">Liquality</a> (cross-chain atomic swaps)
 - <a target="_blank" rel="noreferrer" href="https://walletconnect.org/">WalletConnect</a> (wallet interoperability)
 - <a target="_blank" rel="noreferrer" href="http://abridged.io/">Abridged/Collab.Land</a> (token-permissioned communities)
@@ -43,5 +46,6 @@ Previous grants have already seen amazing innovation comes to light:
 - <a target="_blank" rel="noreferrer" href="https://www.near-staking.com/">NEAR-Staking.com</a> (validator resources)
 
 If you liked the meme museum theme, you might like some real projects happening in that space, the main ones at time of writing are:
+
 - <a target="_blank" rel="noreferrer" href="https://paras.id/">Paras</a>. All-in-one social Digital Art Cards (DAC) marketplace for creators and collectors.
 - <a target="_blank" rel="noreferrer" href="https://mintbase.io/">Mintbase</a>. Global platform that allows anyone, including those with less technical backgrounds, to create their own digital assets verified on multiple blockchains. Mintbase provides creators (minters) with various creative allocation and redemption mechanisms for their customers.

@@ -1,4 +1,5 @@
-<ChapterTitle>Build your Interface</ChapterTitle>
+# Build your Interface
+
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image>
@@ -38,24 +39,26 @@ const nearConfig = getConfig(process.env.NODE_ENV || 'development')
 
 // Initialize contract & set global variables
 export async function initContract() {
- // Initialize connection to the NEAR testnet.
- // Note that the keys are saved in local storage and never leave the client!
- const near = await connect(Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig))
+  // Initialize connection to the NEAR testnet.
+  // Note that the keys are saved in local storage and never leave the client!
+  const near = await connect(
+    Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig),
+  )
 
- // Initializing Wallet based Account. It can work with NEAR testnet wallet that
- // is hosted at https://wallet.testnet.near.org
- window.walletConnection = new WalletConnection(near)
+  // Initializing Wallet based Account. It can work with NEAR testnet wallet that
+  // is hosted at https://wallet.testnet.near.org
+  window.walletConnection = new WalletConnection(near)
 
- // Getting the Account ID. If still unauthorized, it's just empty string
- window.accountId = window.walletConnection.getAccountId()
+  // Getting the Account ID. If still unauthorized, it's just empty string
+  window.accountId = window.walletConnection.getAccountId()
 
- // Initializing our contract APIs by contract name and configuration
- window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
-   // View methods are read only. They don't modify the state, but usually return some value.
-   viewMethods: ['get_meme_list'],
-   // Change (“call”) methods can modify the state. But you don't receive the returned value when called.
-   changeMethods: ['create_meme'],
- })
+  // Initializing our contract APIs by contract name and configuration
+  window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
+    // View methods are read only. They don't modify the state, but usually return some value.
+    viewMethods: ['get_meme_list'],
+    // Change (“call”) methods can modify the state. But you don't receive the returned value when called.
+    changeMethods: ['create_meme'],
+  })
 }
 ```
 
@@ -63,17 +66,16 @@ This initContract function initializes our contract APIs by using a contract nam
 
 That's all you need to know about configuration to get started. The rest works just like any other function calling an API.
 
-Looking at  index.js, we see that we can achieve our goal with four short functions.
-
+Looking at index.js, we see that we can achieve our goal with four short functions.
 
 **1. Get the list of all Memes in the Museum**
 We just use the name that was defined for the function in the contract to call it.
 
 ```typescript
-let memeLIst = [];
+let memeLIst = []
 async function getMemeList() {
-   memeList =  await window.contract.get_meme_list()
-   // ... DOM manipulation here
+  memeList = await window.contract.get_meme_list()
+  // ... DOM manipulation here
 }
 ```
 
@@ -102,14 +104,14 @@ meme + “.” + nearConfig.contractName,
 Here we go. We have all the contracts ready and call the get_meme function for each of them to display the results.
 
 ```typescript
-const memes = [];
+const memes = []
 async function showMemes() {
-   memeContracts.forEach(async memeContract => {
+  memeContracts.forEach(async (memeContract) => {
     memes.push(memeContract.get_meme())
   })
   await Promise.all(memes)
   console.log(memes)
-   // ... DOM manipulation here
+  // ... DOM manipulation here
 }
 ```
 
@@ -119,9 +121,9 @@ Adding a comment to a Meme is just as easy as calling the function set_comment a
 
 ```typescript
 async function setComment(memeIndex, text) {
-const result = await memes[memeIndex].set_comment(text);
-console.log(result)
-      // ... DOM manipulation here
+  const result = await memes[memeIndex].set_comment(text)
+  console.log(result)
+  // ... DOM manipulation here
 }
 ```
 
@@ -136,7 +138,6 @@ The given example is written in plain javascript to keep it simple. But you coul
 Alright, that is all you need to get started. Now make it beautiful and add more features.
 
 ## How to enhance your contract(s) and what's next?
-
 
 Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app ">https://github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
 

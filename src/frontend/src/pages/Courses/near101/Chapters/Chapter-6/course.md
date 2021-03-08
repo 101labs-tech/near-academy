@@ -20,19 +20,15 @@ Technically two contracts are used: the museum contract and the meme contract. T
 
 ## The Museum Contract
 
-Everyone can register to the museum as a contributor. Registration ensures that all the memes deployed have the same properties and  behave the same because they use the same meme code from the museum contract. If everyone could register their own meme contract to the museum, it would be impossible to know if a given contract does what it is intended to do.
+Everyone can register to the museum as a contributor. Registration ensures that all the memes deployed have the same properties and behave the same because they use the same meme code from the museum contract. If everyone could register their own meme contract to the museum, it would be impossible to know if a given contract does what it is intended to do.
 
 The museum contract offers a function to deploy a new meme contract to those who have registered at the museum.
 
 ```typescript
-export function add_meme (
-    meme: AccountId,
-    title: string,
-    data: string,
-    category: Category): void
+export function add_meme(meme: AccountId, title: string, data: string, category: Category): void
 ```
 
-The first argument, **AccountId**, is simply a string that is used to create a new address for the new meme. If you provide the string “alice” it will deploy the contract to *alice.meme-museum.testnet.* This also means that whitespace and “.” are not allowed for a valid name.
+The first argument, **AccountId**, is simply a string that is used to create a new address for the new meme. If you provide the string “alice” it will deploy the contract to _alice.meme-museum.testnet._ This also means that whitespace and “.” are not allowed for a valid name.
 
 The second argument sets the **title** of the meme. It’s just an ordinary string.
 
@@ -87,8 +83,8 @@ View functions do NOT alter contract state. As we’ve seen before the execution
 
 ```typescript
 export function get_vote_score(): i32 {
- 	assert_contract_is_initialized()
- 	return Meme.get().vote_score
+  assert_contract_is_initialized()
+  return Meme.get().vote_score
 }
 ```
 
@@ -96,10 +92,10 @@ Call functions are the ones that alter a contract state. This means that somethi
 
 ```typescript
 export function add_comment(text: string): void {
- assert_contract_is_initialized()
- assert(context.sender == context.predecessor, "Users must comment directly")
- assert_reasonable_comment_length(text)
- Meme.add_comment(text)
+  assert_contract_is_initialized()
+  assert(context.sender == context.predecessor, 'Users must comment directly')
+  assert_reasonable_comment_length(text)
+  Meme.add_comment(text)
 }
 ```
 

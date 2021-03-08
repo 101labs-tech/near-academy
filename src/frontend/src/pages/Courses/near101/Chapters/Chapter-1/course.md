@@ -1,4 +1,5 @@
-<ChapterTitle> Why Should You Care?</ChapterTitle>
+# Why Should You Care?
+
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <Image>
