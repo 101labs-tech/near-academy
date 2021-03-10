@@ -138,7 +138,7 @@ export const HomeContainer = styled.div`
   }
   
   footer.footer {
-    background-color: black;
+    background-color: #000000;
     height: 190px;
     margin: 0 -5vw;
     display: flex;

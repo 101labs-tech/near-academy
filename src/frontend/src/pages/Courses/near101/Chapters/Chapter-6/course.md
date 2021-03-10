@@ -2,17 +2,17 @@
 
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
-<Image>
+<ImageContainer>
     <img src="/images/chap_6.png">
-</Image>
+</ImageContainer>
 
 <Spacer />
-<narrativeText>
+<BackgroundContainer>
 Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
 <Spacer />
 We’re all artists, after all!
 
-</narrativeText>
+</BackgroundContainer>
 <Spacer />
 
 **Now that you are more familiar with NEAR infrastructure and contracts, you are ready to learn how contracts may be used to orchestrate a meme museum.**
@@ -104,14 +104,14 @@ This function add_comment takes a string and saves it in the contract. When done
 
 The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add_comment function.
 
-<Image>
-    <img src="/images/chap_6_1.png">
-</Image>
-
 <Spacer />
-<narrativeText>
+<narrativeText style="background: #00C08B;">
+<div>
+<img src="/images/chap_6_1.png">
+</div>
+<div>
 “I really like what you’re doing!”
 <Spacer />
 “Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”
-
+</div>
 </narrativeText>

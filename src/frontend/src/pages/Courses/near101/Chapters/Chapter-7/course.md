@@ -1,20 +1,18 @@
 # Build your Interface
 
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
-
-<Image>
-    <img src="/images/chap_7.png">
-</Image>
-
 <Spacer />
 
-<narrativeText>
+<narrativeText style="background: #0072CE;">
+<div><img src="/images/chap_7.png">
+</div>
+<div>
 People from all over the world can be connected through memes they like. Oh wait,... not quite!
 <Spacer />
 Before this all works, you have to provide them an easy interface to interact with the contracts, of course. Even in 2029 not everyone is a master with terminals.  
 <Spacer />
 Ethan has started to create an application already.
-
+</div>
 </narrativeText>
 
 The contracts have been deployed, you don’t really have to worry about them anymore. Now is the time to focus on the interface and connecting it with the contracts backend. The designs are not available yet but we can keep working on functionality.
@@ -27,9 +25,9 @@ You see there is a src folder that contains the files to interact with NEAR and 
 
 As we know there is the museum contract with a function get_meme_list. We called it via the NEAR cli before and we can do the same now with the near-api-js. You see that it does not matter how you connect to NEAR as long as it follows a specific protocol. The setup to get connected to NEAR is just a few lines.
 
-<Image>
+<ImageContainer>
     <img src="/images/chap_7_1.png">
-</Image>
+<ImageContainer>
 
 ```typescript
 import { connect, Contract, keyStores, WalletConnection } from 'near-api-js'

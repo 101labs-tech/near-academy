@@ -2,18 +2,17 @@
 
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
-<Image>
-    <img src="/images/chap_4.png">
-</Image>
-
-<Spacer />
-<narrativeText>
-It’s always something to start in a new environment. And you’ve decided to make the best of it.
-<Spacer />
-“You’re all set now. Let’s get to work! “
-<Spacer />
-“You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… ”
-
+<narrativeText style="background: #00C08B;">
+    <div>
+        <img src="/images/chap_4.png">
+    </div>
+    <div>
+        It’s always something to start in a new environment. And you’ve decided to make the best of it.
+        <Spacer />
+        “You’re all set now. Let’s get to work! “
+        <Spacer />
+        “You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… ”
+    </div>
 </narrativeText>
 <Spacer />
 
@@ -22,9 +21,9 @@ The benefits of adding such a truth service to an App include handling money, ow
 
 Backend development usually happens on a local machine and is deployed on a controlled server. Access to others is given through APIs and the code and access is completely controlled by the owner of the server.
 
-<Image>
+<ImageContainer>
     <img src="/images/chap_4_1.png">
-</Image>
+</ImageContainer>
 
 ## Layer 3 — App Layer (Your App BackEnd + FrontEnd)
 
@@ -66,16 +65,16 @@ The goal for gas is to represent a unified measure of resources spent to receive
 
 The cost of each instruction is denominated in “gas” units. Bandwidth is usually measured in bytes, but in the NEAR platform it is converted into gas units by using a simple coefficient of overhead which has been estimated on reference hardware.
 
-<Image>
-    <img src="/images/chap_4_2.png">
-</Image>
-
 <Spacer />
-<narrativeText>
-“Alrighty, I see you’ve still got a hang of it!”
-<Spacer />
-“Awesome, we can start running some code through the near-cli now”
-
+<narrativeText style="background: #0072CE">
+    <div>
+        <img src="/images/chap_4_2.png">
+    </div>
+    <div>
+        “Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now”
+        <Spacer />
+        "Interacting with the network via a terminal is simple and effective."
+    </div>
 </narrativeText>
 <Spacer />
 
@@ -92,9 +91,9 @@ Since we are interested in calling a simple function and getting a quick answer 
 4\. Now the contract name is “meme-museum.testnet” and the method is called “getMemecount”. So type: "near view meme-museum.testnet get_meme_count". This will return you the amount of memes that are registered in the museum.
 5\. Congratulations. You just called a contract on NEAR.
 
- <Image>
+ <ImageContainer>
      <img src="/images/chap_4_3.png">
- </Image>
+ </ImageContainer>
 
 <Spacer />
 

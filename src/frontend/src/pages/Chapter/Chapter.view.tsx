@@ -11,7 +11,7 @@ import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
 import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer } from './Chapter.style'
-import { BackgroundContainer, Difficulty, Image, Quote, quoteComma } from './Chapter.style'
+import { BackgroundContainer, Difficulty, ImageContainer, Quote, quoteComma } from './Chapter.style'
 
 monaco
   .init()
@@ -212,8 +212,8 @@ const Content = ({ course }: any) => (
         Difficulty: {
           component: Difficulty
         },
-        Image: {
-          component: Image
+        ImageContainer: {
+          component: ImageContainer
         },
         Quote: {
           component: Quote

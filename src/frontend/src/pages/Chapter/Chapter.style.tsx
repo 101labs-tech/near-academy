@@ -67,11 +67,15 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #00C1DE;
+    color: #0072CE;
   }
 
   a:visited {
-    color: #0f9ba4;
+    color: #29dbf7;
+  }
+
+  a {
+    color: #00C1DE;
   }
 
   ul {
@@ -235,7 +239,7 @@ export const ChapterLocked = styled.div`
 `
 
 export const Difficulty = styled.div`
-  margin-top: 15px;
+  margin: 15px 0px;
   text-align: center;
   
 `
@@ -248,7 +252,7 @@ export const BackgroundContainer = styled.div`
   }
   
 `
-export const Image = styled.div`
+export const ImageContainer = styled.div`
   margin-top: 40px;
 `
 
@@ -257,9 +261,16 @@ export const Spacer = styled.div`
 `
 
 export const narrativeText = styled.div`
-    font-weight: 500;
-    background-color: #f2f2f2;
-    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #f2f2f2;
+    padding: 40px 40px;
+    max-height: 330px;
+    overflow: hidden;
 `
 
 export const Quote = styled.div`

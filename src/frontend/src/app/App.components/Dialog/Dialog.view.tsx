@@ -11,7 +11,7 @@ type DialogProps = {
 export const DialogView = ({ text, character }: DialogProps) => {
   return (
     <DialogStyled>
-      <DialogCharacter alt="character-bg" src={`/dialog/${character}.svg`} />
+      <DialogCharacter alt="character-bg" src={`/dialog/${character}`} />
       <DialogText>{text}</DialogText>
     </DialogStyled>
   )

@@ -2,17 +2,14 @@
 
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
-<Image>
-    <img src="/images/chap_3.png">
-</Image>
-
-<Spacer />
-<narrativeText>
-Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
-This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
-<Spacer />
-"Today we're going to bring you up to speed with the latest stack from NEAR, and get you your work account which you will use for everything from now on."
-
+<narrativeText style="background: #00C08B">
+ <div><img src="/images/chap_3.png"></div>
+ <div>
+    Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
+    This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
+    <Spacer />
+    "Today we're going to bring you up to speed with the latest stack from NEAR, and get you your work account which you will use for everything from now on."
+</div>
 </narrativeText>
 <Spacer />
 
@@ -55,14 +52,14 @@ The NEAR network has been processing over 1.5M transactions at time of writing, 
 
 The network is supported by 60 validator nodes and a large community, with already over 50’000 active accounts.
 
-<Image>
+<ImageContainer>
     <img src="/images/chap_3_1.png">
-</Image>
+</ImageContainer>
 <Spacer />
 
-<Image>
+<ImageContainer>
     <img src="/images/chap_3_2.png">
-</Image>
+</ImageContainer>
 <Spacer />
 
 The NEAR ecosystem is attracting developers and founders from all over the world. The network is production-ready, enabling the development of high-quality apps and services in record time.
@@ -71,18 +68,18 @@ The NEAR ecosystem is attracting developers and founders from all over the world
 
 With NEAR, developers should not have to choose between different blockchains like NEAR and Ethereum networks and commit to only one. Developers have the same asset on both blockchains and even have apps that seamlessly communicate across the boundary. This has been enabled by a bridge, called <a target="_blank" rel="noreferrer" href="https://github.com/near/rainbow-bridge" >Rainbow Bridge</a>, that requires the lowest possible trust level one can have for an interoperability solution.
 
-<Image>
+<Spacer />
+
+<narrativeText style="background: #0072CE">
+    <div>
     <img src="/images/chap_3_3.png">
-</Image>
-
-<Spacer />
-
-<narrativeText>
-“Hey there, I’m Ethan, welcome to the team!”
-“Nice to meet you! I checked your personal account, you’re a rockstar !”
-<Spacer />
-“Let me show you how to set up a Testnet Account”
-
+    </div>
+    <div>
+        “Hey there, I’m Ethan, welcome to the team!”
+        “Nice to meet you! I checked your personal account, you’re a rockstar !”
+        <Spacer />
+        “Let me show you how to set up a Testnet Account”
+    </div>
 </narrativeText>
 
 ## NEAR Account Overview and Set Up
@@ -100,15 +97,15 @@ Imagine a NEAR based platform that register new user roles that have the ability
 ## Create your NEAR Test Network account
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
-<Image>
-<img src="/images/chap_3_4.png">
-</Image>
+<ImageContainer>
+<img style="max-width: 550px" src="/images/chap_3_4.png">
+</ImageContainer>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!
 
-<Image>
-    <img src="/images/chap_3_5.png">
-</Image>
+<ImageContainer>
+    <img style="max-width: 550px" src="/images/chap_3_5.png">
+</ImageContainer>
 
 3\. Now it is the time to choose the security method to secure and recover your account.
 4\. For simplicity, using Email Recovery is OK on the test network as it is simpler and quicker. This is however not very secure and wouldn’t be advised for the main network.

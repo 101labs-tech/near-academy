@@ -2,19 +2,19 @@
 
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
-<Image>
-    <img src="/images/chap_8.png">
-</Image>
-
 <Spacer />
 
-<narrativeText>
+<narrativeText style="background: #00C08B">
+<div>
+ <img src="/images/chap_8.png">
+</div>
+<div>
 “Oh it’s great i bump into you now”
 <Spacer />
 “I meant to tell you, everyone at the museum is delighted with your work. We’re so lucky to have you onboard!”  
 <Spacer />
 “I’d like you to meet everyone you haven’t met yet. Join us for afterwork, that’s where everyone hangs out at this time!”
-
+</div>
 </narrativeText>
 
 You’ve now been exposed to how dApps are built with NEAR. It’s not that much, but it’s already sufficient for you to create your first dApps!

@@ -2,17 +2,17 @@
 
 <Difficulty> Difficulty: 4/5 | Estimated reading time: 6 min </Difficulty>
 
-<Image>
-    <img src="/images/chap_5.png">
-</Image>
-
 <Spacer />
 
-<narrativeText>
+<narrativeText style="background: #00C08B">
+<div>
+ <img src="/images/chap_5.png">
+</div>
+<div>
 "When you checked the meme collection status, you actually interacted with a contract on the NEAR Network. As a matter of fact, the museum is orchestrated mostly automatically via a multitude of codes deployed on NEAR  that interact with each other."
 <Spacer />
 "I’m so glad to be back at work, digital detox was a bad idea! Imagine living without the internet for a week?! My god, I’m so much better with my smart contracts code. I see the beauty in their rules, like an invisible chaos behind the face of order."
-
+</div>
 </narrativeText>
 <Spacer />
 
