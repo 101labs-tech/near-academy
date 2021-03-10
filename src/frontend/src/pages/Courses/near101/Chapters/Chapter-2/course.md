@@ -48,7 +48,7 @@ In a dApp, security and access are provided by cryptography (public/private keys
 
 <ImageContainer>
     <img src="/images/chap_2_1.png">
-<ImageContainer>
+</ImageContainer>
 
 For users, access to the open web is based only on a private key, which is used to unlock all dApps and services on the blockchain.
 

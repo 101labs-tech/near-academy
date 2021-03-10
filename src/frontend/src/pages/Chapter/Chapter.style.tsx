@@ -81,6 +81,7 @@ export const ChapterCourse = styled.div`
   ul {
     font-size: 19px;
     padding-left: 60px;
+    font-weight: 300;
   }
 `
 

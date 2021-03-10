@@ -27,7 +27,7 @@ The boom of blockchain and Web3 projects has fueled tremendous demand for web de
 
 Blockchain isn’t just about financial transactions. Social and community tokens power new types of blockchain applications centered around human networks and the growth of these networks. They can be designed to create shared value for communities with their own rules across adoption, viral marketing, and ownership.
 
-Creators and influencers can launch their own “**social tokens**”. These tokens may or may not carry monetary value; they are simply used in the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal standing to active governance of the community.
+Creators and influencers can launch their own **social tokens**. These tokens may or may not carry monetary value; they are simply used in the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal standing to active governance of the community.
 
 <Spacer />
 
