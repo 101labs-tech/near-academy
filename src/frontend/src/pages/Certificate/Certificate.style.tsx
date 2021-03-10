@@ -27,7 +27,7 @@ export const CertificateNone = styled.div`
   font-size: 40px;
   width: 100vw;
   left: 0px;
-  color: #fff;
+  color: #000;
   position: absolute;
   text-align: center;
   top: 100px;
