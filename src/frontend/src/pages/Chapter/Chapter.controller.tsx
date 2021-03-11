@@ -114,7 +114,7 @@ export const Chapter = () => {
             setValidatorState(RIGHT)
             if (user) dispatch(addProgress({ chapterDone: pathname }))
             else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
-          } else if (data.exercise.match(/^[a-z0-9_-]*.testnet/gm)) {
+          } else if (pathname === '/near101/chapter-3' && data.exercise.match(/^[a-z0-9_-]*.testnet/gm)) {
             setShowDiff(false)
             setValidatorState(RIGHT)
             if (user) dispatch(addProgress({ chapterDone: pathname }))
