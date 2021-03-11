@@ -6,7 +6,7 @@
 
 <narrativeText style="background: #F0EC74; color: #000000">
     <div>
-        <img src="/images/chap_2.png">
+        <img src="/images/chap_2_0.png">
     </div>
     <div>
     "My dear friend, i’ve known you for a long time. Aren’t you bored of your job at Soga? These social gaming companies are so 2020, lol. I heard from Marco there was a job opening at the new Meme Museum in Rio de Janeiro, what an awesome opportunity. Memes are such a fascinating form of collective expression, this is so the future of anarchivism." <Spacer />

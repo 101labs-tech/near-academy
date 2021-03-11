@@ -6,7 +6,7 @@
 
 <narrativeText style="background: #00C08B">
 <div>
- <img src="/images/chap_8.png">
+ <img src="/images/chap_8_0.png">
 </div>
 <div>
 “Oh it’s great i bump into you now”

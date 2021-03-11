@@ -4,7 +4,7 @@
 <Spacer />
 
 <narrativeText style="background: #0072CE;">
-<div><img src="/images/chap_7.png">
+<div><img src="/images/chap_7_0.png">
 </div>
 <div>
 People from all over the world can be connected through memes they like. Oh wait,... not quite!

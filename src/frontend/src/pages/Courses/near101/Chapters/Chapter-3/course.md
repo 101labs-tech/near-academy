@@ -3,7 +3,7 @@
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <narrativeText style="background: #00C08B">
- <div><img src="/images/chap_3.png"></div>
+ <div><img src="/images/chap_3_0.png"></div>
  <div>
     Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
     This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.

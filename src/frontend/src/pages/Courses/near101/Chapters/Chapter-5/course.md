@@ -6,7 +6,7 @@
 
 <narrativeText style="background: #00C08B">
 <div>
- <img src="/images/chap_5.png">
+ <img src="/images/chap_5_0.png">
 </div>
 <div>
 "When you checked the meme collection status, you actually interacted with a contract on the NEAR Network. As a matter of fact, the museum is orchestrated mostly automatically via a multitude of codes deployed on NEAR  that interact with each other."

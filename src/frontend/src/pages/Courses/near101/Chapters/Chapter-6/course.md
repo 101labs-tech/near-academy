@@ -3,7 +3,7 @@
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
 <ImageContainer>
-    <img src="/images/chap_6.png">
+    <img src="/images/chap_6_0.png">
 </ImageContainer>
 
 <Spacer />

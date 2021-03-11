@@ -4,7 +4,7 @@
 
 <narrativeText style="background: #00C08B;">
     <div>
-        <img src="/images/chap_4.png">
+        <img src="/images/chap_4_0.png">
     </div>
     <div>
         It’s always something to start in a new environment. And you’ve decided to make the best of it.
