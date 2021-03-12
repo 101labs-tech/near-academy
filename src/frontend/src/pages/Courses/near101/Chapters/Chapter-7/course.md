@@ -70,7 +70,7 @@ Looking at index.js, we see that we can achieve our goal with four short functio
 **1. Get the list of all Memes in the Museum**
 We just use the name that was defined for the function in the contract to call it.
 
-```typescript
+```javascript
 let memeLIst = []
 async function getMemeList() {
   memeList = await window.contract.get_meme_list()
@@ -83,7 +83,7 @@ Since we need to send our query through the network we need to await the answer.
 **2. Get all memes**
 We are almost there. With the full memeList we can start to call the individual contracts and read the details. From the previous chapter we know that each contract is deployed on it’s own account. We need to call different contracts but all of the same kind (meme contracts). So we fill an array with new contracts to use them in the next step.
 
-```typescript
+```javascript
 const memeContracts = [];
 async function setupMemeContracts() {
    memeList.forEach(meme => {
@@ -102,7 +102,7 @@ meme + “.” + nearConfig.contractName,
 **3. Display all memes**
 Here we go. We have all the contracts ready and call the get_meme function for each of them to display the results.
 
-```typescript
+```javascript
 const memes = []
 async function showMemes() {
   memeContracts.forEach(async (memeContract) => {
@@ -118,7 +118,7 @@ async function showMemes() {
 
 Adding a comment to a Meme is just as easy as calling the function set_comment and providing your text.
 
-```typescript
+```javascript
 async function setComment(memeIndex, text) {
   const result = await memes[memeIndex].set_comment(text)
   console.log(result)
@@ -138,7 +138,7 @@ Alright, that is all you need to get started. Now make it beautiful and add more
 
 ## How to enhance your contract(s) and what's next?
 
-Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app ">https://github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
+Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https://github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
 
 - Use a voting system to remove memes from the museum
 - Design an improved system to curate the list of memes in the contract
