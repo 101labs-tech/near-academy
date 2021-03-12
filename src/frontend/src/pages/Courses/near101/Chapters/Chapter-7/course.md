@@ -27,9 +27,9 @@ As we know there is the museum contract with a function get_meme_list. We called
 
 <ImageContainer>
     <img src="/images/chap_7_1.png">
-<ImageContainer>
+</ImageContainer>
 
-```typescript
+```javascript
 import { connect, Contract, keyStores, WalletConnection } from 'near-api-js'
 import getConfig from './config'
 
