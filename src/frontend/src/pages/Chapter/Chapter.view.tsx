@@ -210,26 +210,26 @@ const Content = ({ course }: any) => (
           component: Dialog,
         },
         Difficulty: {
-          component: Difficulty
+          component: Difficulty,
         },
         ImageContainer: {
-          component: ImageContainer
+          component: ImageContainer,
         },
         Quote: {
-          component: Quote
+          component: Quote,
         },
         quoteComma: {
-          component: quoteComma
+          component: quoteComma,
         },
         Spacer: {
-          component: Spacer
+          component: Spacer,
         },
         narrativeText: {
-          component: narrativeText
+          component: narrativeText,
         },
         BackgroundContainer: {
-          component: BackgroundContainer
-        }
+          component: BackgroundContainer,
+        },
       },
     }}
   />
