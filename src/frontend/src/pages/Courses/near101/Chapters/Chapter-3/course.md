@@ -3,15 +3,15 @@
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <narrativeText style="background: #00C08B">
- <div>
-    <img alt="story_image_3_0" src="/images/chap_3_0.png">
-</div>
- <div>
-    Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
-    This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
-    <Spacer />
-    "Today we're going to bring you up to speed with the latest stack from NEAR, and get you your work account which you will use for everything from now on."
-</div>
+    <div>
+        <img alt="story_image_3_0" src="/images/chap_3_0.png">
+    </div>
+    <div>
+        Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
+        This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
+        <Spacer />
+        "Today we're going to bring you up to speed with the latest stack from NEAR, and get you your work account which you will use for everything from now on."
+    </div>
 </narrativeText>
 <Spacer />
 
@@ -100,7 +100,7 @@ Imagine a NEAR based platform that register new user roles that have the ability
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
 <ImageContainer>
-<img style="max-width: 550px" alt="story_image_3_4" src="/images/chap_3_4.png">
+    <img style="max-width: 550px" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!

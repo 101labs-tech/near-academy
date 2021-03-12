@@ -8,9 +8,9 @@
 
 <Spacer />
 <BackgroundContainer>
-Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
-<Spacer />
-We’re all artists, after all!
+  Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
+  <Spacer />
+  We’re all artists, after all!
 
 </BackgroundContainer>
 <Spacer />

@@ -9,9 +9,10 @@
 <Spacer />
 
 <BackgroundContainer>
-The year is 2029. The new internet is running on top of public interoperable blockchains. It seems crazy to think how the perception towards these technologies has drastically changed. The Internet of Value is more tangible than ever. Knowing how blockchain works is not considered a competitive advantage nowadays. It is a must-have.
-<Spacer />
-This chain of thoughts makes you remember when you originally discovered you could add a payment gateway with a 1-liner of code to your app via the NEAR blockchain. This was such a game-changer back then...
+    The year is 2029. The new internet is running on top of public interoperable blockchains. It seems crazy to think how the perception towards these technologies has drastically changed. The Internet of Value is more tangible than ever. Knowing how blockchain works is not considered a competitive advantage nowadays. It is a must-have.
+    <Spacer />
+    This chain of thoughts makes you remember when you originally discovered you could add a payment gateway with a 1-liner of code to your app via the NEAR blockchain. This was such a game-changer back then...
+
 </BackgroundContainer>
 <Spacer />
 
@@ -68,7 +69,7 @@ All interactions and states are stored immutably on the blockchain, and made pub
 <Spacer />
 
 <BackgroundContainer>
-In Web3, middlemen are removed from the equation. Users are no longer chained to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
+    In Web3, middlemen are removed from the equation. Users are no longer chained to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
 
 </BackgroundContainer>
 
