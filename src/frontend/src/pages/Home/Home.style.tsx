@@ -237,6 +237,9 @@ export const HomeContainer = styled.div`
       margin-top: -100px;
       .left {
         width: 66vw;
+        &__header {
+          margin-top: 60px;
+        }
         p {
           max-width: 66vw;
         }

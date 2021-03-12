@@ -24,7 +24,7 @@ h1 {
   font-weight: 700;
   display: inline-block;
   margin: 20px 0px;
-  margin-top: 70px;
+  // margin-top: 70px;
 }
 
 

@@ -12,7 +12,7 @@ export const HomeView = () => {
         <HomeContainer>
           <section className={'components first'}>
             <div className={'left'}>
-              <h1 style={{ marginTop: '60pxzzzz' }}>
+              <h1 className={'left__header'}>
                 Build a Web3 App <br /> the fun way!
               </h1>
               <p>
