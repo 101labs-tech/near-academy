@@ -3,7 +3,7 @@
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
 <ImageContainer>
-    <img src="/images/chap_1_0.png">
+    <img alt="story_image_1_0" src="/images/chap_1_0.png">
 </ImageContainer>
 
 <Spacer />

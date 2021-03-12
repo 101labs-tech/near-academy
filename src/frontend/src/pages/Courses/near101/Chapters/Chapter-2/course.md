@@ -6,7 +6,7 @@
 
 <narrativeText style="background: #F0EC74; color: #000000">
     <div>
-        <img src="/images/chap_2_0.png">
+        <img alt="story_image_2_0" src="/images/chap_2_0.png">
     </div>
     <div>
     "My dear friend, i’ve known you for a long time. Aren’t you bored of your job at Soga? These social gaming companies are so 2020, lol. I heard from Marco there was a job opening at the new Meme Museum in Rio de Janeiro, what an awesome opportunity. Memes are such a fascinating form of collective expression, this is so the future of anarchivism." <Spacer />
@@ -47,7 +47,7 @@ Applications are usually broken into logical chunks called "tiers", where every 
 In a dApp, security and access are provided by cryptography (public/private keys) rather than username and password or oAuth. This approach is also called **passwordless identification**. **Users keep their identity through dApps** rather than having a different one in each or rely on third party identity management.
 
 <ImageContainer>
-    <img src="/images/chap_2_1.png">
+    <img alt="story_image_2_1" src="/images/chap_2_1.png">
 </ImageContainer>
 
 For users, access to the open web is based only on a private key, which is used to unlock all dApps and services on the blockchain.

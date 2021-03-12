@@ -3,7 +3,9 @@
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <narrativeText style="background: #00C08B">
- <div><img src="/images/chap_3_0.png"></div>
+ <div>
+    <img alt="story_image_3_0" src="/images/chap_3_0.png">
+</div>
  <div>
     Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
     This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
@@ -53,12 +55,12 @@ The NEAR network has been processing over 1.5M transactions at time of writing, 
 The network is supported by 60 validator nodes and a large community, with already over 50’000 active accounts.
 
 <ImageContainer>
-    <img src="/images/chap_3_1.png">
+    <img alt="story_image_3_1" src="/images/chap_3_1.png">
 </ImageContainer>
 <Spacer />
 
 <ImageContainer>
-    <img src="/images/chap_3_2.png">
+    <img alt="story_image_3_2" src="/images/chap_3_2.png">
 </ImageContainer>
 <Spacer />
 
@@ -72,7 +74,7 @@ With NEAR, developers should not have to choose between different blockchains li
 
 <narrativeText style="background: #0072CE">
     <div>
-    <img src="/images/chap_3_3.png">
+        <img alt="story_image_3_3" src="/images/chap_3_3.png">
     </div>
     <div>
         “Hey there, I’m Ethan, welcome to the team!”
@@ -98,13 +100,13 @@ Imagine a NEAR based platform that register new user roles that have the ability
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
 <ImageContainer>
-<img style="max-width: 550px" src="/images/chap_3_4.png">
+<img style="max-width: 550px" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!
 
 <ImageContainer>
-    <img style="max-width: 550px" src="/images/chap_3_5.png">
+    <img style="max-width: 550px" alt="story_image_3_5" src="/images/chap_3_5.png">
 </ImageContainer>
 
 3\. Now it is the time to choose the security method to secure and recover your account.

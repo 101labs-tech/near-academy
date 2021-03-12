@@ -4,7 +4,7 @@
 
 <narrativeText style="background: #00C08B;">
     <div>
-        <img src="/images/chap_4_0.png">
+        <img alt="story_image_4_0" src="/images/chap_4_0.png">
     </div>
     <div>
         It’s always something to start in a new environment. And you’ve decided to make the best of it.
@@ -22,7 +22,7 @@ The benefits of adding such a truth service to an App include handling money, ow
 Backend development usually happens on a local machine and is deployed on a controlled server. Access to others is given through APIs and the code and access is completely controlled by the owner of the server.
 
 <ImageContainer>
-    <img src="/images/chap_4_1.png">
+    <img alt="story_image_4_1" src="/images/chap_4_1.png">
 </ImageContainer>
 
 ## Layer 3 — App Layer (Your App BackEnd + FrontEnd)
@@ -68,7 +68,7 @@ The cost of each instruction is denominated in “gas” units. Bandwidth is usu
 <Spacer />
 <narrativeText style="background: #0072CE">
     <div>
-        <img src="/images/chap_4_2.png">
+        <img alt="story_image_4_2" src="/images/chap_4_2.png">
     </div>
     <div>
         “Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now”
@@ -92,7 +92,7 @@ Since we are interested in calling a simple function and getting a quick answer 
 5\. Congratulations. You just called a contract on NEAR.
 
  <ImageContainer>
-     <img src="/images/chap_4_3.png">
+     <img alt="story_image_4_3" src="/images/chap_4_3.png">
  </ImageContainer>
 
 <Spacer />

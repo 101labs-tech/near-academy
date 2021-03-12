@@ -3,7 +3,7 @@
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
 <ImageContainer>
-    <img src="/images/chap_6_0.png">
+    <img alt="story_image_6_0" src="/images/chap_6_0.png">
 </ImageContainer>
 
 <Spacer />
@@ -106,12 +106,12 @@ The contract checks if the comment has a short enough length (a maximum length o
 
 <Spacer />
 <narrativeText style="background: #00C08B;">
-<div>
-<img src="/images/chap_6_1.png">
-</div>
-<div>
-“I really like what you’re doing!”
-<Spacer />
-“Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”
-</div>
+  <div>
+    <img alt="story_image_6_1" src="/images/chap_6_1.png">
+  </div>
+  <div>
+    “I really like what you’re doing!”
+    <Spacer />
+    “Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”
+  </div>
 </narrativeText>
