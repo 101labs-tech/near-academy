@@ -14,7 +14,7 @@ export const HomeView = () => {
           <section className={"components first"}>
             <div className={"left"}>
               <h1>Build a Web3 App <br /> the fun way!</h1>
-              <p>NEAR Academy is an interactive introduction course for web developers looking to explore blockchain integration to their Apps. It is free, and it hands a completion certificate.</p>
+              <p>NEAR Academy is an interactive course for web developers looking to explore blockchain integration with their Apps. It is free and ends with a certificate of completion.</p>
               <Link to="/near101/chapter-1">
                 <Button text="START ACADEMY" color="primary" />
               </Link>
