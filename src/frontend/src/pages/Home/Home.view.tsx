@@ -38,9 +38,9 @@ export const HomeView = () => {
           <section className={"components third"}>
             <div className={"left"}>
               <h1>Immerse yourself  <br />  in the course narrative</h1>
-              <p>You are about to play a web developer at the Meme Museum.</p>
-              <p>The year is 2029, the near future; things are not that different from today, except perhaps that life is 80% digital now. Innovation that seemed breakthrough in the early 20s is widely adopted, and so is NEAR protocol in the blockchain space.</p>
-              <p>The new NFT Meme museum in Rio de Janeiro is the hottest thing right now. Elon Musk was there at its inauguration last week, that says something.</p>
+              <p>You are about to play the role of a web developer at the Meme Museum.</p>
+              <p>The year is 2029, the near future. Things are not that different from today except perhaps that life is 80% digital now. Innovations that seemed like breakthroughs in the early 2020s are now widely adopted. NEAR Protocol is the leading blockchain platform.</p>
+              <p>The new NFT Meme Museum in Rio de Janeiro is the hottest thing right now. Elon Musk was there at its inauguration last week and that says something!</p>
               <Link to="/near101/chapter-1">
                 <Button text="GET STARTED" color="primary" />
               </Link>
