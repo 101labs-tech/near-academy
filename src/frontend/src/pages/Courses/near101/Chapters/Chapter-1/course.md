@@ -68,7 +68,8 @@ All interactions and states are stored immutably on the blockchain, and made pub
 <Spacer />
 
 <BackgroundContainer>
-<p>In Web3, middlemen are removed from the equation. Users are no longer chained to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.</p>
+In Web3, middlemen are removed from the equation. Users are no longer chained to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
+
 </BackgroundContainer>
 
 <!-- <img src="/images/chapter_12.jpg"" /> -->
