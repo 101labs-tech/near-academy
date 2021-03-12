@@ -37,17 +37,16 @@ export const HomeContainer = styled.div`
 
   section.first {
     background-image: url('museum_exterior_1.svg');
+    border: 5px solid red;
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 881px 684px;
-    min-height: 108vh;
-    z-index: 1;
+    min-height: 100vh;
     position: relative;
     margin-bottom: -200px;
-    //margin-right: -60px;
+    margin-right: -60px;
     margin-top: 110px;
     z-index: 1;
-    position: relative;
 
     .left {
       width: 50vw;
