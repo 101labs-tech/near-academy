@@ -1,5 +1,4 @@
 import { Button } from 'app/App.components/Button/Button.controller'
-
 // band-aid hardcode import. fix later.
 import { chapterData } from 'pages/Courses/near101/Chapters/Chapters.data'
 import * as React from 'react'
