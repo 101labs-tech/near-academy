@@ -5,7 +5,7 @@
 <Spacer />
 
 <narrativeText style="background: #F0EC74; color: #000000">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_2_0" src="/images/chap_2_0.png">
     </div>
     <div>

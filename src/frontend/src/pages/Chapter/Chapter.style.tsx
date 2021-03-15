@@ -267,9 +267,14 @@ export const narrativeText = styled.div`
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
-  padding: 20px 40px;
+  padding: 0px 40px;
   /* max-height: 330px; */
   overflow: hidden;
+
+  .image-wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
 `
 
 export const Quote = styled.div`
