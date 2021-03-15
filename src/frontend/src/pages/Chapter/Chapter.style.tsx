@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
-  background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
+  background: linear-gradient(236.29deg, #1174cb 3.4%, #20c1dc 100%);
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-gap: 20px;
@@ -67,7 +67,7 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #0072CE;
+    color: #0072ce;
   }
 
   a:visited {
@@ -75,7 +75,7 @@ export const ChapterCourse = styled.div`
   }
 
   a {
-    color: #00C1DE;
+    color: #00c1de;
   }
 
   ul {
@@ -88,14 +88,14 @@ export const ChapterCourse = styled.div`
 export const ChapterH1 = styled.div`
   font-size: 50px;
   margin-top: 25px;
-  color: #1174CB;
+  color: #1174cb;
   line-height: 38px;
   font-weight: 600;
   text-align: center;
 `
 
 export const ChapterH2 = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   padding: 20px 40px 10px 40px;
   font-weight: 900;
   font-size: 28px;
@@ -242,7 +242,6 @@ export const ChapterLocked = styled.div`
 export const Difficulty = styled.div`
   margin: 15px 0px;
   text-align: center;
-  
 `
 export const BackgroundContainer = styled.div`
   background-color: #0072ce;
@@ -251,41 +250,38 @@ export const BackgroundContainer = styled.div`
   h1 {
     color: #ffb359;
   }
-  
 `
 export const ImageContainer = styled.div`
   margin-top: 40px;
 `
 
 export const Spacer = styled.div`
-    height: 30px;
+  height: 30px;
 `
 
 export const narrativeText = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    gap: 0px 20px;
-    font-weight: 400;
-    font-size: 18px;
-    color: #f2f2f2;
-    padding: 40px 40px;
-    max-height: 330px;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f2f2f2;
+  padding: 20px 40px;
+  /* max-height: 330px; */
+  overflow: hidden;
 `
 
 export const Quote = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   font-size: 35px;
   font-weight: 900;
   padding-left: 40px;
 `
 
 export const quoteComma = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   font-weight: 600;
   font-size: 88px;
   margin-bottom: -80px;
-
 `
-
