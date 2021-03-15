@@ -36,7 +36,9 @@ export const HomeContainer = styled.div`
   }
 
   section.first {
-    background-image: url('museum_exterior_1.svg');
+    /* background-image: url('/images/museum_exterior_1.svg'); */
+    background-image: url('/museum_exterior_1.svg');
+    /* background-image: url('/images/chap_3_0.png'); */
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 881px 684px;
