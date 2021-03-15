@@ -160,6 +160,7 @@ export const HomeContainer = styled.div`
   @media (max-width: 1200px) {
     section.first {
       background-size: 881px 684px;
+      background-position: right -90px bottom 0;
       min-height: 770px;
     }
 
@@ -238,6 +239,7 @@ export const HomeContainer = styled.div`
   @media screen and (min-width: 769px) and (max-width: 1111px) {
     section.first {
       background-size: 621px 598px;
+
       margin-top: -100px;
       .left {
         width: 66vw;
@@ -256,6 +258,13 @@ export const HomeContainer = styled.div`
       }
     }
   }
+
+  /* @media (min-height: 769px) and (max-width: 940px) {
+    .left {
+      display: flex;
+      flex-direction: column;
+    }
+  } */
 
   @media (max-width: 768px) {
     section.first {
