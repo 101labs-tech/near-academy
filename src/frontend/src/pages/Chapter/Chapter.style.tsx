@@ -122,6 +122,7 @@ export const ChapterValidator = styled.div`
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  padding: 0 10px;
 
   &.ok {
     border-color: ${okColor};
@@ -255,8 +256,9 @@ export const ImageContainer = styled.div`
   margin-top: 40px;
 `
 
-export const Spacer = styled.div`
-  height: 30px;
+export const Spacer = styled.span`
+    display: block;
+    height: 30px;
 `
 
 export const narrativeText = styled.div`
