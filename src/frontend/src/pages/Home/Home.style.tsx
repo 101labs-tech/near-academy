@@ -165,8 +165,13 @@ export const HomeContainer = styled.div`
 
     section.second {
       .button--center {
-        margin-top: calc(-18vw);
+        margin-top: calc(-10vw);
         margin-bottom: 350px;
+      }
+    }
+    section.second {
+      h1 {
+        margin-top: 190px;
       }
     }
   }
@@ -262,8 +267,8 @@ export const HomeContainer = styled.div`
       /* padding-left: 30px; */
 
       .left:not(button) {
-        /* width: 88vw; */
-        width: 100%;
+        width: 88vw;
+        /* width: 100%; */
         padding-bottom: 5vw;
         display: flex;
         flex-direction: column;
@@ -317,7 +322,7 @@ export const HomeContainer = styled.div`
         a {
           display: block;
           margin-bottom: 20px;
-          padding-right: 35px;
+          padding-right: 60px;
         }
       }
     }
