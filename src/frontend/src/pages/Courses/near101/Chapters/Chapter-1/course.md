@@ -16,19 +16,19 @@
 </BackgroundContainer>
 <Spacer />
 
-Adding a blockchain-enabled payment gateway to a web application is as seamless as it can be.
+Handling big ideas like money and identity is seamless:
 
 ```javascript
 sender.sendMoney(receiver, amount)
 ```
 
-The rise of the first blockchain application started in 2009 with Bitcoin, an independent network powering a global digital currency. Since then, blockchain technology has been used across many new applications forming a new open internet, the Web3. In 2021, over 7,000 companies are building the internet infrastructure of Web3.
+The rise of the first blockchain application started in 2009 with Bitcoin, an independent network powering a global digital currency. Since then, blockchain technology has been used across many new applications forming a new open internet called Web3. In 2021, over 7,000 companies are building the internet infrastructure of Web3.
 
 The boom of blockchain and Web3 projects has fueled tremendous demand for web developers, software engineers, testers, UX and web designers, project and community managers. Opportunities are everywhere.
 
-Blockchain isn’t just about financial transactions. Social and community tokens power new types of blockchain applications centered around human networks and the growth of these networks. They can be designed to create shared value for communities with their own rules across adoption, viral marketing, and ownership.
+Blockchain isn’t just about financial transactions. Social and community tokens power new types of blockchain applications centered around human networks and the growth of these networks. They can be designed to create shared value for communities with their own rules around adoption, viral marketing, and ownership.
 
-Creators and influencers can launch their own **social tokens**. These tokens may or may not carry monetary value; they are simply used in the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal standing to active governance of the community.
+Creators and influencers can launch their own **social tokens**. These tokens may or may not carry monetary value; they are simply used within the creator’s community. Fans can get, transfer, donate, transact or hold these tokens. In this emerging space, we see tokens being used to drive various forms of engagement with fans, from personal reputation to active governance of the community.
 
 <Spacer />
 
@@ -42,13 +42,13 @@ Before Web3, the internet was a native mechanism to transfer what computer scien
 
 State is a key property for enabling human ecosystems. The ability to easily and efficiently transfer value independently has been at the heart of exchanges between humans for centuries. When Alice gives 1 shell to Bob, their states change.
 
-Without a native mechanism to save states on the internet, exchanges could be recorded only through institutions acting as clearing entities.
+Without a native mechanism to save states on the internet, exchanges could be recorded only through institutions acting as clearing entities that require our unconditional trust.
 
-**Blockchain technology has introduced a method to store the state of the network in a digitally native format**, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
+**Blockchain technology has introduced a decentralized method to store changes to the state of the network in an irrefutable way**, without the need for intermediaries. Each participant in these networks is able to keep track, hold and transfer value independently. The network stores the history of all preceding events or user interactions, its successive states.
 
 ## Who benefits from this?
 
-While cloud services enable businesses to focus more on their business logic and care less about infrastructure it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
+While cloud services enable businesses to focus more on their business logic and care less about infrastructure, it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give unrestricted access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
 
 In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**. This is why they are also referred to as the “Open Web”.
 
@@ -69,7 +69,7 @@ All interactions and states are stored immutably on the blockchain, and made pub
 <Spacer />
 
 <BackgroundContainer>
-    In Web3, middlemen are removed from the equation. Users are no longer chained to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
+    In Web3, middlemen are removed from the equation. Users are no longer tied to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
 
 </BackgroundContainer>
 
