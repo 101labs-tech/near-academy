@@ -5,7 +5,7 @@ import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
@@ -55,6 +55,7 @@ const MonacoReadOnly = ({ children }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
@@ -78,17 +79,19 @@ const MonacoEditorSupport = ({ support }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
+const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any) => {
   return (
     <div>
       <ControlledEditor
         height="600px"
+        width={width}
         value={proposedSolution}
         language="rust"
         theme="myCustomTheme"
@@ -102,13 +105,14 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
           readOnly: false,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoDiff = ({ solution, proposedSolution }: any) => {
+const MonacoDiff = ({ solution, proposedSolution, width }: any) => {
   return (
     <div>
       <DiffEditor
@@ -128,6 +132,7 @@ const MonacoDiff = ({ solution, proposedSolution }: any) => {
           fontSize: 14,
           fontFamily: 'Proxima Nova',
           renderSideBySide: false,
+          wordWrap: true
         }}
       />
     </div>
@@ -261,6 +266,16 @@ export const ChapterView = ({
   proposedQuestionAnswerCallback,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
+  const [editorWidth, setEditorWidth] = useState(0)
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+    window.addEventListener('resize', () => {
+      setEditorWidth(0)
+      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+    })
+  }, []);
 
   let extension = '.rs'
 
@@ -299,13 +314,14 @@ export const ChapterView = ({
             ))}
           </ChapterQuestions>
         ) : (
-          <div>
+          <div ref={wrapperRef}>
             {display === 'solution' ? (
               <ChapterMonaco>
                 {showDiff ? (
-                  <MonacoDiff solution={solution} proposedSolution={proposedSolution} />
+                  <MonacoDiff width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
                 ) : (
                   <MonacoEditor
+                    width={editorWidth}
                     proposedSolution={proposedSolution}
                     proposedSolutionCallback={proposedSolutionCallback}
                   />
