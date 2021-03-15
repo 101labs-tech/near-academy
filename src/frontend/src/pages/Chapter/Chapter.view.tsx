@@ -6,6 +6,7 @@ import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
@@ -17,22 +18,22 @@ monaco
   .init()
   .then((monacoInstance) => {
     monacoInstance.editor.defineTheme('myCustomTheme', {
-      base: 'vs-light',
+      base: 'vs',
       inherit: true,
-      // rules: [
-      //   { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
-      //   { token: 'keyword', foreground: '#0e15e1' },
-      //   { token: 'number', foreground: '#038c2a' },
-      //   { token: 'string', foreground: '#910303' },
-      // ],
-      // colors: {
-      //   'editor.foreground': '#7b7b7b',
-      //   'editor.background': backgroundColorLight,
-      //   'editor.selectionBackground': '#DDF0FF33',
-      //   'editor.lineHighlightBackground': '#FFFFFF08',
-      //   'editorCursor.foreground': '#A7A7A7',
-      //   'editorWhitespace.foreground': '#FFFFFF40',
-      // },
+      rules: [
+        { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '#0e15e1' },
+        { token: 'number', foreground: '#038c2a' },
+        { token: 'string', foreground: '#910303' },
+      ],
+      colors: {
+        'editor.foreground': '#7b7b7b',
+        'editor.background': backgroundColorLight,
+        'editor.selectionBackground': '#DDF0FF33',
+        'editor.lineHighlightBackground': '#FFFFFF08',
+        'editorCursor.foreground': '#A7A7A7',
+        'editorWhitespace.foreground': '#FFFFFF40',
+      },
     })
   })
   .catch((error) => console.error('An error occurred during initialization of Monaco: ', error))
