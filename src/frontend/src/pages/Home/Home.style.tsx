@@ -37,7 +37,6 @@ export const HomeContainer = styled.div`
 
   section.first {
     background-image: url('museum_exterior_1.svg');
-    border: 5px solid red;
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 881px 684px;
@@ -61,7 +60,7 @@ export const HomeContainer = styled.div`
       }
       button {
         margin-top: 50px;
-        margin-left: 100px;
+        /* margin-left: 100px; */
       }
     }
     .right {
@@ -213,6 +212,7 @@ export const HomeContainer = styled.div`
   @media (min-width: 1801px) {
     section.first {
       //height: 100vh;
+
       min-height: 888px;
       .left {
         width: 38vw;
@@ -259,25 +259,28 @@ export const HomeContainer = styled.div`
       background-size: 628px 601px;
       min-height: 1070px;
       padding: 0 20px;
-      padding-left: 30px;
+      /* padding-left: 30px; */
 
-      .left {
-        width: 88vw;
+      .left:not(button) {
+        /* width: 88vw; */
+        width: 100%;
         padding-bottom: 5vw;
         display: flex;
         flex-direction: column;
-        align-items: center;
+
         h1 {
           font-weight: 900;
         }
+
         p {
           font-size: 24px;
           line-height: 36px;
           max-width: 590px;
+          text-align: justify;
         }
         button {
-          margin-top: 50px;
-          margin-left: auto;
+          display: flex;
+          margin: 50px auto 0 auto;
         }
       }
     }
