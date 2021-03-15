@@ -122,6 +122,7 @@ export const ChapterValidator = styled.div`
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  padding: 0 10px;
 
   &.ok {
     border-color: ${okColor};
