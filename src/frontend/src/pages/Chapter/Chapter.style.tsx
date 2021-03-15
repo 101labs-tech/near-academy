@@ -257,7 +257,8 @@ export const ImageContainer = styled.div`
   margin-top: 40px;
 `
 
-export const Spacer = styled.div`
+export const Spacer = styled.span`
+    display: block;
     height: 30px;
 `
 
