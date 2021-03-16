@@ -133,6 +133,12 @@ export const HomeContainer = styled.div`
       p {
         padding: 40px;
       }
+      p:first-child{
+        margin-left:  10px;
+      }
+      p:last-child{
+        margin-right: 30px;
+      }
       img {
         width: 276px;
         height: 693px;
