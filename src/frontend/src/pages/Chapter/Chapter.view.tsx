@@ -88,11 +88,11 @@ const MonacoEditorSupport = ({ support }: any) => {
   )
 }
 
-const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any) => {
+const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, height }: any) => {
   return (
     <div>
       <ControlledEditor
-        height="600px"
+        height={height ? height : '600px'}
         width={width}
         value={proposedSolution}
         language="rust"
@@ -114,11 +114,11 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any
   )
 }
 
-const MonacoDiff = ({ solution, proposedSolution, width }: any) => {
+const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
   return (
     <div>
       <DiffEditor
-        height="600px"
+        height={height ? height : '600px'}
         original={proposedSolution}
         modified={solution}
         language="rust"
@@ -269,15 +269,18 @@ export const ChapterView = ({
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
+  const [editorHeight, setEditorHeight] = useState(0)
   const wrapperRef = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted()
 
   useEffect(() => {
     setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+    setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
     window.addEventListener('resize', () => {
       if (isMounted.current) {
         setEditorWidth(0)
         setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+        setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
       }
     })
   }, []);
@@ -327,6 +330,7 @@ export const ChapterView = ({
                 ) : (
                   <MonacoEditor
                     width={editorWidth}
+                    height={editorHeight}
                     proposedSolution={proposedSolution}
                     proposedSolutionCallback={proposedSolutionCallback}
                   />
