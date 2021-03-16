@@ -20,9 +20,11 @@ export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
   display: grid;
   grid-template-rows: ${(props) => (props.hasTabs ? '30px auto auto' : 'auto auto')};
   grid-gap: 0;
-  overflow-y: scroll;
+  height: calc(100vh - 170px);
+  /* overflow-y: scroll; */
 
   @media (max-width: 900px) {
+    height: auto;
     overflow-y: initial;
     margin-bottom: 20px;
   }
@@ -123,6 +125,7 @@ export const ChapterValidator = styled.div`
   justify-content: space-around;
   text-align: center;
   padding: 0 10px;
+  min-height: 180px;
 
   @media (max-width: 900px) {
     padding: 45px 10px;
