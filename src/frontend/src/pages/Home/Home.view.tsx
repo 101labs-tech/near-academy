@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 //prettier-ignore
-import { HomeContainer, HomePage, HomeStyled } from './Home.style'
+import { Footer, HomeContainer, HomePage, HomeStyled } from './Home.style'
 
 export const HomeView = () => {
   return (
@@ -68,27 +68,28 @@ export const HomeView = () => {
             </div>
             <img className={'museum-interior'} src={'museum_interior_x2.svg'} alt="museum interior" />
           </section>
-
-          <footer className={'footer'}>
-            <div className={'left'}>
-              <img src={'logo-white.svg'} alt="101 labs icon" />
-              <p>Made by 101Labs.org</p>
-            </div>
-            <div className={'right'}>
-              <a href={'https://github.com/near'}>
-                {' '}
-                <img src={'github.svg'} alt="github icon" />
-              </a>
-              <a href={'https://twitter.com/NEARProtocol'}>
-                <img src={'twitter.svg'} alt="twitter icon" />
-              </a>
-              <a href={'https://t.me/cryptonear'}>
-                <img src={'telegram.svg'} alt="telegram icon" />
-              </a>
-            </div>
-          </footer>
         </HomeContainer>
       </HomePage>
+      <Footer>
+        <div className="footer-wrapper">
+          <div className={'left'}>
+            <img src={'logo-white.svg'} alt="101 labs icon" />
+            <p>Made by 101Labs.org</p>
+          </div>
+          <div className={'right'}>
+            <a href={'https://github.com/near'}>
+              {' '}
+              <img src={'github.svg'} alt="github icon" />
+            </a>
+            <a href={'https://twitter.com/NEARProtocol'}>
+              <img src={'twitter.svg'} alt="twitter icon" />
+            </a>
+            <a href={'https://t.me/cryptonear'}>
+              <img src={'telegram.svg'} alt="telegram icon" />
+            </a>
+          </div>
+        </div>
+      </Footer>
     </HomeStyled>
   )
 }

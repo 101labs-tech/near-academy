@@ -1,5 +1,6 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
+import useIsMounted from 'ismounted'
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import Markdown from 'markdown-to-jsx'
@@ -11,7 +12,7 @@ import { backgroundColorLight } from 'styles'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer } from './Chapter.style'
+import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, TextWrapper, Spacer } from './Chapter.style'
 import { BackgroundContainer, Difficulty, ImageContainer, Quote, quoteComma } from './Chapter.style'
 
 monaco
@@ -233,6 +234,9 @@ const Content = ({ course }: any) => (
         narrativeText: {
           component: narrativeText,
         },
+        TextWrapper: {
+          component: TextWrapper,
+        },
         BackgroundContainer: {
           component: BackgroundContainer,
         },
@@ -269,12 +273,15 @@ export const ChapterView = ({
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const isMounted = useIsMounted()
 
   useEffect(() => {
     setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
     window.addEventListener('resize', () => {
-      setEditorWidth(0)
-      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      if (isMounted.current) {
+        setEditorWidth(0)
+        setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      }
     })
   }, []);
 

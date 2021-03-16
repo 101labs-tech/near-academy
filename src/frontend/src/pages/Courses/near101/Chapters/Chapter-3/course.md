@@ -76,12 +76,12 @@ With NEAR, developers should not have to choose between different blockchains li
     <div>
         <img alt="story_image_3_3" src="/images/chap_3_3.png">
     </div>
-    <div>
+    <TextWrapper>
         “Hey there, I’m Ethan, welcome to the team!”
         “Nice to meet you! I checked your personal account, you’re a rockstar !”
         <Spacer />
         “Let me show you how to set up a Testnet Account”
-    </div>
+    </TextWrapper>
 </narrativeText>
 
 ## NEAR Account Overview and Set Up
@@ -98,7 +98,7 @@ Imagine a NEAR based platform that register new user roles that have the ability
 
 ## Create your NEAR Test Network account
 
-1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
+1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https:\/\/wallet.testnet.near.org/</a>
 <ImageContainer>
     <img style="max-width: 550px" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
