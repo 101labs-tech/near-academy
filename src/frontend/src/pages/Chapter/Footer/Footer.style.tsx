@@ -6,6 +6,10 @@ export const FooterStyled = styled.div`
   margin-top: 20px;
   padding-bottom: 20px;
 
+  @media (max-width: 900px) {
+    margin: 0;
+  }
+
   a {
     bottom: 20px;
     button {
