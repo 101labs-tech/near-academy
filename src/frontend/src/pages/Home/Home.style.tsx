@@ -49,7 +49,7 @@ export const Footer = styled.footer`
   .links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 30px;
     grid-row-gap: 10px;
   }
 

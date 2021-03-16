@@ -78,12 +78,12 @@ export const HomeView = () => {
           </div>
           <div className={'right'}>
             <div className="links">
-              <a href="https://google.com" target="_blank" className="link">123</a>
-              <a href="https://google.com" target="_blank" className="link">lorem</a>
-              <a href="https://google.com" target="_blank" className="link">sflgjvlsdfxkmvc</a>
-              <a href="https://google.com" target="_blank" className="link">https://google.com</a>
-              <a href="https://google.com" target="_blank" className="link">hello world</a>
-              <a href="https://google.com" target="_blank" className="link">321</a>
+              <a href="https://mintbase.io/" rel="noopener noreferrer" target="_blank" className="link">Mintbase</a>
+              <a href="https://paras.id/" rel="noopener noreferrer" target="_blank" className="link">Paras</a>
+              <a href="https://berryclub.io/" rel="noopener noreferrer" target="_blank" className="link">Berry Club</a>
+              <a href="https://near.org/developers/" rel="noopener noreferrer" target="_blank" className="link">Near Devs</a>
+              <a href="https://nearguilds.com/" rel="noopener noreferrer" target="_blank" className="link">Near Guilds</a>
+              <a href="https://near.chat" rel="noopener noreferrer" target="_blank" className="link">Near Chat</a>
             </div>
             <div className="socials">
               <a href={'https://github.com/near'}>
