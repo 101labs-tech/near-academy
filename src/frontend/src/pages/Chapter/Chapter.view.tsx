@@ -1,8 +1,8 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
-import useIsMounted from 'ismounted'
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
@@ -12,7 +12,7 @@ import { backgroundColorLight } from 'styles'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, TextWrapper, Spacer } from './Chapter.style'
+import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
 import { BackgroundContainer, Difficulty, ImageContainer, Quote, quoteComma } from './Chapter.style'
 
 monaco
@@ -240,6 +240,9 @@ const Content = ({ course }: any) => (
         BackgroundContainer: {
           component: BackgroundContainer,
         },
+        VerticalAlign:{
+          component: VerticalAlign,
+        }
       },
     }}
   />

@@ -301,3 +301,9 @@ export const quoteComma = styled.div`
   font-size: 88px;
   margin-bottom: -80px;
 `
+
+export const VerticalAlign = styled.div`
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+`
