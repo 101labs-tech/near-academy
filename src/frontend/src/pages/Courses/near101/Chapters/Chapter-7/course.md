@@ -138,7 +138,7 @@ Alright, that is all you need to get started. Now make it beautiful and add more
 
 ## How to enhance your contract(s) and what's next?
 
-Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https://github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
+Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https:\/\/github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
 
 - Use a voting system to remove memes from the museum
 - Design an improved system to curate the list of memes in the contract
