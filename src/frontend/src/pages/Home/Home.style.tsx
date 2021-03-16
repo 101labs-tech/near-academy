@@ -19,7 +19,7 @@ export const Footer = styled.footer`
   /* margin: 0 -5vw; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   .left {
     padding: 60px;
     p {
@@ -34,6 +34,14 @@ export const Footer = styled.footer`
       width: 32px;
       margin-left: 25px;
     }
+  }
+
+  .footer-wrapper{
+    width:90vw;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `
 

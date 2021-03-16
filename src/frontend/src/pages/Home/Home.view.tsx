@@ -71,21 +71,23 @@ export const HomeView = () => {
         </HomeContainer>
       </HomePage>
       <Footer>
-        <div className={'left'}>
-          <img src={'logo-white.svg'} alt="101 labs icon" />
-          <p>Made by 101Labs.org</p>
-        </div>
-        <div className={'right'}>
-          <a href={'https://github.com/near'}>
-            {' '}
-            <img src={'github.svg'} alt="github icon" />
-          </a>
-          <a href={'https://twitter.com/NEARProtocol'}>
-            <img src={'twitter.svg'} alt="twitter icon" />
-          </a>
-          <a href={'https://t.me/cryptonear'}>
-            <img src={'telegram.svg'} alt="telegram icon" />
-          </a>
+        <div className="footer-wrapper">
+          <div className={'left'}>
+            <img src={'logo-white.svg'} alt="101 labs icon" />
+            <p>Made by 101Labs.org</p>
+          </div>
+          <div className={'right'}>
+            <a href={'https://github.com/near'}>
+              {' '}
+              <img src={'github.svg'} alt="github icon" />
+            </a>
+            <a href={'https://twitter.com/NEARProtocol'}>
+              <img src={'twitter.svg'} alt="twitter icon" />
+            </a>
+            <a href={'https://t.me/cryptonear'}>
+              <img src={'telegram.svg'} alt="telegram icon" />
+            </a>
+          </div>
         </div>
       </Footer>
     </HomeStyled>
