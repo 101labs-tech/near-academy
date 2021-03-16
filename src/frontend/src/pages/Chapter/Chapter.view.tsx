@@ -1,5 +1,6 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
+import useIsMounted from 'ismounted'
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import Markdown from 'markdown-to-jsx'
@@ -269,12 +270,15 @@ export const ChapterView = ({
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const isMounted = useIsMounted()
 
   useEffect(() => {
     setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
     window.addEventListener('resize', () => {
-      setEditorWidth(0)
-      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      if (isMounted.current) {
+        setEditorWidth(0)
+        setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      }
     })
   }, []);
 
