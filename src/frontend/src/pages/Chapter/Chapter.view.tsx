@@ -274,15 +274,17 @@ export const ChapterView = ({
   const isMounted = useIsMounted()
 
   useEffect(() => {
-    setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-    setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
-    window.addEventListener('resize', () => {
-      if (isMounted.current) {
-        setEditorWidth(0)
-        setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-        setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
-      }
-    })
+    if (wrapperRef.current) {
+      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+      window.addEventListener('resize', () => {
+        if (isMounted.current) {
+          setEditorWidth(0)
+          setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+          setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+        }
+      })
+    }
   }, []);
 
   let extension = '.rs'
