@@ -5,7 +5,8 @@ import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
@@ -17,22 +18,22 @@ monaco
   .init()
   .then((monacoInstance) => {
     monacoInstance.editor.defineTheme('myCustomTheme', {
-      base: 'vs-light',
+      base: 'vs',
       inherit: true,
-      // rules: [
-      //   { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
-      //   { token: 'keyword', foreground: '#0e15e1' },
-      //   { token: 'number', foreground: '#038c2a' },
-      //   { token: 'string', foreground: '#910303' },
-      // ],
-      // colors: {
-      //   'editor.foreground': '#7b7b7b',
-      //   'editor.background': backgroundColorLight,
-      //   'editor.selectionBackground': '#DDF0FF33',
-      //   'editor.lineHighlightBackground': '#FFFFFF08',
-      //   'editorCursor.foreground': '#A7A7A7',
-      //   'editorWhitespace.foreground': '#FFFFFF40',
-      // },
+      rules: [
+        { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '#0e15e1' },
+        { token: 'number', foreground: '#038c2a' },
+        { token: 'string', foreground: '#910303' },
+      ],
+      colors: {
+        'editor.foreground': '#7b7b7b',
+        'editor.background': backgroundColorLight,
+        'editor.selectionBackground': '#DDF0FF33',
+        'editor.lineHighlightBackground': '#FFFFFF08',
+        'editorCursor.foreground': '#A7A7A7',
+        'editorWhitespace.foreground': '#FFFFFF40',
+      },
     })
   })
   .catch((error) => console.error('An error occurred during initialization of Monaco: ', error))
@@ -55,6 +56,7 @@ const MonacoReadOnly = ({ children }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
@@ -78,17 +80,19 @@ const MonacoEditorSupport = ({ support }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
+const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any) => {
   return (
     <div>
       <ControlledEditor
         height="600px"
+        width={width}
         value={proposedSolution}
         language="rust"
         theme="myCustomTheme"
@@ -102,13 +106,14 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
           readOnly: false,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoDiff = ({ solution, proposedSolution }: any) => {
+const MonacoDiff = ({ solution, proposedSolution, width }: any) => {
   return (
     <div>
       <DiffEditor
@@ -128,6 +133,7 @@ const MonacoDiff = ({ solution, proposedSolution }: any) => {
           fontSize: 14,
           fontFamily: 'Proxima Nova',
           renderSideBySide: false,
+          wordWrap: true
         }}
       />
     </div>
@@ -210,26 +216,26 @@ const Content = ({ course }: any) => (
           component: Dialog,
         },
         Difficulty: {
-          component: Difficulty
+          component: Difficulty,
         },
         ImageContainer: {
-          component: ImageContainer
+          component: ImageContainer,
         },
         Quote: {
-          component: Quote
+          component: Quote,
         },
         quoteComma: {
-          component: quoteComma
+          component: quoteComma,
         },
         Spacer: {
-          component: Spacer
+          component: Spacer,
         },
         narrativeText: {
-          component: narrativeText
+          component: narrativeText,
         },
         BackgroundContainer: {
-          component: BackgroundContainer
-        }
+          component: BackgroundContainer,
+        },
       },
     }}
   />
@@ -261,6 +267,16 @@ export const ChapterView = ({
   proposedQuestionAnswerCallback,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
+  const [editorWidth, setEditorWidth] = useState(0)
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+    window.addEventListener('resize', () => {
+      setEditorWidth(0)
+      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+    })
+  }, []);
 
   let extension = '.rs'
 
@@ -299,13 +315,14 @@ export const ChapterView = ({
             ))}
           </ChapterQuestions>
         ) : (
-          <div>
+          <div ref={wrapperRef}>
             {display === 'solution' ? (
               <ChapterMonaco>
                 {showDiff ? (
-                  <MonacoDiff solution={solution} proposedSolution={proposedSolution} />
+                  <MonacoDiff width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
                 ) : (
                   <MonacoEditor
+                    width={editorWidth}
                     proposedSolution={proposedSolution}
                     proposedSolutionCallback={proposedSolutionCallback}
                   />

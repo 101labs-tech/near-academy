@@ -143,7 +143,7 @@ export const Chapter = () => {
     <>
       {pathname === '/near101/chapter-24' && !badgeUnlocked ? (
         <ChapterLocked>Chapter locked. Please complete all previous chapters to see this chapter.</ChapterLocked>
-      ) : (
+      ) : data.course && (
         <ChapterView
           validatorState={validatorState}
           validateCallback={validateCallback}
