@@ -13,7 +13,7 @@ import { backgroundColorLight } from 'styles'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper } from './Chapter.style'
+import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
 import { BackgroundContainer, Difficulty, ImageContainer, Quote, quoteComma } from './Chapter.style'
 
 monaco
@@ -89,11 +89,11 @@ const MonacoEditorSupport = ({ support }: any) => {
   )
 }
 
-const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any) => {
+const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, height }: any) => {
   return (
     <div>
       <ControlledEditor
-        height="600px"
+        height={height ? height : '600px'}
         width={width}
         value={proposedSolution}
         language="rust"
@@ -115,11 +115,11 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width }: any
   )
 }
 
-const MonacoDiff = ({ solution, proposedSolution, width }: any) => {
+const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
   return (
     <div>
       <DiffEditor
-        height="600px"
+        height={height ? height : '600px'}
         original={proposedSolution}
         modified={solution}
         language="rust"
@@ -241,6 +241,9 @@ const Content = ({ course }: any) => (
         BackgroundContainer: {
           component: BackgroundContainer,
         },
+        VerticalAlign:{
+          component: VerticalAlign,
+        }
       },
     }}
   />
@@ -273,17 +276,22 @@ export const ChapterView = ({
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
+  const [editorHeight, setEditorHeight] = useState(0)
   const wrapperRef = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted()
 
   useEffect(() => {
-    setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-    window.addEventListener('resize', () => {
-      if (isMounted.current) {
-        setEditorWidth(0)
-        setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-      }
-    })
+    if (wrapperRef.current) {
+      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+      window.addEventListener('resize', () => {
+        if (isMounted.current) {
+          setEditorWidth(0)
+          setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+          setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+        }
+      })
+    }
   }, []);
 
   let extension = '.rs'
@@ -331,6 +339,7 @@ export const ChapterView = ({
                 ) : (
                   <MonacoEditor
                     width={editorWidth}
+                    height={editorHeight}
                     proposedSolution={proposedSolution}
                     proposedSolutionCallback={proposedSolutionCallback}
                   />
