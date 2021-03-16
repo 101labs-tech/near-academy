@@ -284,6 +284,10 @@ export const narrativeText = styled.div`
   }
 `
 
+export const TextWrapper = styled.div`
+  padding: 5%;
+`
+
 export const Quote = styled.div`
   color: #0072ce;
   font-size: 35px;
