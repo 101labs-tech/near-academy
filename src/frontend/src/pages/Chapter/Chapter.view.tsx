@@ -1,12 +1,13 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
-import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
-import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
+
+import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
+import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
@@ -46,7 +47,7 @@ const MonacoReadOnly = ({ children }: any) => {
       <Editor
         height={height}
         value={children}
-        language="rust"
+        language="typescript"
         theme="myCustomTheme"
         options={{
           lineNumbers: false,
