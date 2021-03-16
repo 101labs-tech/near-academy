@@ -98,7 +98,7 @@ Imagine a NEAR based platform that register new user roles that have the ability
 
 ## Create your NEAR Test Network account
 
-1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https://wallet.testnet.near.org/</a>
+1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https:\/\/wallet.testnet.near.org/</a>
 <ImageContainer>
     <img style="max-width: 550px" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
