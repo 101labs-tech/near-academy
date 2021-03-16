@@ -7,13 +7,13 @@
   <div>
     <img alt="story_image_7_0" src="/images/chap_7_0.png">
   </div>
-  <div>
+  <VerticalAlign>
     People from all over the world can be connected through memes they like. Oh wait,... not quite!
     <Spacer />
     Before this all works, you have to provide them an easy interface to interact with the contracts, of course. Even in 2029 not everyone is a master with terminals.  
     <Spacer />
     Ethan has started to create an application already.
-  </div>
+  </VerticalAlign>
 </narrativeText>
 
 The contracts have been deployed, you don’t really have to worry about them anymore. Now is the time to focus on the interface and connecting it with the contracts backend. The designs are not available yet but we can keep working on functionality.

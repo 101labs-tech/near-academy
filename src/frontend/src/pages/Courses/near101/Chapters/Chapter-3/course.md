@@ -6,12 +6,12 @@
     <div>
         <img alt="story_image_3_0" src="/images/chap_3_0.png">
     </div>
-    <div>
+    <VerticalAlign>
         Lucky you! Your application was accepted. You’ve landed in Rio de Janeiro and head towards the beach where the museum is located.
         This is your first working day in the Meme Museum. You meet the director of the museum who gets you setup.
         <Spacer />
         "Today we're going to bring you up to speed with the latest stack from NEAR, and get you your work account which you will use for everything from now on."
-    </div>
+    </VerticalAlign>
 </narrativeText>
 <Spacer />
 
@@ -76,12 +76,12 @@ With NEAR, developers should not have to choose between different blockchains li
     <div>
         <img alt="story_image_3_3" src="/images/chap_3_3.png">
     </div>
-    <TextWrapper>
+    <VerticalAlign>
         “Hey there, I’m Ethan, welcome to the team!”
         “Nice to meet you! I checked your personal account, you’re a rockstar !”
         <Spacer />
         “Let me show you how to set up a Testnet Account”
-    </TextWrapper>
+    </VerticalAlign>
 </narrativeText>
 
 ## NEAR Account Overview and Set Up
