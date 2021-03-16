@@ -12,7 +12,7 @@ export const ChapterStyled = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: auto;
     height: initial;
-    margin: 70px 10px;
+    margin: 70px 10px 0;
   }
 `
 
@@ -123,6 +123,10 @@ export const ChapterValidator = styled.div`
   justify-content: space-around;
   text-align: center;
   padding: 0 10px;
+
+  @media (max-width: 900px) {
+    padding: 45px 10px;
+  }
 
   &.ok {
     border-color: ${okColor};
