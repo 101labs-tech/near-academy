@@ -252,7 +252,8 @@ export const BackgroundContainer = styled.div`
     color: #ffb359;
   }
 `
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.span`
+  display: block;
   margin-top: 40px;
 `
 
