@@ -67,7 +67,8 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #0072ce;
+    color: #001424;
+    font-weight: bold;
   }
 
   a:visited {
