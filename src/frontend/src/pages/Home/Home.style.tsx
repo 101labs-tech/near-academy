@@ -13,6 +13,30 @@ export const HomeStyled = styled.div`
   }
 `
 
+export const Footer = styled.footer`
+  background-color: #000000;
+  height: 190px;
+  /* margin: 0 -5vw; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .left {
+    padding: 60px;
+    p {
+      color: white;
+      font-size: 14px;
+    }
+  }
+  .right {
+    padding: 60px;
+    margin-top: 14px;
+    img {
+      width: 32px;
+      margin-left: 25px;
+    }
+  }
+`
+
 export const HomePage = styled(FullPage)``
 
 export const HomeContainer = styled.div`
