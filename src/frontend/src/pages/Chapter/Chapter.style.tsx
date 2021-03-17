@@ -74,11 +74,13 @@ export const ChapterCourse = styled.div`
   }
 
   a:visited {
-    color: #29dbf7;
+    color: #002746;
+    text-decoration: underline #001424 !important;
   }
 
   a {
-    color: #00c1de;
+    color: #001424;
+    text-decoration: underline !important;
   }
 
   ul {
