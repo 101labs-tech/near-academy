@@ -280,7 +280,7 @@ export const narrativeText = styled.div`
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
-  padding: 0px 40px;
+  padding: 10px 40px 0px 40px;
   /* max-height: 330px; */
   overflow: hidden;
 
