@@ -51,6 +51,7 @@ export const Footer = styled.footer`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 10px;
+    margin-right: 30px;
   }
 
   .link {
