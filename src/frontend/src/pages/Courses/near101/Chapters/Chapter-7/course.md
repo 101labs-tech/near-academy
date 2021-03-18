@@ -130,17 +130,17 @@ The message is saved in the meme contract on the NEAR testnet. In other words: c
 
 ## What to look for when writing a dApp
 
-As we learned, each call of a change function costs gas. So it might not be desirable to ask the users to directly call the contracts. Rather your server would call it for them. So effectively you would pay for them. You see how you can give your users an advantage by using your platform: they get comments for free. But at the same time you keep the ecosystem open as others could offer the same service or just let the users pay the fees.
+As we learned, each call of a change function costs gas. So it might not be desirable to ask the users to call the contracts directly. Instead, your server would call it for them. So effectively, you would pay for them. You see how you can give your users an advantage by using your platform: they get comments for free. But at the same time, you keep the ecosystem open as others could offer the same service or just let the users pay the fees.
 
-The given example is written in plain javascript to keep it simple. But you could also use the latest frameworks like react, vue and angular.
+The given example is written in plain javascript to keep it simple. But you could also use the latest frameworks like React, Vue and Angular.
 
-Alright, that is all you need to get started. Now make it beautiful and add more features.
+All right, that is all you need to get started. Now make it beautiful and add more features.
 
 ## How to enhance your contract(s) and what's next?
 
-Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https:\/\/github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. Only limit is imagination. Consider for instance:
+Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https:\/\/github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. The only limit is imagination. Consider for instance:
 
 - Use a voting system to remove memes from the museum
 - Design an improved system to curate the list of memes in the contract
-- Implement a royalty system for meme makers based on likes and comments
+- Implement a royalty system for meme-makers based on likes and comments
 - Turn the museum into a fully decentralized autonomous organization (DAO)
