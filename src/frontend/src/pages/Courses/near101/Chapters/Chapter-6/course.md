@@ -33,17 +33,17 @@ The first argument, **AccountId**, is simply a string that is used to create a n
 
 The second argument sets the **title** of the meme. It’s just an ordinary string.
 
-Since the meme-museum is cooperating with 9gag the **data** field must be a URL pointing to 9gag. 9gag is a centralized service which was chosen as a partner for storage because it does not allow offensive and inappropriate content. The meme museum could easily expand to other services and enable other URLs.
+Since the meme-museum is cooperating with 9gag the **data** field must be a URL pointing to 9gag. 9gag is a centralized service that was chosen as a partner for storage because it does not allow offensive and inappropriate content. The meme museum could quickly expand to other services and enable different URLs.
 
 The **category** parameter allows a value from 1 to 4 (inclusive). The meme museum uses these categories to rate the meme quality. 1 is very low quality while 4 might go viral.
 
 With that, you are ready to create your first meme. It is done in just three simple steps.
 
-1\. Prepare your account. You need to make sure your near cli has access to the account that is supposed to interact with the contract. Simply use the NEAR Cli and type “near login” and follow the instructions.
+1\. Prepare your account. You need to make sure your near cli has access to the account supposed to interact with the contract. Simply use the NEAR Cli and type “near login” and follow the instructions.
 
 2\. Register yourself as a contributor to the meme-museum contract. Make sure to use the accountId that you used when you called near login.
 
-3\. Register your meme. Make sure to use a custom name for meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
+3\. Register your meme. Make sure to use a custom name for the meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
 
 ```bash
 near call meme-museum.testnet add_meme \
@@ -74,7 +74,7 @@ export function get_recent_donations(): Array<Donation>
 export function release_donations(account: AccountId): void
 ```
 
-The given functions are written in AssemblyScript. But they could also have been written in Rust or any other language that compiles to Wasm. But it is easier to understand and saves some compiling time compared to Rust which is great for prototyping and simple contracts.
+The given functions are written in AssemblyScript. But they could also have been written in Rust or any other language that compiles to Wasm. But it is easier to understand and saves some compiling time than Rust, which is excellent for prototyping and simple contracts.
 
 You can see that all functions are exported so that they can be called from other accounts. Every function has a name and optional arguments that must be of a specific type (custom types included). Every function needs to return something: void or another data type.
 
@@ -89,7 +89,7 @@ export function get_vote_score(): i32 {
 }
 ```
 
-Call functions are the ones that alter a contract state. This means that something is saved on the blockchain. These operations have a gas cost attached to them that is proportional to the complexity of the computation. Remember validators are working for you behind the scene, and they must be compensated for their work.
+Call functions are the ones that alter a contract state. This means that something is saved on the blockchain. These operations have a gas cost attached to them that is proportional to the complexity of the computation. Remember validators are working for you behind the scene, and they must be rewarded for their validation work.
 
 ```typescript
 export function add_comment(text: string): void {
