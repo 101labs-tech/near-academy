@@ -24,6 +24,6 @@ async function main() {
   const sender = await near.account(sender);
 
   // TODO send those tokens here
-  const result = senderAccount.sendMoney(receiver, amount);
+  const result = await senderAccount.sendMoney(receiver, amount);
   console.log("Transaction Results: ", result.transaction);
 }
