@@ -13,7 +13,7 @@ import './styles/fonts.css'
 
 export const store = configureStore({})
 
-ReactGA.initialize('G-3RMFW1HGZT')
+ReactGA.initialize('UA-192160338-1')
 
 export const Root = () => {
   return (

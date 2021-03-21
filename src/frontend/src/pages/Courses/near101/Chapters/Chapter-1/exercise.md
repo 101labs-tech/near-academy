@@ -1,4 +1,4 @@
-// Here is your easy win to get started: integrate the payment gateway in line 44.
+// Here is your easy win to get started: integrate the payment gateway in line 27.
 // Make sure you do not add extra spaces for code validation purposes.
 const nearAPI = require("near-api-js");
 const { connect, KeyPair, keyStores, utils } = nearAPI;

@@ -32,15 +32,15 @@ Creators and influencers can launch their own **social tokens**. These tokens ma
 
 <Spacer />
 
-Unlike Bitcoin, the “value” managed by blockchain networks is not necessarily “money”; in fact most Web3 projects provide a more human-centric definition of “value” called “utility”.
+Unlike Bitcoin, the “value” managed by blockchain networks is not necessarily “money”; in fact most Web3 projects provide a more human-centric definition of “value” called “utility.”
 
 ## Welcome to the Internet of Value.
 
-These social tokens are just one of the multiple new primitives from Web3, which is shifting the internet away from an attention to engagement and shared value.
+These social tokens are just one of the multiple new primitives from Web3, shifting the internet away from an attention economy to engagement and shared value one.
 
 Before Web3, the internet was a native mechanism to transfer what computer science refers to as **state – the status of who is who, who owns what, and who has the right to do what.**
 
-State is a key property for enabling human ecosystems. The ability to easily and efficiently transfer value independently has been at the heart of exchanges between humans for centuries. When Alice gives 1 shell to Bob, their states change.
+State is a key property for enabling human ecosystems. The ability to quickly and efficiently transfer value independently has been at the heart of exchanges between humans for centuries. When Alice gives 1 shell to Bob, their states change.
 
 Without a native mechanism to save states on the internet, exchanges could be recorded only through institutions acting as clearing entities that require our unconditional trust.
 
@@ -50,7 +50,7 @@ Without a native mechanism to save states on the internet, exchanges could be re
 
 While cloud services enable businesses to focus more on their business logic and care less about infrastructure, it did not solve another fundamental problem of web2: siloed data controlled by platforms. It is not in platforms’ interest to give unrestricted access to their network to anyone; rather they focus on increasing adoption and loyalty, even if that means creating a dependency for users. User identity, created value, and history are only available in the platforms’ walled-gardens.
 
-In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**. This is why they are also referred to as the “Open Web”.
+In contrast, **Web3 networking protocols treat Identity and Monetary Assets as native primitives that can be transferred over the network**.
 
 There are many advantages that a typical centralized architecture cannot provide:
 
@@ -58,13 +58,13 @@ There are many advantages that a typical centralized architecture cannot provide
 Value transfers are operated in a peer-to-peer fashion, without trusted third-parties. That way, users are not dependent on a central entity or platform.
 
 **Censorship resistance**
-Because the network is not operated by a central entity, it cannot be shut down by one particular entity. Consensus is required to change the state of the network.
+Because a central entity does not operate the network, it cannot be shut down by one particular entity. Reaching a Consensus is required to change the state of the network.
 
 **Availability**
 A decentralized system is more robust as there is no central point of failure.
 
 **Transparency**
-All interactions and states are stored immutably on the blockchain, and made publicly available for anyone to review.
+All interactions and states are stored immutably on the blockchain and publicly available for anyone to review.
 
 <Spacer />
 

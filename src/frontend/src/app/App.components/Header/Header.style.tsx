@@ -13,8 +13,6 @@ export const HeaderLogo = styled.img`
   padding: 11px;
   z-index: 1;
   margin: auto;
-  float: left;
-  margin-left: 44px;
 `
 
 export const HeaderLoggedOut = styled.div`

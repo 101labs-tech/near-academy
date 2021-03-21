@@ -1,38 +1,41 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
-import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
-import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
+import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer } from './Chapter.style'
+import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
 import { BackgroundContainer, Difficulty, ImageContainer, Quote, quoteComma } from './Chapter.style'
 
 monaco
   .init()
   .then((monacoInstance) => {
     monacoInstance.editor.defineTheme('myCustomTheme', {
-      base: 'vs-light',
+      base: 'vs',
       inherit: true,
-      // rules: [
-      //   { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
-      //   { token: 'keyword', foreground: '#0e15e1' },
-      //   { token: 'number', foreground: '#038c2a' },
-      //   { token: 'string', foreground: '#910303' },
-      // ],
-      // colors: {
-      //   'editor.foreground': '#7b7b7b',
-      //   'editor.background': backgroundColorLight,
-      //   'editor.selectionBackground': '#DDF0FF33',
-      //   'editor.lineHighlightBackground': '#FFFFFF08',
-      //   'editorCursor.foreground': '#A7A7A7',
-      //   'editorWhitespace.foreground': '#FFFFFF40',
-      // },
+      rules: [
+        { token: 'comment', foreground: '#029b3a', fontStyle: 'italic' },
+        { token: 'keyword', foreground: '#0e15e1' },
+        { token: 'number', foreground: '#038c2a' },
+        { token: 'string', foreground: '#910303' },
+      ],
+      colors: {
+        'editor.foreground': '#7b7b7b',
+        'editor.background': backgroundColorLight,
+        'editor.selectionBackground': '#DDF0FF33',
+        'editor.lineHighlightBackground': '#FFFFFF08',
+        'editorCursor.foreground': '#A7A7A7',
+        'editorWhitespace.foreground': '#FFFFFF40',
+      },
     })
   })
   .catch((error) => console.error('An error occurred during initialization of Monaco: ', error))
@@ -44,7 +47,7 @@ const MonacoReadOnly = ({ children }: any) => {
       <Editor
         height={height}
         value={children}
-        language="rust"
+        language="typescript"
         theme="myCustomTheme"
         options={{
           lineNumbers: false,
@@ -55,6 +58,7 @@ const MonacoReadOnly = ({ children }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
@@ -78,17 +82,19 @@ const MonacoEditorSupport = ({ support }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
+const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, height }: any) => {
   return (
     <div>
       <ControlledEditor
-        height="600px"
+        height={height ? height : '600px'}
+        width={width}
         value={proposedSolution}
         language="rust"
         theme="myCustomTheme"
@@ -102,17 +108,18 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback }: any) => {
           readOnly: false,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
+          wordWrap: true
         }}
       />
     </div>
   )
 }
 
-const MonacoDiff = ({ solution, proposedSolution }: any) => {
+const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
   return (
     <div>
       <DiffEditor
-        height="600px"
+        height={height ? height : '600px'}
         original={proposedSolution}
         modified={solution}
         language="rust"
@@ -128,6 +135,7 @@ const MonacoDiff = ({ solution, proposedSolution }: any) => {
           fontSize: 14,
           fontFamily: 'Proxima Nova',
           renderSideBySide: false,
+          wordWrap: true
         }}
       />
     </div>
@@ -210,25 +218,31 @@ const Content = ({ course }: any) => (
           component: Dialog,
         },
         Difficulty: {
-          component: Difficulty
+          component: Difficulty,
         },
         ImageContainer: {
-          component: ImageContainer
+          component: ImageContainer,
         },
         Quote: {
-          component: Quote
+          component: Quote,
         },
         quoteComma: {
-          component: quoteComma
+          component: quoteComma,
         },
         Spacer: {
-          component: Spacer
+          component: Spacer,
         },
         narrativeText: {
-          component: narrativeText
+          component: narrativeText,
+        },
+        TextWrapper: {
+          component: TextWrapper,
         },
         BackgroundContainer: {
-          component: BackgroundContainer
+          component: BackgroundContainer,
+        },
+        VerticalAlign:{
+          component: VerticalAlign,
         }
       },
     }}
@@ -261,6 +275,24 @@ export const ChapterView = ({
   proposedQuestionAnswerCallback,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
+  const [editorWidth, setEditorWidth] = useState(0)
+  const [editorHeight, setEditorHeight] = useState(0)
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const isMounted = useIsMounted()
+
+  useEffect(() => {
+    if (wrapperRef.current) {
+      setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+      setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+      window.addEventListener('resize', () => {
+        if (isMounted.current) {
+          setEditorWidth(0)
+          setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
+          setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+        }
+      })
+    }
+  }, []);
 
   let extension = '.rs'
 
@@ -299,13 +331,15 @@ export const ChapterView = ({
             ))}
           </ChapterQuestions>
         ) : (
-          <div>
+          <div ref={wrapperRef}>
             {display === 'solution' ? (
               <ChapterMonaco>
                 {showDiff ? (
-                  <MonacoDiff solution={solution} proposedSolution={proposedSolution} />
+                  <MonacoDiff width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
                 ) : (
                   <MonacoEditor
+                    width={editorWidth}
+                    height={editorHeight}
                     proposedSolution={proposedSolution}
                     proposedSolutionCallback={proposedSolutionCallback}
                   />

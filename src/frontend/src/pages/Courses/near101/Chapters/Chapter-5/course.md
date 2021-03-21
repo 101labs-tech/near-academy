@@ -8,11 +8,11 @@
   <div>
   <img alt="story_image_5_0" src="/images/chap_5_0.png">
   </div>
-  <div>
+  <VerticalAlign>
   "When you checked the meme collection status, you actually interacted with a contract on the NEAR Network. As a matter of fact, the museum is orchestrated mostly automatically via a multitude of codes deployed on NEAR  that interact with each other."
   <Spacer />
   "I’m so glad to be back at work, digital detox was a bad idea! Imagine living without the internet for a week?! My god, I’m so much better with my smart contracts code. I see the beauty in their rules, like an invisible chaos behind the face of order."
-  </div>
+  </VerticalAlign>
 </narrativeText>
 <Spacer />
 
@@ -39,7 +39,7 @@ near view hello-world-contract.testnet hello
 
 ## Functions
 
-The hello-world contract is the most basic type of contract as no state alteration is required by the NEAR Network when the contract is called. It simply displays a static string stored on the blockchain. Calling such contracts does not involve gas cost in NEAR; gas is incurred only when computation is required.
+The hello-world contract is the most basic type of contract as no state alteration is required by the NEAR Network when the contract is called. It simply displays a static string stored on the blockchain. Calling such contracts does not involve gas cost in NEAR; gas is incurred only when a computation is required.
 Let’s look at hello_you() now. This contract invokes more than just a simple“view” function on something that was stored on the blockchain. It requires a call of context.
 
 ```typescript
@@ -48,7 +48,7 @@ export function hello_you(): string {
 }
 ```
 
-Contract hello_you() does not alter the state of the blockchain, but it requires a call of context, which is an operation that validator nodes have to carry, and therefore gas to be paid.
+Contract hello_you() does not alter the blockchain state. Still, it requires a call of context, an operation that validator nodes have to carry, and therefore gas to be paid.
 
 Other "call" functions may alter the state of the blockchain. Gas must be paid to the network when invoking these functions.
 
@@ -65,7 +65,7 @@ Note that this time, the function does not return anything to view. This is what
 
 ## Action
 
-An action is a composable unit of operation that, together with zero or more other actions, defines a transaction. You can think of an action as a valid message to be executed at the destination (receiver). And a Transaction is an externally issued request to create the Receipt
+An action is a composable unit of operation that, together with zero or more other actions, defines a transaction. You can think of an action as a valid message to be executed at the destination (receiver). 
 
 There are currently 8 supported action types:
 
@@ -75,7 +75,7 @@ There are currently 8 supported action types:
 **5.DeleteKey** to delete an existing key from an account
 **6.Transfer** to move tokens from one account to another
 **7.Stake** to express interest in becoming a validator at the next available opportunity
-**8.DeployContract** to deploy a contract FunctionCall to invoke a method on a contract (including budget for compute and storage)
+**8.DeployContract** to deploy a contract FunctionCall to invoke a method on a contract (including the budget for computing and storage)
 
 ## Deployment
 
@@ -85,10 +85,10 @@ Step 1: **Compile contract bytecode**
 The given Rust or AssemblyScript code is compiled into wasm bytecode.
 
 Step 2: **Compose transaction using DeployContract with attached bytecode.**
-A transaction is constructed that contains all the necessary values for NEAR to deploy a smart contract. A transaction alters the state of the VM and it can contain more than one action like CreateAccount, AddKey, Transfer as well.
+A transaction is constructed that contains all the necessary values for NEAR to deploy a smart contract. A transaction alters the VM state and can include more than one action like CreateAccount, AddKey, Transfer as well.
 
-Step 3: **Sign and send transaction to deploy your code**
-Everyone can create a transaction. But only a signed transaction (with valid keys) is valid. The signed transaction is broadcasted to NEAR, validated by the validators and eventually the code gets deployed on the network.
+Step 3: **Sign and send a transaction to deploy your code**
+Everyone can create a transaction. But only a signed transaction (with valid keys) is correct. The signed transaction is broadcasted to NEAR, validated by the validators and eventually the code gets deployed on the network.
 
 Step 4: **Redeployment and trustless operation**
-As long as FullAccess private keys are available you can redeploy. Remove these keys for trustless operation. Congratulations.
+As long as FullAccess private keys are available, you can redeploy. Remove these keys for trustless operation. Congratulations.

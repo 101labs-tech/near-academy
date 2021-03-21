@@ -124,7 +124,7 @@ ChapterDrawerView.propTypes = {
   hideCallback: PropTypes.func.isRequired,
   pathname: PropTypes.string.isRequired,
   changeCourseCallback: PropTypes.func.isRequired,
-  activeCourse: PropTypes.string.isRequired,
+  activeCourse: PropTypes.object.isRequired,
 }
 
 ChapterDrawerView.defaultProps = {

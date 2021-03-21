@@ -1,3 +1,4 @@
+import useIsMounted from 'ismounted'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useState } from 'react'
@@ -16,10 +17,15 @@ type ButtonProps = {
 }
 
 export const Button = ({ text, icon, color, onClick, type, loading, invertIcon }: ButtonProps) => {
+  const isMounted = useIsMounted()
   const [clicked, setClicked] = useState(false)
   const clickCallback = () => {
     setClicked(true)
-    setTimeout(() => setClicked(false), 1000)
+    setTimeout(() => {
+      if (isMounted.current) {
+        setClicked(false)
+      }
+    }, 1000)
   }
   return (
     <ButtonView

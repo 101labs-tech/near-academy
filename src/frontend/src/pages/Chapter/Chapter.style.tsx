@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
-  background: linear-gradient(236.29deg, #1174CB 3.4%, #20C1DC 100%);
+  background: linear-gradient(236.29deg, #1174cb 3.4%, #20c1dc 100%);
   display: grid;
   grid-template-columns: 5fr 3fr;
   grid-gap: 20px;
@@ -12,7 +12,7 @@ export const ChapterStyled = styled.div`
   @media (max-width: 900px) {
     grid-template-columns: auto;
     height: initial;
-    margin: 70px 10px;
+    margin: 70px 10px 0;
   }
 `
 
@@ -20,9 +20,11 @@ export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
   display: grid;
   grid-template-rows: ${(props) => (props.hasTabs ? '30px auto auto' : 'auto auto')};
   grid-gap: 0;
-  overflow-y: scroll;
+  height: calc(100vh - 170px);
+  /* overflow-y: scroll; */
 
   @media (max-width: 900px) {
+    height: auto;
     overflow-y: initial;
     margin-bottom: 20px;
   }
@@ -67,15 +69,18 @@ export const ChapterCourse = styled.div`
   }
 
   strong {
-    color: #0072CE;
+    color: #001424;
+    font-weight: bold;
   }
 
   a:visited {
-    color: #29dbf7;
+    color: #002746;
+    text-decoration: underline #001424 !important;
   }
 
   a {
-    color: #00C1DE;
+    color: #001424;
+    text-decoration: underline !important;
   }
 
   ul {
@@ -88,14 +93,14 @@ export const ChapterCourse = styled.div`
 export const ChapterH1 = styled.div`
   font-size: 50px;
   margin-top: 25px;
-  color: #1174CB;
+  color: #1174cb;
   line-height: 38px;
   font-weight: 600;
   text-align: center;
 `
 
 export const ChapterH2 = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   padding: 20px 40px 10px 40px;
   font-weight: 900;
   font-size: 28px;
@@ -122,6 +127,12 @@ export const ChapterValidator = styled.div`
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  padding: 0 10px;
+  min-height: 180px;
+
+  @media (max-width: 900px) {
+    padding: 45px 10px;
+  }
 
   &.ok {
     border-color: ${okColor};
@@ -242,7 +253,6 @@ export const ChapterLocked = styled.div`
 export const Difficulty = styled.div`
   margin: 15px 0px;
   text-align: center;
-  
 `
 export const BackgroundContainer = styled.div`
   background-color: #0072ce;
@@ -251,41 +261,55 @@ export const BackgroundContainer = styled.div`
   h1 {
     color: #ffb359;
   }
-  
 `
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.span`
+  display: block;
   margin-top: 40px;
 `
 
-export const Spacer = styled.div`
+export const Spacer = styled.span`
+    display: block;
     height: 30px;
 `
 
 export const narrativeText = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    gap: 0px 20px;
-    font-weight: 400;
-    font-size: 18px;
-    color: #f2f2f2;
-    padding: 40px 40px;
-    max-height: 330px;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f2f2f2;
+  padding: 10px 40px 0px 40px;
+  /* max-height: 330px; */
+  overflow: hidden;
+
+  .image-wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+`
+
+export const TextWrapper = styled.div`
+  padding: 5%;
 `
 
 export const Quote = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   font-size: 35px;
   font-weight: 900;
   padding-left: 40px;
 `
 
 export const quoteComma = styled.div`
-  color: #0072CE;
+  color: #0072ce;
   font-weight: 600;
   font-size: 88px;
   margin-bottom: -80px;
-
 `
 
+export const VerticalAlign = styled.div`
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+`
