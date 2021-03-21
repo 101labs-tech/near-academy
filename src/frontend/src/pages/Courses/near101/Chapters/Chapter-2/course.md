@@ -87,7 +87,7 @@ Besides cloud databases and other centralized solutions, data can be stored on P
 
 ## Check it for yourself with a Block Explorer!
 
-The NEAR blockchain is public, so anyone can query it to get any data stored in it. Everyone can query the blockchain through the NEAR client, but a dedicated interface is easier to use, and is accessible by anyone regardless of whether they are running the NEAR software or not. Blockchain explorers, as these interfaces are called, can display blockchain data in a more user-friendly way and enhance the entries with off-chain data like current dollar value of a token.
+The NEAR blockchain is public, so anyone can query it to get any data stored in it. Everyone can query the blockchain through a NEAR client, but a dedicated interface is easier to use, and is accessible by anyone regardless of whether they are running the NEAR software or not. Blockchain explorers, as these interfaces are called, can display blockchain data in a more user-friendly way and enhance the entries with off-chain data like current dollar value of a token.
 
 <Spacer />
 

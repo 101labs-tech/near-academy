@@ -43,7 +43,7 @@ The **category** parameter allows a value from 1 to 4 (inclusive). The meme muse
 
 With that, you are ready to create your first meme. It is done in just three simple steps.
 
-1\. Prepare your account. You need to make sure your near cli has access to the account supposed to interact with the contract. Simply use the NEAR Cli and type “near login” and follow the instructions.
+1\. Prepare your account. You need to make sure your NEAR CLI has access to the account supposed to interact with the contract. Simply use the NEAR CLI and type “near login” and follow the instructions.
 
 2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login: "near call museum.testnet add_myself_as_contributor --accountId YOUR_ACCOUNT_NAME.testnet"
 
