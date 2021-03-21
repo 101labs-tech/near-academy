@@ -45,9 +45,9 @@ With that, you are ready to create your first meme. It is done in just three sim
 
 1\. Prepare your account. You need to make sure your near cli has access to the account supposed to interact with the contract. Simply use the NEAR Cli and type “near login” and follow the instructions.
 
-2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login.
+2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login: "near call museum.testnet add_myself_as_contributor --accountId YOUR_ACCOUNT_NAME.testnet"
 
-3\. Register your meme. Make sure to use a custom name for the meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
+3\. Register your meme. Make sure to use a custom name for the meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you at least 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
 
 ```bash
 near call museum.testnet add_meme \
