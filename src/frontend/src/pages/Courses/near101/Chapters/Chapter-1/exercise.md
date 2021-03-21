@@ -21,7 +21,7 @@ async function main() {
   // connect to NEAR! :)
   const near = await connect(config);
   // create a NEAR account object
-  const senderAccount = await near.account(sender);
+  const sender = await near.account(sender);
 
   // TODO send those tokens here
   const result = ;
