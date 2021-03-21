@@ -9,9 +9,9 @@
     <VerticalAlign>
         It’s always something to start in a new environment. And you’ve decided to make the best of it.
         <Spacer />
-        “You’re all set now. Let’s get to work! “
+        "You’re all set now. Let’s get to work! "
         <Spacer />
-        “You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… ”
+        "You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… "
     </VerticalAlign>
 </narrativeText>
 <Spacer />
@@ -39,7 +39,7 @@ Transactions and data storage are validated here via the NEAR consensus mechanis
 
 ## Layer 1 - Runtime Layer (VM, Storage )
 
-Layer 1 can be considered at the same level as the protocol layer. Every time a NEAR Validator Node validates a transaction they read and write in the State Storage and on the VM. Layer 1 is often referred to as the resource layer because the “real computations” occur here.
+Layer 1 can be considered at the same level as the protocol layer. Every time a NEAR Validator Node validates a transaction they read and write in the State Storage and on the VM. Layer 1 is often referred to as the resource layer because the "real computations" occur here.
 
 ## The NEAR VM
 
@@ -55,7 +55,7 @@ Validators also store each processed transaction in the network. Validators are 
 
 Validator nodes rewards are adjusted based on the amount of stake and participation (uptime). The rewards of the validator nodes come from programmed new token emission (currently capped at 5%) and transaction fees from network users, referred to as ‘gas’.
 
-Validator nodes are pseudonymous, and game theory is used to ensure that they run the code with good behavior with a staking process called “Proof of Stake”. In this process, they make a guarantee deposit, a stake in NEAR, which they will forfeit if they have operated improperly.
+Validator nodes are pseudonymous, and game theory is used to ensure that they run the code with good behavior with a staking process called "Proof of Stake". In this process, they make a guarantee deposit, a stake in NEAR, which they will forfeit if they have operated improperly.
 
 ## Transaction Gas
 
@@ -63,7 +63,7 @@ Each transaction takes some amount of bandwidth to be included in the network le
 
 The goal for gas is to represent a unified measure of resources spent to receive, execute, and propagate a transaction on default hardware. Computation (CPU) is a momentary resource spent on executing a transaction.
 
-The cost of each instruction is denominated in “gas” units. Bandwidth is usually measured in bytes, but in the NEAR platform it is converted into gas units using a simple coefficient of overhead which has been estimated on reference hardware.
+The cost of each instruction is denominated in "gas" units. Bandwidth is usually measured in bytes, but in the NEAR platform it is converted into gas units using a simple coefficient of overhead which has been estimated on reference hardware.
 
 <Spacer />
 <narrativeText style="background: #0072CE">
@@ -71,7 +71,7 @@ The cost of each instruction is denominated in “gas” units. Bandwidth is usu
         <img alt="story_image_4_2" src="/images/chap_4_2.png">
     </div>
     <VerticalAlign>
-        “Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now”
+        "Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now"
         <Spacer />
         "Interacting with the network via a terminal is simple and effective."
     </VerticalAlign>
@@ -88,7 +88,7 @@ Since we are interested in calling a simple function and getting a quick answer,
 1\. Install NEAR CLI: "npm install -g near-cli"
 2\. Typing "near" prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum
 3\. Type "near login" this will open your browser and ask you to login into your account
-4\. Now the contract name is “meme-museum.testnet” and the method is called “getMemecount”. So type: "near view meme-museum.testnet get_meme_count". This will return you the amount of memes that are registered in the museum.
+4\. Now the contract name is "museum.testnet" and the method is called get_meme_count. So type: "near view museum.testnet get_meme_count". This will return you the amount of memes that are registered in the museum.
 5\. Congratulations. You just called a contract on NEAR.
 
  <ImageContainer>
