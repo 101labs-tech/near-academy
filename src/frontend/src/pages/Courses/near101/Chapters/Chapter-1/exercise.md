@@ -11,11 +11,11 @@ const networkId = "testnet";
 const amount = utils.format.parseNearAmount("1.5");
 
 async function main() {
-  // sets up an empty keyStore object in memory using near-api-js
+  // setup an empty keyStore object in memory using near-api-js
   const keyStore = new keyStores.InMemoryKeyStore();
-  // creates a keyPair from the private key provided in your .env file
+  // create a keyPair from the private key provided in your .env file
   const keyPair = KeyPair.fromString(process.env.SENDER_PRIVATE_KEY);
-  // adds the key you just created to your keyStore which can hold multiple keys
+  // add the key you just created to your keyStore which can hold multiple keys
   await keyStore.setKey(networkId, sender, keyPair);
 
   // connect to NEAR! :)
