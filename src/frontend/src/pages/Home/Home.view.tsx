@@ -1,6 +1,7 @@
-import { Button } from 'app/App.components/Button/Button.controller'
 import * as React from 'react'
 import { Link } from 'react-router-dom'
+
+import { Button } from 'app/App.components/Button/Button.controller'
 
 //prettier-ignore
 import { Footer, HomeContainer, HomePage, HomeStyled } from './Home.style'
@@ -59,14 +60,14 @@ export const HomeView = () => {
             <p>Made by 101Labs.org</p>
           </div>
           <div className={'right'}>
-            <div className="links">
+            {/* <div className="links">
               <a href="https://mintbase.io/" rel="noopener noreferrer" target="_blank" className="link">Mintbase</a>
               <a href="https://paras.id/" rel="noopener noreferrer" target="_blank" className="link">Paras</a>
               <a href="https://berryclub.io/" rel="noopener noreferrer" target="_blank" className="link">Berry Club</a>
               <a href="https://near.org/developers/" rel="noopener noreferrer" target="_blank" className="link">Near Devs</a>
               <a href="https://nearguilds.com/" rel="noopener noreferrer" target="_blank" className="link">Near Guilds</a>
               <a href="https://near.chat" rel="noopener noreferrer" target="_blank" className="link">Near Chat</a>
-            </div>
+            </div> */}
             <div className="socials">
               <a href={'https://github.com/near'}>
                 {' '}
