@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+
 import { backgroundColorLight, downColor, near6, okColor, primaryColor, textColor } from 'styles'
 
 export const ChapterStyled = styled.div`
@@ -312,4 +313,27 @@ export const VerticalAlign = styled.div`
   display:flex;
   flex-direction: column;
   justify-content: center;
+`
+
+export const SpecialCode = styled.div`
+  animation: flow 6s ease-in-out infinite;
+  background: linear-gradient(-60deg, #fff, #00C08B, #0072ce, #000);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 8px 40px;
+
+  @keyframes flow {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    
+    100% {
+      background-position: 0 50%;
+    } 
+  }
 `
