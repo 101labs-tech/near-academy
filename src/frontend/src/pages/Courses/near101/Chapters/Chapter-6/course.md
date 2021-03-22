@@ -114,8 +114,8 @@ The contract checks if the comment has a short enough length (a maximum length o
     <img alt="story_image_6_1" src="/images/chap_6_1.png">
   </div>
   <VerticalAlign>
-    “I really like what you’re doing!”
+    *“I really like what you’re doing!”*
     <Spacer />
-    “Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”
+    *“Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”*
   </VerticalAlign>
 </narrativeText>

@@ -16,7 +16,7 @@
 </BackgroundContainer>
 <Spacer />
 
-Handling big ideas like money and identity is seamless:
+Adding a payment gateway with NEAR is seamless:
 
 ```javascript
 sender.sendMoney(receiver, amount)

@@ -9,11 +9,11 @@
         <img alt="story_image_8_0" src="/images/chap_8_0.png">
     </div>
     <VerticalAlign>
-        “Oh it’s great i bump into you now”
+        *“Oh it’s great i bump into you now”*
         <Spacer />
-        “I meant to tell you, everyone at the museum is delighted with your work. We’re so lucky to have you onboard!”  
+        *“I meant to tell you, everyone at the museum is delighted with your work. We’re so lucky to have you onboard!”*
         <Spacer />
-        “I’d like you to meet everyone you haven’t met yet. Join us for afterwork, that’s where everyone hangs out at this time!”
+        *“I’d like you to meet everyone you haven’t met yet. Join us for afterwork, that’s where everyone hangs out at this time!”*
     </VerticalAlign>
 </narrativeText>
 

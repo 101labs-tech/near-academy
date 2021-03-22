@@ -9,9 +9,9 @@
     <VerticalAlign>
         It’s always something to start in a new environment. And you’ve decided to make the best of it.
         <Spacer />
-        "You’re all set now. Let’s get to work! "
+        *"You’re all set now. Let’s get to work!"*
         <Spacer />
-        "You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… "
+        *"You’ve got your first opportunity to show you know your stuff. Ethan is on vacation, and he deals with the meme inventory. Could you cover for him? Start by getting familiar with the registry… "*
     </VerticalAlign>
 </narrativeText>
 <Spacer />
@@ -71,9 +71,9 @@ The cost of each instruction is denominated in "gas" units. Bandwidth is usually
         <img alt="story_image_4_2" src="/images/chap_4_2.png">
     </div>
     <VerticalAlign>
-        "Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now"
+        *"Alrighty, I see you’ve still got a hang of it! Awesome, we can start running some code through the near-cli now"*
         <Spacer />
-        "Interacting with the network via a terminal is simple and effective."
+        *"Interacting with the network via a terminal is simple and effective."*
     </VerticalAlign>
 </narrativeText>
 <Spacer />
