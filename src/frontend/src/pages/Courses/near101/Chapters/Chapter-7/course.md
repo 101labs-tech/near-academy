@@ -24,7 +24,7 @@ git clone https://github.com/oceanByte/meme-museum-dapp
 
 You see there is a src folder that contains the files to interact with NEAR and to display the results. It looks just like an ordinary web app. We are using the near-api-js library here which provides an easy way to interact with NEAR. Like with every other library, many details will become more clear when you really need them, so let’s focus on what’s needed now: **We want to display a list of all available memes and interact with them by writing a comment.**
 
-As we know there is the museum contract with a function get_meme_list. We called it via the NEAR CLI before and we can do the same now with the near-api-js. You see that it does not matter how you connect to NEAR as long as it follows a specific protocol. The setup to get connected to NEAR is just a few lines.
+As we know there is the museum contract with a function get\_meme\_list. We called it via the NEAR CLI before and we can do the same now with the near-api-js. You see that it does not matter how you connect to NEAR as long as it follows a specific protocol. The setup to get connected to NEAR is just a few lines.
 
 <ImageContainer>
     <img alt="story_image_7_1" src="/images/chap_7_1.png">
@@ -100,7 +100,7 @@ meme + “.” + nearConfig.contractName,
 ```
 
 **3. Display all memes**
-Here we go. We have all the contracts ready and call the get_meme function for each of them to display the results.
+Here we go. We have all the contracts ready and call the get\_meme function for each of them to display the results.
 
 ```javascript
 const memes = []
@@ -116,7 +116,7 @@ async function showMemes() {
 
 **4. Write a comment**
 
-Adding a comment to a Meme is just as easy as calling the function set_comment and providing your text.
+Adding a comment to a Meme is just as easy as calling the function set\_comment and providing your text.
 
 ```javascript
 async function setComment(memeIndex, text) {

@@ -43,9 +43,10 @@ The **category** parameter allows a value from 1 to 4 (inclusive). The meme muse
 
 With that, you are ready to create your first meme. It is done in just three simple steps.
 
-1\. Prepare your account. You need to make sure your NEAR CLI has access to the account supposed to interact with the contract. Simply use the NEAR CLI and type “near login” and follow the instructions.
+1\. Prepare your account. You need to make sure your NEAR CLI has access to the account supposed to interact with the contract. Simply use the NEAR CLI and type <AnimatedCode>near login</AnimatedCode> and follow the instructions.
 
-2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login: "near call museum.testnet add_myself_as_contributor --accountId YOUR_ACCOUNT_NAME.testnet"
+2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login: 
+<AnimatedCode>near call museum.testnet add\_myself\_as\_contributor --accountId YOUR\_ACCOUNT\_NAME.testnet</AnimatedCode>
 
 3\. Register your meme. Make sure to use a custom name for the meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you at least 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
 
@@ -55,7 +56,7 @@ near call museum.testnet add_meme \
 --accountId YOUR_ACCOUNT_NAME.testnet --amount 3
 ```
 
-Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: "near view museum.testnet get_meme_list". You may now also find it on the blockchain explorer, it is in the public domain now.
+Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get\_meme\_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
 
 ## The Meme Contract
 
@@ -84,7 +85,7 @@ You can see that all functions are exported so that they can be called from othe
 
 We can classify these functions into two different kinds of functions: view functions and call functions.
 
-View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote_score is returned, which represents the total vote score for this specific meme:
+View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote\_score is returned, which represents the total vote score for this specific meme:
 
 ```typescript
 export function get_vote_score(): i32 {
@@ -104,9 +105,9 @@ export function add_comment(text: string): void {
 }
 ```
 
-This function add_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
+This function add\_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
 
-The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add_comment function.
+The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add\_comment function.
 
 <Spacer />
 <narrativeText style="background: #00C08B;">

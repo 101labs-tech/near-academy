@@ -30,17 +30,12 @@ After it was compiled to Wasm, the contract can be deployed to the NEAR blockcha
 
 Once deployed, the contract can be called in the NEAR VM like a script, served by Nodes on the NEAR blockchain. Anyone connected to the network can see and interact with the code. If a user provides a valid input, the contract will deterministically produce its expected output. In this case “Hello, World!”.
 
-The contract can be called using the NEAR CLI:
-
-```bash
-near view hello-world-contract.testnet hello
-
-```
+The contract can be called using the NEAR CLI: <AnimatedCode>near view hello-world-contract.testnet hello</AnimatedCode>
 
 ## Functions
 
 The hello-world contract is the most basic type of contract as no state alteration is required by the NEAR Network when the contract is called. It simply displays a static string stored on the blockchain. Calling such contracts does not involve gas cost in NEAR; gas is incurred only when a computation is required.
-Let’s look at hello_you() now. This contract invokes more than just a simple“view” function on something that was stored on the blockchain. It requires a call of context.
+Let’s look at hello_you() now. This contract invokes more than just a simple “view” function on something that was stored on the blockchain. It requires a call of context.
 
 ```typescript
 export function hello_you(): string {

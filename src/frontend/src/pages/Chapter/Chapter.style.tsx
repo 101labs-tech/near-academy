@@ -337,3 +337,26 @@ export const SpecialCode = styled.div`
     } 
   }
 `
+export const AnimatedCode = styled.div`
+  animation: flow 10s ease-in-out infinite;
+  background: linear-gradient(-60deg, #000, #00C08B, #0072ce, #000);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+
+  @keyframes flow {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    
+    100% {
+      background-position: 0 50%;
+    } 
+  }
+`
+

@@ -86,8 +86,7 @@ With NEAR, developers should not have to choose between different blockchains li
 
 ## NEAR Account Overview and Set Up
 
-NEAR uses readable account IDs similar to Twitter handles. In addition, account IDs work like website domains; they can have sub-domains.
-For example, only the account "alice" can create a sub-account like "work.alice", and now just "work.alice" can create a "http://dayjob.work.alice".
+NEAR uses readable account IDs similar to Twitter handles. In addition, account IDs work like website domains; they can have sub-domains. For example, only the account "alice" can create a sub-account like "work.alice", and now just "work.alice" can create "dayjob.work.alice".
 Each of these subaccounts has its public key, so one account can have multiple public keys representing various profiles.
 
 These public keys, also called access keys grant permission to act on behalf of the account. There are 2 types of permissions: full-permission and function-call limited permission.
