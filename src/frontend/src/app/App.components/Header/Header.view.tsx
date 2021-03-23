@@ -18,7 +18,7 @@ export const HeaderView = ({ user, removeAuthUserCallback }: HeaderViewProps) =>
     <HeaderStyled>
       <HamburgerLeft />
       <Link to="/">
-        <HeaderLogo alt="logo" src="/logo.svg" />
+        <HeaderLogo alt="logo" width="300px" src="/logo.svg" />
       </Link>
       {user ? loggedInHeader({ user, removeAuthUserCallback }) : loggedOutHeader()}
     </HeaderStyled>

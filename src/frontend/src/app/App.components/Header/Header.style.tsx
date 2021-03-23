@@ -10,7 +10,7 @@ export const HeaderStyled = styled.div`
 `
 
 export const HeaderLogo = styled.img`
-  padding: 11px;
+  padding: 0px;
   z-index: 1;
   margin: auto;
 `
