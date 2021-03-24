@@ -19,7 +19,7 @@
 The contracts have been deployed, you don’t really have to worry about them anymore. Now is the time to focus on the interface and connecting it with the contracts backend. The designs are not available yet but we can keep working on functionality.
 
 ```bash
-git clone https://github.com/oceanByte/meme-museum-dapp
+git clone https://github.com/oceanByte/near-academy-museum-frontend
 ```
 
 You see there is a src folder that contains the files to interact with NEAR and to display the results. It looks just like an ordinary web app. We are using the near-api-js library here which provides an easy way to interact with NEAR. Like with every other library, many details will become more clear when you really need them, so let’s focus on what’s needed now: **We want to display a list of all available memes and interact with them by writing a comment.**
