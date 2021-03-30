@@ -78,6 +78,12 @@ export const ChapterCourse = styled.div`
     display: block;
   }
 
+  @media (min-width: 500px) {
+    .chapterImage {
+      max-width: 450px;
+    }
+  }
+
   strong {
     color: #001424;
     font-weight: bold;
@@ -118,7 +124,11 @@ export const ChapterH2 = styled.div`
   padding: 20px 40px 10px 40px;
   font-weight: 900;
   font-size: 28px;
-  text-align: justify;
+  text-align: left;
+
+  @media (max-width: 615px) {
+    font-size: 35px;
+  }
 `
 
 export const ChapterH3 = styled.div`
