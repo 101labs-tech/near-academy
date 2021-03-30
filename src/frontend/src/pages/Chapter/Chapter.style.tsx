@@ -107,6 +107,10 @@ export const ChapterH1 = styled.div`
   line-height: 38px;
   font-weight: 600;
   text-align: center;
+
+  @media (max-width: 615px) {
+    font-size: 35px;
+  }
 `
 
 export const ChapterH2 = styled.div`
