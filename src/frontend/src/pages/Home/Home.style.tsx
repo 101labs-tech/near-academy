@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+
 import { FullPage } from 'styles'
 
 export const HomeStyled = styled.div`
@@ -358,6 +359,12 @@ export const HomeContainer = styled.div`
     }
   } */
 
+  @media (min-width: 1024px) {
+    p {
+      text-align: justify;
+    }
+  }
+  
   @media (max-width: 768px) {
     section.first {
       margin-top: 130px;
@@ -382,7 +389,7 @@ export const HomeContainer = styled.div`
           font-size: 24px;
           line-height: 36px;
           max-width: 590px;
-          text-align: justify;
+          text-align: left;
         }
         button {
           display: flex;
