@@ -60,7 +60,16 @@ export const ChapterCourse = styled.div`
     padding: 0 40px;
     font-size: 19px;
     font-weight: 300;
-    text-align: justify;
+    text-align: left;
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      padding: 0 40px;
+      font-size: 19px;
+      font-weight: 300;
+      text-align: justify;
+    }
   }
 
   img {
@@ -275,15 +284,27 @@ export const Spacer = styled.span`
 
 export const narrativeText = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 0px 20px;
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
-  padding: 10px 40px 0px 40px;
-  /* max-height: 330px; */
+  padding: 10px 40px;
   overflow: hidden;
+
+  img {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 2fr;
+    img {
+      display: block;
+    }
+    
+    padding: 10px 40px 0px 40px;
+  }
 
   .image-wrapper {
     display: flex;
