@@ -364,7 +364,7 @@ export const HomeContainer = styled.div`
       text-align: justify;
     }
   }
-  
+
   @media (max-width: 768px) {
     section.first {
       margin-top: 130px;
@@ -375,7 +375,7 @@ export const HomeContainer = styled.div`
       /* padding-left: 30px; */
 
       .left:not(button) {
-        width: 88vw;
+        width: 87vw;
         /* width: 100%; */
         padding-bottom: 5vw;
         display: flex;
