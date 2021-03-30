@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+
 import { bgTextColor, near6, primaryColor, textColor } from 'styles'
 
 export const HeaderStyled = styled.div`
@@ -13,6 +14,9 @@ export const HeaderLogo = styled.img`
   padding: 0px;
   z-index: 1;
   margin: auto;
+  @media (max-width: 450px) {
+    max-width: 240px;
+  }
 `
 
 export const HeaderLoggedOut = styled.div`
