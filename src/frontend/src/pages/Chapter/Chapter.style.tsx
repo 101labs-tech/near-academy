@@ -358,6 +358,7 @@ export const SpecialCode = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 8px 40px;
+  line-break: anywhere;
 
   @keyframes flow {
     0% {
