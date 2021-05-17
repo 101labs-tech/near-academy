@@ -10,6 +10,7 @@ import { Login } from 'pages/Login/Login.controller'
 import { ResetPassword } from 'pages/ResetPassword/ResetPassword.controller'
 import { SignUp } from 'pages/SignUp/SignUp.controller'
 import { Terms } from 'pages/Terms/Terms.controller'
+import { Invite } from 'pages/Invite/Invite.controller'
 import { User } from 'pages/User/User.controller'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
@@ -52,6 +53,9 @@ export const AppRoutes = ({ location }: any) => (
     <Route exact path="/terms">
       <Terms />
     </Route>
+      <Route exact path="/invite">
+          <Invite />
+      </Route>
     <Route>
       <Error404 />
     </Route>

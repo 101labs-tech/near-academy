@@ -28,6 +28,9 @@ export const HeaderView = ({ user, removeAuthUserCallback }: HeaderViewProps) =>
 function loggedOutHeader() {
   return (
     <HeaderLoggedOut>
+      <Link to="/invite">
+        <HeaderMenuItem>INVITE</HeaderMenuItem>
+      </Link>
       <Link to="/terms">
         <HeaderMenuItem>TERMS</HeaderMenuItem>
       </Link>
