@@ -14,6 +14,10 @@ export const HamburgerStyledLeft = styled.div`
   box-sizing: content-box;
   cursor: pointer;
   z-index: 11;
+  
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
 
 export const HamburgerStyledRight = styled.div`

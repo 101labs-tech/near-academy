@@ -6,6 +6,9 @@ import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
 
+// @ts-ignore
+import Highlight from 'react-highlight.js';
+
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
 import { backgroundColorLight } from 'styles'
@@ -219,6 +222,9 @@ const Content = ({ course }: any) => (
         },
         dialog: {
           component: Dialog,
+        },
+        Highlight: {
+            component: Highlight
         },
         Difficulty: {
           component: Difficulty,

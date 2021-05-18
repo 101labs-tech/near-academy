@@ -16,6 +16,7 @@ export const FooterView = () => {
     if (pathname === chapter.pathname) {
       if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
       if (i + 1 < chapterData.length) nextChapter = chapterData[i + 1].pathname
+        else nextChapter = '/thank-you'
     }
   })
 

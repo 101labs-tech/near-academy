@@ -50,5 +50,5 @@ export const chapterData: ChapterData[] = [
     pathname: `/${course.path}/chapter-8`,
     name: '8 - What Next',
     data: chapter8,
-  },
+  }
 ]

@@ -18,9 +18,9 @@
 
 Adding a payment gateway with NEAR is seamless:
 
-<SpecialCode>
+<Highlight language="javascript">
 sender.sendMoney(receiver, amount)
-</SpecialCode>
+</Highlight>
 
 The rise of the first blockchain application started in 2009 with Bitcoin, an independent network powering a global digital currency. Since then, blockchain technology has been used across many new applications forming a new open internet called Web3. In 2021, over 7,000 companies are building the internet infrastructure of Web3.
 

@@ -30,7 +30,7 @@ As we know there is the museum contract with a function get\_meme\_list. We call
     <img alt="story_image_7_1" src="/images/chap_7_1.png">
 </ImageContainer>
 
-```javascript
+<Highlight language="javascript">
 import { connect, Contract, keyStores, WalletConnection } from 'near-api-js'
 import getConfig from './config'
 
@@ -38,29 +38,28 @@ const nearConfig = getConfig(process.env.NODE_ENV || 'development')
 
 // Initialize contract & set global variables
 export async function initContract() {
-  // Initialize connection to the NEAR testnet.
-  // Note that the keys are saved in local storage and never leave the client!
-  const near = await connect(
-    Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig),
-  )
+// Initialize connection to the NEAR testnet.
+// Note that the keys are saved in local storage and never leave the client!
+const near = await connect(
+Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig),
+)
 
-  // Initializing Wallet based Account. It can work with NEAR testnet wallet that
-  // is hosted at https://wallet.testnet.near.org
-  window.walletConnection = new WalletConnection(near)
+// Initializing Wallet based Account. It can work with NEAR testnet wallet that
+// is hosted at https://wallet.testnet.near.org
+window.walletConnection = new WalletConnection(near)
 
-  // Getting the Account ID. If still unauthorized, it's just empty string
-  window.accountId = window.walletConnection.getAccountId()
+// Getting the Account ID. If still unauthorized, it's just empty string
+window.accountId = window.walletConnection.getAccountId()
 
-  // Initializing our contract APIs by contract name and configuration
-  window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
-    // View methods are read only. They don't modify the state, but usually return some value.
-    viewMethods: ['get_meme_list'],
-    // Change (“call”) methods can modify the state. But you don't receive the returned value when called.
-    changeMethods: ['create_meme'],
-  })
+// Initializing our contract APIs by contract name and configuration
+window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
+// View methods are read only. They don't modify the state, but usually return some value.
+viewMethods: ['get_meme_list'],
+// Change (“call”) methods can modify the state. But you don't receive the returned value when called.
+changeMethods: ['create_meme'],
+})
 }
-```
-
+</Highlight>
 This initContract function initializes our contract APIs by using a contract name and configuration. You should recognize viewMethods and changeMethods (also known as callMethods). We can list all functions here that we want to use in our application.
 
 That's all you need to know about configuration to get started. The rest works just like any other function calling an API.
@@ -70,20 +69,19 @@ Looking at index.js, we see that we can achieve our goal with four short functio
 **1. Get the list of all Memes in the Museum**
 We just use the name that was defined for the function in the contract to call it.
 
-```javascript
+<Highlight language="javascript">
 let memeLIst = []
 async function getMemeList() {
   memeList = await window.contract.get_meme_list()
   // ... DOM manipulation here
 }
-```
-
+</Highlight>
 Since we need to send our query through the network we need to await the answer. Just like an ordinary API call to a server. This will return an array with all the names for the accounts that contain the meme contracts.
 
 **2. Get all memes**
 We are almost there. With the full memeList we can start to call the individual contracts and read the details. From the previous chapter we know that each contract is deployed on it’s own account. We need to call different contracts but all of the same kind (meme contracts). So we fill an array with new contracts to use them in the next step.
 
-```javascript
+<Highlight language="javascript">
 const memeContracts = [];
 async function setupMemeContracts() {
    memeList.forEach(meme => {
@@ -93,16 +91,15 @@ meme + “.” + nearConfig.contractName,
   changeMethods: [‘set_comment’]}))
    })
 
-   await Promise.all(memeContracts)
-   console.log(memeContracts)
-   // ... DOM manipulation here
+await Promise.all(memeContracts)
+console.log(memeContracts)
+// ... DOM manipulation here
 }
-```
-
+</Highlight>
 **3. Display all memes**
 Here we go. We have all the contracts ready and call the get\_meme function for each of them to display the results.
 
-```javascript
+<Highlight language="javascript">
 const memes = []
 async function showMemes() {
   memeContracts.forEach(async (memeContract) => {
@@ -112,20 +109,18 @@ async function showMemes() {
   console.log(memes)
   // ... DOM manipulation here
 }
-```
-
+</Highlight>
 **4. Write a comment**
 
 Adding a comment to a Meme is just as easy as calling the function set\_comment and providing your text.
 
-```javascript
+<Highlight language="javascript">
 async function setComment(memeIndex, text) {
   const result = await memes[memeIndex].set_comment(text)
   console.log(result)
   // ... DOM manipulation here
 }
-```
-
+</Highlight>
 The message is saved in the meme contract on the NEAR testnet. In other words: calling this function alters the state of the blockchain and costs gas. The costs are a fraction of a cent but keep this in mind when writing more complex functions.
 
 ## What to look for when writing a dApp
