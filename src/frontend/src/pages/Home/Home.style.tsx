@@ -30,6 +30,13 @@ export const Footer = styled.footer`
       color: white;
       font-size: 14px;
     }
+    a { 
+      color: white;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 20px 0px;
+    }
   }
   .right {
     padding: 60px;
