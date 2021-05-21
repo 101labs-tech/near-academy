@@ -59,6 +59,20 @@ export const HomeView = () => {
             <img src={'logo-white.svg'} alt="101 labs icon" />
             <p>Made by 101Labs.org</p>
           </div>
+          <div className={'center'}>
+           <ul>
+             <p className={'title'}>Lorem</p>
+             <li>
+               <Link to="/terms">TERMS</Link>
+             </li>
+             <li>
+               <Link to="/terms">Near NFT projects</Link>
+             </li>
+           </ul>
+           <ul>
+             <p className={'title'}>Ecosystem</p>
+           </ul>
+          </div>
           <div className={'right'}>
             {/* <div className="links">
               <a href="https://mintbase.io/" rel="noopener noreferrer" target="_blank" className="link">Mintbase</a>

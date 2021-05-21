@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { FullPage } from 'styles'
+import {FullPage} from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
@@ -22,14 +22,47 @@ export const Footer = styled.footer`
   flex-direction: row;
   justify-content: center;
   .left {
-    padding: 60px;
+    padding: 25px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     p {
       color: white;
       font-size: 14px;
     }
+    img {
+      width: 265px;
+      margin-bottom: 50px;
+    }
+  }
+  .center {
+   display: flex;
+   
+   ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   p { 
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #00C1DE;
+      margin-bottom: 15px;
+   }
+    li {
+    margin-bottom: 15px;
+        a {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          color: #FFFFFF;
+      }
+    }
+   }
   }
   .right {
     padding: 60px;
@@ -131,7 +164,7 @@ export const HomeContainer = styled.div`
     position: relative;
     margin-bottom: -200px;
     margin-right: -60px;
-    margin-top: 110px;
+    margin-top: 50px;
     z-index: 1;
 
     .left {

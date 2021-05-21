@@ -30,6 +30,17 @@ export const HeaderLoggedOut = styled.div`
   @media (max-width: 1130px) {
     display: none;
   }
+  
+  .get-started { 
+    display: flex;
+    align-items: center;
+    
+    button {
+       width: max-content;
+       height: 35px;
+       padding: 0px 15px; 
+    }
+  }
 `
 
 export const HeaderLoggedIn = styled.div`
