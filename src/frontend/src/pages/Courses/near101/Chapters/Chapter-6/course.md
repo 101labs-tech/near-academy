@@ -29,9 +29,9 @@ Everyone can register to the museum as a contributor. Registration ensures that 
 
 The museum contract offers a function to deploy a new meme contract to those who have registered at the museum.
 
-```typescript
+<Highlight language="typescript">
 export function add_meme(meme: AccountId, title: string, data: string, category: Category): void
-```
+</Highlight>
 
 The first argument, **AccountId**, is simply a string that is used to create a new address for the new meme. If you provide the string “alice” it will deploy the contract to _alice.museum.testnet._ This also means that whitespace and “.” are not allowed for a valid name.
 
@@ -45,16 +45,20 @@ With that, you are ready to create your first meme. It is done in just three sim
 
 1\. Prepare your account. You need to make sure your NEAR CLI has access to the account supposed to interact with the contract. Simply use the NEAR CLI and type <AnimatedCode>near login</AnimatedCode> and follow the instructions.
 
-2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login: 
-<AnimatedCode>near call museum.testnet add\_myself\_as\_contributor --accountId YOUR\_ACCOUNT\_NAME.testnet</AnimatedCode>
+2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login:
+
+
+<Highlight language="bash">
+near call museum.testnet add\_myself\_as\_contributor --accountId YOUR\_ACCOUNT\_NAME.testnet
+</Highlight>
 
 3\. Register your meme. Make sure to use a custom name for the meme. Contracts that already exist cannot be overwritten. Deploying your meme will cost you at least 3 NEAR. You may send more NEAR as a signal of the quality of your meme, of course.
 
-```bash
+<Highlight language="bash">
 near call museum.testnet add_meme \
 '{"meme" : "bob", "title" : "god", "data" : "https://9gag.com/gag/ad8K0vj", "category" : 4}' \
 --accountId YOUR_ACCOUNT_NAME.testnet --amount 3
-```
+</Highlight>
 
 Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get\_meme\_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
 
@@ -64,20 +68,31 @@ As we just learned each meme contract lives on a newly created account that was 
 
 The meme contract contains 12 functions:
 
-```typescript
+<Highlight language="typescript">
 export function init(title: string, data: string, category: Category): void
+
 export function get_meme(): Meme
+
 export function vote(value: i8): void
+
 export function batch_vote(value: i8, is_batch: bool = true): void
+
 export function get_recent_votes(): Array<Vote>
+
 export function get_vote_score(): i32
+
 export function add_comment(text: string): void
+
 export function get_recent_comments(): Array<Comment>
+
 export function donate(): void
+
 export function get_donations_total(): u128
+
 export function get_recent_donations(): Array<Donation>
+
 export function release_donations(account: AccountId): void
-```
+</Highlight>
 
 The given functions are written in AssemblyScript. But they could also have been written in Rust or any other language that compiles to Wasm. But it is easier to understand and saves some compiling time than Rust, which is excellent for prototyping and simple contracts.
 
@@ -87,24 +102,22 @@ We can classify these functions into two different kinds of functions: view func
 
 View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote\_score is returned, which represents the total vote score for this specific meme:
 
-```typescript
+<Highlight language="typescript">
 export function get_vote_score(): i32 {
   assert_contract_is_initialized()
   return Meme.get().vote_score
 }
-```
-
+</Highlight>
 Call functions are the ones that alter a contract state. This means that something is saved on the blockchain. These operations have a gas cost attached to them that is proportional to the complexity of the computation. Remember validators are working for you behind the scene, and they must be rewarded for their validation work.
 
-```typescript
+<Highlight language="typescript">
 export function add_comment(text: string): void {
   assert_contract_is_initialized()
   assert(context.sender == context.predecessor, 'Users must comment directly')
   assert_reasonable_comment_length(text)
   Meme.add_comment(text)
 }
-```
-
+</Highlight>
 This function add\_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
 
 The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add\_comment function.

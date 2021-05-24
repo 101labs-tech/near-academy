@@ -49,6 +49,8 @@ export const ChapterCourse = styled.div`
   overflow: auto;
   position: relative;
   font-size: 22px;
+  
+  
 
   .view-line {
     font-size: 18px;
@@ -62,7 +64,13 @@ export const ChapterCourse = styled.div`
     font-weight: 300;
     text-align: left;
   }
-
+  @media (max-width: 680px) {
+    padding: 10px;
+    p {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+  }
   @media (min-width: 1024px) {
     p {
       padding: 0 40px;
@@ -71,6 +79,7 @@ export const ChapterCourse = styled.div`
       text-align: justify;
     }
   }
+ 
 
   img {
     max-width: 100%;
@@ -127,7 +136,8 @@ export const ChapterH2 = styled.div`
   text-align: left;
 
   @media (max-width: 615px) {
-    font-size: 35px;
+    font-size: 26px;
+    padding: 10px;
   }
 `
 
@@ -285,6 +295,12 @@ export const BackgroundContainer = styled.div`
   h1 {
     color: #ffb359;
   }
+  
+  @media (max-width: 680px) {
+    padding: 10px 0;
+  }
+  
+  
 `
 export const ImageContainer = styled.span`
   display: block;

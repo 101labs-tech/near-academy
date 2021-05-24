@@ -8,6 +8,12 @@ export const HeaderStyled = styled.div`
   height: 50px;
   z-index: 1;
   background-color: ${near6};
+  
+   @media (max-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const HeaderLogo = styled.img`
@@ -15,7 +21,7 @@ export const HeaderLogo = styled.img`
   z-index: 1;
   margin: auto;
   @media (max-width: 450px) {
-    max-width: 240px;
+    max-width: 200px;
   }
 `
 

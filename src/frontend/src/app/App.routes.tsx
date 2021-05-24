@@ -1,4 +1,14 @@
-// import { About } from 'pages/About/About.controller'
+/**
+ * React Dependency
+ * **/
+
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+
+/**
+ * Custom Components
+ * **/
+
 import { Certificate } from 'pages/Certificate/Certificate.controller'
 import { ChangePassword } from 'pages/ChangePassword/ChangePassword.controller'
 import { Chapter } from 'pages/Chapter/Chapter.controller'
@@ -11,8 +21,9 @@ import { ResetPassword } from 'pages/ResetPassword/ResetPassword.controller'
 import { SignUp } from 'pages/SignUp/SignUp.controller'
 import { Terms } from 'pages/Terms/Terms.controller'
 import { User } from 'pages/User/User.controller'
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import {ThankYou} from "../pages/ThankYou/ThankYou.controller";
+// import { About } from 'pages/About/About.controller'
+
 
 export const AppRoutes = ({ location }: any) => (
   <Switch location={location}>
@@ -51,6 +62,9 @@ export const AppRoutes = ({ location }: any) => (
     </Route> */}
     <Route exact path="/terms">
       <Terms />
+    </Route>
+    <Route exact path="/thank-you">
+      <ThankYou />
     </Route>
     <Route>
       <Error404 />
