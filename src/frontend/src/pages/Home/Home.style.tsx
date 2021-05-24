@@ -152,6 +152,37 @@ export const HomeContainer = styled.div`
   button:hover {
     transform: scale(1.05);
   }
+  
+  section.benefits {
+    padding: 100px 0px 0px 0px;
+    
+    h1 {
+      text-align: center;
+      width: 100%;
+      margin: 0px 0px 40px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+       li {
+         width: 22%;
+         list-style-type: none;
+         box-shadow: 0px 0px 68px 0px rgba(190,179,194,0.6);
+         padding: 20px;
+         border-radius: 22px;
+         
+         h2 {
+             font-size: 24px;
+             font-weight: bold;
+             text-align: center;
+             margin: 10px 0px 20px;
+        }
+        .description {
+            font-size: 16px;
+        }
+      }
+    }
+  }
 
   section.first {
     /* background-image: url('/images/museum_exterior_1.svg'); */

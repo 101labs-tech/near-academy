@@ -36,7 +36,27 @@ export const HomeView = () => {
               </Link>
             </div>
           </section>
-
+          <section className={'components benefits'}>
+            <h1>Get Involved In Our Community</h1>
+            <ul>
+              <li>
+                <h2>Events</h2>
+                <p className={'description'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic iusto magnam nam quia rerum?</p>
+              </li>
+              <li>
+                <h2>SputnicDOA</h2>
+                <p className={'description'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error illo nemo possimus quod ullam.</p>
+              </li>
+              <li>
+                <h2>Blog</h2>
+                <p className={'description'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus enim labore laboriosam provident, sequi!</p>
+              </li>
+              <li>
+                <h2>Guild</h2>
+                <p className={'description'}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi debitis eum officiis soluta voluptatem.</p>
+              </li>
+            </ul>
+          </section>
           <section className={'components third'}>
             <div className={'left'}>
               <h1>
