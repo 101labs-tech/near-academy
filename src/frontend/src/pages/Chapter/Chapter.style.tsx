@@ -199,12 +199,12 @@ export const ChapterValidatorContent = styled.div`
 
 export const ChapterValidatorContentWrapper = styled.div``
 
-export const Button = styled.div`
+export const ButtonStyle = styled.div`
   font-size: 14px;
   width: 220px;
   height: 40px;
   border: 1px solid white;
-  position: relative;
+  position: relative; 
   display: inline-block;
   cursor: pointer;
   margin: 20px auto 10px auto;
@@ -214,6 +214,18 @@ export const Button = styled.div`
     margin: 10px 20px 10px -10px;
     vertical-align: bottom;
   }
+`
+
+export const FormWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    
+    button {
+        height: 36px;
+        max-width: 170px;
+        margin: 0px 0px 0px 30px;
+    }
 `
 
 export const ButtonBorder = styled.div`

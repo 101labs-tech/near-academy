@@ -1,24 +1,24 @@
 import { Button } from 'app/App.components/Button/Button.controller'
 // band-aid hardcode import. fix later.
-import { chapterData } from 'pages/Courses/near101/Chapters/Chapters.data'
+// import { chapterData } from 'pages/Courses/near101/Chapters/Chapters.data'
 import * as React from 'react'
-import { useLocation } from 'react-router-dom'
+// import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 import { FooterStyled } from './Footer.style'
 
-export const FooterView = () => {
-  const { pathname } = useLocation()
-  let previousChapter = '/'
-  let nextChapter = '/'
+export const FooterView = ({ nextChapter, previousChapter }: any) => {
+  // const { pathname } = useLocation()
+  // let previousChapter = '/'
+  // let nextChapter = '/'
 
-  chapterData.forEach((chapter, i) => {
-    if (pathname === chapter.pathname) {
-      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
-      if (i + 1 < chapterData.length) nextChapter = chapterData[i + 1].pathname
-        else nextChapter = '/thank-you'
-    }
-  })
+  // chapterData.forEach((chapter, i) => {
+  //   if (pathname === chapter.pathname) {
+  //     if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
+  //     if (i + 1 < chapterData.length) nextChapter = chapterData[i + 1].pathname
+  //       else nextChapter = '/thank-you'
+  //   }
+  // })
 
   return (
     <FooterStyled>

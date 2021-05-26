@@ -11,13 +11,17 @@ import Highlight from 'react-highlight.js';
 
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import { Popup } from 'app/App.components/Popup/Popup.controller'
 import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
+import { ButtonStyle, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign, FormWrapper } from './Chapter.style'
 import { AnimatedCode, BackgroundContainer, Difficulty, ImageContainer, SpecialCode } from './Chapter.style'
+import { Input } from "../../app/App.components/Input/Input.controller";
+import { Button } from "../../app/App.components/Button/Button.controller";
+
 
 monaco
   .init()
@@ -159,10 +163,10 @@ const Validator = ({ validatorState, validateCallback }: any) => (
       <ChapterValidatorContentWrapper>
         <ChapterValidatorTitle>CHAPTER VALIDATION</ChapterValidatorTitle>
         <ChapterValidatorContent>Provide your answer above and validate chapter</ChapterValidatorContent>
-        <Button>
+        <ButtonStyle>
           <ButtonBorder />
           <ButtonText onClick={() => validateCallback()}>SUBMIT ANSWER</ButtonText>
-        </Button>
+        </ButtonStyle>
       </ChapterValidatorContentWrapper>
     )}
     {validatorState === RIGHT && (
@@ -177,7 +181,7 @@ const Validator = ({ validatorState, validateCallback }: any) => (
           EXPLORATION FAILED
         </ChapterValidatorTitle>
         <ChapterValidatorContent>Correct your answer and try again</ChapterValidatorContent>
-        <Button>
+        <ButtonStyle>
           <ButtonBorder />
           <ButtonText
             onClick={() => {
@@ -187,11 +191,12 @@ const Validator = ({ validatorState, validateCallback }: any) => (
           >
             TRY AGAIN
           </ButtonText>
-        </Button>
+        </ButtonStyle>
       </ChapterValidatorContentWrapper>
     )}
   </ChapterValidator>
 )
+
 
 const Content = ({ course }: any) => (
   <Markdown
@@ -222,6 +227,15 @@ const Content = ({ course }: any) => (
         },
         dialog: {
           component: Dialog,
+        },
+        Button: {
+          component: Button
+        },
+        FormWrapper: {
+          component: FormWrapper
+        },
+        Input: {
+          component: Input
         },
         Highlight: {
             component: Highlight
@@ -259,9 +273,11 @@ type ChapterViewProps = {
   validatorState: string
   validateCallback: () => void
   solution: string
+  nextChapter: string
   proposedSolution: string
   proposedSolutionCallback: (e: string) => void
   showDiff: boolean
+  isPopup: boolean
   course?: string
   supports: Record<string, string | undefined>
   questions: Question[]
@@ -272,12 +288,14 @@ export const ChapterView = ({
   validatorState,
   validateCallback,
   solution,
+  isPopup,
   proposedSolution,
   proposedSolutionCallback,
   showDiff,
   course,
   supports,
   questions,
+  nextChapter,
   proposedQuestionAnswerCallback,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
@@ -304,6 +322,7 @@ export const ChapterView = ({
 
   return (
     <ChapterStyled>
+      { isPopup ? <Popup link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }
       <ChapterCourse>
         <Content course={course || ''} />
       </ChapterCourse>
@@ -368,8 +387,10 @@ ChapterView.propTypes = {
   validatorState: PropTypes.string,
   validateCallback: PropTypes.func.isRequired,
   solution: PropTypes.string,
+  nextChapter: PropTypes.string,
   proposedSolution: PropTypes.string,
   showDiff: PropTypes.bool.isRequired,
+  isPopup: PropTypes.bool,
   proposedSolutionCallback: PropTypes.func.isRequired,
   course: PropTypes.string,
   supports: PropTypes.object.isRequired,
