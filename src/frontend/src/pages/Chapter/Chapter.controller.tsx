@@ -54,6 +54,7 @@ export const Chapter = () => {
   const user = useSelector((state: State) => state.auth.user)
   let previousChapter = '/'
   let nextChapter = '/'
+  let percent = 0
 
   let badgeUnlocked = false
   let counter = 0
@@ -84,9 +85,12 @@ export const Chapter = () => {
 
   chapterData.forEach((chapter, i) => {
     if (pathname === chapter.pathname) {
-      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
-      if (i + 1 < chapterData.length) nextChapter = chapterData[i + 1].pathname
-      else nextChapter = '/thank-you'
+      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname; percent = 0
+      if (i + 1 < chapterData.length) {
+        nextChapter = chapterData[i + 1].pathname;
+      } else nextChapter = '/thank-you'
+      if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
+      else percent = 100
     }
   })
 
@@ -174,7 +178,7 @@ export const Chapter = () => {
           proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
         />
       )}
-      <Footer nextChapter={nextChapter} previousChapter={previousChapter} />
+      <Footer percent={percent} nextChapter={nextChapter} previousChapter={previousChapter} />
     </>
   )
 }

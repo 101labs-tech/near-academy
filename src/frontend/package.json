@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "3.2.1",
+    "@ramonak/react-progress-bar": "^3.1.0",
     "@redux-offline/redux-offline": "^2.6.0",
     "axios": "^0.21.1",
     "babel-loader": "8.1.0",
@@ -44,8 +45,8 @@
     "react-dom": "^16.13.1",
     "react-ga": "3.1.2",
     "react-google-recaptcha-v3": "^1.5.2",
-    "react-highlight.js": "^1.0.7",
     "react-helmet": "^6.0.0",
+    "react-highlight.js": "^1.0.7",
     "react-hotjar": "^2.2.1",
     "react-icons": "^4.1.0",
     "react-motion": "^0.5.2",

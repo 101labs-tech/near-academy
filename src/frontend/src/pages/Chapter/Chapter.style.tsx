@@ -33,10 +33,14 @@ export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
 
 export const ChapterQuestions = styled.div`
   padding: 20px;
-  border: 1px solid ${near6};
-  background: white;
+  border: 1px solid #1e1e1e;
+  background: #1e1e1e;
   h2 {
     font-weight: 600;
+    color: #d4d4d4;
+  }
+  span {
+    color: #d4d4d4;
   }
 `
 
@@ -49,6 +53,7 @@ export const ChapterCourse = styled.div`
   overflow: auto;
   position: relative;
   font-size: 22px;
+  color: black;
   
   
 
@@ -153,8 +158,8 @@ export const ChapterH4 = styled.div`
 `
 
 export const ChapterValidator = styled.div`
-  background: ${backgroundColorLight};
-  border: 1px solid ${near6};
+  background: #1e1e1e;
+  border: 1px solid #1e1e1e;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -195,6 +200,7 @@ export const ChapterValidatorTitle = styled.div`
 
 export const ChapterValidatorContent = styled.div`
   font-size: 12px;
+  color: #d4d4d4;
 `
 
 export const ChapterValidatorContentWrapper = styled.div``
@@ -203,7 +209,7 @@ export const ButtonStyle = styled.div`
   font-size: 14px;
   width: 220px;
   height: 40px;
-  border: 1px solid white;
+  // border: 1px solid white;
   position: relative; 
   display: inline-block;
   cursor: pointer;

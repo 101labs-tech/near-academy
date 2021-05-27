@@ -55,7 +55,7 @@ const MonacoReadOnly = ({ children }: any) => {
         height={height}
         value={children}
         language="typescript"
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: false,
           scrollBeyondLastLine: false,
@@ -79,7 +79,7 @@ const MonacoEditorSupport = ({ support }: any) => {
         height="600px"
         value={support}
         language="rust"
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: true,
           scrollBeyondLastLine: false,
@@ -104,7 +104,7 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, heigh
         width={width}
         value={proposedSolution}
         language="rust"
-        theme="myCustomTheme"
+        theme="vs-dark"
         onChange={(_, val) => proposedSolutionCallback(val)}
         options={{
           lineNumbers: true,
@@ -131,7 +131,7 @@ const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
         modified={solution}
         language="rust"
         // @ts-ignore
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: true,
           scrollBeyondLastLine: false,

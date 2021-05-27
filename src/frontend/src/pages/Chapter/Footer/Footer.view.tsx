@@ -2,12 +2,14 @@ import { Button } from 'app/App.components/Button/Button.controller'
 // band-aid hardcode import. fix later.
 // import { chapterData } from 'pages/Courses/near101/Chapters/Chapters.data'
 import * as React from 'react'
+import ProgressBar from "@ramonak/react-progress-bar";
+
 // import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-import { FooterStyled } from './Footer.style'
+import { FooterStyled, ProgressBarWrapper } from './Footer.style'
 
-export const FooterView = ({ nextChapter, previousChapter }: any) => {
+export const FooterView = ({ nextChapter, previousChapter, percent }: any) => {
   // const { pathname } = useLocation()
   // let previousChapter = '/'
   // let nextChapter = '/'
@@ -25,6 +27,9 @@ export const FooterView = ({ nextChapter, previousChapter }: any) => {
       <Link to={previousChapter}>
         <Button text="Previous Chapter" color="primary" icon="left-arrow" invertIcon />
       </Link>
+      <ProgressBarWrapper>
+          <ProgressBar bgColor={'#00C08B'} completed={percent} />
+      </ProgressBarWrapper>
       <Link to={nextChapter}>
         <Button text="Next Chapter" color="primary" icon="right-arrow" />
       </Link>
