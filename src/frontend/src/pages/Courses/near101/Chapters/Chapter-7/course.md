@@ -139,3 +139,5 @@ Have a look here to get started: <a target="_blank" rel="noreferrer" href="https
 - Design an improved system to curate the list of memes in the contract
 - Implement a royalty system for meme-makers based on likes and comments
 - Turn the museum into a fully decentralized autonomous organization (DAO)
+
+<FormSevenChapter></FormSevenChapter>   

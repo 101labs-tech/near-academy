@@ -21,7 +21,7 @@ import { ButtonStyle, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, Chap
 import { AnimatedCode, BackgroundContainer, Difficulty, ImageContainer, SpecialCode } from './Chapter.style'
 import { Input } from "../../app/App.components/Input/Input.controller";
 import { Button } from "../../app/App.components/Button/Button.controller";
-
+import {FormSevenChapter} from '../../app/App.components/FormSevenChapter/FormSevenChapter.controller'
 
 monaco
   .init()
@@ -263,6 +263,9 @@ const Content = ({ course }: any) => (
         },
         VerticalAlign:{
           component: VerticalAlign,
+        },
+        FormSevenChapter: {
+          component: FormSevenChapter
         }
       },
     }}

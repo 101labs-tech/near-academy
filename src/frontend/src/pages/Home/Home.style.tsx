@@ -171,6 +171,32 @@ export const HomeContainer = styled.div`
          padding: 20px;
          border-radius: 22px;
          
+         .icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 30px;
+            border-radius: 100%;
+            
+            &.first {
+                background: rgba(134,24,251, 0.2)
+            }
+             &.second {
+                background: rgba(251,120,24, 0.2)
+            }
+             &.third {
+                background: rgba(251,31,24, 0.2)
+            }
+             &.last {
+                background: rgba(24,251,45, 0.2)
+            }
+            img {
+               width: 30%;
+            }
+         }
+         
          h2 {
              font-size: 24px;
              font-weight: bold;
@@ -213,8 +239,6 @@ export const HomeContainer = styled.div`
         margin-top: 50px;
         /* margin-left: 100px; */
       }
-    }
-    .right {
     }
   }
 
