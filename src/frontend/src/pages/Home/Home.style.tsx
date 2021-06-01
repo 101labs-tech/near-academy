@@ -307,9 +307,9 @@ export const HomeContainer = styled.div`
         margin-right: 30px;
       }
       img {
-        width: 276px;
         height: 693px;
-
+        min-width: 276px;
+        width: 276px;
         margin-left: 50px;
       }
     }

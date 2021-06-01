@@ -20,6 +20,7 @@ import { Login } from 'pages/Login/Login.controller'
 import { ResetPassword } from 'pages/ResetPassword/ResetPassword.controller'
 import { SignUp } from 'pages/SignUp/SignUp.controller'
 import { Terms } from 'pages/Terms/Terms.controller'
+import { Invite } from 'pages/Invite/Invite.controller'
 import { User } from 'pages/User/User.controller'
 import {ThankYou} from "../pages/ThankYou/ThankYou.controller";
 // import { About } from 'pages/About/About.controller'
@@ -63,9 +64,15 @@ export const AppRoutes = ({ location }: any) => (
     <Route exact path="/terms">
       <Terms />
     </Route>
+<<<<<<< HEAD
     <Route exact path="/thank-you">
       <ThankYou />
     </Route>
+=======
+      <Route exact path="/invite">
+          <Invite />
+      </Route>
+>>>>>>> 6def4bec5b4d85d9bed89af6e08589c60d4b1a4e
     <Route>
       <Error404 />
     </Route>
