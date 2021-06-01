@@ -16,7 +16,7 @@ export const FormSevenChapterView = () => {
     const [form, setForm] = useState<FormInputs>({
         meme: { value: '' },
         title: { value: '' },
-        data: { value: '' },
+        url: { value: '' },
         category: { value: '' },
     })
 
@@ -27,13 +27,14 @@ export const FormSevenChapterView = () => {
 
     const handleBlur = (e: ChangeEvent<HTMLInputElement>) => {
         const updatedForm = updateFormFromBlur(e, form)
+        console.log(updatedForm)
         setForm(updatedForm)
     }
 
     const handleSubmit = (event: SyntheticEvent) => {
         const updatedForm = updateFormFromSubmit(event, form, SevenChapterForm)
-
-        if (!updatedForm.meme.error && !updatedForm.title.error && !updatedForm.data.error && !updatedForm.category.error)
+        console.log(updatedForm)
+        if (!updatedForm.meme.error && !updatedForm.title.error && !updatedForm.url.error && !updatedForm.category.error)
             console.log('success')
         else setForm(updatedForm)
     }
@@ -62,14 +63,14 @@ export const FormSevenChapterView = () => {
                     errorMessage={getErrorMessage(form.title)}
                 />
                 <Input
-                    name="data"
+                    name="url"
                     placeholder="Enter Data"
                     type="text"
                     onChange={handleChange}
-                    value={form.data.value}
+                    value={form.url.value}
                     onBlur={handleBlur}
-                    inputStatus={getInputStatus(form.data)}
-                    errorMessage={getErrorMessage(form.data)}
+                    inputStatus={getInputStatus(form.url)}
+                    errorMessage={getErrorMessage(form.url)}
                 />
                 <Input
                     name="category"

@@ -12,8 +12,8 @@ export class SevenChapterForm {
 
     @Expose()
     @Length(1, 100)
-    @Matches(/https:\/\/9gag\.com\/gag\/([a-zA-Z0-9]{7}).*/gi, { message: 'Web Site should be https://9gag.com'})
-    data!: string
+    @Matches(/https:\/\/9gag\.com\/gag\/([a-zA-Z0-9]{7})/, { message: 'Web Site should be https://9gag.com'})
+    url!: string
 
     @Expose()
     @Length(1, 1)

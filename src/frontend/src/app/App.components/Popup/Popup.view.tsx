@@ -10,15 +10,17 @@ type PopupProps = {
     text: string,
     link: string,
     buttonText: string
+    closePopup: (values: any) => void
 }
 
-export const PopupView = ({ text, title, link, buttonText }: PopupProps) => {
+export const PopupView = ({ text, title, link, buttonText, closePopup }: PopupProps) => {
     return (
       <PopupStyle>
           <PopupWrapper>
               <PopupTitle>{ title }</PopupTitle>
               <PopupText>{ text }</PopupText>
               <div className={'button-wrapper'}>
+                  <Button onClick={() => closePopup} text={'Close'} />
                   <Link to={link}>
                       <Button text={buttonText} />
                   </Link>
@@ -33,4 +35,5 @@ PopupView.propTypes = {
     title: PropTypes.string.isRequired,
     link: PropTypes.string,
     buttonText: PropTypes.string,
+    closePopup: PropTypes.func
 }

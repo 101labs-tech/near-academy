@@ -64,15 +64,12 @@ export const AppRoutes = ({ location }: any) => (
     <Route exact path="/terms">
       <Terms />
     </Route>
-<<<<<<< HEAD
     <Route exact path="/thank-you">
       <ThankYou />
     </Route>
-=======
       <Route exact path="/invite">
           <Invite />
       </Route>
->>>>>>> 6def4bec5b4d85d9bed89af6e08589c60d4b1a4e
     <Route>
       <Error404 />
     </Route>

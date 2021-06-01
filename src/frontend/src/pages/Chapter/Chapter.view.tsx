@@ -306,6 +306,7 @@ export const ChapterView = ({
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
   const [editorHeight, setEditorHeight] = useState(0)
+  const [isSaveConfirmPopup, setIsSaveConfirmPopup] = useState(true)
   const wrapperRef = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted()
 
@@ -325,10 +326,11 @@ export const ChapterView = ({
 
   let extension = '.rs'
 
+
   return (
     <ChapterStyled>
-      { nextChapter === '/near101/chapter-2' && !user ? <Popup buttonText={'Go to login'} link={'/login'} title={'Login'} text={'Create an account to Save your progress and earn NFT '} /> : null}
-      { isPopup ? <Popup buttonText={'Next Chapter'} link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }
+      { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ? <Popup closePopup={() => setIsSaveConfirmPopup(false)} buttonText={'Go to login'} link={'/login'} title={'Login'} text={'Create an account to Save your progress and earn NFT '} /> : null}
+      {/*{ isPopup ? <Popup buttonText={'Next Chapter'} link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }*/}
       <ChapterCourse>
         <Content course={course || ''} />
       </ChapterCourse>
