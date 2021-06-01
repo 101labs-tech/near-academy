@@ -30,4 +30,8 @@ export const FooterStyled = styled.div`
 `
 export const ProgressBarWrapper = styled.div`
     width: 100%;
+    
+     @media (max-width: 900px) {
+        display:none;
+     }
 `

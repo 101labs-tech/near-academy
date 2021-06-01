@@ -5,7 +5,7 @@ import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
-
+import {PublicUser} from 'shared/user/PublicUser'
 // @ts-ignore
 import Highlight from 'react-highlight.js';
 
@@ -282,6 +282,7 @@ type ChapterViewProps = {
   showDiff: boolean
   isPopup: boolean
   course?: string
+  user?: PublicUser
   supports: Record<string, string | undefined>
   questions: Question[]
   proposedQuestionAnswerCallback: (e: Question[]) => void
@@ -296,6 +297,7 @@ export const ChapterView = ({
   proposedSolutionCallback,
   showDiff,
   course,
+  user,
   supports,
   questions,
   nextChapter,
@@ -325,7 +327,8 @@ export const ChapterView = ({
 
   return (
     <ChapterStyled>
-      { isPopup ? <Popup link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }
+      { nextChapter === '/near101/chapter-2' && !user ? <Popup buttonText={'Go to login'} link={'/login'} title={'Login'} text={'Create an account to Save your progress and earn NFT '} /> : null}
+      { isPopup ? <Popup buttonText={'Next Chapter'} link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }
       <ChapterCourse>
         <Content course={course || ''} />
       </ChapterCourse>

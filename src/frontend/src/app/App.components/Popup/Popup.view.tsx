@@ -8,10 +8,11 @@ import {Link} from 'react-router-dom';
 type PopupProps = {
     title: string
     text: string,
-    link: string
+    link: string,
+    buttonText: string
 }
 
-export const PopupView = ({ text, title, link }: PopupProps) => {
+export const PopupView = ({ text, title, link, buttonText }: PopupProps) => {
     return (
       <PopupStyle>
           <PopupWrapper>
@@ -19,7 +20,7 @@ export const PopupView = ({ text, title, link }: PopupProps) => {
               <PopupText>{ text }</PopupText>
               <div className={'button-wrapper'}>
                   <Link to={link}>
-                      <Button text={'Next Chapter'} />
+                      <Button text={buttonText} />
                   </Link>
               </div>
           </PopupWrapper>
@@ -30,4 +31,6 @@ export const PopupView = ({ text, title, link }: PopupProps) => {
 PopupView.propTypes = {
     text: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    buttonText: PropTypes.string,
 }

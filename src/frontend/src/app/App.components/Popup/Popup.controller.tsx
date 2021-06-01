@@ -6,14 +6,17 @@ import { PopupView } from "./Popup.view";
 type PopupProps = {
     title: string;
     text: string;
-    link: string
+    link: string;
+    buttonText: string
 };
 
-export const Popup = ({ title, text, link }: PopupProps) => {
-    return <PopupView link={link} text={text} title={title} />;
+export const Popup = ({ title, text, link, buttonText }: PopupProps) => {
+    return <PopupView buttonText={buttonText} link={link} text={text} title={title} />;
 };
 
 Popup.propTypes = {
     text: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    buttonText: PropTypes.string,
 };

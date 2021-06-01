@@ -37,11 +37,18 @@ export const Footer = styled.footer`
   }
   .center {
    display: flex;
-   
+   @media (max-width: 480px) {
+        flex-direction: column;
+     }
    ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+     @media (max-width: 480px) {
+        padding: 0;
+        align-items: center;
+     }
+    
    p { 
       font-style: normal;
       font-weight: 900;
@@ -164,12 +171,31 @@ export const HomeContainer = styled.div`
     ul {
         display: flex;
         justify-content: space-between;
+        padding: 0;
+        
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+        }
+        
        li {
          width: 22%;
          list-style-type: none;
          box-shadow: 0px 0px 68px 0px rgba(190,179,194,0.6);
          padding: 20px;
          border-radius: 22px;
+         
+           @media (max-width: 992px) {
+             width: 32%;
+             margin-bottom: 20px;
+        }
+        
+         @media (max-width: 680px) {
+             width: 45%;
+        }
+        
+         @media (max-width: 460px) {
+             width: 100%;
+        }
          
          .icon {
             width: 100px;
