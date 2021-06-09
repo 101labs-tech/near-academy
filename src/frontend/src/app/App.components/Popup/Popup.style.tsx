@@ -16,7 +16,7 @@ export const PopupStyle = styled.div`
     .button-wrapper {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         padding: 20px;
     }
 `
@@ -31,13 +31,14 @@ export const PopupWrapper = styled.div`
 export const PopupTitle = styled.h2`
     padding: 20px;
     font-size: 36px;
-    border-bottom: 1px solid;
     font-weight: bold;
     letter-spacing: 2px;
     color: #00C08B;
+    text-align: center;
 `
 
 export const PopupText = styled.p`
     padding: 20px;
     font-size: 24px;
+    text-align: center;
 `

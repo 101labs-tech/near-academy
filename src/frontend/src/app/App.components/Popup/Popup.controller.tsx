@@ -8,7 +8,7 @@ type PopupProps = {
     text: string;
     link: string;
     buttonText: string;
-    closePopup: (value: any) => void
+    closePopup: () => void
 };
 
 export const Popup = ({ title, text, link, buttonText, closePopup }: PopupProps) => {

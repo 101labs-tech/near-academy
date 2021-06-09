@@ -172,6 +172,7 @@ export const Chapter = () => {
           showDiff={showDiff}
           isPopup={isPopup}
           course={data.course}
+          closeIsPopup={() => setIsPopup(false)}
           user={user}
           supports={data.supports}
           questions={data.questions}

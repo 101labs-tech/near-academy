@@ -10,7 +10,7 @@ type PopupProps = {
     text: string,
     link: string,
     buttonText: string
-    closePopup: (values: any) => void
+    closePopup: () => void
 }
 
 export const PopupView = ({ text, title, link, buttonText, closePopup }: PopupProps) => {
@@ -20,7 +20,7 @@ export const PopupView = ({ text, title, link, buttonText, closePopup }: PopupPr
               <PopupTitle>{ title }</PopupTitle>
               <PopupText>{ text }</PopupText>
               <div className={'button-wrapper'}>
-                  <Button onClick={() => closePopup} text={'Close'} />
+                  <Button onClick={closePopup} text={'Continue without account'} />
                   <Link to={link}>
                       <Button text={buttonText} />
                   </Link>

@@ -17,11 +17,32 @@ export const ThankYouStyled = styled.div`
   }
 `
 
-export const ThankYouPage = styled(FullPage)``
+export const ThankYouPage = styled(FullPage)`
+        padding: 100px 0px 0px 0px;
+`
 
 export const ThankYouContainer = styled.div`
   > h1 {
     margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  p {
+     text-align: center;
+  }
+  
+  a {
+      margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul {
+      width: max-content;
+    margin: 30px auto;
+    padding: 0;
   }
 
   > h2 {

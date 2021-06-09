@@ -281,6 +281,7 @@ type ChapterViewProps = {
   proposedSolutionCallback: (e: string) => void
   showDiff: boolean
   isPopup: boolean
+  closeIsPopup: () => void
   course?: string
   user?: PublicUser
   supports: Record<string, string | undefined>
@@ -293,6 +294,7 @@ export const ChapterView = ({
   validateCallback,
   solution,
   isPopup,
+  closeIsPopup,
   proposedSolution,
   proposedSolutionCallback,
   showDiff,
@@ -329,8 +331,8 @@ export const ChapterView = ({
 
   return (
     <ChapterStyled>
-      { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ? <Popup closePopup={() => setIsSaveConfirmPopup(false)} buttonText={'Go to login'} link={'/login'} title={'Login'} text={'Create an account to Save your progress and earn NFT '} /> : null}
-      {/*{ isPopup ? <Popup buttonText={'Next Chapter'} link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }*/}
+      { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ? <Popup closePopup={() => setIsSaveConfirmPopup(false)} buttonText={'Sign up'} link={'/login'} title={'Login'} text={'Create an account to save your progress and earn your certificate'} /> : null}
+      { isPopup ? <Popup closePopup={closeIsPopup} buttonText={'Next Chapter'} link={nextChapter} title={'Success'} text={'End of Exercises'} /> : null }
       <ChapterCourse>
         <Content course={course || ''} />
       </ChapterCourse>
@@ -399,6 +401,7 @@ ChapterView.propTypes = {
   proposedSolution: PropTypes.string,
   showDiff: PropTypes.bool.isRequired,
   isPopup: PropTypes.bool,
+  closeIsPopup: PropTypes.func,
   proposedSolutionCallback: PropTypes.func.isRequired,
   course: PropTypes.string,
   supports: PropTypes.object.isRequired,

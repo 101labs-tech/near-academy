@@ -240,7 +240,7 @@ export const HomeContainer = styled.div`
     /* background-image: url('/images/museum_exterior_1.svg'); */
     background-image: url('/museum_exterior_1.svg');
     /* background-image: url('/images/chap_3_0.png'); */
-    background-position: right bottom;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: 881px 684px;
     min-height: 100vh;
@@ -387,7 +387,7 @@ export const HomeContainer = styled.div`
   @media (min-width: 1201px) {
     section.first {
       //height: 100vh;
-      min-height: 888px;
+      min-height: 800px;
       .left {
         width: 55vw;
         p {
@@ -426,7 +426,7 @@ export const HomeContainer = styled.div`
     section.first {
       //height: 100vh;
 
-      min-height: 888px;
+      min-height: 800px;
       .left {
         width: 38vw;
         p {
