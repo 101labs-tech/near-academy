@@ -61,9 +61,7 @@
     "redux-thunk": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "styled-components": "^5.1.1",
-    "webpack": "4.42.0"
-  },
-  "devDependencies": {
+    "webpack": "4.42.0",
     "@cypress/code-coverage": "^3.8.1",
     "@cypress/instrument-cra": "^1.1.1",
     "@testing-library/jest-dom": "^4.2.4",
