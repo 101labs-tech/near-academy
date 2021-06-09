@@ -158,8 +158,8 @@ export const ChapterH4 = styled.div`
 `
 
 export const ChapterValidator = styled.div`
-  background: #1e1e1e;
-  border: 1px solid #1e1e1e;
+  background: white;
+  border: 1px solid white;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -200,7 +200,7 @@ export const ChapterValidatorTitle = styled.div`
 
 export const ChapterValidatorContent = styled.div`
   font-size: 12px;
-  color: #d4d4d4;
+  color: #000;
 `
 
 export const ChapterValidatorContentWrapper = styled.div``
@@ -276,9 +276,7 @@ export const ButtonText = styled.div`
   }
 `
 
-export const ChapterMonaco = styled.div`
-  border: 1px solid ${primaryColor};
-`
+export const ChapterMonaco = styled.div``
 
 export const ChapterItalic = styled.em`
   font-style: italic;

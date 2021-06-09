@@ -18,6 +18,13 @@ export const PopupStyle = styled.div`
         align-items: center;
         justify-content: space-between;
         padding: 20px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        
+        button {
+            height: 40px;
+        }
     }
 `
 
@@ -25,7 +32,9 @@ export const PopupWrapper = styled.div`
     border-radius: 22px;
     box-shadow: 0px 0px 49px -17px rgb(0 0 0 / 62%);
     background: #fff;
-    width: 50%;
+    width: 600px;
+    height: 600px;
+    position: relative;
 `
 
 export const PopupTitle = styled.h2`
@@ -41,4 +50,17 @@ export const PopupText = styled.p`
     padding: 20px;
     font-size: 24px;
     text-align: center;
+`
+
+export const PopupImage = styled.div`
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    
+    img {
+        width: 100%;
+    }
 `

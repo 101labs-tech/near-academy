@@ -115,5 +115,5 @@ Imagine a NEAR-based platform that registers new user roles that can perform act
 From now, you have the possibility to interact with the NEAR testnet and do your first transaction. Your test account comes with 200 NEAR, which come quite handy to experiment.
 
 <FormWrapper>
-    <Button text="Submin" color="primary" invertIcon />
+    <Button text="Submit" color="primary" invertIcon />
 </FormWrapper>

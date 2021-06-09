@@ -113,5 +113,5 @@ At the museum, each meme is created by a contributor and can receive comments, v
 
 <FormWrapper>
     <Input placeholder="Placehollder" type="text"/>
-    <Button text="Submin" color="primary" invertIcon />
+    <Button text="Submit" color="primary" invertIcon />
 </FormWrapper>
