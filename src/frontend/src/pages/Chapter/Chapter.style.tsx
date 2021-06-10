@@ -51,6 +51,20 @@ export const ChapterCourse = styled.div`
   font-size: 22px;
   color: black;
   
+  code {
+    font-size: 14px;
+    
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    span {
+        font-size: 14px;
+        font-weight: normal;
+    }
+  }
   
 
   .view-line {
@@ -304,6 +318,15 @@ export const BackgroundContainer = styled.div`
   background-color: #0072ce;
   color: white;
   padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+    max-width: 30%;
+    width: 30%;
+  }
+    
   h1 {
     color: #ffb359;
   }

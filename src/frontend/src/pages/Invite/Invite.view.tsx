@@ -12,14 +12,15 @@ export const InviteView = () => {
                 <InviteContainer>
                     <h1>Referral Program</h1>
 
-                    <p>You are about to play the role of a web developer at the Meme Museum</p>
+                    <p>NEAR Academy is free and it will always be.
+                        For all our registered users, we thought that implementing a referral
+                        system would be the most effective way to grow together.
+                    </p>
 
-                    <p>The year is 2029 , the near future. Things are not that different from today except perhars that life
-                    is 80% digital now. Innovations that seemed like breakthroughs in the early 2020s are now widely
-                    adopter. NEAR Protocol is the leading blockchain platform</p>
+                    <p>What can you expect from the Academy’s referral system?
+                        Some NEAR every time your referred friend claims the certificate.
+                    </p>
 
-                    <p>The new NFT MEME Museum in Rio de Janeiro is the hottest thing
-                    right now. Elon Musk was there at its inauguration last week and that says something!</p>
                     <ul>
                         <li>
                             <p>Pending</p>
@@ -42,16 +43,23 @@ export const InviteView = () => {
                         <p>Share this link with your friends and earn NEAR.
                             For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
                     </form>
-                    <h1>Referral Program</h1>
+                    <h1>What do you have to do?</h1>
 
-                    <p>You are about to play the role of a web developer at the Meme Museum</p>
+                    <p>
+                        Simply share your link! During the registration process,
+                        the Referral ID will be automatically filled with your username -
+                        this way is faster for your friends and family to sign up!
+                    </p>
 
-                    <p>The year is 2029 , the near future. Things are not that different from today except perhars that life
-                        is 80% digital now. Innovations that seemed like breakthroughs in the early 2020s are now widely
-                        adopter. NEAR Protocol is the leading blockchain platform</p>
+                    <p>There is another way to increase your NEAR rewards:
+                        by openly contributing to our repo on github</p>
 
-                    <p>The new NFT MEME Museum in Rio de Janeiro is the hottest thing
-                        right now. Elon Musk was there at its inauguration last week and that says something!</p>
+                    <p>
+                        Submit your PR on github:
+                        <a href="https://github.com/101labs-tech/near-academy"> https://github.com/101labs-tech/near-academy </a>
+                        If your PR is accepted, then share it here <a href="https://x2muu8nc82s.typeform.com/to/JFQB14AF"> https://x2muu8nc82s.typeform.com/to/JFQB14AF </a>
+                          with your NEAR wallet address and wait for those NEAR to flow in.
+                    </p>
                 </InviteContainer>
             </InvitePage>
             <img src={'museum_interior_x2.svg'} alt="museum interior" />
