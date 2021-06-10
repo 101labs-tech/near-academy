@@ -33,14 +33,10 @@ export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
 
 export const ChapterQuestions = styled.div`
   padding: 20px;
-  border: 1px solid #1e1e1e;
-  background: #1e1e1e;
+  border: 1px solid ${near6};
+  background: white;
   h2 {
     font-weight: 600;
-    color: #d4d4d4;
-  }
-  span {
-    color: #d4d4d4;
   }
 `
 

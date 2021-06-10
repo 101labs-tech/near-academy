@@ -88,7 +88,10 @@ export const Chapter = () => {
       if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname; percent = 0
       if (i + 1 < chapterData.length) {
         nextChapter = chapterData[i + 1].pathname;
-      } else nextChapter = '/thank-you'
+      } else {
+        if (user) nextChapter = `/user/${user.username}`
+        else nextChapter = '/login'
+      }
       if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
       else percent = 100
     }
