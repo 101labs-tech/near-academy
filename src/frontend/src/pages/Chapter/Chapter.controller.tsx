@@ -90,7 +90,7 @@ export const Chapter = () => {
         nextChapter = chapterData[i + 1].pathname;
       } else {
         if (user) nextChapter = `/user/${user.username}`
-        else nextChapter = '/login'
+        else nextChapter = '/sing_up'
       }
       if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
       else percent = 100
