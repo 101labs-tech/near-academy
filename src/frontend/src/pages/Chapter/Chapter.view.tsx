@@ -72,11 +72,11 @@ const MonacoReadOnly = ({ children }: any) => {
   )
 }
 
-const MonacoEditorSupport = ({ support }: any) => {
+const MonacoEditorSupport = ({ support, height }: any) => {
   return (
     <div>
       <Editor
-        height="600px"
+        height={height}
         value={support}
         language="rust"
         theme="vs-dark"
@@ -385,7 +385,7 @@ export const ChapterView = ({
             {display === 'solution' ? (
               <ChapterMonaco>
                 {showDiff ? (
-                  <MonacoDiff width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
+                  <MonacoDiff height={editorHeight} width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
                 ) : (
                   <MonacoEditor
                     width={editorWidth}
@@ -397,7 +397,7 @@ export const ChapterView = ({
               </ChapterMonaco>
             ) : (
               <ChapterMonaco>
-                <MonacoEditorSupport support={supports[display]} />
+                <MonacoEditorSupport height={editorHeight} support={supports[display]} />
               </ChapterMonaco>
             )}
           </div>
