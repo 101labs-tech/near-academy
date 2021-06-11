@@ -18,8 +18,9 @@ export const ChapterStyled = styled.div`
 `
 
 export const ChapterGrid = styled.div<{ hasTabs?: boolean }>`
- display: flex;
- flex-direction: column;
+  display: grid;
+  grid-template-rows: ${(props) => (props.hasTabs ? '30px auto auto' : 'auto auto')};
+  grid-gap: 0;
   height: calc(100vh - 170px);
   /* overflow-y: scroll; */
 
