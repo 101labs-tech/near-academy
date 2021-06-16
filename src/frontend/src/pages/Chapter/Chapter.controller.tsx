@@ -98,6 +98,12 @@ export const Chapter = () => {
   })
 
   const validateCallback = () => {
+    if (pathname === '/near101/chapter-8') {
+      setValidatorState(RIGHT)
+      setIsPopup(true)
+      return
+    }
+
     if (data.questions.length > 0) {
       let ok = true
       data.questions.forEach((question) => {
