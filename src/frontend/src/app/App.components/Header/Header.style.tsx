@@ -5,15 +5,12 @@ import { bgTextColor, near6, primaryColor, textColor } from 'styles'
 export const HeaderStyled = styled.div`
   position: relative;
   text-align: center;
-  height: 50px;
+  height: 70px;
   z-index: 1;
   background-color: ${near6};
-  
-   @media (max-width: 992px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const HeaderLogo = styled.img`
@@ -27,9 +24,10 @@ export const HeaderLogo = styled.img`
 
 export const HeaderLoggedOut = styled.div`
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 10px;
   display: flex;
+  transform: translate(0, -50%);
   // grid-template-columns: auto auto auto auto;
   // grid-gap: 10px;
 
@@ -51,12 +49,13 @@ export const HeaderLoggedOut = styled.div`
 
 export const HeaderLoggedIn = styled.div`
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
   text-transform: uppercase;
+  transform: translate(0, -50%);
 
   @media (max-width: 1130px) {
     display: none;

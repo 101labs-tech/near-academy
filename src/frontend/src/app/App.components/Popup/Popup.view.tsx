@@ -10,19 +10,20 @@ type PopupProps = {
     text: string,
     link: string,
     buttonText: string
+    buttonTextClose: string
     isImage: boolean
     img: string
     closePopup: () => void
 }
 
-export const PopupView = ({ text, title, link, buttonText, closePopup, isImage, img }: PopupProps) => {
+export const PopupView = ({ text, title, link, buttonText, closePopup, isImage, img, buttonTextClose }: PopupProps) => {
     return (
       <PopupStyle>
           <PopupWrapper>
               { isImage ? <PopupImage> <img src={img} alt="popup"/></PopupImage> : null }
               <PopupText>{ text }</PopupText>
               <div className={'button-wrapper'}>
-                  <Button onClick={closePopup} text={'Continue without account'} />
+                  <Button onClick={closePopup} text={buttonTextClose} />
                   <Link to={link}>
                       <Button text={buttonText} />
                   </Link>
@@ -39,5 +40,6 @@ PopupView.propTypes = {
     img: PropTypes.string,
     isImage: PropTypes.bool,
     buttonText: PropTypes.string,
+    buttonTextClose: PropTypes.string,
     closePopup: PropTypes.func
 }

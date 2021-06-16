@@ -333,6 +333,7 @@ export const ChapterView = ({
     <ChapterStyled>
       { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
           <Popup closePopup={() => setIsSaveConfirmPopup(false)}
+                 buttonTextClose={'Continue without account'}
                  buttonText={'Sign up'}
                  img={'/images/chap_5_0.png'}
                  isImage={true}
@@ -341,7 +342,8 @@ export const ChapterView = ({
                  text={'Create an account to save your progress and earn your certificate'} />
                  : null}
       { isPopup ? <Popup closePopup={closeIsPopup}
-                         buttonText={'Next Chapter'}
+                         buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
+                         buttonTextClose={'Close'}
                          link={nextChapter}
                          img={''}
                          isImage={false}

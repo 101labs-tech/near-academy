@@ -172,13 +172,17 @@ export const HomeContainer = styled.div`
         display: flex;
         justify-content: space-between;
         padding: 0;
+        padding: 0 200px;
+        margin-bottom: 100px;
         
         @media (max-width: 992px) {
             flex-wrap: wrap;
+            padding: 0px;
+            margin-bottom: 10px;
         }
         
        li {
-         width: 22%;
+         width: 30%;
          list-style-type: none;
          box-shadow: 0px 0px 68px 0px rgba(190,179,194,0.6);
          padding: 20px;

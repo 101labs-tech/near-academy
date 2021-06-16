@@ -7,7 +7,7 @@ import { HamburgerBottomBackward, HamburgerBottomForward, HamburgerTopBackward, 
 export const HamburgerStyledLeft = styled.div`
   position: fixed;
   left: 18px;
-  top: 18px;
+  top: 30px;
   overflow: visible;
   margin: 0;
   height: 14px;

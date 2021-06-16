@@ -30,7 +30,7 @@ export const FooterView = ({ nextChapter, previousChapter, percent }: any) => {
         <Button text="Previous" color="primary" icon="left-arrow" invertIcon />
       </Link>
       <ProgressBarWrapper>
-          <ProgressBar bgColor={'#00C08B'} completed={percent} />
+          <ProgressBar baseBgColor={'#fff'} bgColor={'#00C08B'} completed={percent} />
       </ProgressBarWrapper>
       <Link to={nextChapter}>
         <Button text={pathname !== '/near101/chapter-8' ? 'Next' : 'Get certificate'} color="primary" icon="right-arrow" />
