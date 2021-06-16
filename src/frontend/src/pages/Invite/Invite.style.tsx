@@ -60,12 +60,21 @@ export const InvitePage = styled(FullPage)`
         justify-content: space-between;
         padding: 50px 0px;
         
+        @media (max-width: 992px) {
+            flex-direction: column;
+             padding: 20px 0px;
+        }
+        
         li {
             list-style: none;
             text-align: center;
             p, span {
                 font-size: 40px;
                 font-weight: 700;
+                
+                @media (max-width: 992px) {
+                    font-size: 24px;
+                }
             }
             span {
                 color: #00C08B
@@ -77,16 +86,33 @@ export const InvitePage = styled(FullPage)`
 export const InviteContainer = styled.div`
     width: 60%;
     margin: auto;
+    
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+    
   > h1 {
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
+     @media (max-width: 992px) {
+        font-size: 24px;
+     }
+  }
+  
+  p {
+   @media (max-width: 992px) {
+        word-break: break-all;
+   }
   }
 
   > h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+     @media (max-width: 992px) {
+        font-size: 24px;
+     }
   }
 
   > ul {
