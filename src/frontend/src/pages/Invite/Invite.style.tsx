@@ -33,7 +33,7 @@ export const InvitePage = styled(FullPage)`
             width: 100%;
             margin-bottom: 20px;
             display: flex;    
-            button {
+            .copy-button {
                 width: 20%;
                 border: none;
                 height: 40px;

@@ -2,10 +2,14 @@ import * as React from 'react'
 
 //prettier-ignore
 import { InviteContainer, InvitePage, InviteStyled } from './Invite.style'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import {MainFooter} from 'app/App.components/MainFooter/MainFooter.controller'
+import {useState} from "react";
 
 export const InviteView = () => {
+    const [value, setValue] = useState('https://near.academy/sign-up?referral=username')
+
     return (
         <InviteStyled>
             <InvitePage>
@@ -37,8 +41,10 @@ export const InviteView = () => {
                     </ul>
                     <form action="">
                         <div className="input">
-                            <input type="text"/>
-                            <button type='submit'>copy</button>
+                            <input value={value} onChange={(e) => setValue(e.target.value)} type="text"/>
+                            <CopyToClipboard text={value}>
+                                <a className='copy-button'>copy</a>
+                            </CopyToClipboard>
                         </div>
                         <p>Share this link with your friends and earn NEAR.
                             For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
