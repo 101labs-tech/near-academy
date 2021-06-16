@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 export const FooterStyled = styled.div`
   height: 70px;
-  background: rgba(255, 255, 255, 1);
+  background: #F2F2F2;
   margin-top: 20px;
   display: flex;
   align-items: center;

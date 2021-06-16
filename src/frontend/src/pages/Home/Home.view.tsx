@@ -23,6 +23,39 @@ export const HomeView = () => {
               </Link>
             </div>
           </section>
+          <section className={'components benefits'}>
+            <h1>Get Involved In Our Community</h1>
+            <ul>
+              <li>
+                <div className={'icon first'}>
+                  <img src={'images/benefits/1.png'} alt="benefits icon" />
+                </div>
+                <h2>NFT Certificate</h2>
+                <p className={'description'}>Complete the course and receive your certificate as a Non-Fungible Token.</p>
+              </li>
+              <li>
+                <div className={'icon second'}>
+                  <img src={'images/benefits/2.png'} alt="benefits icon" />
+                </div>
+                <h2>Earn To Learn</h2>
+                <p className={'description'}>Get your NEAR mainnet account created for free on course completion.</p>
+              </li>
+              <li>
+                <div className={'icon third'}>
+                  <img src={'images/benefits/3.png'} alt="benefits icon" />
+                </div>
+                <h2>Contribute to NEAR Academy</h2>
+                <p className={'description'}>Join the builders of NEAR Academy on Github. Earn NEAR if your PR is accepted.</p>
+              </li>
+              {/*<li>*/}
+              {/*  <div className={'icon last'}>*/}
+              {/*    <img src={'images/benefits/4.png'} alt="benefits icon" />*/}
+              {/*  </div>*/}
+              {/*  <h2>Earn To Learn</h2>*/}
+              {/*  <p className={'description'}>Finish the course to get some Near. </p>*/}
+              {/*</li>*/}
+            </ul>
+          </section>
           <section className={'components second'}>
             <h1>Join the future</h1>
             <div className={'left'}>
@@ -35,39 +68,6 @@ export const HomeView = () => {
                 <Button text="JOIN NOW" color="secondary" />
               </Link>
             </div>
-          </section>
-          <section className={'components benefits'}>
-            <h1>Get Involved In Our Community</h1>
-            <ul>
-              <li>
-                <div className={'icon first'}>
-                  <img src={'images/benefits/1.png'} alt="benefits icon" />
-                </div>
-                <h2>NFT Certificate</h2>
-                <p className={'description'}>Complete the course and join the NEAR Academy community. You will receive your certificate in an NFT. </p>
-              </li>
-              <li>
-                <div className={'icon second'}>
-                  <img src={'images/benefits/2.png'} alt="benefits icon" />
-                </div>
-                <h2>Academy DAO</h2>
-                <p className={'description'}>Join our working group and expand the reach of Near and the Academy.</p>
-              </li>
-              <li>
-                <div className={'icon third'}>
-                  <img src={'images/benefits/3.png'} alt="benefits icon" />
-                </div>
-                <h2>Create Content</h2>
-                <p className={'description'}>Submit a proposal or check what tasks are open to contribute to our long term growth. We encourage contributions from the ecosystem.</p>
-              </li>
-              <li>
-                <div className={'icon last'}>
-                  <img src={'images/benefits/4.png'} alt="benefits icon" />
-                </div>
-                <h2>Earn To Learn</h2>
-                <p className={'description'}>Finish the course to get some Near. </p>
-              </li>
-            </ul>
           </section>
           <section className={'components third'}>
             <div className={'left'}>

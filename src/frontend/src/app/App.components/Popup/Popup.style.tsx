@@ -32,9 +32,11 @@ export const PopupWrapper = styled.div`
     border-radius: 22px;
     box-shadow: 0px 0px 49px -17px rgb(0 0 0 / 62%);
     background: #fff;
-    width: 600px;
-    height: 600px;
+    max-height: 530px;
+    min-height: 200px;
     position: relative;
+    width: 600px;
+    height: 100%;
 `
 
 export const PopupTitle = styled.h2`

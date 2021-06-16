@@ -112,6 +112,6 @@ Invoking a contract method from your dApp will trigger a sequence of actions loc
 At the museum, each meme is created by a contributor and can receive comments, votes and donations. The contributor can call a release function to release the donations to any given address. The meme museum has an expert team that curates the most interesting memes and presents them in their museum. Yes, this is part of the job!
 
 <FormWrapper>
-    <Input placeholder="Placehollder" type="text"/>
+    <Input placeholder="Placeholder" type="text"/>
     <Button text="Submit" color="primary" invertIcon />
 </FormWrapper>
