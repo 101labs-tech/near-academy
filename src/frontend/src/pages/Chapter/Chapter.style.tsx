@@ -54,6 +54,10 @@ export const ChapterCourse = styled.div`
   code {
     font-size: 14px;
     
+    &.hljs {
+        padding: 10px 40px;
+    }
+    
     p {
         padding: 0;
         margin: 0;

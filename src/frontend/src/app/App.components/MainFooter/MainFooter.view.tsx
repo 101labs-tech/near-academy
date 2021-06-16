@@ -8,7 +8,7 @@ export const ViewMainFooter  = () => {
             <div className="footer-wrapper">
                 <div className={'left'}>
                     <img src={'logo-white.svg'} alt="101 labs icon" />
-                    <p>Made by 101Labs.org</p>
+                    <p>Made by <a target='_blank' href="https://101Labs.org">101Labs.org</a></p>
                 </div>
                 <div className={'center'}>
                     <ul>

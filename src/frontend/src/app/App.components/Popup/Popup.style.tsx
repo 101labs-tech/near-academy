@@ -18,9 +18,7 @@ export const PopupStyle = styled.div`
         align-items: center;
         justify-content: space-between;
         padding: 20px;
-        position: absolute;
         width: 100%;
-        bottom: 0;
         
         button {
             height: 40px;
@@ -36,7 +34,9 @@ export const PopupWrapper = styled.div`
     min-height: 200px;
     position: relative;
     width: 600px;
-    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 `
 
 export const PopupTitle = styled.h2`
@@ -52,6 +52,7 @@ export const PopupText = styled.p`
     padding: 20px;
     font-size: 24px;
     text-align: center;
+    margin: 0;
 `
 
 export const PopupImage = styled.div`
