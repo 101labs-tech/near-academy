@@ -2,7 +2,9 @@ import * as React from 'react'
 
 //prettier-ignore
 import { InviteContainer, InvitePage, InviteStyled } from './Invite.style'
+// @ts-ignore
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+
 
 import {MainFooter} from 'app/App.components/MainFooter/MainFooter.controller'
 import {useState} from "react";
