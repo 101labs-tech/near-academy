@@ -8,7 +8,6 @@ export const ViewMainFooter  = () => {
             <div className="footer-wrapper">
                 <div className={'left'}>
                     <img src={'logo-white.svg'} alt="101 labs icon" />
-                    <Link to='/terms'>TERMS</Link>
                     <p>Made by 101Labs.org</p>
                 </div>
                 <div className={'center'}>
