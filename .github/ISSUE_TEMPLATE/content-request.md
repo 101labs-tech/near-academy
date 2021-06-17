@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-
+Refer to an existing chapter to update, improve or fix it. Or suggest completely new content (coureses). Provide as much information as possible. 
