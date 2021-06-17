@@ -2,13 +2,9 @@
 
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
-<ImageContainer>
-    
-</ImageContainer>
-
-<Spacer />
 <BackgroundContainer>
-<img alt="story_image_6_0" src="/images/chap_6_0.png">
+<div class="images"><img alt="story_image_6_0" src="/images/chap_6_0.png"></div>
+
   Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
   <Spacer />
   We’re all artists, after all!

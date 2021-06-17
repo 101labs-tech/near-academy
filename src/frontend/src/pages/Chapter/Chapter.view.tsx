@@ -308,11 +308,16 @@ export const ChapterView = ({
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
   const [editorHeight, setEditorHeight] = useState(0)
-  const [isSaveConfirmPopup, setIsSaveConfirmPopup] = useState(true)
+  const [isSaveConfirmPopup, setIsSaveConfirmPopup] = useState<any>(null)
+
   const wrapperRef = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted()
 
   useEffect(() => {
+    if (nextChapter === '/near101/chapter-2' && localStorage.getItem('popupConfirm')) {
+        setIsSaveConfirmPopup(false)
+    } else setIsSaveConfirmPopup(true)
+
     if (wrapperRef.current) {
       setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
       setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
@@ -328,27 +333,31 @@ export const ChapterView = ({
 
   let extension = '.rs'
 
+  const closePopupSaveProcess = () => {
+      setIsSaveConfirmPopup(false)
+      localStorage.setItem('popupConfirm', 'true')
+  }
 
   return (
     <ChapterStyled>
       { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
-          <Popup closePopup={() => setIsSaveConfirmPopup(false)}
+          <Popup closePopup={closePopupSaveProcess}
                  buttonTextClose={'Continue without account'}
                  buttonText={'Sign up'}
                  img={'/images/chap_5_0.png'}
                  isImage={true}
                  link={'/login'}
-                 title={'Login'}
+                 title={''}
                  text={'Create an account to save your progress and earn your certificate'} />
                  : null}
       { isPopup ? <Popup closePopup={closeIsPopup}
                          buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
                          buttonTextClose={'Close'}
                          link={nextChapter}
-                         img={''}
-                         isImage={false}
+                         img={'/icons/dog.svg'}
+                         isImage={true}
                          title={'Success'}
-                         text={'End of Exercises'} />
+                         text={'Congratulations'} />
                          : null }
       <ChapterCourse>
         <Content course={course || ''} />

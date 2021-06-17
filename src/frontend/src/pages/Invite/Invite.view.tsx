@@ -8,9 +8,12 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import {MainFooter} from 'app/App.components/MainFooter/MainFooter.controller'
 import {useState} from "react";
+import {Link} from "react-router-dom";
+import {Button} from "../../app/App.components/Button/Button.controller";
+import {HeaderLoggedOut} from "../../app/App.components/Header/Header.style";
 
-export const InviteView = () => {
-    const [value, setValue] = useState('https://near.academy/sign-up?referral=username')
+export const InviteView = ({ user } : any) => {
+    const [value, setValue] = useState(`https://near.academy/sign-up?referral=${user?.username}`)
 
     return (
         <InviteStyled>
@@ -41,16 +44,21 @@ export const InviteView = () => {
                             <span>15 NEAR</span>
                         </li>
                     </ul>
-                    <form action="">
-                        <div className="input">
-                            <input value={value} onChange={(e) => setValue(e.target.value)} type="text"/>
-                            <CopyToClipboard text={value}>
-                                <a className='copy-button'>copy</a>
-                            </CopyToClipboard>
-                        </div>
-                        <p>Share this link with your friends and earn NEAR.
-                            For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
-                    </form>
+                    {
+                        user ? <form action="">
+                            <div className="input">
+                                <input value={value} onChange={(e) => setValue(e.target.value)} type="text"/>
+                                <CopyToClipboard text={value}>
+                                    <a className='copy-button'>copy</a>
+                                </CopyToClipboard>
+                            </div>
+                            <p>Share this link with your friends and earn NEAR.
+                                For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
+                        </form> :  <Link className={'get-started'} to="/sign-up">
+                            <Button text="SIGN UP" color="secondary"/>
+                        </Link>
+                    }
+
                     <h1>What do you have to do?</h1>
 
                     <p>

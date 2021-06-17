@@ -16,9 +16,6 @@ export const ViewMainFooter  = () => {
                         <li>
                             <Link to="/terms">TERMS</Link>
                         </li>
-                        <li>
-                            <Link to="/terms">Near NFT projects</Link>
-                        </li>
                     </ul>
                     <ul>
                         <p className={'title'}>Ecosystem</p>

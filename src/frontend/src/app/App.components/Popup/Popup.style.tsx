@@ -30,7 +30,7 @@ export const PopupWrapper = styled.div`
     border-radius: 22px;
     box-shadow: 0px 0px 49px -17px rgb(0 0 0 / 62%);
     background: #fff;
-    max-height: 530px;
+    max-height: 600px;
     min-height: 200px;
     position: relative;
     width: 600px;

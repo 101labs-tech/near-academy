@@ -8,7 +8,22 @@ export const ChapterStyled = styled.div`
   grid-template-columns: 5fr 3fr;
   grid-gap: 20px;
   height: calc(100vh - 170px);
-  margin: 70px 20px 0;
+  margin: 80px 20px 0;
+  
+  .images {
+        width: 65%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 65%;
+        height: 100%;
+        overflow: hidden;
+    img {
+        width: 100%;
+    height: 100%;
+    max-width: 100%;    
+    }
+  }
 
   @media (max-width: 900px) {
     grid-template-columns: auto;
@@ -52,20 +67,21 @@ export const ChapterCourse = styled.div`
   color: black;
   
   code {
-    font-size: 14px;
+    font-size: 14.5px;
     
     &.hljs {
-        padding: 10px 40px;
+        padding: 10px;
+        margin: 0px 40px;
     }
     
     p {
         padding: 0;
         margin: 0;
-        font-size: 14px;
+        font-size: 14.5px;
     }
     
     span {
-        font-size: 14px;
+        font-size: 14.5px;
         font-weight: normal;
     }
   }
@@ -321,7 +337,7 @@ export const Difficulty = styled.div`
 export const BackgroundContainer = styled.div`
   background-color: #0072ce;
   color: white;
-  padding: 40px 0;
+  // padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: center;

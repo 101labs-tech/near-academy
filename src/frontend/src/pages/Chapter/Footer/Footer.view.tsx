@@ -27,7 +27,7 @@ export const FooterView = ({ nextChapter, previousChapter, percent }: any) => {
   return (
     <FooterStyled>
       <Link to={previousChapter}>
-        <Button text="Previous" color="primary" icon="left-arrow" invertIcon />
+        <Button text={pathname !== '/near101/chapter-1' ? 'Previous' : 'Go to Home'} color="primary" icon="left-arrow" invertIcon />
       </Link>
       <ProgressBarWrapper>
           <ProgressBar baseBgColor={'#fff'} bgColor={'#00C08B'} completed={percent} />

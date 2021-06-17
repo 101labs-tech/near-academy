@@ -43,6 +43,7 @@ export const HeaderLoggedOut = styled.div`
        width: max-content;
        height: 35px;
        padding: 0px 15px; 
+       font-size: 14px;
     }
   }
 `

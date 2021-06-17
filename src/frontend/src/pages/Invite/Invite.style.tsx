@@ -16,6 +16,14 @@ export const InviteStyled = styled.div`
 export const InvitePage = styled(FullPage)`
     padding: 100px 0px 0px 0px;
     
+    .get-started {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto;
+    }
+    
     form {
         display: flex;
         flex-direction: column;

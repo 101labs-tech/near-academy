@@ -20,6 +20,7 @@ export const PopupView = ({ text, title, link, buttonText, closePopup, isImage, 
     return (
       <PopupStyle>
           <PopupWrapper>
+              { title ?  <PopupTitle>{title}</PopupTitle> : null }
               { isImage ? <PopupImage> <img src={img} alt="popup"/></PopupImage> : null }
               <PopupText>{ text }</PopupText>
               <div className={'button-wrapper'}>
