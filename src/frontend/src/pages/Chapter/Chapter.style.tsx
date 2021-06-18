@@ -342,9 +342,13 @@ export const BackgroundContainer = styled.div`
   align-items: center;
   justify-content: center;
   
+  p {
+    font-size: 17px;
+  }
+  
   img {
-    max-width: 30%;
-    width: 30%;
+    max-width: 40%;
+    width: 40%;
   }
     
   h1 {

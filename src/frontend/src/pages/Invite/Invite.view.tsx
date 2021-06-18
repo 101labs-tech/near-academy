@@ -29,21 +29,22 @@ export const InviteView = ({ user } : any) => {
                     <p>What can you expect from the Academy’s referral system?
                         Some NEAR every time your referred friend claims the certificate.
                     </p>
-
-                    <ul>
-                        <li>
-                            <p>Pending</p>
-                            <p>1</p>
-                        </li>
-                        <li>
-                            <p>Complete</p>
-                            <p>1</p>
-                        </li>
-                        <li>
-                            <p>Reward</p>
-                            <span>15 NEAR</span>
-                        </li>
-                    </ul>
+                    {
+                        user ?  <ul>
+                            <li>
+                                <p>Pending</p>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <p>Complete</p>
+                                <p>1</p>
+                            </li>
+                            <li>
+                                <p>Reward</p>
+                                <span>15 NEAR</span>
+                            </li>
+                        </ul> : null
+                    }
                     {
                         user ? <form action="">
                             <div className="input">
@@ -54,9 +55,7 @@ export const InviteView = ({ user } : any) => {
                             </div>
                             <p>Share this link with your friends and earn NEAR.
                                 For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
-                        </form> :  <Link className={'get-started'} to="/sign-up">
-                            <Button text="SIGN UP" color="secondary"/>
-                        </Link>
+                        </form> :  null
                     }
 
                     <h1>What do you have to do?</h1>
@@ -76,6 +75,12 @@ export const InviteView = ({ user } : any) => {
                         If your PR is accepted, then share it here <a href="https://x2muu8nc82s.typeform.com/to/JFQB14AF"> https://x2muu8nc82s.typeform.com/to/JFQB14AF </a>
                           with your NEAR wallet address and wait for those NEAR to flow in.
                     </p>
+
+                    {
+                        !user ? <Link className={'get-started'} to="/sign-up">
+                            <Button text="SIGN UP" color="secondary"/>
+                        </Link> : null
+                    }
                 </InviteContainer>
             </InvitePage>
             <img src={'museum_interior_x2.svg'} alt="museum interior" />
