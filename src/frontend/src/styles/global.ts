@@ -17,6 +17,10 @@ body {
   color: ${textColor};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  ._hj-3ZiaL__MinimizedWidgetBottom__container {
+            bottom: 40% !important;
+        }
 }
 
 h1 {
@@ -230,5 +234,4 @@ select:-webkit-autofill:focus {
 .rc-slider-mark-text {
   display: none !important;
 }
-
 `

@@ -121,7 +121,7 @@ The contract checks if the comment has a short enough length (a maximum length o
 
 <Spacer />
 <narrativeText style="background: #00C08B;">
-  <div>
+  <div class="image-wrapper">
     <img alt="story_image_6_1" src="/images/chap_6_1.png">
   </div>
   <VerticalAlign>

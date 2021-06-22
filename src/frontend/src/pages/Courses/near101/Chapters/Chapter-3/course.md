@@ -3,7 +3,7 @@
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <narrativeText style="background: #00C08B">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_3_0" src="/images/chap_3_0.png">
     </div>
     <VerticalAlign>
@@ -73,7 +73,7 @@ With NEAR, developers should not have to choose between different blockchains li
 <Spacer />
 
 <narrativeText style="background: #0072CE">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_3_3" src="/images/chap_3_3.png">
     </div>
     <VerticalAlign>

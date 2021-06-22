@@ -5,7 +5,7 @@
 <Spacer />
 
 <narrativeText style="background: #00C08B">
-  <div>
+  <div class="image-wrapper">
   <img alt="story_image_5_0" src="/images/chap_5_0.png">
   </div>
   <VerticalAlign>

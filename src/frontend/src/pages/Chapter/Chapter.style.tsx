@@ -372,10 +372,7 @@ export const Spacer = styled.span`
 `
 
 export const narrativeText = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 20px;
+  display: flex;
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
@@ -398,6 +395,7 @@ export const narrativeText = styled.div`
   .image-wrapper {
     display: flex;
     align-items: flex-end;
+    width: 30%;
   }
 `
 
@@ -422,6 +420,7 @@ export const quoteComma = styled.div`
 export const VerticalAlign = styled.div`
   display:flex;
   flex-direction: column;
+  width: 70%;
   justify-content: center;
 `
 

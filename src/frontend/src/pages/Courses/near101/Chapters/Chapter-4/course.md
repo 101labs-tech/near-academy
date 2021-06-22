@@ -3,7 +3,7 @@
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
 <narrativeText style="background: #00C08B;">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_4_0" src="/images/chap_4_0.png">
     </div>
     <VerticalAlign>
