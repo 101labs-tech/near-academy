@@ -11,11 +11,12 @@ export const ChapterStyled = styled.div`
   margin: 80px 20px 0;
   
   .images {
-        width: 65%;
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 65%;
+        max-width: 40%;
+        min-width: 40%;
         height: 100%;
         overflow: hidden;
     img {
@@ -345,6 +346,23 @@ export const BackgroundContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  
+  .top-line {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    top: 0;
+  }
+  
+    .bottom-line {
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    background: #fff;
+    bottom: 0;
+  }
   
   p {
     font-size: 17px;
@@ -359,7 +377,7 @@ export const BackgroundContainer = styled.div`
     color: #ffb359;
   }
   
-  @media (max-width: 680px) {
+  @media (max-width: 1800px) {
     padding: 10px 0;
   }
   
@@ -400,6 +418,7 @@ export const narrativeText = styled.div`
     display: flex;
     align-items: flex-end;
     width: 30%;
+    margin: 0px 40px 0px 0px;
   }
 `
 

@@ -67,7 +67,7 @@ The cost of each instruction is denominated in "gas" units. Bandwidth is usually
 
 <Spacer />
 <narrativeText style="background: #0072CE">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_4_2" src="/images/chap_4_2.png">
     </div>
     <VerticalAlign>
