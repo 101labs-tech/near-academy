@@ -12,9 +12,10 @@
 </BackgroundContainer>
 <Spacer />
 
-```bash
+<Highlight language="bash">
 git clone https://github.com/oceanByte/near-academy-contracts
-```
+</Highlight>
+
 
 **Now that you are more familiar with NEAR infrastructure and contracts, you are ready to learn how contracts may be used to orchestrate a meme museum.**
 

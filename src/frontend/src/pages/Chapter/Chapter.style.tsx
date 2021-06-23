@@ -72,6 +72,10 @@ export const ChapterCourse = styled.div`
     &.hljs {
         padding: 10px;
         margin: 0px 40px;
+        
+        a {
+            color: #fff;
+        }
     }
     
     p {
