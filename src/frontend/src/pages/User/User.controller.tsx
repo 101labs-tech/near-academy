@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom'
 import { State } from 'reducers'
 import { PublicUser } from 'shared/user/PublicUser'
 
-import { getUser, sendName } from './User.actions'
+import { getUser, sendAccountName, sendName } from './User.actions'
 import { UserView } from './User.view'
 
 export const User = () => {
@@ -17,6 +17,7 @@ export const User = () => {
   const user = useSelector((state: State) => (state.users as Record<string, PublicUser | undefined>)[username])
   const authUser = useSelector((state: State) => state.auth.user)
   const [name, setName] = useState<string>('')
+  const [accountName, setAccountName] = useState<string>('')
 
   const downloadCallback = () => {
     const doc = new jsPDF({
@@ -34,6 +35,10 @@ export const User = () => {
     dispatch(sendName({ name }))
   }
 
+  const issueNftCallback = () => {
+    dispatch(sendAccountName({ accountName }))
+  }
+
   useEffect(() => {
     dispatch(getUser({ username }))
   }, [dispatch, username])
@@ -46,7 +51,10 @@ export const User = () => {
       downloadCallback={downloadCallback}
       name={name}
       setName={setName}
+      accountName={accountName}
+      setAccountName={setAccountName}
       getCertificateCallback={getCertificateCallback}
+      issueNftCallback={issueNftCallback}
     />
   )
 }

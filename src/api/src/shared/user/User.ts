@@ -32,11 +32,18 @@ export class User {
   @Property({ nullable: true, optional: true })
   progress?: string[]
 
+  @Property({ nullable: true, optional: true })
+  @IsOptional()
+  // provide a match decorator
+  referral?: string[]
+
   @IsDate()
   createdAt!: Date
 
   @IsDate()
   updatedAt!: Date
+
+
 }
 
 export const UserModel = getModel(User, { schemaOptions: { timestamps: true } })

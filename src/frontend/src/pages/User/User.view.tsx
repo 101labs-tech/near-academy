@@ -15,9 +15,12 @@ type UserViewProps = {
   user: PublicUser
   authUser?: PublicUser
   downloadCallback: () => void
+  issueNftCallback: () => void
   getCertificateCallback: () => void
-  name: string
-  setName: (e: string) => void
+  name: string,
+  accountName: string,
+  setName: (e: string) => void,
+  setAccountName: (e: string) => void,
 }
 
 export const UserView = ({
@@ -26,8 +29,11 @@ export const UserView = ({
   authUser,
   downloadCallback,
   name,
+  accountName,
   setName,
+  setAccountName,
   getCertificateCallback,
+  issueNftCallback,
 }: UserViewProps) => {
   let badgeUnlocked = false
   let counter = 0
@@ -58,18 +64,38 @@ export const UserView = ({
                   <Link to={`/certificate/${user.username}`}>
                     <Button type="button" text="Certified URL" icon="link" loading={loading} onClick={() => { }} />
                   </Link>
+                  {/* <Button
+                    type="button"
+                    text="Issue NFT certificate"
+                    icon="download"
+                    loading={loading}
+                    onClick={() => issueNftCallback()}
+                  />
+                  <Input
+                    icon="user"
+                    name="account name"
+                    placeholder="NEAR testnet account name"
+                    type="text"
+                    onChange={(e) => {
+                      setAccountName(e.target.value)
+                    }}
+                    value={accountName}
+                    onBlur={() => { }}
+                    inputStatus={undefined}
+                    errorMessage={undefined}
+                  /> */}
                 </UserBadgeButtons>
               ) : (
                 <UserBadgeInput>
                   <Input
                     icon="user"
-                    name="name"
+                    name="accountName"
                     placeholder="Name on certificate"
                     type="text"
                     onChange={(e) => {
-                      setName(e.target.value)
+                      setAccountName(e.target.value)
                     }}
-                    value={name}
+                    value={accountName}
                     onBlur={() => { }}
                     inputStatus={undefined}
                     errorMessage={undefined}

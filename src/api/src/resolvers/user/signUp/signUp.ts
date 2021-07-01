@@ -16,7 +16,7 @@ import { verifyRecaptchaToken } from '../helpers/verifyRecaptchaToken'
 export const signUp = async (ctx: Context, next: Next): Promise<void> => {
   const signUpArgs = plainToClass(SignUpInputs, ctx.request.body, { excludeExtraneousValues: true })
   await validateOrReject(signUpArgs, { forbidUnknownValues: true }).catch(firstError)
-  let { username, email, password, recaptchaToken } = signUpArgs
+  let { username, email, password, referral, recaptchaToken } = signUpArgs
 
   username = username.toLowerCase()
   email = email.toLowerCase()
@@ -29,6 +29,13 @@ export const signUp = async (ctx: Context, next: Next): Promise<void> => {
   const usernameAlreadyTaken: User | null = await UserModel.findOne({ username }).lean()
   if (usernameAlreadyTaken) throw new ResponseError(400, 'Username is already taken')
 
+  if (referral) {
+    referral = referral.toLowerCase()
+    const referralDoesNotExist: User | null = await UserModel.findOne({ username: referral }).lean()
+    if (!referralDoesNotExist) throw new ResponseError(400, 'Referral does not exist')
+    await UserModel.updateOne({ username: referral }, { $addToSet: { referral: username } }).exec()
+  }
+  
   const hashedPassword = await hash(password, 12)
   const user: User = await UserModel.create({ email, username, hashedPassword } as User)
   const publicUser: PublicUser = toPublicUser(user)

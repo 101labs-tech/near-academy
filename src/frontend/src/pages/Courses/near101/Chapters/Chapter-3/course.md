@@ -99,7 +99,7 @@ Imagine a NEAR-based platform that registers new user roles that can perform act
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https:\/\/wallet.testnet.near.org/</a>
 <ImageContainer>
-    <img class="chapterImage" alt="story_image_3_4" src="/images/chap_3_4.png">
+<img class="chapterImage" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!
@@ -114,6 +114,6 @@ Imagine a NEAR-based platform that registers new user roles that can perform act
 
 From now, you have the possibility to interact with the NEAR testnet and do your first transaction. Your test account comes with 200 NEAR, which come quite handy to experiment.
 
-<FormWrapper>
+<!-- <FormWrapper>
     <Button text="Submit" color="primary" invertIcon />
-</FormWrapper>
+</FormWrapper> -->
