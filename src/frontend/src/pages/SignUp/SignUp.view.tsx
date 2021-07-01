@@ -22,6 +22,7 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
     email: { value: '' },
     password: { value: '' },
     confirmPassword: { value: '' },
+    referral: { value: '' }
   })
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -48,6 +49,7 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
         email: updatedForm.email.value,
         password: updatedForm.password.value,
         confirmPassword: updatedForm.confirmPassword.value,
+        referral: updatedForm.referral.value
       })
     else setForm(updatedForm)
   }
@@ -102,6 +104,17 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
             onBlur={handleBlur}
             inputStatus={getInputStatus(form.confirmPassword)}
             errorMessage={getErrorMessage(form.confirmPassword)}
+          />
+          <Input
+            icon="user"
+            name="referral"
+            placeholder="Referral"
+            type="text"
+            onChange={handleChange}
+            value={form.referral.value}
+            onBlur={handleBlur}
+            inputStatus={getInputStatus(form.referral)}
+            errorMessage={getErrorMessage(form.referral)}
           />
           <InputSpacer />
           <Button type="submit" text="Sign Up" icon="sign-up" loading={loading} />

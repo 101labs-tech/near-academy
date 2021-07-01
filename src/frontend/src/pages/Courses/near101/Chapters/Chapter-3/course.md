@@ -3,7 +3,7 @@
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
 <narrativeText style="background: #00C08B">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_3_0" src="/images/chap_3_0.png">
     </div>
     <VerticalAlign>
@@ -73,7 +73,7 @@ With NEAR, developers should not have to choose between different blockchains li
 <Spacer />
 
 <narrativeText style="background: #0072CE">
-    <div>
+    <div class="image-wrapper">
         <img alt="story_image_3_3" src="/images/chap_3_3.png">
     </div>
     <VerticalAlign>
@@ -99,7 +99,7 @@ Imagine a NEAR-based platform that registers new user roles that can perform act
 
 1\. Visit <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/">https:\/\/wallet.testnet.near.org/</a>
 <ImageContainer>
-    <img class="chapterImage" alt="story_image_3_4" src="/images/chap_3_4.png">
+<img class="chapterImage" alt="story_image_3_4" src="/images/chap_3_4.png">
 </ImageContainer>
 
 2\. Choose your personal nickname (i.e. Account ID). The cool thing about NEAR is that it offers the option to personalize your wallet. If the nickname is available, you are ready to join the protocol!
@@ -113,3 +113,7 @@ Imagine a NEAR-based platform that registers new user roles that can perform act
 5\. You are now part of the NEAR test network.
 
 From now, you have the possibility to interact with the NEAR testnet and do your first transaction. Your test account comes with 200 NEAR, which come quite handy to experiment.
+
+<!-- <FormWrapper>
+    <Button text="Submit" color="primary" invertIcon />
+</FormWrapper> -->

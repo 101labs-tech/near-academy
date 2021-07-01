@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-
+import {MainFooter} from 'app/App.components/MainFooter/MainFooter.controller'
 import { Button } from 'app/App.components/Button/Button.controller'
 
 //prettier-ignore
-import { Footer, HomeContainer, HomePage, HomeStyled } from './Home.style'
+import { HomeContainer, HomePage, HomeStyled } from './Home.style'
 
 export const HomeView = () => {
   return (
@@ -23,6 +23,39 @@ export const HomeView = () => {
               </Link>
             </div>
           </section>
+          <section className={'components benefits'}>
+            <h1>Benefits of Near Academy</h1>
+            <ul>
+              <li>
+                <div className={'icon first'}>
+                  <img src={'images/benefits/1.png'} alt="benefits icon" />
+                </div>
+                <h2>NFT Certificate</h2>
+                <p className={'description'}>Complete the course and receive your certificate as a Non-Fungible Token.</p>
+              </li>
+              <li>
+                <div className={'icon second'}>
+                  <img src={'images/benefits/2.png'} alt="benefits icon" />
+                </div>
+                <h2>Earn To Learn</h2>
+                <p className={'description'}>Get your NEAR mainnet account created for free on course completion.</p>
+              </li>
+              <li>
+                <div className={'icon third'}>
+                  <img src={'images/benefits/3.png'} alt="benefits icon" />
+                </div>
+                <h2>Contribute to NEAR Academy</h2>
+                <p className={'description'}>Join the builders of NEAR Academy on Github. Earn NEAR if your PR is accepted.</p>
+              </li>
+              {/*<li>*/}
+              {/*  <div className={'icon last'}>*/}
+              {/*    <img src={'images/benefits/4.png'} alt="benefits icon" />*/}
+              {/*  </div>*/}
+              {/*  <h2>Earn To Learn</h2>*/}
+              {/*  <p className={'description'}>Finish the course to get some Near. </p>*/}
+              {/*</li>*/}
+            </ul>
+          </section>
           <section className={'components second'}>
             <h1>Join the future</h1>
             <div className={'left'}>
@@ -36,7 +69,6 @@ export const HomeView = () => {
               </Link>
             </div>
           </section>
-
           <section className={'components third'}>
             <div className={'left'}>
               <h1>
@@ -53,36 +85,7 @@ export const HomeView = () => {
           </section>
         </HomeContainer>
       </HomePage>
-      <Footer>
-        <div className="footer-wrapper">
-          <div className={'left'}>
-            <img src={'logo-white.svg'} alt="101 labs icon" />
-            <p>Made by 101Labs.org</p>
-          </div>
-          <div className={'right'}>
-            {/* <div className="links">
-              <a href="https://mintbase.io/" rel="noopener noreferrer" target="_blank" className="link">Mintbase</a>
-              <a href="https://paras.id/" rel="noopener noreferrer" target="_blank" className="link">Paras</a>
-              <a href="https://berryclub.io/" rel="noopener noreferrer" target="_blank" className="link">Berry Club</a>
-              <a href="https://near.org/developers/" rel="noopener noreferrer" target="_blank" className="link">Near Devs</a>
-              <a href="https://nearguilds.com/" rel="noopener noreferrer" target="_blank" className="link">Near Guilds</a>
-              <a href="https://near.chat" rel="noopener noreferrer" target="_blank" className="link">Near Chat</a>
-            </div> */}
-            <div className="socials">
-              <a href={'https://github.com/near'}>
-                {' '}
-                <img src={'github.svg'} alt="github icon" />
-              </a>
-              <a href={'https://twitter.com/NEARProtocol'}>
-                <img src={'twitter.svg'} alt="twitter icon" />
-              </a>
-              <a href={'https://t.me/cryptonear'}>
-                <img src={'telegram.svg'} alt="telegram icon" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </Footer>
+      <MainFooter />
     </HomeStyled>
   )
 }

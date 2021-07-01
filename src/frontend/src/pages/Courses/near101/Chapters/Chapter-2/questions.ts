@@ -6,7 +6,7 @@ export const questions = [
             "Full Stack Web3 Developer (junior)",
             "NFT token engineer (junior)",
             "Janitor (senior)",
-            "Meme Specialist (senior)"
+            "meme Specialist (senior)"
         ],
         responses: ["Full Stack Web3 Developer (junior)"],
     }

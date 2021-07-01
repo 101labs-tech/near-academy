@@ -1,5 +1,6 @@
 import { store } from 'index'
 import { GetPublicUserInputs } from 'shared/page/GetPublicUser'
+import { SetAccountNameInputs } from 'shared/page/SetAccountName'
 import { SetNameInputs } from 'shared/page/SetName'
 
 export const GET_USER_REQUEST = 'GET_USER_REQUEST'
@@ -40,6 +41,25 @@ export const sendName = ({ name }: SetNameInputs) => (dispatch: any) => {
           method: 'POST',
           headers: { Authorization: `Bearer ${store.getState().auth.jwt}` },
           json: { name },
+        },
+        commit: { type: SET_NAME_COMMIT, meta: {} },
+        rollback: { type: SET_NAME_ROLLBACK, meta: {} },
+      },
+    },
+  })
+}
+
+export const sendAccountName = ({ accountName }: SetAccountNameInputs) => (dispatch: any) => {
+  dispatch({
+    type: SET_NAME_REQUEST,
+    payload: {},
+    meta: {
+      offline: {
+        effect: {
+          url: `${process.env.REACT_APP_BACKEND_URL}/page/set-account-name`,
+          method: 'POST',
+          headers: { Authorization: `Bearer ${store.getState().auth.jwt}` },
+          json: { accountName },
         },
         commit: { type: SET_NAME_COMMIT, meta: {} },
         rollback: { type: SET_NAME_ROLLBACK, meta: {} },

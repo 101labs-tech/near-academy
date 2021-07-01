@@ -8,7 +8,23 @@ export const ChapterStyled = styled.div`
   grid-template-columns: 5fr 3fr;
   grid-gap: 20px;
   height: calc(100vh - 170px);
-  margin: 70px 20px 0;
+  margin: 80px 20px 0;
+  
+  .images {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 40%;
+        min-width: 40%;
+        height: 100%;
+        overflow: hidden;
+    img {
+        width: 100%;
+    height: 100%;
+    max-width: 100%;    
+    }
+  }
 
   @media (max-width: 900px) {
     grid-template-columns: auto;
@@ -49,6 +65,32 @@ export const ChapterCourse = styled.div`
   overflow: auto;
   position: relative;
   font-size: 22px;
+  color: black;
+  
+  code {
+    font-size: 14.5px;
+    
+    &.hljs {
+        padding: 10px;
+        margin: 0px 40px;
+        
+        a {
+            color: #fff;
+        }
+    }
+    
+    p {
+        padding: 0;
+        margin: 0;
+        font-size: 14.5px;
+    }
+    
+    span {
+        font-size: 14.5px;
+        font-weight: normal;
+    }
+  }
+  
 
   .view-line {
     font-size: 18px;
@@ -62,7 +104,13 @@ export const ChapterCourse = styled.div`
     font-weight: 300;
     text-align: left;
   }
-
+  @media (max-width: 680px) {
+    padding: 10px;
+    p {
+      padding: 0 10px;
+      font-size: 16px;
+    }
+  }
   @media (min-width: 1024px) {
     p {
       padding: 0 40px;
@@ -71,6 +119,7 @@ export const ChapterCourse = styled.div`
       text-align: justify;
     }
   }
+ 
 
   img {
     max-width: 100%;
@@ -127,7 +176,8 @@ export const ChapterH2 = styled.div`
   text-align: left;
 
   @media (max-width: 615px) {
-    font-size: 35px;
+    font-size: 26px;
+    padding: 10px;
   }
 `
 
@@ -143,8 +193,8 @@ export const ChapterH4 = styled.div`
 `
 
 export const ChapterValidator = styled.div`
-  background: ${backgroundColorLight};
-  border: 1px solid ${near6};
+  background: white;
+  border: 1px solid white;
   position: relative;
   margin-top: 20px;
   display: flex;
@@ -185,16 +235,17 @@ export const ChapterValidatorTitle = styled.div`
 
 export const ChapterValidatorContent = styled.div`
   font-size: 12px;
+  color: #000;
 `
 
 export const ChapterValidatorContentWrapper = styled.div``
 
-export const Button = styled.div`
+export const ButtonStyle = styled.div`
   font-size: 14px;
   width: 220px;
   height: 40px;
-  border: 1px solid white;
-  position: relative;
+  // border: 1px solid white;
+  position: relative; 
   display: inline-block;
   cursor: pointer;
   margin: 20px auto 10px auto;
@@ -204,6 +255,18 @@ export const Button = styled.div`
     margin: 10px 20px 10px -10px;
     vertical-align: bottom;
   }
+`
+
+export const FormWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    
+    button {
+        height: 36px;
+        max-width: 170px;
+        margin: 0px 0px 0px 30px;
+    }
 `
 
 export const ButtonBorder = styled.div`
@@ -248,9 +311,7 @@ export const ButtonText = styled.div`
   }
 `
 
-export const ChapterMonaco = styled.div`
-  border: 1px solid ${primaryColor};
-`
+export const ChapterMonaco = styled.div``
 
 export const ChapterItalic = styled.em`
   font-style: italic;
@@ -281,10 +342,46 @@ export const Difficulty = styled.div`
 export const BackgroundContainer = styled.div`
   background-color: #0072ce;
   color: white;
-  padding: 40px 0;
+  // padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  .top-line {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    top: 0;
+  }
+  
+    .bottom-line {
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    background: #fff;
+    bottom: 0;
+  }
+  
+  p {
+    font-size: 17px;
+  }
+  
+  img {
+    max-width: 40%;
+    width: 40%;
+  }
+    
   h1 {
     color: #ffb359;
   }
+  
+  @media (max-width: 1800px) {
+    padding: 10px 0;
+  }
+  
+  
 `
 export const ImageContainer = styled.span`
   display: block;
@@ -297,10 +394,7 @@ export const Spacer = styled.span`
 `
 
 export const narrativeText = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 20px;
+  display: flex;
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
@@ -323,6 +417,8 @@ export const narrativeText = styled.div`
   .image-wrapper {
     display: flex;
     align-items: flex-end;
+    width: 30%;
+    margin: 0px 40px 0px 0px;
   }
 `
 
@@ -347,6 +443,7 @@ export const quoteComma = styled.div`
 export const VerticalAlign = styled.div`
   display:flex;
   flex-direction: column;
+  width: 70%;
   justify-content: center;
 `
 

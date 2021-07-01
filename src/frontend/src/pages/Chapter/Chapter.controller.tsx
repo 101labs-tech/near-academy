@@ -15,6 +15,7 @@ import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { ChapterLocked } from './Chapter.style'
 import { ChapterView } from './Chapter.view'
 import { Footer } from './Footer/Footer.controller'
+import {chapterData} from "../Courses/near101/Chapters/Chapters.data";
 
 export interface ChapterData {
   pathname: string
@@ -40,6 +41,7 @@ export interface Data {
 export const Chapter = () => {
   const [validatorState, setValidatorState] = useState(PENDING)
   const [showDiff, setShowDiff] = useState(false)
+  const [isPopup, setIsPopup] = useState(false)
   const { pathname } = useLocation()
   const [data, setData] = useState<Data>({
     course: undefined,
@@ -50,6 +52,9 @@ export const Chapter = () => {
   })
   const dispatch = useDispatch()
   const user = useSelector((state: State) => state.auth.user)
+  let previousChapter = '/'
+  let nextChapter = '/'
+  let percent = 0
 
   let badgeUnlocked = false
   let counter = 0
@@ -78,7 +83,27 @@ export const Chapter = () => {
     })
   }, [pathname])
 
+  chapterData.forEach((chapter, i) => {
+    if (pathname === chapter.pathname) {
+      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname; percent = 0
+      if (i + 1 < chapterData.length) {
+        nextChapter = chapterData[i + 1].pathname;
+      } else {
+        if (user) nextChapter = `/user/${user.username}`
+        else nextChapter = '/sign-up'
+      }
+      if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
+      else percent = 100
+    }
+  })
+
   const validateCallback = () => {
+    if (pathname === '/near101/chapter-8') {
+      setValidatorState(RIGHT)
+      setIsPopup(true)
+      return
+    }
+
     if (data.questions.length > 0) {
       let ok = true
       data.questions.forEach((question) => {
@@ -95,8 +120,9 @@ export const Chapter = () => {
       })
       if (ok) {
         setValidatorState(RIGHT)
+        setIsPopup(true)
         if (user) dispatch(addProgress({ chapterDone: pathname }))
-        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
+        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'));
       } else setValidatorState(WRONG)
     } else {
       if (showDiff) {
@@ -112,11 +138,13 @@ export const Chapter = () => {
             data.solution.replace(/\s+|\/\/ Type your solution below/g, '')
           ) {
             setValidatorState(RIGHT)
+            setIsPopup(true)
             if (user) dispatch(addProgress({ chapterDone: pathname }))
             else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
           } else if (pathname === '/near101/chapter-3' && data.exercise.match(/^[a-z0-9_-]*.testnet/gm)) {
             setShowDiff(false)
             setValidatorState(RIGHT)
+            setIsPopup(true)
             if (user) dispatch(addProgress({ chapterDone: pathname }))
             else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
           } else setValidatorState(WRONG)
@@ -151,13 +179,17 @@ export const Chapter = () => {
           proposedSolution={data.exercise}
           proposedSolutionCallback={proposedSolutionCallback}
           showDiff={showDiff}
+          isPopup={isPopup}
           course={data.course}
+          closeIsPopup={() => setIsPopup(false)}
+          user={user}
           supports={data.supports}
           questions={data.questions}
+          nextChapter={nextChapter}
           proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
         />
       )}
-      <Footer />
+      <Footer percent={percent} nextChapter={nextChapter} previousChapter={previousChapter} />
     </>
   )
 }

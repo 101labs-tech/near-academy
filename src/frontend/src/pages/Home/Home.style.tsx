@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import { FullPage } from 'styles'
+import {FullPage} from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
@@ -22,14 +22,54 @@ export const Footer = styled.footer`
   flex-direction: row;
   justify-content: center;
   .left {
-    padding: 60px;
+    padding: 25px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     p {
       color: white;
       font-size: 14px;
     }
+    img {
+      width: 265px;
+      margin-bottom: 50px;
+    }
+  }
+  .center {
+   display: flex;
+   @media (max-width: 480px) {
+        flex-direction: column;
+     }
+   ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     @media (max-width: 480px) {
+        padding: 0;
+        align-items: center;
+     }
+    
+   p { 
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: #00C1DE;
+      margin-bottom: 15px;
+   }
+    li {
+    margin-bottom: 15px;
+        a {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          color: #FFFFFF;
+      }
+    }
+   }
   }
   .right {
     padding: 60px;
@@ -119,19 +159,99 @@ export const HomeContainer = styled.div`
   button:hover {
     transform: scale(1.05);
   }
+  
+  section.benefits {
+    padding: 100px 0px 0px 0px;
+    
+    h1 {
+      text-align: center;
+      width: 100%;
+      margin: 0px 0px 40px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        padding: 0 200px;
+        margin-bottom: 100px;
+        
+        @media (max-width: 992px) {
+            flex-wrap: wrap;
+            padding: 0px;
+            margin-bottom: 10px;
+        }
+        
+       li {
+         width: 30%;
+         list-style-type: none;
+         box-shadow: 0px 0px 68px 0px rgba(190,179,194,0.6);
+         padding: 20px;
+         border-radius: 22px;
+         
+           @media (max-width: 992px) {
+             width: 32%;
+             margin-bottom: 20px;
+        }
+        
+         @media (max-width: 680px) {
+             width: 45%;
+        }
+        
+         @media (max-width: 460px) {
+             width: 100%;
+        }
+         
+         .icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 30px;
+            border-radius: 100%;
+            
+            &.first {
+                background: rgba(134,24,251, 0.2)
+            }
+             &.second {
+                background: rgba(251,120,24, 0.2)
+            }
+             &.third {
+                background: rgba(251,31,24, 0.2)
+            }
+             &.last {
+                background: rgba(24,251,45, 0.2)
+            }
+            img {
+               width: 30%;
+            }
+         }
+         
+         h2 {
+             font-size: 24px;
+             font-weight: bold;
+             text-align: center;
+             margin: 10px 0px 20px;
+        }
+        .description {
+            font-size: 16px;
+        }
+      }
+    }
+  }
 
   section.first {
     /* background-image: url('/images/museum_exterior_1.svg'); */
     background-image: url('/museum_exterior_1.svg');
     /* background-image: url('/images/chap_3_0.png'); */
-    background-position: right bottom;
+    background-position: right center;
     background-repeat: no-repeat;
     background-size: 881px 684px;
     min-height: 100vh;
     position: relative;
     margin-bottom: -200px;
     margin-right: -60px;
-    margin-top: 110px;
+    margin-top: 50px;
     z-index: 1;
 
     .left {
@@ -149,8 +269,6 @@ export const HomeContainer = styled.div`
         margin-top: 50px;
         /* margin-left: 100px; */
       }
-    }
-    .right {
     }
   }
 
@@ -193,9 +311,9 @@ export const HomeContainer = styled.div`
         margin-right: 30px;
       }
       img {
-        width: 276px;
         height: 693px;
-
+        min-width: 276px;
+        width: 276px;
         margin-left: 50px;
       }
     }
@@ -273,7 +391,7 @@ export const HomeContainer = styled.div`
   @media (min-width: 1201px) {
     section.first {
       //height: 100vh;
-      min-height: 888px;
+      min-height: 800px;
       .left {
         width: 55vw;
         p {
@@ -312,7 +430,7 @@ export const HomeContainer = styled.div`
     section.first {
       //height: 100vh;
 
-      min-height: 888px;
+      min-height: 800px;
       .left {
         width: 38vw;
         p {

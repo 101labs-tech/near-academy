@@ -2,13 +2,11 @@
 
 <Difficulty> Difficulty: 1/5 | Estimated reading time: 4 min </Difficulty>
 
-<ImageContainer>
-    <img alt="story_image_1_0" src="/images/chap_1_0.png">
-</ImageContainer>
 
 <Spacer />
 
 <BackgroundContainer>
+    <img alt="story_image_1_0" src="/images/chap_1_0.png">
     The year is 2029. The new internet is running on top of public interoperable blockchains. It seems crazy to think how the perception towards these technologies has drastically changed. The Internet of Value is more tangible than ever. Knowing how blockchain works is not considered a competitive advantage nowadays. It is a must-have.
     <Spacer />
     This chain of thoughts makes you remember when you originally discovered you could add a payment gateway with a 1-liner of code to your app via the NEAR blockchain. This was such a game-changer back then...
@@ -18,9 +16,9 @@
 
 Adding a payment gateway with NEAR is seamless:
 
-<SpecialCode>
+<Highlight language="javascript">
 sender.sendMoney(receiver, amount)
-</SpecialCode>
+</Highlight>
 
 The rise of the first blockchain application started in 2009 with Bitcoin, an independent network powering a global digital currency. Since then, blockchain technology has been used across many new applications forming a new open internet called Web3. In 2021, over 7,000 companies are building the internet infrastructure of Web3.
 

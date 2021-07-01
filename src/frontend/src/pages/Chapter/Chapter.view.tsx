@@ -5,16 +5,23 @@ import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
+import {PublicUser} from 'shared/user/PublicUser'
+// @ts-ignore
+import Highlight from 'react-highlight.js';
 
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import { Popup } from 'app/App.components/Popup/Popup.controller'
 import { backgroundColorLight } from 'styles'
 
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { Button, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
+import { ButtonStyle, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign, FormWrapper } from './Chapter.style'
 import { AnimatedCode, BackgroundContainer, Difficulty, ImageContainer, SpecialCode } from './Chapter.style'
+import { Input } from "../../app/App.components/Input/Input.controller";
+import { Button } from "../../app/App.components/Button/Button.controller";
+import {FormSevenChapter} from '../../app/App.components/FormSevenChapter/FormSevenChapter.controller'
 
 monaco
   .init()
@@ -48,7 +55,7 @@ const MonacoReadOnly = ({ children }: any) => {
         height={height}
         value={children}
         language="typescript"
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: false,
           scrollBeyondLastLine: false,
@@ -65,14 +72,14 @@ const MonacoReadOnly = ({ children }: any) => {
   )
 }
 
-const MonacoEditorSupport = ({ support }: any) => {
+const MonacoEditorSupport = ({ support, height }: any) => {
   return (
     <div>
       <Editor
-        height="600px"
+        height={height}
         value={support}
         language="rust"
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: true,
           scrollBeyondLastLine: false,
@@ -97,7 +104,7 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, heigh
         width={width}
         value={proposedSolution}
         language="rust"
-        theme="myCustomTheme"
+        theme="vs-dark"
         onChange={(_, val) => proposedSolutionCallback(val)}
         options={{
           lineNumbers: true,
@@ -124,7 +131,7 @@ const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
         modified={solution}
         language="rust"
         // @ts-ignore
-        theme="myCustomTheme"
+        theme="vs-dark"
         options={{
           lineNumbers: true,
           scrollBeyondLastLine: false,
@@ -156,10 +163,10 @@ const Validator = ({ validatorState, validateCallback }: any) => (
       <ChapterValidatorContentWrapper>
         <ChapterValidatorTitle>CHAPTER VALIDATION</ChapterValidatorTitle>
         <ChapterValidatorContent>Provide your answer above and validate chapter</ChapterValidatorContent>
-        <Button>
+        <ButtonStyle>
           <ButtonBorder />
           <ButtonText onClick={() => validateCallback()}>SUBMIT ANSWER</ButtonText>
-        </Button>
+        </ButtonStyle>
       </ChapterValidatorContentWrapper>
     )}
     {validatorState === RIGHT && (
@@ -174,7 +181,7 @@ const Validator = ({ validatorState, validateCallback }: any) => (
           EXPLORATION FAILED
         </ChapterValidatorTitle>
         <ChapterValidatorContent>Correct your answer and try again</ChapterValidatorContent>
-        <Button>
+        <ButtonStyle>
           <ButtonBorder />
           <ButtonText
             onClick={() => {
@@ -184,11 +191,12 @@ const Validator = ({ validatorState, validateCallback }: any) => (
           >
             TRY AGAIN
           </ButtonText>
-        </Button>
+        </ButtonStyle>
       </ChapterValidatorContentWrapper>
     )}
   </ChapterValidator>
 )
+
 
 const Content = ({ course }: any) => (
   <Markdown
@@ -220,6 +228,18 @@ const Content = ({ course }: any) => (
         dialog: {
           component: Dialog,
         },
+        Button: {
+          component: Button
+        },
+        FormWrapper: {
+          component: FormWrapper
+        },
+        Input: {
+          component: Input
+        },
+        Highlight: {
+            component: Highlight
+        },
         Difficulty: {
           component: Difficulty,
         },
@@ -243,6 +263,9 @@ const Content = ({ course }: any) => (
         },
         VerticalAlign:{
           component: VerticalAlign,
+        },
+        FormSevenChapter: {
+          component: FormSevenChapter
         }
       },
     }}
@@ -253,10 +276,14 @@ type ChapterViewProps = {
   validatorState: string
   validateCallback: () => void
   solution: string
+  nextChapter: string
   proposedSolution: string
   proposedSolutionCallback: (e: string) => void
   showDiff: boolean
+  isPopup: boolean
+  closeIsPopup: () => void
   course?: string
+  user?: PublicUser
   supports: Record<string, string | undefined>
   questions: Question[]
   proposedQuestionAnswerCallback: (e: Question[]) => void
@@ -266,21 +293,31 @@ export const ChapterView = ({
   validatorState,
   validateCallback,
   solution,
+  isPopup,
+  closeIsPopup,
   proposedSolution,
   proposedSolutionCallback,
   showDiff,
   course,
+  user,
   supports,
   questions,
+  nextChapter,
   proposedQuestionAnswerCallback,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
   const [editorHeight, setEditorHeight] = useState(0)
+  const [isSaveConfirmPopup, setIsSaveConfirmPopup] = useState<any>(null)
+
   const wrapperRef = useRef<HTMLDivElement>(null);
   const isMounted = useIsMounted()
 
   useEffect(() => {
+    if (nextChapter === '/near101/chapter-2' && localStorage.getItem('popupConfirm')) {
+        setIsSaveConfirmPopup(false)
+    } else setIsSaveConfirmPopup(true)
+
     if (wrapperRef.current) {
       setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
       setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
@@ -296,8 +333,32 @@ export const ChapterView = ({
 
   let extension = '.rs'
 
+  const closePopupSaveProcess = () => {
+      setIsSaveConfirmPopup(false)
+      localStorage.setItem('popupConfirm', 'true')
+  }
+
   return (
     <ChapterStyled>
+      { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
+          <Popup closePopup={closePopupSaveProcess}
+                 buttonTextClose={'Continue without account'}
+                 buttonText={'Sign up'}
+                 img={'/images/chap_5_0.png'}
+                 isImage={true}
+                 link={'/login'}
+                 title={''}
+                 text={'Create an account to save your progress and earn your certificate'} />
+                 : null}
+      { isPopup ? <Popup closePopup={closeIsPopup}
+                         buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
+                         buttonTextClose={'Close'}
+                         link={nextChapter}
+                         img={'/icons/dog.svg'}
+                         isImage={true}
+                         title={'Success'}
+                         text={'Congratulations'} />
+                         : null }
       <ChapterCourse>
         <Content course={course || ''} />
       </ChapterCourse>
@@ -335,7 +396,7 @@ export const ChapterView = ({
             {display === 'solution' ? (
               <ChapterMonaco>
                 {showDiff ? (
-                  <MonacoDiff width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
+                  <MonacoDiff height={editorHeight} width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
                 ) : (
                   <MonacoEditor
                     width={editorWidth}
@@ -347,7 +408,7 @@ export const ChapterView = ({
               </ChapterMonaco>
             ) : (
               <ChapterMonaco>
-                <MonacoEditorSupport support={supports[display]} />
+                <MonacoEditorSupport height={editorHeight} support={supports[display]} />
               </ChapterMonaco>
             )}
           </div>
@@ -362,8 +423,11 @@ ChapterView.propTypes = {
   validatorState: PropTypes.string,
   validateCallback: PropTypes.func.isRequired,
   solution: PropTypes.string,
+  nextChapter: PropTypes.string,
   proposedSolution: PropTypes.string,
   showDiff: PropTypes.bool.isRequired,
+  isPopup: PropTypes.bool,
+  closeIsPopup: PropTypes.func,
   proposedSolutionCallback: PropTypes.func.isRequired,
   course: PropTypes.string,
   supports: PropTypes.object.isRequired,
