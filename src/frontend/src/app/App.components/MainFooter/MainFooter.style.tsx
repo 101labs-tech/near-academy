@@ -20,6 +20,14 @@ export const Footer = styled.footer`
       width: 265px;
       margin-bottom: 50px;
     }
+    .link {
+        color: #42edf8;
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
   }
   .center {
    display: flex;

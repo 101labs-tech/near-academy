@@ -1,25 +1,24 @@
 import React from 'react';
 import {Footer} from './MainFooter.style'
 import {Link} from "react-router-dom";
+import {PublicUser} from "../../../shared/user/PublicUser";
+import * as PropTypes from "prop-types";
+import {HeaderView} from "../Header/Header.view";
 
-export const ViewMainFooter  = () => {
+
+type FooterViewProps = {
+    user?: PublicUser
+}
+
+export const ViewMainFooter  = ({user}: FooterViewProps) => {
     return (
         <Footer>
             <div className="footer-wrapper">
                 <div className={'left'}>
                     <img src={'logo-white.svg'} alt="101 labs icon" />
+                    { user ? <Link className={'link'} to="/invite">REFERRAL SYSTEM</Link> : null}
+                    <Link className={'link'} to="/terms">TERMS</Link>
                     <p>Made by <a target='_blank' href="https://101Labs.org">101Labs.org</a></p>
-                </div>
-                <div className={'center'}>
-                    <ul>
-                        <p className={'title'}>Legal</p>
-                        <li>
-                            <Link to="/terms">TERMS</Link>
-                        </li>
-                    </ul>
-                    <ul>
-                        <p className={'title'}>Ecosystem</p>
-                    </ul>
                 </div>
                 <div className={'right'}>
                     {/* <div className="links">
@@ -47,3 +46,9 @@ export const ViewMainFooter  = () => {
         </Footer>
     )
 }
+
+ViewMainFooter.propTypes = {
+    user: PropTypes.object,
+}
+
+ViewMainFooter.defaultProps = {}
