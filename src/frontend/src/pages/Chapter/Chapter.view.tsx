@@ -375,7 +375,7 @@ export const ChapterView = ({
             ))}
           </div>
         )}
-        {questions.length > 0 ? (
+        {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
           <ChapterQuestions>
             {questions.map((question, i) => (
               <div key={question.question}>
@@ -391,7 +391,7 @@ export const ChapterView = ({
               </div>
             ))}
           </ChapterQuestions>
-        ) : (
+        ) : questions.length === 0 && nextChapter !== '/near101/chapter-8' ? (
           <div ref={wrapperRef}>
             {display === 'solution' ? (
               <ChapterMonaco>
@@ -412,7 +412,7 @@ export const ChapterView = ({
               </ChapterMonaco>
             )}
           </div>
-        )}
+        ) : (<ChapterQuestions><FormSevenChapter /></ChapterQuestions>)}
         <Validator validatorState={validatorState} validateCallback={validateCallback} />
       </ChapterGrid>
     </ChapterStyled>

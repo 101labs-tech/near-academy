@@ -57,14 +57,14 @@ function loggedInHeader({user, removeAuthUserCallback}: HeaderViewProps) {
             <Link to={`/user/${user?.username}`}>
                 <HeaderMenuItem>{user?.username}</HeaderMenuItem>
             </Link>
-            {/*<Link*/}
-            {/*    to="/"*/}
-            {/*    onClick={() => {*/}
-            {/*        removeAuthUserCallback()*/}
-            {/*    }}*/}
-            {/*>*/}
-            {/*    <HeaderMenuItem>LOGOUT</HeaderMenuItem>*/}
-            {/*</Link>*/}
+            <Link
+                to="/"
+                onClick={() => {
+                    removeAuthUserCallback()
+                }}
+            >
+                <HeaderMenuItem>LOGOUT</HeaderMenuItem>
+            </Link>
         </HeaderLoggedIn>
     )
 }
