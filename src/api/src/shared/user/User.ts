@@ -1,8 +1,9 @@
 // prettier-ignore
-import { IsBoolean, IsDate, IsEmail, IsMongoId, IsOptional, Length, Matches } from 'class-validator'
+import { IsBoolean, IsDate, IsEmail, IsNumber, Min, IsMongoId, IsOptional, Length, Matches } from 'class-validator'
 import { ObjectId } from 'mongodb'
 
 import { getModel, Property } from '../../helpers/typegoose'
+import { Referral } from '../../shared/referral/Referral'
 
 export class User {
   @IsMongoId()
@@ -12,6 +13,11 @@ export class User {
   @Length(2, 20)
   @Matches(/^[a-zA-Z0-9_]*$/, { message: 'Username can only contain letters, numbers and underscores' })
   username!: string
+
+  @Property()
+  @Length(3, 40)
+  @Matches(/^[a-zA-Z0-9_]*.(testnet|near)$/, { message: 'Account name can only contain letters, numbers and underscores and needs to end with .testnet' })
+  accountName?: string
 
   @Property()
   @Length(2, 40)
@@ -35,13 +41,18 @@ export class User {
   @Property({ nullable: true, optional: true })
   @IsOptional()
   // provide a match decorator
-  referral?: string[]
+  referral?: Referral[]
 
   @IsDate()
   createdAt!: Date
 
   @IsDate()
   updatedAt!: Date
+
+  @Property()
+  @IsNumber()
+  @Min(6)
+  tokenId?: number
 
 
 }

@@ -64,38 +64,41 @@ export const UserView = ({
                   <Link to={`/certificate/${user.username}`}>
                     <Button type="button" text="Certified URL" icon="link" loading={loading} onClick={() => { }} />
                   </Link>
-                  {/* <Button
-                    type="button"
-                    text="Issue NFT certificate"
-                    icon="download"
-                    loading={loading}
-                    onClick={() => issueNftCallback()}
-                  />
-                  <Input
-                    icon="user"
-                    name="account name"
-                    placeholder="NEAR testnet account name"
-                    type="text"
-                    onChange={(e) => {
-                      setAccountName(e.target.value)
-                    }}
-                    value={accountName}
-                    onBlur={() => { }}
-                    inputStatus={undefined}
-                    errorMessage={undefined}
-                  /> */}
+                  {!authUser?.accountName ? (
+                    <div>
+                      <Button
+                        type="button"
+                        text="Issue NFT certificate"
+                        icon="download"
+                        loading={loading}
+                        onClick={() => issueNftCallback()}
+                      />
+                      <Input
+                        icon="user"
+                        name="account name"
+                        placeholder="NEAR testnet account name"
+                        type="text"
+                        onChange={(e) => {
+                          setAccountName(e.target.value)
+                        }}
+                        value={accountName}
+                        onBlur={() => { }}
+                        inputStatus={undefined}
+                        errorMessage={undefined}
+                      />
+                    </div>) : (<p>NFT certificate was issued to: <b>{authUser.accountName}</b></p>)}
                 </UserBadgeButtons>
               ) : (
                 <UserBadgeInput>
                   <Input
                     icon="user"
-                    name="accountName"
+                    name="name"
                     placeholder="Name on certificate"
                     type="text"
                     onChange={(e) => {
-                      setAccountName(e.target.value)
+                      setName(e.target.value)
                     }}
-                    value={accountName}
+                    value={name}
                     onBlur={() => { }}
                     inputStatus={undefined}
                     errorMessage={undefined}

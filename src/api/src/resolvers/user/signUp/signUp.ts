@@ -13,6 +13,10 @@ import { User, UserModel } from '../../../shared/user/User'
 import { getSignedJwt } from '../helpers/getSignedJwt'
 import { verifyRecaptchaToken } from '../helpers/verifyRecaptchaToken'
 
+import { ReferralStatus } from '../../../shared/referral/ReferralStatus'
+import { Referral } from '../../../shared/referral/Referral'
+
+
 export const signUp = async (ctx: Context, next: Next): Promise<void> => {
   const signUpArgs = plainToClass(SignUpInputs, ctx.request.body, { excludeExtraneousValues: true })
   await validateOrReject(signUpArgs, { forbidUnknownValues: true }).catch(firstError)
@@ -33,7 +37,9 @@ export const signUp = async (ctx: Context, next: Next): Promise<void> => {
     referral = referral.toLowerCase()
     const referralDoesNotExist: User | null = await UserModel.findOne({ username: referral }).lean()
     if (!referralDoesNotExist) throw new ResponseError(400, 'Referral does not exist')
-    await UserModel.updateOne({ username: referral }, { $addToSet: { referral: username } }).exec()
+    const newReferral: Referral = { username, status: ReferralStatus.PENDING };
+    const result = await UserModel.updateOne({ username: referral }, { $addToSet : {referral: newReferral} }).exec()
+    console.log(result)
   }
   
   const hashedPassword = await hash(password, 12)

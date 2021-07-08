@@ -4,19 +4,21 @@ import { Context, Next } from 'koa'
 
 import { firstError } from '../../../helpers/firstError'
 import { toPublicUser } from '../../../helpers/toPublicUser'
-import { SetNameInputs, SetNameOutputs } from '../../../shared/page/SetName'
+import { SetAccountNameInputs, SetAccountNameOutputs } from '../../../shared/page/SetAccountName'
 import { PublicUser } from '../../../shared/user/PublicUser'
 import { User, UserModel } from '../../../shared/user/User'
 import { rateLimit } from '../../quota/rateLimit/rateLimit'
 import { authenticate } from '../../user/helpers/authenticate'
+import { issueNftCertificate } from '../../near/issueNft'
+
 
 export const PUBLIC_USER_MONGO_SELECTOR = '_id username emailVerified progress createdAt'
 
-export const setName = async (ctx: Context, next: Next): Promise<void> => {
+export const setAccountName = async (ctx: Context, next: Next): Promise<void> => {
   console.log(ctx.request.body)
-  const setNameArgs = plainToClass(SetNameInputs, ctx.request.body, { excludeExtraneousValues: true })
-  await validateOrReject(setNameArgs, { forbidUnknownValues: true }).catch(firstError)
-  const { name } = setNameArgs
+  const setAccountNameArgs = plainToClass(SetAccountNameInputs, ctx.request.body, { excludeExtraneousValues: true })
+  await validateOrReject(setAccountNameArgs, { forbidUnknownValues: true }).catch(firstError)
+  const { accountName } = setAccountNameArgs
 
   const user: User = await authenticate(ctx)
 
@@ -24,8 +26,18 @@ export const setName = async (ctx: Context, next: Next): Promise<void> => {
 
   await UserModel.updateOne(
     { _id: user._id },
-    { $set: { name } },
+    { $set: { accountName } },
   ).exec()
+
+  let count = await UserModel.countDocuments({ tokenId : { $exists: true }}).exec();
+  const offset = 12
+  await UserModel.updateOne(
+    { _id: user._id },
+    { $set: { tokenId: count + offset } },
+  ).exec()
+  user.tokenId = count + offset;
+
+  issueNftCertificate(user.username, user.tokenId, accountName)
 
   const updatedUser: User = await UserModel.findOne(
     { _id: user._id },
@@ -33,7 +45,7 @@ export const setName = async (ctx: Context, next: Next): Promise<void> => {
 
   const publicUser: PublicUser = toPublicUser(updatedUser)
   
-  const response: SetNameOutputs = { user: publicUser }
+  const response: SetAccountNameOutputs = { user: publicUser }
 
   ctx.status = 200
   ctx.body = response

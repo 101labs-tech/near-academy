@@ -33,7 +33,7 @@ export const SET_NAME_ROLLBACK = 'SET_NAME_ROLLBACK'
 export const sendName = ({ name }: SetNameInputs) => (dispatch: any) => {
   dispatch({
     type: SET_NAME_REQUEST,
-    payload: {},
+    payload: { name },
     meta: {
       offline: {
         effect: {
@@ -49,9 +49,14 @@ export const sendName = ({ name }: SetNameInputs) => (dispatch: any) => {
   })
 }
 
+
+export const SET_ACCOUNT_NAME_REQUEST = 'SET_ACCOUNT_NAME_REQUEST'
+export const SET_ACCOUNT_NAME_COMMIT = 'GET_ACCOUNT_NAME_COMMIT'
+export const SET_ACCOUNT_NAME_ROLLBACK = 'SET_ACCOUNT_NAME_ROLLBACK'
+
 export const sendAccountName = ({ accountName }: SetAccountNameInputs) => (dispatch: any) => {
   dispatch({
-    type: SET_NAME_REQUEST,
+    type: SET_ACCOUNT_NAME_REQUEST,
     payload: {},
     meta: {
       offline: {
@@ -61,8 +66,8 @@ export const sendAccountName = ({ accountName }: SetAccountNameInputs) => (dispa
           headers: { Authorization: `Bearer ${store.getState().auth.jwt}` },
           json: { accountName },
         },
-        commit: { type: SET_NAME_COMMIT, meta: {} },
-        rollback: { type: SET_NAME_ROLLBACK, meta: {} },
+        commit: { type: SET_ACCOUNT_NAME_COMMIT, meta: {} },
+        rollback: { type: SET_ACCOUNT_NAME_ROLLBACK, meta: {} },
       },
     },
   })

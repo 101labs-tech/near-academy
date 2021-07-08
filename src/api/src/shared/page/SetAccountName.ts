@@ -10,6 +10,6 @@ export class SetAccountNameInputs {
   accountName!: string
 }
 
-export class SetNameOutputs {
+export class SetAccountNameOutputs {
   user!: PublicUser
 }
