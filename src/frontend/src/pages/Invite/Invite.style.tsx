@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-
 import { FullPage } from 'styles'
 
 export const InviteStyled = styled.div`
@@ -53,6 +52,9 @@ export const InvitePage = styled(FullPage)`
                 color: #fff;
                 font-size: 26px;
                 font-weight: bold;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             input {
                 width: 80%;

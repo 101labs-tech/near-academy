@@ -13,7 +13,6 @@ import { authenticate } from '../../user/helpers/authenticate'
 export const PUBLIC_USER_MONGO_SELECTOR = '_id username emailVerified progress createdAt'
 
 export const setName = async (ctx: Context, next: Next): Promise<void> => {
-  console.log(ctx.request.body)
   const setNameArgs = plainToClass(SetNameInputs, ctx.request.body, { excludeExtraneousValues: true })
   await validateOrReject(setNameArgs, { forbidUnknownValues: true }).catch(firstError)
   const { name } = setNameArgs

@@ -8,7 +8,7 @@ import { PublicUser } from 'shared/user/PublicUser'
 
 import { chapterData } from '../Courses/near101/Chapters/Chapters.data'
 // prettier-ignore
-import { UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
+import { AccountNameInput, UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
 
 type UserViewProps = {
   loading: boolean
@@ -73,19 +73,21 @@ export const UserView = ({
                         loading={loading}
                         onClick={() => issueNftCallback()}
                       />
-                      <Input
-                        icon="user"
-                        name="account name"
-                        placeholder="NEAR testnet account name"
-                        type="text"
-                        onChange={(e) => {
-                          setAccountName(e.target.value)
-                        }}
-                        value={accountName}
-                        onBlur={() => { }}
-                        inputStatus={undefined}
-                        errorMessage={undefined}
-                      />
+                      <AccountNameInput>
+                        <Input
+                          icon="user"
+                          name="account name"
+                          placeholder="NEAR testnet account name"
+                          type="text"
+                          onChange={(e) => {
+                            setAccountName(e.target.value)
+                          }}
+                          value={accountName}
+                          onBlur={() => { }}
+                          inputStatus={undefined}
+                          errorMessage={undefined}
+                        />
+                      </AccountNameInput>
                     </div>) : (<p>NFT certificate was issued to: <b>{authUser.accountName}</b></p>)}
                 </UserBadgeButtons>
               ) : (

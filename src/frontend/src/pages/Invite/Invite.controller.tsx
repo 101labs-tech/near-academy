@@ -1,17 +1,18 @@
 import * as React from 'react'
-import { useEffect } from 'react'
-import { InviteView } from './Invite.view'
 import { useDispatch, useSelector } from "react-redux";
-import { getReferral } from "./Invite.actions";
+
+// import { State } from "./Invite.actions";
 import { State } from "../../reducers";
+// import { InviteView } from 'react'
+import { InviteView } from './Invite.view'
 
 export const Invite = () => {
     const dispatch = useDispatch();
     const user = useSelector((state: State) => state.auth.user)
 
-    useEffect(() => {
-        dispatch(getReferral())
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(getReferral())
+    // }, [dispatch])
 
     const pending = useSelector((state: State) => state)
 

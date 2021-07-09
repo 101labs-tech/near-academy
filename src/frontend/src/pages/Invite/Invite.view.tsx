@@ -1,3 +1,4 @@
+import { MainFooter } from 'app/App.components/MainFooter/MainFooter.controller'
 import * as React from 'react'
 import { useState } from "react";
 import { useEffect } from 'react'
@@ -6,11 +7,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
 
-import { MainFooter } from 'app/App.components/MainFooter/MainFooter.controller'
-
 import { Button } from "../../app/App.components/Button/Button.controller";
 import { HeaderLoggedOut } from "../../app/App.components/Header/Header.style";
-import { getReferral } from './Invite.actions'
 //prettier-ignore
 import { InviteContainer, InvitePage, InviteStyled } from './Invite.style'
 
@@ -49,7 +47,7 @@ export const InviteView = ({ user }: any) => {
                             </li>
                             <li>
                                 <p>Open Reward</p>
-                                <span>{2 * user.stats.completed} NEAR</span>
+                                <span>{1 * user.stats.completed} NEAR</span>
                             </li>
                         </ul> : null
                     }
@@ -62,7 +60,7 @@ export const InviteView = ({ user }: any) => {
                                 </CopyToClipboard>
                             </div>
                             <p>Share this link with your friends and earn NEAR.
-                                For each newly registered user that finishes the NEAR Academy you will get 3 NEAR</p>
+                                For each newly registered user that finishes the NEAR Academy you will get 1 NEAR</p>
                         </form> : null
                     }
 

@@ -47,6 +47,10 @@ export const UserBadgeInput = styled.div`
   }
 `
 
+export const AccountNameInput = styled.div`
+  padding-top: 15px !important;
+`
+
 export const UserBadgeButtons = styled.div`
   margin-top: 10px;
   display: grid;
