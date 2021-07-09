@@ -24,7 +24,7 @@ export const HomeView = () => {
             </div>
           </section>
           <section className={'components benefits'}>
-            <h1>Benefits of Near Academy</h1>
+            <h1>Benefits of NEAR Academy</h1>
             <ul>
               <li>
                 <div className={'icon first'}>
