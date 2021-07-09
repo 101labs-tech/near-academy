@@ -1,5 +1,7 @@
-const contractName = 'museum-nft.testnet';
+/* @ts-ignore */
+const contractName = 'meme-museum.testnet';
 
+/* @ts-ignore */
 module.exports = function getConfig(isServer = false) {
   let config = {
     networkId: "testnet",
@@ -12,16 +14,12 @@ module.exports = function getConfig(isServer = false) {
   if (process.env.REACT_APP_ENV === undefined) {
     config = {
       ...config,
+      /* @ts-ignore */
       GAS: "200000000000000",
-      DEFAULT_NEW_ACCOUNT_AMOUNT: "1",
+      DEFAULT_NEW_ACCOUNT_AMOUNT: "5",
       contractMethods: {
-        changeMethods: [	
-        "new",
-        "nft_mint",
-        "nft_transfer",
-        "nft_approve_account_id"
-        ],
-        viewMethods: ["get_token_ids", "nft_tokens"],
+        changeMethods: ["create_meme", "add_meme"],
+        viewMethods: ["get_meme_count", "get_meme_list"],
       },
     };
   }
@@ -33,7 +31,8 @@ module.exports = function getConfig(isServer = false) {
       nodeUrl: "https://rpc.mainnet.near.org",
       walletUrl: "https://wallet.near.org",
       helperUrl: "https://helper.mainnet.near.org",
-      nftConfig: "near",
+      /* @ts-ignore */
+      CONTRACT_NAME: "near",
     };
   }
 
