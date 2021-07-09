@@ -30,7 +30,7 @@ export const setAccountName = async (ctx: Context, next: Next): Promise<void> =>
   ).exec()
 
   let count = await UserModel.countDocuments({ tokenId : { $exists: true }}).exec();
-  const offset = 12
+  const offset = 100
   await UserModel.updateOne(
     { _id: user._id },
     { $set: { tokenId: count + offset } },
