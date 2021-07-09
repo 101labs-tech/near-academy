@@ -27,7 +27,7 @@ describe('User', () => {
       expect(emailMsg).toBeDefined()
     })
 
-    await sendEmailForgotPassword(email, index, key)
+    await sendEmailForgotPassword(email, index.toString(), key)
 
     expect(sendgrid.send).toHaveBeenCalledWith(emailMsg)
 
