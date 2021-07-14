@@ -17,7 +17,7 @@
 Adding a payment gateway with NEAR is seamless:
 
 <Highlight language="javascript">
-sender.sendMoney(receiver, amount)
+await sender.sendMoney(receiver, amount);
 </Highlight>
 
 The rise of the first blockchain application started in 2009 with Bitcoin, an independent network powering a global digital currency. Since then, blockchain technology has been used across many new applications forming a new open internet called Web3. In 2021, over 7,000 companies are building the internet infrastructure of Web3.
@@ -70,5 +70,10 @@ All interactions and states are stored immutably on the blockchain and publicly 
     In Web3, middlemen are removed from the equation. Users are no longer tied to a specific platform, but can change platforms while maintaining their identity and history. Web developers can compose new applications by using existing code or creating their own. There is no gatekeeper to prevent someone from creating a new application on top of another.
 
 </BackgroundContainer>
+
+<Spacer />
+
+## Exercise
+Here is your easy win to get started: integrate the payment gateway in line 20 of the app code in the exercise code box.
 
 <!-- <img src="/images/chapter_12.jpg"" /> -->
