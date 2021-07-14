@@ -1,6 +1,7 @@
 // const fs = require('fs');
 import * as dotenv from 'dotenv'
-import { keyStores, KeyPair, Near, Account, utils } from "near-api-js";
+import { Account, KeyPair, keyStores, Near, utils } from "near-api-js";
+
 const getConfig = require('./config');
 
 dotenv.config()
@@ -31,11 +32,11 @@ contractAccount.addAccessKey = (publicKey) => contractAccount.addKey(publicKey, 
 
 // console.log(contract)
 
-async function sendMoney(receiver: string, amount: string) {
+export async function sendMoney(receiver: string, amount: string) {
   const amountInYocto = utils.format.parseNearAmount(amount);
   const result = await contractAccount.sendMoney(receiver, amountInYocto)
   // console.log(result);
   return result;
 }
 
-sendMoney('bob3.testnet', "1")
+// sendMoney('bob3.testnet', "1")

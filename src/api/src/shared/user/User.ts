@@ -1,5 +1,5 @@
 // prettier-ignore
-import { IsBoolean, IsDate, IsEmail, IsNumber, Min, IsMongoId, IsOptional, Length, Matches } from 'class-validator'
+import { IsBoolean, IsDate, IsEmail, IsMongoId, IsNumber, IsOptional, Length, Matches, Min } from 'class-validator'
 import { ObjectId } from 'mongodb'
 
 import { getModel, Property } from '../../helpers/typegoose'
@@ -18,7 +18,7 @@ export class User {
   @Length(3, 40)
   @Matches(/^[a-zA-Z0-9_]*.(testnet|near)$/, { message: 'Account name can only contain letters, numbers and underscores and needs to end with .testnet' })
   accountName?: string
-
+  
   @Property()
   @Length(2, 40)
   name!: string
@@ -49,12 +49,14 @@ export class User {
   @IsDate()
   updatedAt!: Date
 
+  @IsDate()
+  @IsOptional()
+  certifiedAt?: Date
+
   @Property()
   @IsNumber()
   @Min(6)
   tokenId?: number
-
-
 }
 
 export const UserModel = getModel(User, { schemaOptions: { timestamps: true } })

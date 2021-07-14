@@ -8,6 +8,13 @@ export const UserStyled = styled.div`
   max-width: 90vw;
 `
 
+export const ExternalLink = styled.span`
+  text-decoration: underline;
+  &:hover {
+    color: ${primaryColor}
+  }
+`
+
 export const UserCard = styled(AnimatedCard)`
   padding: 20px;
 `

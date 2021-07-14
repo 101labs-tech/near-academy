@@ -1,18 +1,19 @@
 import * as Router from '@koa/router'
 import { Context } from 'koa'
 
+import { getReward } from './resolvers/near/getReward'
 import { getPublicUser } from './resolvers/page/getPublicUser/getPublicUser'
-import { setName } from './resolvers/page/setName/setName'
 import { setAccountName } from './resolvers/page/setAccountName/setAccountName'
+import { setName } from './resolvers/page/setName/setName'
 import { addProgress } from './resolvers/user/addProgress/addProgress'
 import { changePassword } from './resolvers/user/changePassword/changePassword'
 import { forgotPassword } from './resolvers/user/forgotPassword/forgotPassword'
 import { isCertified } from './resolvers/user/isCertified/isCertified'
 import { login } from './resolvers/user/login/login'
+import { getReferralStats } from './resolvers/user/referral/getReferralStats'
 import { resetPassword } from './resolvers/user/resetPassword/resetPassword'
 import { signUp } from './resolvers/user/signUp/signUp'
-import { getReferralStats } from './resolvers/user/referral/getReferralStats'
-import { getReward } from './resolvers/near/getReward'
+
 // import { issueNftCertificate } from './resolvers/near/issueNft'
 
 const router = new Router()

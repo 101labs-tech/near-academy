@@ -1,6 +1,7 @@
 // const fs = require('fs');
 import * as dotenv from 'dotenv'
-import { keyStores, KeyPair, Contract, Near, utils, Account } from "near-api-js";
+import { Account, Contract, KeyPair, keyStores, Near, utils } from "near-api-js";
+
 const getConfig = require('./nftConfig');
 
 dotenv.config()
@@ -39,6 +40,7 @@ export async function issueNftCertificate(username: string, tokenId: number, acc
   const now: string = Date.now().toString();
 
   const amountInYocto = utils.format.parseNearAmount("1");
+  
   /*@ts-ignore*/
   const receipt = await contract.nft_mint({
     token_id: tokenId.toString(),

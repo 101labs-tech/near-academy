@@ -8,7 +8,7 @@ import { PublicUser } from 'shared/user/PublicUser'
 
 import { chapterData } from '../Courses/near101/Chapters/Chapters.data'
 // prettier-ignore
-import { AccountNameInput, UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
+import { AccountNameInput, ExternalLink, UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
 
 type UserViewProps = {
   loading: boolean
@@ -88,7 +88,7 @@ export const UserView = ({
                           errorMessage={undefined}
                         />
                       </AccountNameInput>
-                    </div>) : (<p>NFT certificate was issued to: <b>{authUser.accountName}</b></p>)}
+                    </div>) : (<p>NFT certificate was issued to: <a href="https://explorer.testnet.near.org/accounts/test.museum-nft.testnet" target="_blank" rel="noopener noreferrer nofollow" ><ExternalLink>{authUser.accountName}</ExternalLink></a></p>)}
                 </UserBadgeButtons>
               ) : (
                 <UserBadgeInput>

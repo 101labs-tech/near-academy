@@ -1,6 +1,7 @@
 // const fs = require('fs');
 import * as dotenv from 'dotenv'
-import { keyStores, KeyPair, Near, Account, utils } from "near-api-js";
+import { Account, KeyPair, keyStores, Near, utils } from "near-api-js";
+
 const getConfig = require('./config');
 
 dotenv.config()
@@ -29,7 +30,7 @@ const contractAccount = new Account(connection, contractName);
 /* @ts-ignore */
 contractAccount.addAccessKey = (publicKey) => contractAccount.addKey(publicKey, contractName, contractMethods.changeMethods, parseNearAmount('0.1'));
 
-async function sendMoney(receiver: string, amount: string) {
+export async function sendReward(receiver: string, amount: string) {
   const amountInYocto = utils.format.parseNearAmount(amount);
   const result = await contractAccount.sendMoney(receiver, amountInYocto)
 
@@ -38,8 +39,8 @@ async function sendMoney(receiver: string, amount: string) {
 
 import { Context, Next } from 'koa'
 export const getReward = async (ctx: Context, next: Next): Promise<void> => {
-  const transaction = await sendMoney('bob3.testnet', "1")
-
+  const transaction =  "" // await sendReward('bob3.testnet', "1")
+  
   const response: any = { transaction }
 
   ctx.status = 200

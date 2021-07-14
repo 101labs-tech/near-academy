@@ -30,5 +30,8 @@ export class PublicUser {
   @IsArray()
   referral?: Referral[]
 
+  @IsDate()
+  certifiedAt?: Date
+
   stats?: Object
 }

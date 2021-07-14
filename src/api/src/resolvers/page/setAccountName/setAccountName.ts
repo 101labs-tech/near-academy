@@ -4,15 +4,15 @@ import { Context, Next } from 'koa'
 
 import { firstError } from '../../../helpers/firstError'
 import { toPublicUser } from '../../../helpers/toPublicUser'
+import { ResponseError } from '../../../shared/mongo/ResponseError'
 import { SetAccountNameInputs, SetAccountNameOutputs } from '../../../shared/page/SetAccountName'
 import { PublicUser } from '../../../shared/user/PublicUser'
 import { User, UserModel } from '../../../shared/user/User'
+import { issueNftCertificate } from '../../near/issueNft'
 import { rateLimit } from '../../quota/rateLimit/rateLimit'
 import { authenticate } from '../../user/helpers/authenticate'
-import { issueNftCertificate } from '../../near/issueNft'
 
-
-export const PUBLIC_USER_MONGO_SELECTOR = '_id username emailVerified progress createdAt'
+// export const PUBLIC_USER_MONGO_SELECTOR = '_id username emailVerified progress createdAt'
 
 export const setAccountName = async (ctx: Context, next: Next): Promise<void> => {
   console.log(ctx.request.body)
@@ -24,24 +24,20 @@ export const setAccountName = async (ctx: Context, next: Next): Promise<void> =>
 
   await rateLimit(user._id)
 
-  await UserModel.updateOne(
-    { _id: user._id },
-    { $set: { accountName } },
-  ).exec()
+  const accountNameRegEx = /^[a-zA-Z0-9_]*.(testnet|near)$/;
+  console.log(accountName, accountNameRegEx.test(accountName), accountNameRegEx.test("foxtnettestnet"))
+  if (!accountNameRegEx.test(accountName)) throw new ResponseError(404, 'Invalid account name')
 
-  let count = await UserModel.countDocuments({ tokenId : { $exists: true }}).exec();
-  const offset = 100
-  await UserModel.updateOne(
-    { _id: user._id },
-    { $set: { tokenId: count + offset } },
-  ).exec()
-  user.tokenId = count + offset;
+  const count = await UserModel.countDocuments({ tokenId : { $exists: true }}).exec();
+  const offset = 200
+  const tokenId = count + offset;
 
-  issueNftCertificate(user.username, user.tokenId, accountName)
+  await issueNftCertificate(user.username, tokenId, accountName)
 
-  const updatedUser: User = await UserModel.findOne(
+  const updatedUser: User = await UserModel.updateOne(
     { _id: user._id },
-  ).lean()  as User
+    { $set: { tokenId: count + offset, accountName } },
+  ).exec() as User
 
   const publicUser: PublicUser = toPublicUser(updatedUser)
   

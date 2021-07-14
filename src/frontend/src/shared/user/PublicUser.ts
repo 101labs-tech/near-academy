@@ -1,5 +1,6 @@
 import { IsArray, IsDate, IsEmail, IsMongoId, Length, Matches } from 'class-validator'
 import { ObjectId } from 'mongodb'
+
 import { Referral } from '../referral/Referral'
 
 export class PublicUser {
@@ -28,6 +29,9 @@ export class PublicUser {
 
   @IsArray()
   referral?: Referral[]
+
+  @IsDate()
+  certifiedAt?: Date
 
   stats?: Object
 }
