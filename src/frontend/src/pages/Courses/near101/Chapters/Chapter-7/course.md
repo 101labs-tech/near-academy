@@ -129,7 +129,6 @@ As we learned, each call of a change function costs gas. So it might not be desi
 
 The given example is written in plain javascript to keep it simple. But you could also use the latest frameworks like React, Vue and Angular.
 
-All right, that is all you need to get started. Now make it beautiful and add more features.
 
 ## How to enhance your contract(s) and what's next?
 
@@ -139,5 +138,11 @@ Have a look here to get started: <a target="_blank" rel="noreferrer" href="https
 - Design an improved system to curate the list of memes in the contract
 - Implement a royalty system for meme-makers based on likes and comments
 - Turn the museum into a fully decentralized autonomous organization (DAO)
+
+
+## Exercise
+
+Use the getRecentComments function via the NEAR cli or use the web app and the near-api-js library to retrieve the latest comment made on the “bob33” meme contract.
+Copy/paste the very latest comment that was made for exercise validation.
 
 <!-- <FormSevenChapter></FormSevenChapter>    -->
