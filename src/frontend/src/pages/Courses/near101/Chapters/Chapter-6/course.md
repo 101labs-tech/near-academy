@@ -118,7 +118,7 @@ export function add_comment(text: string): void {
 </Highlight>
 This function add\_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
 
-The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. But how does this actually look like to write something on the blockchain? Try it yourself by fixing the add\_comment function.
+The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. 
 
 <Spacer />
 <narrativeText style="background: #00C08B;">
@@ -131,3 +131,6 @@ The contract checks if the comment has a short enough length (a maximum length o
     *“Now that I think about it, we could even add comment capability to the contract. Can you imagine? This could transform the Meme museum into a social platform, and the community into a social network... How awesome!”*
   </VerticalAlign>
 </narrativeText>
+  
+## Exercise
+Check out the add\_comment function in the code snippet of the exercise code box, there are 3 bugs in lines 11 and 12 that need to be fixed.
