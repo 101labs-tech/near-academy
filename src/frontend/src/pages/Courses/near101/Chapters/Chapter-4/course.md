@@ -107,9 +107,16 @@ Invoking a contract method from your dApp will trigger a sequence of actions loc
 4\. The VM loads the contract code to invoke the function identified in the transaction, reading and writing to state storage as needed and returning the result of the function call.
 5\. The blockchain layer routes the result back through the RPC interface to your dApp.
 
-## Exercise
+<Spacer />
 
+<BackgroundContainer>
 At the museum, each meme is created by a contributor and can receive comments, votes and donations. The contributor can call a release function to release the donations to any given address. The meme museum has an expert team that curates the most interesting memes and presents them in their museum. Yes, this is part of the job!
+</BackgroundContainer>
+
+<Spacer />
+
+## Exercise
+Now that you have installed it, get familiar with the NEAR CLI and check out the Museum contract to see how many memes have been added to it so far.
 
 <!-- <FormWrapper>
     <Input placeholder="Placeholder" type="text"/>
