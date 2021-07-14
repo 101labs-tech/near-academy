@@ -63,12 +63,19 @@ An action is a composable unit of operation that, together with zero or more oth
 There are currently 8 supported action types:
 
 **1. CreateAccount** to make a new account (for a person, contract, refrigerator, etc)
+
 **2. DeleteAccount** to delete an account (and transfer balance to a beneficiary account)
+
 **3. AddKey** to add a key to an account (either FullAccess or FunctionCall access)
+
 **4. DeleteKey** to delete an existing key from an account
+
 **5. Transfer** to move tokens from one account to another
+
 **6. Stake** to express interest in becoming a validator at the next available opportunity
+
 **7. DeployContract** to deploy a contract on the NEAR blockchain
+
 **8. FunctionCall** to invoke a method on a contract (including the budget for computing and storage)
 
 ## Deployment
