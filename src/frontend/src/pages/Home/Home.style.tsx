@@ -422,7 +422,7 @@ export const HomeContainer = styled.div`
           margin-left: 200px;
         }
         h1 {
-          font-size: 72px;
+          font-size: 68px;
           margin-top: 72px;
         }
       }
