@@ -161,7 +161,11 @@ export const HomeContainer = styled.div`
   }
   
   section.benefits {
-    padding: 100px 0px 0px 0px;
+    padding: 100px 0px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     h1 {
       text-align: center;
@@ -174,7 +178,8 @@ export const HomeContainer = styled.div`
         justify-content: space-between;
         padding: 0;
         padding: 0 200px;
-        margin-bottom: 100px;
+        margin-bottom: 75px;
+
         
         @media (max-width: 992px) {
             flex-wrap: wrap;
@@ -283,7 +288,8 @@ export const HomeContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 685px 147px;
     margin: 0 -5vw;
-
+    height: 600px;
+    
     .button--center {
       margin-top: -350px;
       margin-bottom: 350px;
@@ -296,20 +302,13 @@ export const HomeContainer = styled.div`
       font-weight: 900;
     }
     background-color: #f2f2f2;
-    height: 840px;
-
+ 
     .left {
       display: flex;
       flex-direction: row;
 
       p {
-        padding: 40px;
-      }
-      p:first-child{
-        margin-left:  10px;
-      }
-      p:last-child{
-        margin-right: 30px;
+       padding: 10px 40px;
       }
       img {
         height: 693px;
@@ -323,7 +322,7 @@ export const HomeContainer = styled.div`
   section.third {
     h1 {
       text-align: center;
-      margin-top: 170px;
+      margin-top: 90px;
       font-weight: 900;
     }
     .left {
