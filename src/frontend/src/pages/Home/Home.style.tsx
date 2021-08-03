@@ -167,6 +167,7 @@ export const HomeContainer = styled.div`
       text-align: center;
       width: 100%;
       margin: 0px 0px 40px;
+      font-weight: 900;
     }
     ul {
         display: flex;

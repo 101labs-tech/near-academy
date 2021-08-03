@@ -19,7 +19,7 @@ export const HomeView = () => {
               <p>NEAR Academy is an interactive course for web developers looking to explore blockchain integration with their Apps. It is free and ends with a certificate of completion.</p>
 
               <Link to="/near101/chapter-1">
-                <Button text="START ACADEMY" color="primary" />
+                <Button text="START LEARNING" color="primary" />
               </Link>
             </div>
           </section>
