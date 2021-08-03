@@ -161,7 +161,7 @@ export const HomeContainer = styled.div`
   }
   
   section.benefits {
-    padding: 100px 0px 75px;
+    padding: 200px 0px 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,17 +288,18 @@ export const HomeContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 685px 147px;
     margin: 0 -5vw;
-    height: 600px;
+    height: 650px;
+    position: relative;
     
-    .button--center {
-      margin-top: -350px;
-      margin-bottom: 350px;
+    .paragraph {
+        max-width: 690px;
     }
+   
 
     h1 {
       width: 100%;
       text-align: center;
-      padding-top: 333px;
+      padding-top: 10px;
       font-weight: 900;
     }
     background-color: #f2f2f2;
@@ -308,13 +309,15 @@ export const HomeContainer = styled.div`
       flex-direction: row;
 
       p {
-       padding: 10px 40px;
+       padding: 10px 0px;
       }
       img {
         height: 693px;
         min-width: 276px;
         width: 276px;
         margin-left: 50px;
+            position: absolute;
+            left: 0px;
       }
     }
   }
