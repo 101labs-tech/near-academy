@@ -39,6 +39,8 @@ export const TermsView = () => {
           </ul>
           <p>near.academy may also receive your data indirectly from the following sources:</p>
           <ul>
+            <li>Hotjar</li>
+            <li>Twitter Analytics</li>
             <li>Google Analytics</li>
           </ul>
           <h2>How will we use your data?</h2>

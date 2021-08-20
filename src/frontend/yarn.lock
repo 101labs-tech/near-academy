@@ -11428,6 +11428,11 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-twitter-conversion-tracker@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-twitter-conversion-tracker/-/react-twitter-conversion-tracker-1.0.0.tgz#6c12ed124753ad6ae66e3d0b69ed32ffcdb375bd"
+  integrity sha1-bBLtEkdTrWrmbj0Lae0y/82zdb0=
+
 react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
