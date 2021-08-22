@@ -1,27 +1,26 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
+import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
+import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import { Popup } from 'app/App.components/Popup/Popup.controller'
 import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
-import {PublicUser} from 'shared/user/PublicUser'
 // @ts-ignore
 import Highlight from 'react-highlight.js';
-
-import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
-import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
-import { Popup } from 'app/App.components/Popup/Popup.controller'
+import { PublicUser } from 'shared/user/PublicUser'
 import { backgroundColorLight } from 'styles'
 
+import { Button } from "../../app/App.components/Button/Button.controller";
+import { FormSevenChapter } from '../../app/App.components/FormSevenChapter/FormSevenChapter.controller'
+import { Input } from "../../app/App.components/Input/Input.controller";
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
-import { ButtonStyle, ButtonBorder, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, narrativeText, Spacer, TextWrapper, VerticalAlign, FormWrapper } from './Chapter.style'
+import { ButtonBorder, ButtonStyle, ButtonText, ChapterCourse, ChapterGrid, ChapterH1, ChapterH2, ChapterH3, ChapterH4, ChapterItalic, ChapterMonaco, ChapterQuestions, ChapterStyled, ChapterTab, ChapterValidator, ChapterValidatorContent, ChapterValidatorContentWrapper, ChapterValidatorTitle, FormWrapper, narrativeText, Spacer, TextWrapper, VerticalAlign } from './Chapter.style'
 import { AnimatedCode, BackgroundContainer, Difficulty, ImageContainer, SpecialCode } from './Chapter.style'
-import { Input } from "../../app/App.components/Input/Input.controller";
-import { Button } from "../../app/App.components/Button/Button.controller";
-import {FormSevenChapter} from '../../app/App.components/FormSevenChapter/FormSevenChapter.controller'
 
 monaco
   .init()
@@ -238,7 +237,7 @@ const Content = ({ course }: any) => (
           component: Input
         },
         Highlight: {
-            component: Highlight
+          component: Highlight
         },
         Difficulty: {
           component: Difficulty,
@@ -261,7 +260,7 @@ const Content = ({ course }: any) => (
         BackgroundContainer: {
           component: BackgroundContainer,
         },
-        VerticalAlign:{
+        VerticalAlign: {
           component: VerticalAlign,
         },
         FormSevenChapter: {
@@ -315,7 +314,7 @@ export const ChapterView = ({
 
   useEffect(() => {
     if (nextChapter === '/near101/chapter-2' && localStorage.getItem('popupConfirm')) {
-        setIsSaveConfirmPopup(false)
+      setIsSaveConfirmPopup(false)
     } else setIsSaveConfirmPopup(true)
 
     if (wrapperRef.current) {
@@ -334,8 +333,8 @@ export const ChapterView = ({
   let extension = '.rs'
 
   const closePopupSaveProcess = () => {
-      setIsSaveConfirmPopup(false)
-      localStorage.setItem('popupConfirm', 'true')
+    setIsSaveConfirmPopup(false)
+    localStorage.setItem('popupConfirm', 'true')
   }
 
   return (

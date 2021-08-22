@@ -86,9 +86,9 @@ Let us call the Meme Museum Contract and see how many memes there are registered
 Since we are interested in calling a simple function and getting a quick answer, there is no need to build any interface. We use the nodejs based NEAR CLI that provides a set of command-line tools to easily create, test, deploy scripts on the NEAR Network.
 
 1\. Install NEAR CLI: <AnimatedCode>npm install -g near-cli</AnimatedCode> 
-2\. Typing <AnimatedCode>near</AnimatedCode> prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum 
-3\. Type <AnimatedCode>near login</AnimatedCode> this will open your browser and ask you to login into your account 
-4\. Now the contract name is "museum.testnet" and the method is called get\_meme\_count. So type: <AnimatedCode>near view museum.testnet get\_meme\_count</AnimatedCode>. This will return you the amount of memes that are registered in the museum. 
+2\. Typing <AnimatedCode>near</AnimatedCode> prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum
+3\. Type <AnimatedCode>near login</AnimatedCode> this will open your browser and ask you to login into your account
+4\. Now the contract name is "museum.testnet" and the method is called get\_meme\_count. So type: <AnimatedCode>near view museum.testnet get\_meme\_count</AnimatedCode>. This will return you the amount of memes that are registered in the museum.
 5\. Congratulations. You just called a contract on NEAR.
 
  <ImageContainer>
@@ -107,11 +107,18 @@ Invoking a contract method from your dApp will trigger a sequence of actions loc
 4\. The VM loads the contract code to invoke the function identified in the transaction, reading and writing to state storage as needed and returning the result of the function call.
 5\. The blockchain layer routes the result back through the RPC interface to your dApp.
 
-## Exercise
+<Spacer />
 
+<BackgroundContainer>
 At the museum, each meme is created by a contributor and can receive comments, votes and donations. The contributor can call a release function to release the donations to any given address. The meme museum has an expert team that curates the most interesting memes and presents them in their museum. Yes, this is part of the job!
+</BackgroundContainer>
 
-<FormWrapper>
+<Spacer />
+
+## Exercise
+Now that you have installed it, get familiar with the NEAR CLI and check out the Museum contract to see how many memes have been added to it so far.
+
+<!-- <FormWrapper>
     <Input placeholder="Placeholder" type="text"/>
     <Button text="Submit" color="primary" invertIcon />
-</FormWrapper>
+</FormWrapper> -->

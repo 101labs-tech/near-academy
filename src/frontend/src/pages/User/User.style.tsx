@@ -8,6 +8,13 @@ export const UserStyled = styled.div`
   max-width: 90vw;
 `
 
+export const ExternalLink = styled.span`
+  text-decoration: underline;
+  &:hover {
+    color: ${primaryColor}
+  }
+`
+
 export const UserCard = styled(AnimatedCard)`
   padding: 20px;
 `
@@ -45,6 +52,10 @@ export const UserBadgeInput = styled.div`
   > button {
     height: 40px;
   }
+`
+
+export const AccountNameInput = styled.div`
+  padding-top: 15px !important;
 `
 
 export const UserBadgeButtons = styled.div`

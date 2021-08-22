@@ -22,10 +22,9 @@ The contracts have been deployed, you don’t really have to worry about them an
 git clone https://github.com/oceanByte/near-academy-museum-frontend
 </Highlight>
 
-
 You see there is a src folder that contains the files to interact with NEAR and to display the results. It looks just like an ordinary web app. We are using the near-api-js library here which provides an easy way to interact with NEAR. Like with every other library, many details will become more clear when you really need them, so let’s focus on what’s needed now: **We want to display a list of all available memes and interact with them by writing a comment.**
 
-As we know there is the museum contract with a function get\_meme\_list. We called it via the NEAR CLI before and we can do the same now with the near-api-js. You see that it does not matter how you connect to NEAR as long as it follows a specific protocol. The setup to get connected to NEAR is just a few lines.
+As we know there is the museum contract with a function get_meme_list. We called it via the NEAR CLI before and we can do the same now with the near-api-js. You see that it does not matter how you connect to NEAR as long as it follows a specific protocol. The setup to get connected to NEAR is just a few lines.
 
 <ImageContainer>
     <img alt="story_image_7_1" src="/images/chap_7_1.png">
@@ -98,7 +97,7 @@ console.log(memeContracts)
 }
 </Highlight>
 **3. Display all memes**
-Here we go. We have all the contracts ready and call the get\_meme function for each of them to display the results.
+Here we go. We have all the contracts ready and call the get_meme function for each of them to display the results.
 
 <Highlight language="javascript">
 const memes = []
@@ -113,7 +112,7 @@ async function showMemes() {
 </Highlight>
 **4. Write a comment**
 
-Adding a comment to a Meme is just as easy as calling the function set\_comment and providing your text.
+Adding a comment to a Meme is just as easy as calling the function set_comment and providing your text.
 
 <Highlight language="javascript">
 async function setComment(memeIndex, text) {
@@ -130,7 +129,6 @@ As we learned, each call of a change function costs gas. So it might not be desi
 
 The given example is written in plain javascript to keep it simple. But you could also use the latest frameworks like React, Vue and Angular.
 
-All right, that is all you need to get started. Now make it beautiful and add more features.
 
 ## How to enhance your contract(s) and what's next?
 
@@ -141,3 +139,10 @@ Have a look here to get started: <a target="_blank" rel="noreferrer" href="https
 - Implement a royalty system for meme-makers based on likes and comments
 - Turn the museum into a fully decentralized autonomous organization (DAO)
 
+
+## Exercise
+
+Use the getRecentComments function via the NEAR cli or use the web app and the near-api-js library to retrieve the latest comment made on the “bob33” meme contract.
+Copy/paste the very latest comment that was made for exercise validation.
+
+<!-- <FormSevenChapter></FormSevenChapter>    -->

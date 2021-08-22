@@ -10,12 +10,12 @@ import { State } from 'reducers'
 
 import { CourseData } from '../Course/Course.controller'
 import { chaptersByCourse, courseData } from '../Course/Course.data'
+import { chapterData } from "../Courses/near101/Chapters/Chapters.data";
 import { addProgress } from './Chapter.actions'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { ChapterLocked } from './Chapter.style'
 import { ChapterView } from './Chapter.view'
 import { Footer } from './Footer/Footer.controller'
-import {chapterData} from "../Courses/near101/Chapters/Chapters.data";
 
 export interface ChapterData {
   pathname: string
@@ -100,6 +100,7 @@ export const Chapter = () => {
   const validateCallback = () => {
     if (pathname === '/near101/chapter-8') {
       setValidatorState(RIGHT)
+      if (user) dispatch(addProgress({ chapterDone: pathname }))
       setIsPopup(true)
       return
     }

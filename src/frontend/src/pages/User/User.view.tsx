@@ -8,16 +8,19 @@ import { PublicUser } from 'shared/user/PublicUser'
 
 import { chapterData } from '../Courses/near101/Chapters/Chapters.data'
 // prettier-ignore
-import { UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
+import { AccountNameInput, ExternalLink, UserBadge, UserBadgeButtons, UserBadgeInput, UserCard, UserChapter, UserProgress, UserStyled, UserTitle, UserTitle2 } from './User.style'
 
 type UserViewProps = {
   loading: boolean
   user: PublicUser
   authUser?: PublicUser
   downloadCallback: () => void
+  issueNftCallback: () => void
   getCertificateCallback: () => void
-  name: string
-  setName: (e: string) => void
+  name: string,
+  accountName: string,
+  setName: (e: string) => void,
+  setAccountName: (e: string) => void,
 }
 
 export const UserView = ({
@@ -26,8 +29,11 @@ export const UserView = ({
   authUser,
   downloadCallback,
   name,
+  accountName,
   setName,
+  setAccountName,
   getCertificateCallback,
+  issueNftCallback,
 }: UserViewProps) => {
   let badgeUnlocked = false
   let counter = 0
@@ -58,6 +64,31 @@ export const UserView = ({
                   <Link to={`/certificate/${user.username}`}>
                     <Button type="button" text="Certified URL" icon="link" loading={loading} onClick={() => { }} />
                   </Link>
+                  {!authUser?.accountName ? (
+                    <div>
+                      <Button
+                        type="button"
+                        text="Issue NFT certificate"
+                        icon="download"
+                        loading={loading}
+                        onClick={() => issueNftCallback()}
+                      />
+                      <AccountNameInput>
+                        <Input
+                          icon="user"
+                          name="account name"
+                          placeholder="NEAR testnet account name"
+                          type="text"
+                          onChange={(e) => {
+                            setAccountName(e.target.value)
+                          }}
+                          value={accountName}
+                          onBlur={() => { }}
+                          inputStatus={undefined}
+                          errorMessage={undefined}
+                        />
+                      </AccountNameInput>
+                    </div>) : (<p>NFT certificate was issued to: <a href="https://explorer.testnet.near.org/accounts/test.museum-nft.testnet" target="_blank" rel="noopener noreferrer nofollow" ><ExternalLink>{authUser.accountName}</ExternalLink></a></p>)}
                 </UserBadgeButtons>
               ) : (
                 <UserBadgeInput>

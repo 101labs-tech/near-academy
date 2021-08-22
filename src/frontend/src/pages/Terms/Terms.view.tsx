@@ -8,7 +8,7 @@ export const TermsView = () => {
     <TermsStyled>
       <TermsPage>
         <TermsContainer>
-          <h1>Near Academy Privacy Policy</h1>
+          <h1>NEAR Academy Privacy Policy</h1>
           <p>
             This privacy policy will explain how our organization uses the personal data we collect from you when you
             use our website.
@@ -62,7 +62,7 @@ export const TermsView = () => {
           </p>
           <h2>Marketing</h2>
           <p>
-            near.academy may send you information related to Near Academy, Near Protocol or Near Protocol community.{' '}
+            near.academy may send you information related to NEAR Academy, Near Protocol or Near Protocol community.{' '}
           </p>
           <p>
             You have the right at any time to stop near.academy from contacting you for any purposes. To do so, please

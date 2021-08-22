@@ -12,4 +12,4 @@ import solution from '!raw-loader!./solution.md'
 import support from '!raw-loader!./support.md'
 import { Data } from 'pages/Chapter/Chapter.controller'
 
-export const data: Data = { course, exercise: undefined, solution: undefined, supports: { }, questions: [] }
+export const data: Data = { course, exercise, solution, supports: { }, questions: [] }
