@@ -1,8 +1,5 @@
 //prettier-ignore
 import Editor, { ControlledEditor, DiffEditor, monaco } from '@monaco-editor/react'
-import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
-import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
-import { Popup } from 'app/App.components/Popup/Popup.controller'
 import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
@@ -10,6 +7,10 @@ import * as React from 'react'
 import { useEffect, useRef, useState } from 'react'
 // @ts-ignore
 import Highlight from 'react-highlight.js';
+
+import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
+import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
+import { Popup } from 'app/App.components/Popup/Popup.controller'
 import { PublicUser } from 'shared/user/PublicUser'
 import { backgroundColorLight } from 'styles'
 
@@ -263,9 +264,9 @@ const Content = ({ course }: any) => (
         VerticalAlign: {
           component: VerticalAlign,
         },
-        FormSevenChapter: {
-          component: FormSevenChapter
-        }
+        // FormSevenChapter: {
+        //   component: FormSevenChapter
+        // }
       },
     }}
   />
@@ -391,7 +392,7 @@ export const ChapterView = ({
                               </div>
                           ))}
                       </ChapterQuestions>
-                  ) : questions.length === 0 && nextChapter !== '/near101/chapter-8' ? (
+                  ) : (
                       <div ref={wrapperRef}>
                           {display === 'solution' ? (
                               <ChapterMonaco>
@@ -412,7 +413,7 @@ export const ChapterView = ({
                               </ChapterMonaco>
                           )}
                       </div>
-                  ) : (<ChapterQuestions><FormSevenChapter /></ChapterQuestions>)}
+                  )}
                   <Validator validatorState={validatorState} validateCallback={validateCallback} />
               </ChapterGrid>
           </ChapterStyled>
