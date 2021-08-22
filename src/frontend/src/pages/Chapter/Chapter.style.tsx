@@ -19,6 +19,13 @@ export const ChapterStyled = styled.div`
         min-width: 40%;
         height: 100%;
         overflow: hidden;
+        
+        @media (max-width: 992px) {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+        
     img {
         width: 100%;
     height: 100%;
@@ -73,6 +80,11 @@ export const ChapterCourse = styled.div`
     &.hljs {
         padding: 10px;
         margin: 0px 40px;
+        
+        @media (max-width: 680px) {
+            margin: 0px;
+        }   
+        
         
         a {
             color: #fff;
@@ -354,6 +366,10 @@ export const BackgroundContainer = styled.div`
     height: 25px;
     background: #fff;
     top: 0;
+    
+    @media (max-width: 992px) {
+        display: none;
+    }  
   }
   
     .bottom-line {
@@ -362,6 +378,10 @@ export const BackgroundContainer = styled.div`
     height: 22px;
     background: #fff;
     bottom: 0;
+    
+      @media (max-width: 992px) {
+        display: none;
+    }  
   }
   
   p {
@@ -371,6 +391,10 @@ export const BackgroundContainer = styled.div`
   img {
     max-width: 40%;
     width: 40%;
+      @media (max-width: 992px) {
+        max-width: 100%;
+        width: 100%;
+    }  
   }
     
   h1 {
@@ -381,6 +405,9 @@ export const BackgroundContainer = styled.div`
     padding: 10px 0;
   }
   
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
   
 `
 export const ImageContainer = styled.span`
@@ -400,6 +427,7 @@ export const narrativeText = styled.div`
   color: #f2f2f2;
   padding: 10px 40px;
   overflow: hidden;
+ 
 
   img {
     display: none;
@@ -413,12 +441,20 @@ export const narrativeText = styled.div`
     
     padding: 10px 40px 0px 40px;
   }
+  
+   @media (max-width: 992px) {
+        flex-direction: column;
+   }
 
   .image-wrapper {
     display: flex;
     align-items: flex-end;
     width: 30%;
     margin: 0px 40px 0px 0px;
+    
+    @media (max-width: 992px) {
+        width: 100%;
+    }
   }
 `
 
@@ -445,6 +481,11 @@ export const VerticalAlign = styled.div`
   flex-direction: column;
   width: 70%;
   justify-content: center;
+  
+   @media (max-width: 992px) {
+    width: 100%;
+  }
+ 
 `
 
 export const SpecialCode = styled.div`

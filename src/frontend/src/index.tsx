@@ -11,6 +11,8 @@ import { GlobalStyle } from './styles'
 import { hotjar } from 'react-hotjar';
 // @ts-ignore
 import TagManager from 'react-gtm-module'
+import TwitterConvTrkr from "react-twitter-conversion-tracker";
+
 
 import './styles/fonts.css'
 
@@ -22,7 +24,11 @@ hotjar.initialize(2383690, 6);
 const tagManagerArgs = {
     gtmId: process.env.REACT_APP_GTM_ID
 }
-TagManager.initialize(tagManagerArgs)
+TagManager.initialize(tagManagerArgs);
+
+TwitterConvTrkr.init("o6dxd");
+TwitterConvTrkr.pageView();
+
 
 export const Root = () => {
   return (

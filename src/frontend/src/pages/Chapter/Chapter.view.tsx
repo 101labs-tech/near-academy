@@ -338,83 +338,85 @@ export const ChapterView = ({
   }
 
   return (
-    <ChapterStyled>
-      {nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
-        <Popup closePopup={closePopupSaveProcess}
-          buttonTextClose={'Continue without account'}
-          buttonText={'Sign up'}
-          img={'/images/chap_5_0.png'}
-          isImage={true}
-          link={'/login'}
-          title={''}
-          text={'Create an account to save your progress and earn your certificate'} />
-        : null}
-      {isPopup ? <Popup closePopup={closeIsPopup}
-        buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
-        buttonTextClose={'Close'}
-        link={nextChapter}
-        img={'/icons/dog.svg'}
-        isImage={true}
-        title={'Success'}
-        text={'Congratulations'} />
-        : null}
-      <ChapterCourse>
-        <Content course={course || ''} />
-      </ChapterCourse>
-      <ChapterGrid hasTabs={Object.keys(supports).length > 0}>
-        {Object.keys(supports).length > 0 && (
-          <div>
-            <ChapterTab isSelected={display === 'solution'} onClick={() => setDisplay('solution')}>
-              Exercice
-            </ChapterTab>
-            {Object.keys(supports).map((key, index) => (
-              <ChapterTab isSelected={display === key} onClick={() => setDisplay(key)}>
-                {`${key}.${extension}`}
-              </ChapterTab>
-            ))}
-          </div>
-        )}
-        {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
-          <ChapterQuestions>
-            {questions.map((question, i) => (
-              <div key={question.question}>
-                <h2>{question.question}</h2>
-                <Checkboxes
-                  items={question.answers}
-                  onUpdate={(selected) => {
-                    const proposedQuestions = questions
-                    proposedQuestions[i].proposedResponses = selected
-                    proposedQuestionAnswerCallback(proposedQuestions)
-                  }}
-                />
-              </div>
-            ))}
-          </ChapterQuestions>
-        ) : (
-          <div ref={wrapperRef}>
-            {display === 'solution' ? (
-              <ChapterMonaco>
-                {showDiff ? (
-                  <MonacoDiff height={editorHeight} width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
-                ) : (
-                  <MonacoEditor
-                    width={editorWidth}
-                    height={editorHeight}
-                    proposedSolution={proposedSolution}
-                    proposedSolutionCallback={proposedSolutionCallback}
-                  />
-                )}
-              </ChapterMonaco>
-            ) : (
-              <ChapterMonaco>
-                <MonacoEditorSupport height={editorHeight} support={supports[display]} />
-              </ChapterMonaco>
-            )}
-          </div>
-        )}
-        < Validator validatorState={validatorState} validateCallback={validateCallback} />
-      </ChapterGrid>
-    </ChapterStyled>
+      <div>
+          { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
+              <Popup closePopup={closePopupSaveProcess}
+                     buttonTextClose={'Continue without account'}
+                     buttonText={'Sign up'}
+                     img={'/images/chap_5_0.png'}
+                     isImage={true}
+                     link={'/login'}
+                     title={''}
+                     text={'Create an account to save your progress and earn your certificate'} />
+              : null}
+          { isPopup ? <Popup closePopup={closeIsPopup}
+                             buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
+                             buttonTextClose={'Close'}
+                             link={nextChapter}
+                             img={'/icons/dog.svg'}
+                             isImage={true}
+                             title={'Success'}
+                             text={'Congratulations'} />
+              : null }
+          <ChapterStyled>
+              <ChapterCourse>
+                  <Content course={course || ''} />
+              </ChapterCourse>
+              <ChapterGrid hasTabs={Object.keys(supports).length > 0}>
+                  {Object.keys(supports).length > 0 && (
+                      <div>
+                          <ChapterTab isSelected={display === 'solution'} onClick={() => setDisplay('solution')}>
+                              Exercice
+                          </ChapterTab>
+                          {Object.keys(supports).map((key, index) => (
+                              <ChapterTab isSelected={display === key} onClick={() => setDisplay(key)}>
+                                  {`${key}.${extension}`}
+                              </ChapterTab>
+                          ))}
+                      </div>
+                  )}
+                  {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
+                      <ChapterQuestions>
+                          {questions.map((question, i) => (
+                              <div key={question.question}>
+                                  <h2>{question.question}</h2>
+                                  <Checkboxes
+                                      items={question.answers}
+                                      onUpdate={(selected) => {
+                                          const proposedQuestions = questions
+                                          proposedQuestions[i].proposedResponses = selected
+                                          proposedQuestionAnswerCallback(proposedQuestions)
+                                      }}
+                                  />
+                              </div>
+                          ))}
+                      </ChapterQuestions>
+                  ) : questions.length === 0 && nextChapter !== '/near101/chapter-8' ? (
+                      <div ref={wrapperRef}>
+                          {display === 'solution' ? (
+                              <ChapterMonaco>
+                                  {showDiff ? (
+                                      <MonacoDiff height={editorHeight} width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
+                                  ) : (
+                                      <MonacoEditor
+                                          width={editorWidth}
+                                          height={editorHeight}
+                                          proposedSolution={proposedSolution}
+                                          proposedSolutionCallback={proposedSolutionCallback}
+                                      />
+                                  )}
+                              </ChapterMonaco>
+                          ) : (
+                              <ChapterMonaco>
+                                  <MonacoEditorSupport height={editorHeight} support={supports[display]} />
+                              </ChapterMonaco>
+                          )}
+                      </div>
+                  ) : (<ChapterQuestions><FormSevenChapter /></ChapterQuestions>)}
+                  <Validator validatorState={validatorState} validateCallback={validateCallback} />
+              </ChapterGrid>
+          </ChapterStyled>
+      </div>
   )
 }
 

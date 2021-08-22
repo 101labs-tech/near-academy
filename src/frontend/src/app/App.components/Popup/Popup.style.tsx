@@ -20,6 +20,14 @@ export const PopupStyle = styled.div`
         padding: 20px;
         width: 100%;
         
+         @media (max-width: 992px) {
+            flex-direction: column;
+            
+            button {
+                margin-bottom: 20px;
+            }
+        }
+        
         button {
             height: 40px;
         }
@@ -37,6 +45,11 @@ export const PopupWrapper = styled.div`
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    
+      @media (max-width: 992px) {
+            width: 90%;
+            max-height: 90%;
+      }
 `
 
 export const PopupTitle = styled.h2`

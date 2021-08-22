@@ -161,19 +161,25 @@ export const HomeContainer = styled.div`
   }
   
   section.benefits {
-    padding: 100px 0px 0px 0px;
+    padding: 200px 0px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     h1 {
       text-align: center;
       width: 100%;
       margin: 0px 0px 40px;
+      font-weight: 900;
     }
     ul {
         display: flex;
         justify-content: space-between;
         padding: 0;
         padding: 0 200px;
-        margin-bottom: 100px;
+        margin-bottom: 75px;
+
         
         @media (max-width: 992px) {
             flex-wrap: wrap;
@@ -282,39 +288,36 @@ export const HomeContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 685px 147px;
     margin: 0 -5vw;
-
-    .button--center {
-      margin-top: -350px;
-      margin-bottom: 350px;
+    height: 650px;
+    position: relative;
+    
+    .paragraph {
+        max-width: 690px;
     }
+   
 
     h1 {
       width: 100%;
       text-align: center;
-      padding-top: 333px;
+      padding-top: 10px;
       font-weight: 900;
     }
     background-color: #f2f2f2;
-    height: 840px;
-
+ 
     .left {
       display: flex;
       flex-direction: row;
 
       p {
-        padding: 40px;
-      }
-      p:first-child{
-        margin-left:  10px;
-      }
-      p:last-child{
-        margin-right: 30px;
+       padding: 10px 0px;
       }
       img {
         height: 693px;
         min-width: 276px;
         width: 276px;
         margin-left: 50px;
+            position: absolute;
+            left: 0px;
       }
     }
   }
@@ -322,7 +325,7 @@ export const HomeContainer = styled.div`
   section.third {
     h1 {
       text-align: center;
-      margin-top: 170px;
+      margin-top: 90px;
       font-weight: 900;
     }
     .left {
@@ -419,7 +422,7 @@ export const HomeContainer = styled.div`
           margin-left: 200px;
         }
         h1 {
-          font-size: 72px;
+          font-size: 68px;
           margin-top: 72px;
         }
       }

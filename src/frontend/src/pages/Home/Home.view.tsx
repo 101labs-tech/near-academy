@@ -14,12 +14,12 @@ export const HomeView = () => {
           <section className={'components first'}>
             <div className={'left'}>
               <h1 className={'left__header'}>
-                Build a Web3 App <br /> the fun way!
+                Learn how to build a Web3 App, <br/> fast and for free!
               </h1>
               <p>NEAR Academy is an interactive course for web developers looking to explore blockchain integration with their Apps. It is free and ends with a certificate of completion.</p>
 
               <Link to="/near101/chapter-1">
-                <Button text="START ACADEMY" color="primary" />
+                <Button text="START LEARNING" color="primary" />
               </Link>
             </div>
           </section>
@@ -55,13 +55,29 @@ export const HomeView = () => {
               {/*  <p className={'description'}>Finish the course to get some Near. </p>*/}
               {/*</li>*/}
             </ul>
+            <Link to="/near101/chapter-1">
+              <Button text="START LEARNING" color="primary" />
+            </Link>
           </section>
           <section className={'components second'}>
             <h1>Join the future</h1>
             <div className={'left'}>
               <img src={'man.svg'} alt="main character" />
-              <p>The decentralized internet, or Web3, has been growing at a fast pace since its inception in 2009. It is now a magnet to talent, with more smart developers joining every day. Web3 monthly developers are up +15% over 2020, following investments by venture capital of about $900M USD. </p>
-              <p>This is very similar to the growth of internet services in the early 2000s, and hints at significant development for years to come. Importantly, the infrastructure has matured and makes it easy to create dApps, the decentralized equivalent to Apps.</p>
+              <div className={'paragraph'}>
+                <p>The decentralized internet, or Web3, has been growing at a fast
+                  pace since its inception in 2009. It is now a magnet to talent,
+                  with more smart developers joining every day.
+                  Web3 monthly developers are up +15% over 2020, following investments by
+                  venture capital of about $900M USD.
+                </p>
+                <p>This is very similar to the growth of internet services in the early 2000s,
+                  and hints at significant development for years to come.
+                  Importantly, the infrastructure has matured and makes it
+                  easy to create dApps, the decentralized equivalent to Apps.</p>
+                <p>The new skills that you will learn by finishing this course will
+                  open new doors and new career opportunities in the ever
+                  growing blockchain and smart contract industry!</p>
+              </div>
             </div>
             <div className={'button--center'}>
               <Link to="/near101/chapter-1">
