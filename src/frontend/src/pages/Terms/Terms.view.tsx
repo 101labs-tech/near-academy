@@ -42,6 +42,7 @@ export const TermsView = () => {
             <li>Hotjar</li>
             <li>Twitter Analytics</li>
             <li>Google Analytics</li>
+            <li>Mailchimp</li>
           </ul>
           <h2>How will we use your data?</h2>
           <p>near.academy collects your data so that we can:</p>
@@ -50,7 +51,7 @@ export const TermsView = () => {
             <li>Email you with information and news about near.academy or about Near Protocol.</li>
             <li>Email you to invite you to join the Near Protocol community</li>
           </ul>
-          <p>near.academy does not share or sell your data with any other third party.</p>
+          <p>near.academy does not share or sell your data with any other third party except the NEAR Foundation.</p>
           <h2>How do we store your data?</h2>
           <p>
             near.academy securely stores your data in a server located in Frankfurt, Germany. The strictest security
