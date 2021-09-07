@@ -289,6 +289,8 @@ type ChapterViewProps = {
   proposedQuestionAnswerCallback: (e: Question[]) => void
   chapter7InputValue: string
   setChapter7InputValue: React.Dispatch<React.SetStateAction<string>>
+  chapter4InputValue: string
+  setChapter4InputValue: React.Dispatch<React.SetStateAction<string>>
 }
 
 export const ChapterView = ({
@@ -308,6 +310,8 @@ export const ChapterView = ({
   proposedQuestionAnswerCallback,
   chapter7InputValue,
   setChapter7InputValue,
+  chapter4InputValue,
+  setChapter4InputValue,
 }: ChapterViewProps) => {
   const [display, setDisplay] = useState('solution')
   const [editorWidth, setEditorWidth] = useState(0)
@@ -393,7 +397,7 @@ export const ChapterView = ({
               ))}
             </div>
           )}
-          {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
+          {questions.length > 0 && nextChapter !== '/near101/chapter-8' && nextChapter !== '/near101/chapter-5' ? (
             <ChapterQuestions>
               {questions.map((question, i) => (
                 <div key={question.question}>
@@ -411,7 +415,14 @@ export const ChapterView = ({
             </ChapterQuestions>
           ) : (
             <div ref={wrapperRef}>
-              {nextChapter === '/near101/chapter-8' ? (
+              {nextChapter === '/near101/chapter-5' ? (
+                <AnswerFrom
+                  lable="Amount on Memes"
+                  answerText="Use the NEAR CLI view method to query the museum contract and report back the number of memes in the museum"
+                  inputValue={chapter4InputValue}
+                  setInputValue={setChapter4InputValue}
+                />
+              ) : nextChapter === '/near101/chapter-8' ? (
                 <AnswerFrom
                   lable="Latest comment from the 'bob33' meme contract"
                   answerText="Use the NEAR CLI view method to query the museum contract and report back the number of memes in the museum"

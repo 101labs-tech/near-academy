@@ -18,7 +18,7 @@ import { ChapterLocked } from './Chapter.style'
 import { ChapterView } from './Chapter.view'
 import { Footer } from './Footer/Footer.controller'
 
-export type Exercise7ValidationResponse = {
+export type ExerciseValidationResponse = {
   exerciseCompleted: Boolean
 }
 
@@ -48,6 +48,7 @@ export const Chapter = () => {
   const [showDiff, setShowDiff] = useState(false)
   const [isPopup, setIsPopup] = useState(false)
   const [chapter7InputValue, setChapter7InputValue] = useState('')
+  const [chapter4InputValue, setChapter4InputValue] = useState('')
   const { pathname } = useLocation()
   const [data, setData] = useState<Data>({
     course: undefined,
@@ -105,9 +106,33 @@ export const Chapter = () => {
   })
 
   const validateCallback = () => {
+    if (pathname === '/near101/chapter-4') {
+      axios
+        .post<ExerciseValidationResponse>('https://api.near.academy/page/excercise/chapter-4', {
+          numberOfMemes: chapter4InputValue,
+        })
+        .then((resp) => resp.data.exerciseCompleted)
+        .then((isRight) => {
+          if (isRight) {
+            setValidatorState(RIGHT)
+            setIsPopup(true)
+            if (user) dispatch(addProgress({ chapterDone: pathname }))
+            else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
+          } else {
+            setValidatorState(WRONG)
+          }
+        })
+        .catch((error) => {
+          setValidatorState(WRONG)
+          console.error(error)
+        })
+        .finally(() => setChapter7InputValue(''))
+      return
+    }
+
     if (pathname === '/near101/chapter-7') {
       axios
-        .post<Exercise7ValidationResponse>('https://api.near.academy/page/excercise/chapter-7', {
+        .post<ExerciseValidationResponse>('https://api.near.academy/page/excercise/chapter-7', {
           comment: chapter7InputValue,
         })
         .then((resp) => resp.data.exerciseCompleted)
@@ -222,6 +247,8 @@ export const Chapter = () => {
             proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
             chapter7InputValue={chapter7InputValue}
             setChapter7InputValue={setChapter7InputValue}
+            chapter4InputValue={chapter4InputValue}
+            setChapter4InputValue={setChapter4InputValue}
           />
         )
       )}
