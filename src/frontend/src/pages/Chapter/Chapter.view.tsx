@@ -4,9 +4,11 @@ import useIsMounted from 'ismounted'
 import Markdown from 'markdown-to-jsx'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
+import ReactDOM from 'react-dom'
+
 import { useEffect, useRef, useState } from 'react'
 // @ts-ignore
-import Highlight from 'react-highlight.js';
+import Highlight from 'react-highlight.js'
 
 import { Checkboxes } from 'app/App.components/Checkboxes/Checkboxes.controller'
 import { Dialog } from 'app/App.components/Dialog/Dialog.controller'
@@ -14,9 +16,9 @@ import { Popup } from 'app/App.components/Popup/Popup.controller'
 import { PublicUser } from 'shared/user/PublicUser'
 import { backgroundColorLight } from 'styles'
 
-import { Button } from "../../app/App.components/Button/Button.controller";
+import { Button } from '../../app/App.components/Button/Button.controller'
 import { FormSevenChapter } from '../../app/App.components/FormSevenChapter/FormSevenChapter.controller'
-import { Input } from "../../app/App.components/Input/Input.controller";
+import { Input } from '../../app/App.components/Input/Input.controller'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { Question } from './Chapter.controller'
 //prettier-ignore
@@ -65,7 +67,7 @@ const MonacoReadOnly = ({ children }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
-          wordWrap: true
+          wordWrap: true,
         }}
       />
     </div>
@@ -89,7 +91,7 @@ const MonacoEditorSupport = ({ support, height }: any) => {
           readOnly: true,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
-          wordWrap: true
+          wordWrap: true,
         }}
       />
     </div>
@@ -115,7 +117,7 @@ const MonacoEditor = ({ proposedSolution, proposedSolutionCallback, width, heigh
           readOnly: false,
           fontSize: 14,
           fontFamily: 'Proxima Nova',
-          wordWrap: true
+          wordWrap: true,
         }}
       />
     </div>
@@ -142,7 +144,7 @@ const MonacoDiff = ({ solution, proposedSolution, height }: any) => {
           fontSize: 14,
           fontFamily: 'Proxima Nova',
           renderSideBySide: false,
-          wordWrap: true
+          wordWrap: true,
         }}
       />
     </div>
@@ -197,7 +199,6 @@ const Validator = ({ validatorState, validateCallback }: any) => (
   </ChapterValidator>
 )
 
-
 const Content = ({ course }: any) => (
   <Markdown
     children={course}
@@ -229,16 +230,16 @@ const Content = ({ course }: any) => (
           component: Dialog,
         },
         Button: {
-          component: Button
+          component: Button,
         },
         FormWrapper: {
-          component: FormWrapper
+          component: FormWrapper,
         },
         Input: {
-          component: Input
+          component: Input,
         },
         Highlight: {
-          component: Highlight
+          component: Highlight,
         },
         Difficulty: {
           component: Difficulty,
@@ -310,7 +311,7 @@ export const ChapterView = ({
   const [editorHeight, setEditorHeight] = useState(0)
   const [isSaveConfirmPopup, setIsSaveConfirmPopup] = useState<any>(null)
 
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null)
   const isMounted = useIsMounted()
 
   useEffect(() => {
@@ -320,16 +321,24 @@ export const ChapterView = ({
 
     if (wrapperRef.current) {
       setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-      setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+      setEditorHeight(
+        wrapperRef.current!.parentElement!.offsetHeight -
+          (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight -
+          20,
+      )
       window.addEventListener('resize', () => {
         if (isMounted.current) {
           setEditorWidth(0)
           setEditorWidth(wrapperRef.current ? wrapperRef.current.offsetWidth : 0)
-          setEditorHeight(wrapperRef.current!.parentElement!.offsetHeight - (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight - 20)
+          setEditorHeight(
+            wrapperRef.current!.parentElement!.offsetHeight -
+              (wrapperRef.current!.nextElementSibling as HTMLElement).offsetHeight -
+              20,
+          )
         }
       })
     }
-  }, []);
+  }, [])
 
   let extension = '.rs'
 
@@ -338,86 +347,101 @@ export const ChapterView = ({
     localStorage.setItem('popupConfirm', 'true')
   }
 
+  const rootElement = document.getElementById('root') as HTMLElement
+
+  const PopupPortal = ReactDOM.createPortal(
+    <Popup
+      closePopup={closePopupSaveProcess}
+      buttonTextClose={'Continue without account'}
+      buttonText={'Sign up'}
+      img={'/images/chap_5_0.png'}
+      isImage={true}
+      link={'/login'}
+      title={''}
+      text={'Create an account to save your progress and earn your certificate'}
+    />,
+    rootElement,
+  )
+
   return (
-      <div>
-          { nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ?
-              <Popup closePopup={closePopupSaveProcess}
-                     buttonTextClose={'Continue without account'}
-                     buttonText={'Sign up'}
-                     img={'/images/chap_5_0.png'}
-                     isImage={true}
-                     link={'/login'}
-                     title={''}
-                     text={'Create an account to save your progress and earn your certificate'} />
-              : null}
-          { isPopup ? <Popup closePopup={closeIsPopup}
-                             buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
-                             buttonTextClose={'Close'}
-                             link={nextChapter}
-                             img={'/icons/dog.svg'}
-                             isImage={true}
-                             title={'Success'}
-                             text={'Congratulations'} />
-              : null }
-          <ChapterStyled>
-              <ChapterCourse>
-                  <Content course={course || ''} />
-              </ChapterCourse>
-              <ChapterGrid hasTabs={Object.keys(supports).length > 0}>
-                  {Object.keys(supports).length > 0 && (
-                      <div>
-                          <ChapterTab isSelected={display === 'solution'} onClick={() => setDisplay('solution')}>
-                              Exercice
-                          </ChapterTab>
-                          {Object.keys(supports).map((key, index) => (
-                              <ChapterTab isSelected={display === key} onClick={() => setDisplay(key)}>
-                                  {`${key}.${extension}`}
-                              </ChapterTab>
-                          ))}
-                      </div>
-                  )}
-                  {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
-                      <ChapterQuestions>
-                          {questions.map((question, i) => (
-                              <div key={question.question}>
-                                  <h2>{question.question}</h2>
-                                  <Checkboxes
-                                      items={question.answers}
-                                      onUpdate={(selected) => {
-                                          const proposedQuestions = questions
-                                          proposedQuestions[i].proposedResponses = selected
-                                          proposedQuestionAnswerCallback(proposedQuestions)
-                                      }}
-                                  />
-                              </div>
-                          ))}
-                      </ChapterQuestions>
+    <div>
+      {nextChapter === '/near101/chapter-2' && !user && isSaveConfirmPopup ? PopupPortal : null}
+      {isPopup ? (
+        <Popup
+          closePopup={closeIsPopup}
+          buttonText={nextChapter !== '/sign-up' ? 'Next Chapter' : 'Get certificate'}
+          buttonTextClose={'Close'}
+          link={nextChapter}
+          img={'/icons/dog.svg'}
+          isImage={true}
+          title={'Success'}
+          text={'Congratulations'}
+        />
+      ) : null}
+      <ChapterStyled>
+        <ChapterCourse>
+          <Content course={course || ''} />
+        </ChapterCourse>
+        <ChapterGrid hasTabs={Object.keys(supports).length > 0}>
+          {Object.keys(supports).length > 0 && (
+            <div>
+              <ChapterTab isSelected={display === 'solution'} onClick={() => setDisplay('solution')}>
+                Exercice
+              </ChapterTab>
+              {Object.keys(supports).map((key, index) => (
+                <ChapterTab isSelected={display === key} onClick={() => setDisplay(key)}>
+                  {`${key}.${extension}`}
+                </ChapterTab>
+              ))}
+            </div>
+          )}
+          {questions.length > 0 && nextChapter !== '/near101/chapter-8' ? (
+            <ChapterQuestions>
+              {questions.map((question, i) => (
+                <div key={question.question}>
+                  <h2>{question.question}</h2>
+                  <Checkboxes
+                    items={question.answers}
+                    onUpdate={(selected) => {
+                      const proposedQuestions = questions
+                      proposedQuestions[i].proposedResponses = selected
+                      proposedQuestionAnswerCallback(proposedQuestions)
+                    }}
+                  />
+                </div>
+              ))}
+            </ChapterQuestions>
+          ) : (
+            <div ref={wrapperRef}>
+              {display === 'solution' ? (
+                <ChapterMonaco>
+                  {showDiff ? (
+                    <MonacoDiff
+                      height={editorHeight}
+                      width={editorWidth}
+                      solution={solution}
+                      proposedSolution={proposedSolution}
+                    />
                   ) : (
-                      <div ref={wrapperRef}>
-                          {display === 'solution' ? (
-                              <ChapterMonaco>
-                                  {showDiff ? (
-                                      <MonacoDiff height={editorHeight} width={editorWidth} solution={solution} proposedSolution={proposedSolution} />
-                                  ) : (
-                                      <MonacoEditor
-                                          width={editorWidth}
-                                          height={editorHeight}
-                                          proposedSolution={proposedSolution}
-                                          proposedSolutionCallback={proposedSolutionCallback}
-                                      />
-                                  )}
-                              </ChapterMonaco>
-                          ) : (
-                              <ChapterMonaco>
-                                  <MonacoEditorSupport height={editorHeight} support={supports[display]} />
-                              </ChapterMonaco>
-                          )}
-                      </div>
+                    <MonacoEditor
+                      width={editorWidth}
+                      height={editorHeight}
+                      proposedSolution={proposedSolution}
+                      proposedSolutionCallback={proposedSolutionCallback}
+                    />
                   )}
-                  <Validator validatorState={validatorState} validateCallback={validateCallback} />
-              </ChapterGrid>
-          </ChapterStyled>
-      </div>
+                </ChapterMonaco>
+              ) : (
+                <ChapterMonaco>
+                  <MonacoEditorSupport height={editorHeight} support={supports[display]} />
+                </ChapterMonaco>
+              )}
+            </div>
+          )}
+          <Validator validatorState={validatorState} validateCallback={validateCallback} />
+        </ChapterGrid>
+      </ChapterStyled>
+    </div>
   )
 }
 
