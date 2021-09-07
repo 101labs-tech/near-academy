@@ -129,7 +129,6 @@ As we learned, each call of a change function costs gas. So it might not be desi
 
 The given example is written in plain javascript to keep it simple. But you could also use the latest frameworks like React, Vue and Angular.
 
-
 ## How to enhance your contract(s) and what's next?
 
 Have a look here to get started: <a target="_blank" rel="noreferrer" href="https://github.com/near/create-near-app">https:\/\/github.com/near/create-near-app</a>. Many extra features could be developed on top of the museum and meme contracts. The only limit is imagination. Consider for instance:
@@ -139,10 +138,9 @@ Have a look here to get started: <a target="_blank" rel="noreferrer" href="https
 - Implement a royalty system for meme-makers based on likes and comments
 - Turn the museum into a fully decentralized autonomous organization (DAO)
 
-
 ## Exercise
 
 Use the getRecentComments function via the NEAR cli or use the web app and the near-api-js library to retrieve the latest comment made on the “bob33” meme contract.
 Copy/paste the very latest comment that was made for exercise validation.
 
-<!-- <FormSevenChapter></FormSevenChapter>    -->
+<FormSevenChapter></FormSevenChapter>

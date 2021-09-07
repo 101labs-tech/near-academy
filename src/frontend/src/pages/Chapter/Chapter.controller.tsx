@@ -1,5 +1,6 @@
 import { showToaster } from 'app/App.components/Toaster/Toaster.actions'
 import { SUCCESS } from 'app/App.components/Toaster/Toaster.constants'
+import axios from 'axios'
 import { getUser } from 'pages/User/User.actions'
 import * as React from 'react'
 import { useEffect } from 'react'
@@ -10,7 +11,7 @@ import { State } from 'reducers'
 
 import { CourseData } from '../Course/Course.controller'
 import { chaptersByCourse, courseData } from '../Course/Course.data'
-import { chapterData } from "../Courses/near101/Chapters/Chapters.data";
+import { chapterData } from '../Courses/near101/Chapters/Chapters.data'
 import { addProgress } from './Chapter.actions'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { ChapterLocked } from './Chapter.style'
@@ -42,6 +43,7 @@ export const Chapter = () => {
   const [validatorState, setValidatorState] = useState(PENDING)
   const [showDiff, setShowDiff] = useState(false)
   const [isPopup, setIsPopup] = useState(false)
+  const [chapter7InputValue, setChapter7InputValue] = useState('')
   const { pathname } = useLocation()
   const [data, setData] = useState<Data>({
     course: undefined,
@@ -85,19 +87,42 @@ export const Chapter = () => {
 
   chapterData.forEach((chapter, i) => {
     if (pathname === chapter.pathname) {
-      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname; percent = 0
+      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
+      percent = 0
       if (i + 1 < chapterData.length) {
-        nextChapter = chapterData[i + 1].pathname;
+        nextChapter = chapterData[i + 1].pathname
       } else {
         if (user) nextChapter = `/user/${user.username}`
         else nextChapter = '/sign-up'
       }
-      if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
+      if (i !== 7) percent = ((i + 1) / chapterData.length) * 100
       else percent = 100
     }
   })
 
   const validateCallback = () => {
+    if (pathname === '/near101/chapter-7') {
+      axios
+        .post('https://api.near.academy/page/excercise/chapter-7', { comment: chapter7InputValue })
+        .then((resp) => resp?.data?.exerciseCompleted as boolean)
+        .then((isRight) => {
+          if (isRight) {
+            setValidatorState(RIGHT)
+            setIsPopup(true)
+            if (user) dispatch(addProgress({ chapterDone: pathname }))
+            else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
+          } else {
+            setValidatorState(WRONG)
+          }
+        })
+        .catch((error) => {
+          setValidatorState(WRONG)
+          console.error(error)
+        })
+        .finally(() => setChapter7InputValue(''))
+      return
+    }
+
     if (pathname === '/near101/chapter-8') {
       setValidatorState(RIGHT)
       if (user) dispatch(addProgress({ chapterDone: pathname }))
@@ -123,7 +148,7 @@ export const Chapter = () => {
         setValidatorState(RIGHT)
         setIsPopup(true)
         if (user) dispatch(addProgress({ chapterDone: pathname }))
-        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'));
+        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
       } else setValidatorState(WRONG)
     } else {
       if (showDiff) {
@@ -172,23 +197,27 @@ export const Chapter = () => {
     <>
       {pathname === '/near101/chapter-24' && !badgeUnlocked ? (
         <ChapterLocked>Chapter locked. Please complete all previous chapters to see this chapter.</ChapterLocked>
-      ) : data.course && (
-        <ChapterView
-          validatorState={validatorState}
-          validateCallback={validateCallback}
-          solution={data.solution}
-          proposedSolution={data.exercise}
-          proposedSolutionCallback={proposedSolutionCallback}
-          showDiff={showDiff}
-          isPopup={isPopup}
-          course={data.course}
-          closeIsPopup={() => setIsPopup(false)}
-          user={user}
-          supports={data.supports}
-          questions={data.questions}
-          nextChapter={nextChapter}
-          proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
-        />
+      ) : (
+        data.course && (
+          <ChapterView
+            validatorState={validatorState}
+            validateCallback={validateCallback}
+            solution={data.solution}
+            proposedSolution={data.exercise}
+            proposedSolutionCallback={proposedSolutionCallback}
+            showDiff={showDiff}
+            isPopup={isPopup}
+            course={data.course}
+            closeIsPopup={() => setIsPopup(false)}
+            user={user}
+            supports={data.supports}
+            questions={data.questions}
+            nextChapter={nextChapter}
+            proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
+            chapter7InputValue={chapter7InputValue}
+            setChapter7InputValue={setChapter7InputValue}
+          />
+        )
       )}
       <Footer percent={percent} nextChapter={nextChapter} previousChapter={previousChapter} />
     </>
