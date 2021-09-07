@@ -18,6 +18,10 @@ import { ChapterLocked } from './Chapter.style'
 import { ChapterView } from './Chapter.view'
 import { Footer } from './Footer/Footer.controller'
 
+export type Exercise7ValidationResponse = {
+  exerciseCompleted: Boolean
+}
+
 export interface ChapterData {
   pathname: string
   name: string
@@ -103,8 +107,10 @@ export const Chapter = () => {
   const validateCallback = () => {
     if (pathname === '/near101/chapter-7') {
       axios
-        .post('https://api.near.academy/page/excercise/chapter-7', { comment: chapter7InputValue })
-        .then((resp) => resp?.data?.exerciseCompleted as boolean)
+        .post<Exercise7ValidationResponse>('https://api.near.academy/page/excercise/chapter-7', {
+          comment: chapter7InputValue,
+        })
+        .then((resp) => resp.data.exerciseCompleted)
         .then((isRight) => {
           if (isRight) {
             setValidatorState(RIGHT)
