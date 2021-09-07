@@ -2,20 +2,19 @@
 
 <Difficulty>Difficulty: 5/5 | Estimated reading time: 15 min</Difficulty>
 
-<BackgroundContainer>
-  <span class="top-line"></span>
-  <span class="bottom-line"></span>
-  <div class="images">
+<Spacer />
+
+<narrativeText style="background: #0072ce">
+  <div class="image-wrapper">
     <img alt="story_image_6_0" src="/images/chap_6_0.png">
   </div>
   Every day is different, so you’re already onto the next feature to be implemented for the museum with Ethan: an app for visitors to create their own memes and add to the museum.
   We’re all artists, after all!
-</BackgroundContainer>
+</narrativeText>
 
 <Highlight language="bash">
 git clone https://github.com/oceanByte/near-academy-contracts
 </Highlight>
-
 
 **Now that you are more familiar with NEAR infrastructure and contracts, you are ready to learn how contracts may be used to orchestrate a meme museum.**
 
@@ -45,7 +44,6 @@ With that, you are ready to create your first meme. It is done in just three sim
 
 2\. Register yourself as a contributor to the museum contract. Make sure to use the accountId that you used when you called near login:
 
-
 <Highlight language="bash">
 near call museum.testnet add\_myself\_as\_contributor --accountId YOUR\_ACCOUNT\_NAME.testnet
 </Highlight>
@@ -58,7 +56,7 @@ near call museum.testnet add_meme \
 --accountId YOUR_ACCOUNT_NAME.testnet --amount 3
 </Highlight>
 
-Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get\_meme\_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
+Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get_meme_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
 
 ## The Meme Contract
 
@@ -98,7 +96,7 @@ You can see that all functions are exported so that they can be called from othe
 
 We can classify these functions into two different kinds of functions: view functions and call functions.
 
-View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote\_score is returned, which represents the total vote score for this specific meme:
+View functions do NOT alter contract state. As we’ve seen before the execution of these functions do not cost any gas. They just read a value from a variable and return it. In this example the vote_score is returned, which represents the total vote score for this specific meme:
 
 <Highlight language="typescript">
 export function get_vote_score(): i32 {
@@ -118,7 +116,7 @@ export function add_comment(text: string): void {
 </Highlight>
 This function add\_comment takes a string and saves it in the contract. When done, it does not return anything. First, it makes sure the contract is actually initialized to provide necessary fields and functions. It also enforces the user to use their account to write a comment, so you can not call another contract to write a comment.
 
-The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme. 
+The contract checks if the comment has a short enough length (a maximum length of 500 chars was chosen). The final line adds the comment to the Meme.
 
 <Spacer />
 <narrativeText style="background: #00C08B;">

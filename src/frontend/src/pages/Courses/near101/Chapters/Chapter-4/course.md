@@ -2,6 +2,8 @@
 
 <Difficulty> Difficulty: 2/5 | Estimated reading time: 6 min </Difficulty>
 
+<Spacer />
+
 <narrativeText style="background: #00C08B;">
     <div class="image-wrapper">
         <img alt="story_image_4_0" src="/images/chap_4_0.png">
