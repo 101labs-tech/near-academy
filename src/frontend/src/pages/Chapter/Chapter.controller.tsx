@@ -1,5 +1,6 @@
 import { showToaster } from 'app/App.components/Toaster/Toaster.actions'
 import { SUCCESS } from 'app/App.components/Toaster/Toaster.constants'
+import { onDomChange } from 'helpers/domlistener'
 import { getUser } from 'pages/User/User.actions'
 import * as React from 'react'
 import { useEffect } from 'react'
@@ -10,7 +11,7 @@ import { State } from 'reducers'
 
 import { CourseData } from '../Course/Course.controller'
 import { chaptersByCourse, courseData } from '../Course/Course.data'
-import { chapterData } from "../Courses/near101/Chapters/Chapters.data";
+import { chapterData } from '../Courses/near101/Chapters/Chapters.data'
 import { addProgress } from './Chapter.actions'
 import { PENDING, RIGHT, WRONG } from './Chapter.constants'
 import { ChapterLocked } from './Chapter.style'
@@ -83,16 +84,28 @@ export const Chapter = () => {
     })
   }, [pathname])
 
+  onDomChange(() => {
+    const feedbackContainer = document.getElementById('_hj_feedback_container')
+
+    if ((pathname === '/near101/chapter-4' || pathname === '/near101/chapter-8') && feedbackContainer?.style) {
+      console.log(feedbackContainer)
+      feedbackContainer.style.display = 'block'
+    } else if (feedbackContainer?.style) {
+      feedbackContainer.style.display = 'none'
+    }
+  })
+
   chapterData.forEach((chapter, i) => {
     if (pathname === chapter.pathname) {
-      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname; percent = 0
+      if (i - 1 >= 0) previousChapter = chapterData[i - 1].pathname
+      percent = 0
       if (i + 1 < chapterData.length) {
-        nextChapter = chapterData[i + 1].pathname;
+        nextChapter = chapterData[i + 1].pathname
       } else {
         if (user) nextChapter = `/user/${user.username}`
         else nextChapter = '/sign-up'
       }
-      if (i !== 7) percent = (((i + 1) / (chapterData.length)) * 100)
+      if (i !== 7) percent = ((i + 1) / chapterData.length) * 100
       else percent = 100
     }
   })
@@ -123,7 +136,7 @@ export const Chapter = () => {
         setValidatorState(RIGHT)
         setIsPopup(true)
         if (user) dispatch(addProgress({ chapterDone: pathname }))
-        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'));
+        else dispatch(showToaster(SUCCESS, 'Register to save progress', 'and get your completion certificate'))
       } else setValidatorState(WRONG)
     } else {
       if (showDiff) {
@@ -172,23 +185,25 @@ export const Chapter = () => {
     <>
       {pathname === '/near101/chapter-24' && !badgeUnlocked ? (
         <ChapterLocked>Chapter locked. Please complete all previous chapters to see this chapter.</ChapterLocked>
-      ) : data.course && (
-        <ChapterView
-          validatorState={validatorState}
-          validateCallback={validateCallback}
-          solution={data.solution}
-          proposedSolution={data.exercise}
-          proposedSolutionCallback={proposedSolutionCallback}
-          showDiff={showDiff}
-          isPopup={isPopup}
-          course={data.course}
-          closeIsPopup={() => setIsPopup(false)}
-          user={user}
-          supports={data.supports}
-          questions={data.questions}
-          nextChapter={nextChapter}
-          proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
-        />
+      ) : (
+        data.course && (
+          <ChapterView
+            validatorState={validatorState}
+            validateCallback={validateCallback}
+            solution={data.solution}
+            proposedSolution={data.exercise}
+            proposedSolutionCallback={proposedSolutionCallback}
+            showDiff={showDiff}
+            isPopup={isPopup}
+            course={data.course}
+            closeIsPopup={() => setIsPopup(false)}
+            user={user}
+            supports={data.supports}
+            questions={data.questions}
+            nextChapter={nextChapter}
+            proposedQuestionAnswerCallback={proposedQuestionAnswerCallback}
+          />
+        )
       )}
       <Footer percent={percent} nextChapter={nextChapter} previousChapter={previousChapter} />
     </>
