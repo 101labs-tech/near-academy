@@ -88,6 +88,7 @@ export const Chapter = () => {
     const feedbackContainer = document.getElementById('_hj_feedback_container')
 
     if ((pathname === '/near101/chapter-4' || pathname === '/near101/chapter-8') && feedbackContainer?.style) {
+      console.log(feedbackContainer)
       feedbackContainer.style.display = 'block'
     } else if (feedbackContainer?.style) {
       feedbackContainer.style.display = 'none'
