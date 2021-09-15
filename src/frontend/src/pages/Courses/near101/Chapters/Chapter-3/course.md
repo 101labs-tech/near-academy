@@ -2,6 +2,8 @@
 
 <Difficulty>Difficulty: 2/5 | Estimated reading time: 8 min</Difficulty>
 
+<Spacer />
+
 <narrativeText style="background: #00C08B">
     <div class="image-wrapper">
         <img alt="story_image_3_0" src="/images/chap_3_0.png">
@@ -117,6 +119,7 @@ From now, you have the possibility to interact with the NEAR testnet and do your
 <Spacer />
 
 ## Exercise
+
 Create your NEAR testnet account and report it back for validation.
 
 <!-- <FormWrapper>

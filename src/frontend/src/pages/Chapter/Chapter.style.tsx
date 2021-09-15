@@ -9,27 +9,27 @@ export const ChapterStyled = styled.div`
   grid-gap: 20px;
   height: calc(100vh - 170px);
   margin: 80px 20px 0;
-  
+
   .images {
-        width: 40%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 40%;
-        min-width: 40%;
-        height: 100%;
-        overflow: hidden;
-        
-        @media (max-width: 992px) {
-            width: 100%;
-            max-width: 100%;
-            min-width: 100%;
-        }
-        
-    img {
-        width: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+    min-width: 40%;
     height: 100%;
-    max-width: 100%;    
+    overflow: hidden;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
     }
   }
 
@@ -73,36 +73,34 @@ export const ChapterCourse = styled.div`
   position: relative;
   font-size: 22px;
   color: black;
-  
+
   code {
     font-size: 14.5px;
-    
+
     &.hljs {
-        padding: 10px;
-        margin: 0px 40px;
-        
-        @media (max-width: 680px) {
-            margin: 0px;
-        }   
-        
-        
-        a {
-            color: #fff;
-        }
+      padding: 10px;
+      margin: 0px 40px;
+
+      @media (max-width: 680px) {
+        margin: 0px;
+      }
+
+      a {
+        color: #fff;
+      }
     }
-    
+
     p {
-        padding: 0;
-        margin: 0;
-        font-size: 14.5px;
+      padding: 0;
+      margin: 0;
+      font-size: 14.5px;
     }
-    
+
     span {
-        font-size: 14.5px;
-        font-weight: normal;
+      font-size: 14.5px;
+      font-weight: normal;
     }
   }
-  
 
   .view-line {
     font-size: 18px;
@@ -131,7 +129,6 @@ export const ChapterCourse = styled.div`
       text-align: justify;
     }
   }
- 
 
   img {
     max-width: 100%;
@@ -257,7 +254,7 @@ export const ButtonStyle = styled.div`
   width: 220px;
   height: 40px;
   // border: 1px solid white;
-  position: relative; 
+  position: relative;
   display: inline-block;
   cursor: pointer;
   margin: 20px auto 10px auto;
@@ -270,15 +267,15 @@ export const ButtonStyle = styled.div`
 `
 
 export const FormWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    padding: 0px 40px;
-    
-    button {
-        height: 36px;
-        max-width: 170px;
-        margin: 0px 0px 0px 30px;
-    }
+  display: flex;
+  align-items: center;
+  padding: 0px 40px;
+
+  button {
+    height: 36px;
+    max-width: 170px;
+    margin: 0px 0px 0px 30px;
+  }
 `
 
 export const ButtonBorder = styled.div`
@@ -359,56 +356,55 @@ export const BackgroundContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  
+
   .top-line {
     position: absolute;
     width: 100%;
     height: 25px;
     background: #fff;
     top: 0;
-    
+
     @media (max-width: 992px) {
-        display: none;
-    }  
+      display: none;
+    }
   }
-  
-    .bottom-line {
+
+  .bottom-line {
     position: absolute;
     width: 100%;
     height: 22px;
     background: #fff;
     bottom: 0;
-    
-      @media (max-width: 992px) {
-        display: none;
-    }  
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
-  
+
   p {
     font-size: 17px;
   }
-  
+
   img {
     max-width: 40%;
     width: 40%;
-      @media (max-width: 992px) {
-        max-width: 100%;
-        width: 100%;
-    }  
+    @media (max-width: 992px) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
-    
+
   h1 {
     color: #ffb359;
   }
-  
+
   @media (max-width: 1800px) {
     padding: 10px 0;
   }
-  
+
   @media (max-width: 992px) {
     flex-direction: column;
   }
-  
 `
 export const ImageContainer = styled.span`
   display: block;
@@ -416,44 +412,42 @@ export const ImageContainer = styled.span`
 `
 
 export const Spacer = styled.span`
-    display: block;
-    height: 30px;
+  display: block;
+  height: 30px;
 `
 
 export const narrativeText = styled.div`
   display: flex;
+  align-items: center;
+  height: 400px;
   font-weight: 400;
   font-size: 18px;
   color: #f2f2f2;
-  padding: 10px 40px;
   overflow: hidden;
- 
 
   img {
     display: none;
   }
 
   @media (min-width: 800px) {
-    grid-template-columns: 1fr 2fr;
     img {
       display: block;
     }
-    
-    padding: 10px 40px 0px 40px;
   }
-  
-   @media (max-width: 992px) {
-        flex-direction: column;
-   }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 
   .image-wrapper {
     display: flex;
     align-items: flex-end;
     width: 30%;
-    margin: 0px 40px 0px 0px;
-    
+    min-width: 30%;
+    margin: 0px 40px 0px 15px;
+
     @media (max-width: 992px) {
-        width: 100%;
+      width: 100%;
     }
   }
 `
@@ -477,20 +471,19 @@ export const quoteComma = styled.div`
 `
 
 export const VerticalAlign = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 70%;
   justify-content: center;
-  
-   @media (max-width: 992px) {
+
+  @media (max-width: 992px) {
     width: 100%;
   }
- 
 `
 
 export const SpecialCode = styled.div`
   animation: flow 6s ease-in-out infinite;
-  background: linear-gradient(-60deg, #fff, #00C08B, #0072ce, #000);
+  background: linear-gradient(-60deg, #fff, #00c08b, #0072ce, #000);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -505,15 +498,15 @@ export const SpecialCode = styled.div`
     50% {
       background-position: 100% 0;
     }
-    
+
     100% {
       background-position: 0 50%;
-    } 
+    }
   }
 `
 export const AnimatedCode = styled.div`
   animation: flow 10s ease-in-out infinite;
-  background: linear-gradient(-60deg, #000, #00C08B, #0072ce, #000);
+  background: linear-gradient(-60deg, #000, #00c08b, #0072ce, #000);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -527,10 +520,9 @@ export const AnimatedCode = styled.div`
     50% {
       background-position: 100% 0;
     }
-    
+
     100% {
       background-position: 0 50%;
-    } 
+    }
   }
 `
-

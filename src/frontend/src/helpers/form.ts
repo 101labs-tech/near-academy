@@ -58,7 +58,7 @@ export const updateFormFromSubmit = (
   form: FormInputs,
   FormInputClass: any,
 ): FormInputs => {
-  event.preventDefault()
+  event?.preventDefault()
 
   const updatedForm: FormInputs = JSON.parse(JSON.stringify(form))
 

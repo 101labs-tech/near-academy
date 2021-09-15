@@ -5,7 +5,7 @@ import { InputSpacer } from 'app/App.components/Input/Input.style'
 import { FormInputs, getErrorMessage, getInputStatus, updateFormFromBlur, updateFormFromChange, updateFormFromSubmit } from 'helpers/form'
 import * as PropTypes from 'prop-types'
 import * as React from 'react'
-import { ChangeEvent, SyntheticEvent, useState } from 'react'
+import { ChangeEvent, SyntheticEvent, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { SignUpInputs } from 'shared/user/SignUp'
 
@@ -22,8 +22,20 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
     email: { value: '' },
     password: { value: '' },
     confirmPassword: { value: '' },
-    referral: { value: '' }
+    referral: { value: '' },
   })
+
+  const setReferalLink = (url: string) => {
+    setForm((prev) => ({ ...prev, referral: { value: url } }))
+  }
+
+  useEffect(() => {
+    const url = window.location.href
+
+    if (url.includes('?referral=')) {
+      setReferalLink(url)
+    }
+  }, [])
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const updatedForm = updateFormFromChange(e, form, SignUpInputs)
@@ -49,10 +61,12 @@ export const SignUpView = ({ signUpCallback, loading }: SignUpViewProps) => {
         email: updatedForm.email.value,
         password: updatedForm.password.value,
         confirmPassword: updatedForm.confirmPassword.value,
-        referral: updatedForm.referral.value
+        referral: updatedForm.referral.value,
       })
     else setForm(updatedForm)
   }
+
+  console.log(form)
 
   return (
     <SignUpStyled>

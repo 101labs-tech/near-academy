@@ -6,6 +6,7 @@ import { Gdpr } from './App.components/Gdpr/Gdpr.controller'
 import { HamburgerLeft, HamburgerRight } from './App.components/Hamburger/Hamburger.controller'
 import { Header } from './App.components/Header/Header.controller'
 import { ProgressBar } from './App.components/ProgressBar/ProgressBar.controller'
+import { Toaster } from './App.components/Toaster/Toaster.controller'
 // import { Toaster } from './App.components/Toaster/Toaster.controller'
 import { history } from './App.store'
 import { AppBg } from './App.style'
@@ -20,7 +21,7 @@ export const App = () => (
       <LoginDrawer />
       <HamburgerRight />
       <AppView />
-      {/*<Toaster />*/}
+      <Toaster />
       <ProgressBar />
       <Gdpr />
     </AppBg>
