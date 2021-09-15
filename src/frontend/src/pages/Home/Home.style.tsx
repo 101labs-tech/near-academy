@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-import {FullPage} from 'styles'
+import { FullPage } from 'styles'
 
 export const HomeStyled = styled.div`
   position: relative;
@@ -36,40 +36,40 @@ export const Footer = styled.footer`
     }
   }
   .center {
-   display: flex;
-   @media (max-width: 480px) {
-        flex-direction: column;
-     }
-   ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-     @media (max-width: 480px) {
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (max-width: 480px) {
         padding: 0;
         align-items: center;
-     }
-    
-   p { 
-      font-style: normal;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 29px;
-      text-align: center;
-      color: #00C1DE;
-      margin-bottom: 15px;
-   }
-    li {
-    margin-bottom: 15px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #00c1de;
+        margin-bottom: 15px;
+      }
+      li {
+        margin-bottom: 15px;
         a {
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
           line-height: 22px;
           text-align: center;
-          color: #FFFFFF;
+          color: #ffffff;
+        }
       }
     }
-   }
   }
   .right {
     padding: 60px;
@@ -96,10 +96,10 @@ export const Footer = styled.footer`
   }
 
   .link {
-    color: #fff
+    color: #fff;
   }
 
-  .footer-wrapper{
+  .footer-wrapper {
     width: 90vw;
     max-width: 1280px;
     display: flex;
@@ -119,7 +119,7 @@ export const Footer = styled.footer`
   }
 
   @media (max-width: 800px) {
-    .footer-wrapper{
+    .footer-wrapper {
       flex-direction: column;
     }
 
@@ -159,14 +159,14 @@ export const HomeContainer = styled.div`
   button:hover {
     transform: scale(1.05);
   }
-  
+
   section.benefits {
     padding: 200px 0px 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     h1 {
       text-align: center;
       width: 100%;
@@ -174,73 +174,72 @@ export const HomeContainer = styled.div`
       font-weight: 900;
     }
     ul {
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        padding: 0 200px;
-        margin-bottom: 75px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      padding: 0 200px;
+      margin-bottom: 75px;
 
-        
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-bottom: 10px;
+      }
+
+      li {
+        width: 30%;
+        list-style-type: none;
+        box-shadow: 0px 0px 68px 0px rgba(190, 179, 194, 0.6);
+        padding: 20px;
+        border-radius: 22px;
+
         @media (max-width: 992px) {
-            flex-wrap: wrap;
-            padding: 0px;
-            margin-bottom: 10px;
+          width: 32%;
+          margin-bottom: 20px;
         }
-        
-       li {
-         width: 30%;
-         list-style-type: none;
-         box-shadow: 0px 0px 68px 0px rgba(190,179,194,0.6);
-         padding: 20px;
-         border-radius: 22px;
-         
-           @media (max-width: 992px) {
-             width: 32%;
-             margin-bottom: 20px;
+
+        @media (max-width: 680px) {
+          width: 45%;
         }
-        
-         @media (max-width: 680px) {
-             width: 45%;
+
+        @media (max-width: 460px) {
+          width: 100%;
         }
-        
-         @media (max-width: 460px) {
-             width: 100%;
+
+        .icon {
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px auto 30px;
+          border-radius: 100%;
+
+          &.first {
+            background: rgba(134, 24, 251, 0.2);
+          }
+          &.second {
+            background: rgba(251, 120, 24, 0.2);
+          }
+          &.third {
+            background: rgba(251, 31, 24, 0.2);
+          }
+          &.last {
+            background: rgba(24, 251, 45, 0.2);
+          }
+          img {
+            width: 30%;
+          }
         }
-         
-         .icon {
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto 30px;
-            border-radius: 100%;
-            
-            &.first {
-                background: rgba(134,24,251, 0.2)
-            }
-             &.second {
-                background: rgba(251,120,24, 0.2)
-            }
-             &.third {
-                background: rgba(251,31,24, 0.2)
-            }
-             &.last {
-                background: rgba(24,251,45, 0.2)
-            }
-            img {
-               width: 30%;
-            }
-         }
-         
-         h2 {
-             font-size: 24px;
-             font-weight: bold;
-             text-align: center;
-             margin: 10px 0px 20px;
+
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          text-align: center;
+          margin: 10px 0px 20px;
         }
         .description {
-            font-size: 16px;
+          font-size: 16px;
         }
       }
     }
@@ -290,11 +289,10 @@ export const HomeContainer = styled.div`
     margin: 0 -5vw;
     height: 650px;
     position: relative;
-    
+
     .paragraph {
-        max-width: 690px;
+      max-width: 690px;
     }
-   
 
     h1 {
       width: 100%;
@@ -303,21 +301,21 @@ export const HomeContainer = styled.div`
       font-weight: 900;
     }
     background-color: #f2f2f2;
- 
+
     .left {
       display: flex;
       flex-direction: row;
 
       p {
-       padding: 10px 0px;
+        padding: 10px 0px;
       }
       img {
         height: 693px;
         min-width: 276px;
         width: 276px;
         margin-left: 50px;
-            position: absolute;
-            left: 0px;
+        position: absolute;
+        left: 0px;
       }
     }
   }
@@ -380,7 +378,6 @@ export const HomeContainer = styled.div`
 
     section.second {
       .button--center {
-        margin-top: calc(-10vw);
         margin-bottom: 350px;
       }
     }
