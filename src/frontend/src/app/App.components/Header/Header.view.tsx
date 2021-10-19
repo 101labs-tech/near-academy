@@ -5,7 +5,7 @@ import {PublicUser} from 'shared/user/PublicUser'
 
 import {HamburgerLeft} from '../Hamburger/Hamburger.controller'
 // prettier-ignore
-import {HeaderLoggedIn, HeaderLoggedOut, HeaderLogo, HeaderMenuItem, HeaderStyled} from "./Header.style";
+import {HeaderLoggedIn, HeaderLoggedOut, HeaderLogo, HeaderMenuItem, HeaderStyled, LeftContainer} from "./Header.style";
 import {Button} from "../Button/Button.controller";
 
 type HeaderViewProps = {
@@ -17,10 +17,12 @@ type HeaderViewProps = {
 export const HeaderView = ({user, removeAuthUserCallback}: HeaderViewProps) => {
     return (
         <HeaderStyled>
-            <HamburgerLeft/>
-            <Link to="/">
-                <HeaderLogo alt="logo" width="300px" src="/logo.svg"/>
-            </Link>
+            <LeftContainer>
+                <HamburgerLeft/>
+                <Link to="/">
+                    <HeaderLogo alt="logo" width="179px" src="/logo.svg"/>
+                </Link>
+            </LeftContainer>
             {user ? loggedInHeader({user, removeAuthUserCallback}) : loggedOutHeader()}
         </HeaderStyled>
     )
@@ -30,19 +32,16 @@ function loggedOutHeader() {
   return (
     <HeaderLoggedOut>
         <Link className={'get-started'} to="/near101/chapter-1">
-            <Button text="GET STARTED" color="secondary"/>
+            <Button text="Start learning" color="primary"/>
         </Link>
-      <Link to="/invite">
-        <HeaderMenuItem>REFERRAL</HeaderMenuItem>
-      </Link>
       {/*<Link to="/terms">*/}
       {/*  <HeaderMenuItem>TERMS</HeaderMenuItem>*/}
       {/*</Link>*/}
       <Link to="/sign-up">
-        <HeaderMenuItem>SIGN UP</HeaderMenuItem>
+        <HeaderMenuItem>Sign up</HeaderMenuItem>
       </Link>
       <Link to="/login">
-        <HeaderMenuItem>LOGIN</HeaderMenuItem>
+        <HeaderMenuItem>Log in</HeaderMenuItem>
       </Link>
     </HeaderLoggedOut>
   )

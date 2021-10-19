@@ -1,13 +1,81 @@
 import styled from "styled-components/macro";
+import { near3, textColor } from "styles";
 
 export const Footer = styled.footer`
-  background-color: #000000;
+  background-color: #0A172F;;
   /* height: 190px; */
   /* margin: 0 -5vw; */
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  .left {
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 32px;
+
+  .footer-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left-box {
+    font-size: 16px;
+    color: ${textColor};
+    a {
+      color: ${near3};
+    }
+  }
+
+  .logo-box {
+    display: flex;
+
+    .poweredBy {
+      margin-right: 20px;
+    }
+
+    .logo {
+      background-image: url('/images/main_footer/near_logo.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 94px;
+      height: 25px;
+    }
+  }
+
+  .social-box {
+    display: flex;
+    align-items: center;
+    ul li {
+      list-style: none;
+    }
+
+    .nav-items {
+      margin-right: 33px;
+      ul {
+        display: flex;
+
+        li + li {
+          margin-left: 10px;
+        }
+
+        a {
+          padding: 15px 20px;
+          color: ${near3};
+        }
+      }
+    }
+
+    .social-items {
+      ul {
+        display: flex;
+
+        li + li {
+          margin-left: 10px;
+        }
+      }
+    }
+    
+  }
+  /* .left {
     padding: 25px 60px;
     display: flex;
     flex-direction: column;
@@ -28,7 +96,7 @@ export const Footer = styled.footer`
         font-size: 18px;
         line-height: 22px;
     }
-  }
+  } */
   .center {
    display: flex;
    @media (max-width: 480px) {
@@ -93,13 +161,14 @@ export const Footer = styled.footer`
     color: #fff
   }
 
-  .footer-wrapper{
+  
+  /* .footer-wrapper{
     width: 90vw;
     max-width: 1280px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+  } */
 
   @media (max-width: 1000px) {
     .right {

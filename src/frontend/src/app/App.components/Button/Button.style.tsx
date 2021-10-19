@@ -12,19 +12,17 @@ export const clickWave = keyframes`
 `
 
 export const ButtonStyled = styled.button`
-  height: 36px;
   border: none;
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  border-radius: 55px;
+  /* border-radius: 55px; */
+  border-radius: 5px;
   will-change: box-shadow;
   width: 100%;
   max-width: 275px;
   user-select: none;
-  width: 275px;
-  height: 61px;
 
   &.clicked {
     animation: ${clickWave} 1250ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -44,6 +42,11 @@ export const ButtonStyled = styled.button`
   &.transparent {
     color: ${buttonColor};
     background-color: initial;
+  }
+
+  &.gradient {
+    color: ${buttonColor};
+    background: linear-gradient(97.4deg, #FD9827 -39.51%, #FB0D1B 105.97%);
   }
 
   &.loading {

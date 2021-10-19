@@ -5,15 +5,17 @@ import styled from 'styled-components/macro'
 import { HamburgerBottomBackward, HamburgerBottomForward, HamburgerTopBackward, HamburgerTopForward, textColor } from '../../../styles'
 
 export const HamburgerStyledLeft = styled.div`
-  position: fixed;
+  /* position: fixed;
   left: 18px;
   top: 30px;
   overflow: visible;
   margin: 0;
   height: 14px;
+  z-index: 11; */
+  margin-right: 17px;
+  height: 17px;
   box-sizing: content-box;
   cursor: pointer;
-  z-index: 11;
   
   @media (max-width: 992px) {
     display: none;

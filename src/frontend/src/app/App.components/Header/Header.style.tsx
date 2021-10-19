@@ -1,16 +1,22 @@
 import styled from 'styled-components/macro'
 
-import { bgTextColor, near6, primaryColor, textColor } from 'styles'
+import { bgTextColor, backgroundColorLight, primaryColor, textColorMenuItem } from 'styles'
 
 export const HeaderStyled = styled.div`
   position: relative;
   text-align: center;
   height: 70px;
   z-index: 1;
-  background-color: ${near6};
+  background-color: ${backgroundColorLight};
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 46px;
+`
+
+export const LeftContainer = styled.div`
+  display: flex;
 `
 
 export const HeaderLogo = styled.img`
@@ -23,11 +29,8 @@ export const HeaderLogo = styled.img`
 `
 
 export const HeaderLoggedOut = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 10px;
   display: flex;
-  transform: translate(0, -50%);
+  align-items: center;
   // grid-template-columns: auto auto auto auto;
   // grid-gap: 10px;
 
@@ -40,10 +43,10 @@ export const HeaderLoggedOut = styled.div`
     align-items: center;
     
     button {
-       width: max-content;
-       height: 35px;
-       padding: 0px 15px; 
-       font-size: 14px;
+      height: 40px;
+      padding: 0px 20px; 
+      font-size: 16px;
+      margin-right: 20px;
     }
   }
 `
@@ -65,10 +68,10 @@ export const HeaderLoggedIn = styled.div`
 
 export const HeaderMenuItem = styled.div`
   position: relative;
-  color: ${textColor};
-  line-height: 50px;
-  font-size: 14px;
-  font-weight: 700;
+  color: ${textColorMenuItem};
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
   display: inline-block;
   padding: 0 20px;
 
