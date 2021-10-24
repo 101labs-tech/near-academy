@@ -87,10 +87,10 @@ Let us call the Meme Museum Contract and see how many memes there are registered
 
 Since we are interested in calling a simple function and getting a quick answer, there is no need to build any interface. We use the nodejs based NEAR CLI that provides a set of command-line tools to easily create, test, deploy scripts on the NEAR Network.
 
-1\. Install NEAR CLI: <AnimatedCode>npm install -g near-cli</AnimatedCode>
+1\. Install NEAR CLI: <AnimatedCode>npm install -g near-cli </AnimatedCode> <!-- intentional trailing whitespace -->
 2\. Typing <AnimatedCode>near</AnimatedCode> prints a list of all available commands. We are interested in near login (to login with our account) and near view to make call our code and get the amount of memes in the museum
 3\. Type <AnimatedCode>near login</AnimatedCode> this will open your browser and ask you to login into your account
-4\. Now the contract name is "museum.testnet" and the method is called get_meme_count. So type: <AnimatedCode>near view museum.testnet get_meme_count</AnimatedCode>. This will return you the amount of memes that are registered in the museum.
+4\. Now the contract name is "museum.testnet" and the method is called get_meme_count. So type: <AnimatedCode>near view museum.testnet get\_meme\_count</AnimatedCode>. This will return you the amount of memes that are registered in the museum.
 5\. Congratulations. You just called a contract on NEAR.
 
  <ImageContainer>
