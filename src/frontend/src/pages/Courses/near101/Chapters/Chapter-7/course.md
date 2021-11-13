@@ -38,26 +38,26 @@ const nearConfig = getConfig(process.env.NODE_ENV || 'development')
 
 // Initialize contract & set global variables
 export async function initContract() {
-// Initialize connection to the NEAR testnet.
-// Note that the keys are saved in local storage and never leave the client!
-const near = await connect(
-Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig),
-)
+  // Initialize connection to the NEAR testnet.
+  // Note that the keys are saved in local storage and never leave the client!
+  const near = await connect(
+    Object.assign({ deps: { keyStore: new keyStores.BrowserLocalStorageKeyStore() } }, nearConfig),
+  )
 
-// Initializing Wallet based Account. It can work with NEAR testnet wallet that
-// is hosted at https://wallet.testnet.near.org
-window.walletConnection = new WalletConnection(near)
+  // Initializing Wallet based Account. It can work with NEAR testnet wallet that
+  // is hosted at https://wallet.testnet.near.org
+  window.walletConnection = new WalletConnection(near)
 
-// Getting the Account ID. If still unauthorized, it's just empty string
-window.accountId = window.walletConnection.getAccountId()
+  // Getting the Account ID. If still unauthorized, it's just empty string
+  window.accountId = window.walletConnection.getAccountId()
 
-// Initializing our contract APIs by contract name and configuration
-window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
-// View methods are read only. They don't modify the state, but usually return some value.
-viewMethods: ['get_meme_list'],
-// Change (“call”) methods can modify the state. But you don't receive the returned value when called.
-changeMethods: ['create_meme'],
-})
+  // Initializing our contract APIs by contract name and configuration
+  window.contract = await new Contract(window.walletConnection.account(), nearConfig.contractName, {
+    // View methods are read only. They don't modify the state, but usually return some value.
+    viewMethods: ['get_meme_list'],
+    // Change (“call”) methods can modify the state. But you don't receive the returned value when called.
+    changeMethods: ['create_meme'],
+  })
 }
 </Highlight>
 This initContract function initializes our contract APIs by using a contract name and configuration. You should recognize viewMethods and changeMethods (also known as callMethods). We can list all functions here that we want to use in our application.
@@ -70,9 +70,9 @@ Looking at index.js, we see that we can achieve our goal with four short functio
 We just use the name that was defined for the function in the contract to call it.
 
 <Highlight language="javascript">
-let memeLIst = []
+let memeList = []
 async function getMemeList() {
-  memeList = await window.contract.get_meme_list()
+  memeList = await window.contract.get\_meme\_list()
   // ... DOM manipulation here
 }
 </Highlight>
@@ -84,16 +84,18 @@ We are almost there. With the full memeList we can start to call the individual 
 <Highlight language="javascript">
 const memeContracts = [];
 async function setupMemeContracts() {
-   memeList.forEach(meme => {
-memeContracts.push(await new Contract(window.walletConnection.account(),
-meme + “.” + nearConfig.contractName,
-{ viewMethods: ['get_meme', ‘get_recent_comments’],
-  changeMethods: [‘set_comment’]}))
-   })
+  memeList.forEach(meme => {
+    memeContracts.push(await new Contract(window.walletConnection.account(),
+      meme + "." + nearConfig.contractName,
+      { viewMethods: ['get_meme', 'get_recent_comments'],
+        changeMethods: ['set_comment']
+      }
+    ))
+  })
 
-await Promise.all(memeContracts)
-console.log(memeContracts)
-// ... DOM manipulation here
+  await Promise.all(memeContracts)
+  console.log(memeContracts)
+  // ... DOM manipulation here
 }
 </Highlight>
 **3. Display all memes**
