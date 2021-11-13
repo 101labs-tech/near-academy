@@ -56,7 +56,7 @@ near call museum.testnet add_meme \
 --accountId YOUR_ACCOUNT_NAME.testnet --amount 3
 </Highlight>
 
-Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get_meme_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
+Once the meme contract is deployed, you can verify that it was created by returning the list of all available memes: <AnimatedCode>near view museum.testnet get\_meme\_list</AnimatedCode>. You may now also find it on the blockchain explorer, it is in the public domain now.
 
 ## The Meme Contract
 
@@ -67,27 +67,27 @@ The meme contract contains 12 functions:
 <Highlight language="typescript">
 export function init(title: string, data: string, category: Category): void
 
-export function get_meme(): Meme
+export function get\_meme(): Meme
 
 export function vote(value: i8): void
 
-export function batch_vote(value: i8, is_batch: bool = true): void
+export function batch\_vote(value: i8, is\_batch: bool = true): void
 
-export function get_recent_votes(): Array<Vote>
+export function get\_recent_votes(): Array<Vote>
 
-export function get_vote_score(): i32
+export function get\_vote\_score(): i32
 
-export function add_comment(text: string): void
+export function add\_comment(text: string): void
 
-export function get_recent_comments(): Array<Comment>
+export function get\_recent\_comments(): Array<Comment>
 
 export function donate(): void
 
-export function get_donations_total(): u128
+export function get\_donations\_total(): u128
 
-export function get_recent_donations(): Array<Donation>
+export function get\_recent\_donations(): Array<Donation>
 
-export function release_donations(account: AccountId): void
+export function release\_donations(account: AccountId): void
 </Highlight>
 
 The given functions are written in AssemblyScript. But they could also have been written in Rust or any other language that compiles to Wasm. But it is easier to understand and saves some compiling time than Rust, which is excellent for prototyping and simple contracts.
